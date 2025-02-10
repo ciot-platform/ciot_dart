@@ -1,0 +1,3 @@
+[submodule "protos"]
+	path = protos
+	url = https://github.com/ciot-platform/ciot_types_proto.git
