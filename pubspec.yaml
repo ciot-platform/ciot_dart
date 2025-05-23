@@ -1,7 +1,7 @@
 name: ciot_dart
 description: "A new Flutter package project."
 version: 0.0.1
-homepage:
+publish_to: none
 
 environment:
   sdk: ^3.5.2
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   fpdart: ^1.1.1
-  protobuf: ^3.1.0
+  protobuf: ^4.0.0
   dartz: ^0.10.1
   http: ^1.1.0
   shared_preferences: ^2.5.1
@@ -25,7 +25,7 @@ dev_dependencies:
 # following page: https://dart.dev/tools/pub/pubspec
 
 # The following section is specific to Flutter packages.
-flutter:
+# flutter:
 
   # To add assets to your package, add an assets section, like this:
   # assets:
