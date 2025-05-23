@@ -3,7 +3,7 @@ import 'dart:typed_data';
 import 'package:ciot_dart/src/errors/errors.dart';
 import 'package:ciot_dart/src/generated/ciot/proto/v2/event.pb.dart';
 import 'package:ciot_dart/src/generated/ciot/proto/v2/iface.pb.dart';
-import 'package:ciot_dart/src/generated/ciot/proto/v2/msg.pb.dart';
+import 'package:ciot_dart/src/generated/ciot/proto/v2/msg_data.pb.dart';
 import 'package:fpdart/fpdart.dart';
 
 abstract class Iface {
