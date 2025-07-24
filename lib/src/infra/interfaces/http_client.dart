@@ -93,32 +93,40 @@ class HttpClient implements Iface {
     var duration = Duration(milliseconds: _cfg.timeout);
     http.Response response;
 
-    switch (_cfg.method) {
-      case HttpClientMethod.HTTP_METHOD_HEAD:
-        response = await http.head(uri).timeout(duration);
-      case HttpClientMethod.HTTP_METHOD_GET:
-        response = await http.get(uri).timeout(duration);
-      case HttpClientMethod.HTTP_METHOD_POST:
-        response = await http.post(uri, body: data).timeout(duration);
-      case HttpClientMethod.HTTP_METHOD_PUT:
-        response = await http.put(uri, body: data).timeout(duration);
-      case HttpClientMethod.HTTP_METHOD_PATCH:
-        response = await http.patch(uri, body: data).timeout(duration);
-      case HttpClientMethod.HTTP_METHOD_DELETE:
-        response = await http.delete(uri, body: data).timeout(duration);
-      default:
-        return Either.left(ErrorNotImplemented());
-    }
+    try {
+      switch (_cfg.method) {
+        case HttpClientMethod.HTTP_METHOD_HEAD:
+          response = await http.head(uri).timeout(duration);
+        case HttpClientMethod.HTTP_METHOD_GET:
+          response = await http.get(uri).timeout(duration);
+        case HttpClientMethod.HTTP_METHOD_POST:
+          response = await http.post(uri, body: data).timeout(duration);
+        case HttpClientMethod.HTTP_METHOD_PUT:
+          response = await http.put(uri, body: data).timeout(duration);
+        case HttpClientMethod.HTTP_METHOD_PATCH:
+          response = await http.patch(uri, body: data).timeout(duration);
+        case HttpClientMethod.HTTP_METHOD_DELETE:
+          response = await http.delete(uri, body: data).timeout(duration);
+        default:
+          return Either.left(ErrorNotImplemented());
+      }
 
-    if(response.statusCode == HttpStatus.ok ||
-       response.statusCode == HttpStatus.accepted ||
-       response.statusCode == HttpStatus.created)
-    {
-      return Either.right(response.bodyBytes);
-    }
-    else
-    {
-      return Either.left(ErrorHttpRequest(response.statusCode, response.bodyBytes));
+      if(response.statusCode == HttpStatus.ok ||
+        response.statusCode == HttpStatus.accepted ||
+        response.statusCode == HttpStatus.created)
+      {
+        return Either.right(response.bodyBytes);
+      }
+      else
+      {
+        return Either.left(ErrorHttpRequest(response.statusCode, response.bodyBytes));
+      }
+    } on SocketException catch (_) {
+      return Either.left(ErrorConnection()); 
+    } on TimeoutException catch (_) {
+      return Either.left(ErrorTimeout());    
+    } on Exception catch (e) {
+      return Either.left(ErrorException(e));
     }
   }
 }
