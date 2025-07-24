@@ -1,7 +1,7 @@
 import 'dart:convert';
 
-import 'package:ciot_dart/src/generated/ciot/proto/v2/iface_manager.pb.dart';
-import 'package:ciot_dart/src/generated/ciot/proto/v2/msg.pb.dart';
+import 'package:ciot_dart/generated/ciot/proto/v2/iface_manager.pb.dart';
+import 'package:ciot_dart/generated/ciot/proto/v2/msg.pb.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class CiotData {
