@@ -4,9 +4,9 @@ import 'package:ciot_dart/src/domain/interfaces/config_repository.dart';
 import 'package:ciot_dart/src/domain/interfaces/iface.dart';
 import 'package:ciot_dart/src/domain/interfaces/iface_repository.dart';
 import 'package:ciot_dart/src/errors/errors.dart';
-import 'package:ciot_dart/src/generated/ciot/proto/v2/event.pb.dart';
-import 'package:ciot_dart/src/generated/ciot/proto/v2/iface.pb.dart';
-import 'package:ciot_dart/src/generated/ciot/proto/v2/msg.pb.dart';
+import 'package:ciot_dart/generated/ciot/proto/v2/event.pb.dart';
+import 'package:ciot_dart/generated/ciot/proto/v2/iface.pb.dart';
+import 'package:ciot_dart/generated/ciot/proto/v2/msg.pb.dart';
 import 'package:ciot_dart/src/infra/interfaces/http_client.dart';
 import 'package:fpdart/fpdart.dart';
 
