@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+import 'package:ciot_dart/generated/ciot/proto/v2/errors.pbenum.dart';
 
 abstract class ErrorBase {}
 
@@ -22,3 +23,8 @@ class ErrorNotFound implements ErrorBase {}
 class ErrorTimeout implements ErrorBase {}
 
 class ErrorConnection implements ErrorBase {}
+
+class ErrorCiotRequest implements ErrorBase {
+  final Err error;
+  ErrorCiotRequest(this.error);
+}
