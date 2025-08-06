@@ -40,7 +40,7 @@ class CmdType extends $pb.ProtobufEnum {
   static const CmdType CMD_TYPE_DFU = CmdType._(3, _omitEnumNames ? '' : 'CMD_TYPE_DFU');
   static const CmdType CMD_TYPE_TOGGLE_AP = CmdType._(4, _omitEnumNames ? '' : 'CMD_TYPE_TOGGLE_AP');
   /// CMD_TYPE_GET_IDENTITY = 5;                  // Get device identity data
-  /// CMD_TYPE_GET_HEALTH = 6;                    // Get health data
+  static const CmdType CMD_TYPE_GET_HEALTH = CmdType._(6, _omitEnumNames ? '' : 'CMD_TYPE_GET_HEALTH');
   static const CmdType CMD_TYPE_SET_DFU_TYPE = CmdType._(99, _omitEnumNames ? '' : 'CMD_TYPE_SET_DFU_TYPE');
   /// CMD_TYPE_GET_DFU_TYPE = 100;                // Get DFU type cmd
   static const CmdType CMD_TYPE_DELETE_MIGRATED_SETTINGS = CmdType._(101, _omitEnumNames ? '' : 'CMD_TYPE_DELETE_MIGRATED_SETTINGS');
@@ -51,6 +51,7 @@ class CmdType extends $pb.ProtobufEnum {
     CMD_TYPE_RESET,
     CMD_TYPE_DFU,
     CMD_TYPE_TOGGLE_AP,
+    CMD_TYPE_GET_HEALTH,
     CMD_TYPE_SET_DFU_TYPE,
     CMD_TYPE_DELETE_MIGRATED_SETTINGS,
   ];
