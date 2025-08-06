@@ -91,38 +91,6 @@ class TcpProvState extends $pb.ProtobufEnum {
   const TcpProvState._(super.v, super.n);
 }
 
-/// HG TCP Module prov error codes
-class TcpProvError extends $pb.ProtobufEnum {
-  static const TcpProvError TCP_PROV_ERROR_OK = TcpProvError._(0, _omitEnumNames ? '' : 'TCP_PROV_ERROR_OK');
-  static const TcpProvError TCP_PROV_ERROR_BLE = TcpProvError._(1, _omitEnumNames ? '' : 'TCP_PROV_ERROR_BLE');
-  static const TcpProvError TCP_PROV_ERROR_NTP = TcpProvError._(2, _omitEnumNames ? '' : 'TCP_PROV_ERROR_NTP');
-  static const TcpProvError TCP_PROV_ERROR_MQTT = TcpProvError._(3, _omitEnumNames ? '' : 'TCP_PROV_ERROR_MQTT');
-  static const TcpProvError TCP_PROV_ERROR_BUSY = TcpProvError._(4, _omitEnumNames ? '' : 'TCP_PROV_ERROR_BUSY');
-  static const TcpProvError TCP_PROV_ERROR_INVALID_BLE = TcpProvError._(5, _omitEnumNames ? '' : 'TCP_PROV_ERROR_INVALID_BLE');
-  static const TcpProvError TCP_PROV_ERROR_INVALID_NTP = TcpProvError._(6, _omitEnumNames ? '' : 'TCP_PROV_ERROR_INVALID_NTP');
-  static const TcpProvError TCP_PROV_ERROR_INVALID_MQTT = TcpProvError._(7, _omitEnumNames ? '' : 'TCP_PROV_ERROR_INVALID_MQTT');
-  static const TcpProvError TCP_PROV_ERROR_INVALID_ORG_ID = TcpProvError._(8, _omitEnumNames ? '' : 'TCP_PROV_ERROR_INVALID_ORG_ID');
-  static const TcpProvError TCP_PROV_ERROR_INVALID_MQTT_NETWORK = TcpProvError._(9, _omitEnumNames ? '' : 'TCP_PROV_ERROR_INVALID_MQTT_NETWORK');
-
-  static const $core.List<TcpProvError> values = <TcpProvError> [
-    TCP_PROV_ERROR_OK,
-    TCP_PROV_ERROR_BLE,
-    TCP_PROV_ERROR_NTP,
-    TCP_PROV_ERROR_MQTT,
-    TCP_PROV_ERROR_BUSY,
-    TCP_PROV_ERROR_INVALID_BLE,
-    TCP_PROV_ERROR_INVALID_NTP,
-    TCP_PROV_ERROR_INVALID_MQTT,
-    TCP_PROV_ERROR_INVALID_ORG_ID,
-    TCP_PROV_ERROR_INVALID_MQTT_NETWORK,
-  ];
-
-  static final $core.Map<$core.int, TcpProvError> _byValue = $pb.ProtobufEnum.initByValue(values);
-  static TcpProvError? valueOf($core.int value) => _byValue[value];
-
-  const TcpProvError._(super.v, super.n);
-}
-
 /// Enum representing different types of HG TCP Module reset
 class TcpResetType extends $pb.ProtobufEnum {
   static const TcpResetType UNKNOWN = TcpResetType._(0, _omitEnumNames ? '' : 'UNKNOWN');

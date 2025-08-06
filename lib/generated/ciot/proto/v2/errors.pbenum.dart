@@ -66,6 +66,15 @@ class Err extends $pb.ProtobufEnum {
   static const Err ERR_TRANSPORT = Err._(49, _omitEnumNames ? '' : 'ERR_TRANSPORT');
   static const Err ERR_INVALID_RESPONSE = Err._(50, _omitEnumNames ? '' : 'ERR_INVALID_RESPONSE');
   static const Err ERR_NULL_EVENT_HANDLER = Err._(51, _omitEnumNames ? '' : 'ERR_NULL_EVENT_HANDLER');
+  static const Err ERR_PROV_REQ_BLE = Err._(2000, _omitEnumNames ? '' : 'ERR_PROV_REQ_BLE');
+  static const Err ERR_PROV_REQ_NTP = Err._(2002, _omitEnumNames ? '' : 'ERR_PROV_REQ_NTP');
+  static const Err ERR_PROV_REQ_MQTT = Err._(2003, _omitEnumNames ? '' : 'ERR_PROV_REQ_MQTT');
+  static const Err ERR_PROV_REQ_BUSY = Err._(2004, _omitEnumNames ? '' : 'ERR_PROV_REQ_BUSY');
+  static const Err ERR_PROV_REQ_INVALID_BLE = Err._(2005, _omitEnumNames ? '' : 'ERR_PROV_REQ_INVALID_BLE');
+  static const Err ERR_PROV_REQ_INVALID_NTP = Err._(2006, _omitEnumNames ? '' : 'ERR_PROV_REQ_INVALID_NTP');
+  static const Err ERR_PROV_REQ_INVALID_MQTT = Err._(2007, _omitEnumNames ? '' : 'ERR_PROV_REQ_INVALID_MQTT');
+  static const Err ERR_PROV_REQ_INVALID_ORG_ID = Err._(2008, _omitEnumNames ? '' : 'ERR_PROV_REQ_INVALID_ORG_ID');
+  static const Err ERR_PROV_REQ_INVALID_MQTT_NETWORK = Err._(2009, _omitEnumNames ? '' : 'ERR_PROV_REQ_INVALID_MQTT_NETWORK');
   static const Err ERR_OTA_BASE = Err._(5376, _omitEnumNames ? '' : 'ERR_OTA_BASE');
   static const Err ERR_OTA_PARTITION_CONFLICT = Err._(5377, _omitEnumNames ? '' : 'ERR_OTA_PARTITION_CONFLICT');
   static const Err ERR_OTA_SELECT_INFO_INVALID = Err._(5378, _omitEnumNames ? '' : 'ERR_OTA_SELECT_INFO_INVALID');
@@ -130,6 +139,15 @@ class Err extends $pb.ProtobufEnum {
     ERR_TRANSPORT,
     ERR_INVALID_RESPONSE,
     ERR_NULL_EVENT_HANDLER,
+    ERR_PROV_REQ_BLE,
+    ERR_PROV_REQ_NTP,
+    ERR_PROV_REQ_MQTT,
+    ERR_PROV_REQ_BUSY,
+    ERR_PROV_REQ_INVALID_BLE,
+    ERR_PROV_REQ_INVALID_NTP,
+    ERR_PROV_REQ_INVALID_MQTT,
+    ERR_PROV_REQ_INVALID_ORG_ID,
+    ERR_PROV_REQ_INVALID_MQTT_NETWORK,
     ERR_OTA_BASE,
     ERR_OTA_PARTITION_CONFLICT,
     ERR_OTA_SELECT_INFO_INVALID,

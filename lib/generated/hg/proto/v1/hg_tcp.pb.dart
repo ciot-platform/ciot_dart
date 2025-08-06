@@ -17,6 +17,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../../../ciot/proto/v2/ble.pb.dart' as $1;
 import '../../../ciot/proto/v2/ciot.pb.dart' as $2;
 import '../../../ciot/proto/v2/dfu.pb.dart' as $12;
+import '../../../ciot/proto/v2/errors.pbenum.dart' as $14;
 import '../../../ciot/proto/v2/mqtt_client.pb.dart' as $9;
 import '../../../ciot/proto/v2/ntp.pb.dart' as $8;
 import '../../../ciot/proto/v2/ota.pb.dart' as $13;
@@ -29,25 +30,99 @@ export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'hg_tcp.pbenum.dart';
 
+/// HG TCP Module provisioning status message
+class TcpProvStatus extends $pb.GeneratedMessage {
+  factory TcpProvStatus({
+    TcpProvState? state,
+    $14.Err? error,
+    $core.int? tries,
+  }) {
+    final $result = create();
+    if (state != null) {
+      $result.state = state;
+    }
+    if (error != null) {
+      $result.error = error;
+    }
+    if (tries != null) {
+      $result.tries = tries;
+    }
+    return $result;
+  }
+  TcpProvStatus._() : super();
+  factory TcpProvStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory TcpProvStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TcpProvStatus', package: const $pb.PackageName(_omitMessageNames ? '' : 'Hg'), createEmptyInstance: create)
+    ..e<TcpProvState>(1, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: TcpProvState.TCP_PROV_STATE_IDLE, valueOf: TcpProvState.valueOf, enumValues: TcpProvState.values)
+    ..e<$14.Err>(2, _omitFieldNames ? '' : 'error', $pb.PbFieldType.OE, defaultOrMaker: $14.Err.ERR_OK, valueOf: $14.Err.valueOf, enumValues: $14.Err.values)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'tries', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  TcpProvStatus clone() => TcpProvStatus()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  TcpProvStatus copyWith(void Function(TcpProvStatus) updates) => super.copyWith((message) => updates(message as TcpProvStatus)) as TcpProvStatus;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static TcpProvStatus create() => TcpProvStatus._();
+  TcpProvStatus createEmptyInstance() => create();
+  static $pb.PbList<TcpProvStatus> createRepeated() => $pb.PbList<TcpProvStatus>();
+  @$core.pragma('dart2js:noInline')
+  static TcpProvStatus getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TcpProvStatus>(create);
+  static TcpProvStatus? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  TcpProvState get state => $_getN(0);
+  @$pb.TagNumber(1)
+  set state(TcpProvState v) { $_setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasState() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearState() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $14.Err get error => $_getN(1);
+  @$pb.TagNumber(2)
+  set error($14.Err v) { $_setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasError() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearError() => $_clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.int get tries => $_getIZ(2);
+  @$pb.TagNumber(3)
+  set tries($core.int v) { $_setSignedInt32(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasTries() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearTries() => $_clearField(3);
+}
+
 /// HG TCP Module available for provisioning message
 class TcpProvAvailable extends $pb.GeneratedMessage {
   factory TcpProvAvailable({
     $fixnum.Int64? t,
-    TcpProvState? state,
     $core.List<$core.int>? appVer,
     $core.String? hwVer,
     $core.String? hwType,
     HardwareMacs? hwMacs,
-    $core.int? tries,
-    TcpProvError? err,
     $core.int? sn,
+    TcpProvStatus? status,
   }) {
     final $result = create();
     if (t != null) {
       $result.t = t;
-    }
-    if (state != null) {
-      $result.state = state;
     }
     if (appVer != null) {
       $result.appVer = appVer;
@@ -61,14 +136,11 @@ class TcpProvAvailable extends $pb.GeneratedMessage {
     if (hwMacs != null) {
       $result.hwMacs = hwMacs;
     }
-    if (tries != null) {
-      $result.tries = tries;
-    }
-    if (err != null) {
-      $result.err = err;
-    }
     if (sn != null) {
       $result.sn = sn;
+    }
+    if (status != null) {
+      $result.status = status;
     }
     return $result;
   }
@@ -78,14 +150,12 @@ class TcpProvAvailable extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'TcpProvAvailable', package: const $pb.PackageName(_omitMessageNames ? '' : 'Hg'), createEmptyInstance: create)
     ..a<$fixnum.Int64>(1, _omitFieldNames ? '' : 't', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..e<TcpProvState>(2, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: TcpProvState.TCP_PROV_STATE_IDLE, valueOf: TcpProvState.valueOf, enumValues: TcpProvState.values)
-    ..a<$core.List<$core.int>>(3, _omitFieldNames ? '' : 'appVer', $pb.PbFieldType.OY)
-    ..aOS(4, _omitFieldNames ? '' : 'hwVer')
-    ..aOS(5, _omitFieldNames ? '' : 'hwType')
-    ..aOM<HardwareMacs>(6, _omitFieldNames ? '' : 'hwMacs', subBuilder: HardwareMacs.create)
-    ..a<$core.int>(7, _omitFieldNames ? '' : 'tries', $pb.PbFieldType.O3)
-    ..e<TcpProvError>(8, _omitFieldNames ? '' : 'err', $pb.PbFieldType.OE, defaultOrMaker: TcpProvError.TCP_PROV_ERROR_OK, valueOf: TcpProvError.valueOf, enumValues: TcpProvError.values)
-    ..a<$core.int>(9, _omitFieldNames ? '' : 'sn', $pb.PbFieldType.OU3)
+    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'appVer', $pb.PbFieldType.OY)
+    ..aOS(3, _omitFieldNames ? '' : 'hwVer')
+    ..aOS(4, _omitFieldNames ? '' : 'hwType')
+    ..aOM<HardwareMacs>(5, _omitFieldNames ? '' : 'hwMacs', subBuilder: HardwareMacs.create)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'sn', $pb.PbFieldType.OU3)
+    ..aOM<TcpProvStatus>(7, _omitFieldNames ? '' : 'status', subBuilder: TcpProvStatus.create)
     ..hasRequiredFields = false
   ;
 
@@ -120,78 +190,62 @@ class TcpProvAvailable extends $pb.GeneratedMessage {
   void clearT() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  TcpProvState get state => $_getN(1);
+  $core.List<$core.int> get appVer => $_getN(1);
   @$pb.TagNumber(2)
-  set state(TcpProvState v) { $_setField(2, v); }
+  set appVer($core.List<$core.int> v) { $_setBytes(1, v); }
   @$pb.TagNumber(2)
-  $core.bool hasState() => $_has(1);
+  $core.bool hasAppVer() => $_has(1);
   @$pb.TagNumber(2)
-  void clearState() => $_clearField(2);
+  void clearAppVer() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $core.List<$core.int> get appVer => $_getN(2);
+  $core.String get hwVer => $_getSZ(2);
   @$pb.TagNumber(3)
-  set appVer($core.List<$core.int> v) { $_setBytes(2, v); }
+  set hwVer($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
-  $core.bool hasAppVer() => $_has(2);
+  $core.bool hasHwVer() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAppVer() => $_clearField(3);
+  void clearHwVer() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $core.String get hwVer => $_getSZ(3);
+  $core.String get hwType => $_getSZ(3);
   @$pb.TagNumber(4)
-  set hwVer($core.String v) { $_setString(3, v); }
+  set hwType($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
-  $core.bool hasHwVer() => $_has(3);
+  $core.bool hasHwType() => $_has(3);
   @$pb.TagNumber(4)
-  void clearHwVer() => $_clearField(4);
+  void clearHwType() => $_clearField(4);
 
   @$pb.TagNumber(5)
-  $core.String get hwType => $_getSZ(4);
+  HardwareMacs get hwMacs => $_getN(4);
   @$pb.TagNumber(5)
-  set hwType($core.String v) { $_setString(4, v); }
+  set hwMacs(HardwareMacs v) { $_setField(5, v); }
   @$pb.TagNumber(5)
-  $core.bool hasHwType() => $_has(4);
+  $core.bool hasHwMacs() => $_has(4);
   @$pb.TagNumber(5)
-  void clearHwType() => $_clearField(5);
+  void clearHwMacs() => $_clearField(5);
+  @$pb.TagNumber(5)
+  HardwareMacs ensureHwMacs() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  HardwareMacs get hwMacs => $_getN(5);
+  $core.int get sn => $_getIZ(5);
   @$pb.TagNumber(6)
-  set hwMacs(HardwareMacs v) { $_setField(6, v); }
+  set sn($core.int v) { $_setUnsignedInt32(5, v); }
   @$pb.TagNumber(6)
-  $core.bool hasHwMacs() => $_has(5);
+  $core.bool hasSn() => $_has(5);
   @$pb.TagNumber(6)
-  void clearHwMacs() => $_clearField(6);
-  @$pb.TagNumber(6)
-  HardwareMacs ensureHwMacs() => $_ensure(5);
+  void clearSn() => $_clearField(6);
 
   @$pb.TagNumber(7)
-  $core.int get tries => $_getIZ(6);
+  TcpProvStatus get status => $_getN(6);
   @$pb.TagNumber(7)
-  set tries($core.int v) { $_setSignedInt32(6, v); }
+  set status(TcpProvStatus v) { $_setField(7, v); }
   @$pb.TagNumber(7)
-  $core.bool hasTries() => $_has(6);
+  $core.bool hasStatus() => $_has(6);
   @$pb.TagNumber(7)
-  void clearTries() => $_clearField(7);
-
-  @$pb.TagNumber(8)
-  TcpProvError get err => $_getN(7);
-  @$pb.TagNumber(8)
-  set err(TcpProvError v) { $_setField(8, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasErr() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearErr() => $_clearField(8);
-
-  @$pb.TagNumber(9)
-  $core.int get sn => $_getIZ(8);
-  @$pb.TagNumber(9)
-  set sn($core.int v) { $_setUnsignedInt32(8, v); }
-  @$pb.TagNumber(9)
-  $core.bool hasSn() => $_has(8);
-  @$pb.TagNumber(9)
-  void clearSn() => $_clearField(9);
+  void clearStatus() => $_clearField(7);
+  @$pb.TagNumber(7)
+  TcpProvStatus ensureStatus() => $_ensure(6);
 }
 
 /// HG TCP Module provisioning request
@@ -203,6 +257,7 @@ class TcpProvReq extends $pb.GeneratedMessage {
     $9.MqttClientCfg? mqtt,
     $core.String? mqttNetwork,
     $core.String? orgId,
+    $core.int? sn,
   }) {
     final $result = create();
     if (t != null) {
@@ -223,6 +278,9 @@ class TcpProvReq extends $pb.GeneratedMessage {
     if (orgId != null) {
       $result.orgId = orgId;
     }
+    if (sn != null) {
+      $result.sn = sn;
+    }
     return $result;
   }
   TcpProvReq._() : super();
@@ -236,6 +294,7 @@ class TcpProvReq extends $pb.GeneratedMessage {
     ..aOM<$9.MqttClientCfg>(4, _omitFieldNames ? '' : 'mqtt', subBuilder: $9.MqttClientCfg.create)
     ..aOS(5, _omitFieldNames ? '' : 'mqttNetwork')
     ..aOS(6, _omitFieldNames ? '' : 'orgId')
+    ..a<$core.int>(7, _omitFieldNames ? '' : 'sn', $pb.PbFieldType.OU3)
     ..hasRequiredFields = false
   ;
 
@@ -319,6 +378,15 @@ class TcpProvReq extends $pb.GeneratedMessage {
   $core.bool hasOrgId() => $_has(5);
   @$pb.TagNumber(6)
   void clearOrgId() => $_clearField(6);
+
+  @$pb.TagNumber(7)
+  $core.int get sn => $_getIZ(6);
+  @$pb.TagNumber(7)
+  set sn($core.int v) { $_setUnsignedInt32(6, v); }
+  @$pb.TagNumber(7)
+  $core.bool hasSn() => $_has(6);
+  @$pb.TagNumber(7)
+  void clearSn() => $_clearField(7);
 }
 
 /// HG TCP Module data saved on device flash memory

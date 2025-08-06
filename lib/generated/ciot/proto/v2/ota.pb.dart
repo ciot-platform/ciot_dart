@@ -57,7 +57,6 @@ class OtaCfg extends $pb.GeneratedMessage {
   factory OtaCfg({
     $core.String? url,
     $core.bool? force,
-    $core.bool? encrypted,
     $core.bool? restart,
     OtaType? type,
   }) {
@@ -67,9 +66,6 @@ class OtaCfg extends $pb.GeneratedMessage {
     }
     if (force != null) {
       $result.force = force;
-    }
-    if (encrypted != null) {
-      $result.encrypted = encrypted;
     }
     if (restart != null) {
       $result.restart = restart;
@@ -86,7 +82,6 @@ class OtaCfg extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OtaCfg', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'url')
     ..aOB(2, _omitFieldNames ? '' : 'force')
-    ..aOB(3, _omitFieldNames ? '' : 'encrypted')
     ..aOB(4, _omitFieldNames ? '' : 'restart')
     ..e<OtaType>(5, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: OtaType.OTA_TYPE_DEFAULT, valueOf: OtaType.valueOf, enumValues: OtaType.values)
     ..hasRequiredFields = false
@@ -131,30 +126,21 @@ class OtaCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearForce() => $_clearField(2);
 
-  @$pb.TagNumber(3)
-  $core.bool get encrypted => $_getBF(2);
-  @$pb.TagNumber(3)
-  set encrypted($core.bool v) { $_setBool(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasEncrypted() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearEncrypted() => $_clearField(3);
-
   @$pb.TagNumber(4)
-  $core.bool get restart => $_getBF(3);
+  $core.bool get restart => $_getBF(2);
   @$pb.TagNumber(4)
-  set restart($core.bool v) { $_setBool(3, v); }
+  set restart($core.bool v) { $_setBool(2, v); }
   @$pb.TagNumber(4)
-  $core.bool hasRestart() => $_has(3);
+  $core.bool hasRestart() => $_has(2);
   @$pb.TagNumber(4)
   void clearRestart() => $_clearField(4);
 
   @$pb.TagNumber(5)
-  OtaType get type => $_getN(4);
+  OtaType get type => $_getN(3);
   @$pb.TagNumber(5)
   set type(OtaType v) { $_setField(5, v); }
   @$pb.TagNumber(5)
-  $core.bool hasType() => $_has(4);
+  $core.bool hasType() => $_has(3);
   @$pb.TagNumber(5)
   void clearType() => $_clearField(5);
 }

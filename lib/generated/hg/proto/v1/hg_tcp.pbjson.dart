@@ -76,32 +76,6 @@ final $typed_data.Uint8List tcpProvStateDescriptor = $convert.base64Decode(
     'CgxUY3BQcm92U3RhdGUSFwoTVENQX1BST1ZfU1RBVEVfSURMRRAAEh4KGlRDUF9QUk9WX1NUQV'
     'RFX0lOX1BST0dSRVNTEAESHAoYVENQX1BST1ZfU1RBVEVfQ09NUExFVEVEEAI=');
 
-@$core.Deprecated('Use tcpProvErrorDescriptor instead')
-const TcpProvError$json = {
-  '1': 'TcpProvError',
-  '2': [
-    {'1': 'TCP_PROV_ERROR_OK', '2': 0},
-    {'1': 'TCP_PROV_ERROR_BLE', '2': 1},
-    {'1': 'TCP_PROV_ERROR_NTP', '2': 2},
-    {'1': 'TCP_PROV_ERROR_MQTT', '2': 3},
-    {'1': 'TCP_PROV_ERROR_BUSY', '2': 4},
-    {'1': 'TCP_PROV_ERROR_INVALID_BLE', '2': 5},
-    {'1': 'TCP_PROV_ERROR_INVALID_NTP', '2': 6},
-    {'1': 'TCP_PROV_ERROR_INVALID_MQTT', '2': 7},
-    {'1': 'TCP_PROV_ERROR_INVALID_ORG_ID', '2': 8},
-    {'1': 'TCP_PROV_ERROR_INVALID_MQTT_NETWORK', '2': 9},
-  ],
-};
-
-/// Descriptor for `TcpProvError`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List tcpProvErrorDescriptor = $convert.base64Decode(
-    'CgxUY3BQcm92RXJyb3ISFQoRVENQX1BST1ZfRVJST1JfT0sQABIWChJUQ1BfUFJPVl9FUlJPUl'
-    '9CTEUQARIWChJUQ1BfUFJPVl9FUlJPUl9OVFAQAhIXChNUQ1BfUFJPVl9FUlJPUl9NUVRUEAMS'
-    'FwoTVENQX1BST1ZfRVJST1JfQlVTWRAEEh4KGlRDUF9QUk9WX0VSUk9SX0lOVkFMSURfQkxFEA'
-    'USHgoaVENQX1BST1ZfRVJST1JfSU5WQUxJRF9OVFAQBhIfChtUQ1BfUFJPVl9FUlJPUl9JTlZB'
-    'TElEX01RVFQQBxIhCh1UQ1BfUFJPVl9FUlJPUl9JTlZBTElEX09SR19JRBAIEicKI1RDUF9QUk'
-    '9WX0VSUk9SX0lOVkFMSURfTVFUVF9ORVRXT1JLEAk=');
-
 @$core.Deprecated('Use tcpResetTypeDescriptor instead')
 const TcpResetType$json = {
   '1': 'TcpResetType',
@@ -118,29 +92,41 @@ final $typed_data.Uint8List tcpResetTypeDescriptor = $convert.base64Decode(
     'CgxUY3BSZXNldFR5cGUSCwoHVU5LTk9XThAAEggKBFNPRlQQARIICgRQUk9WEAISBwoDQUxMEA'
     'M=');
 
+@$core.Deprecated('Use tcpProvStatusDescriptor instead')
+const TcpProvStatus$json = {
+  '1': 'TcpProvStatus',
+  '2': [
+    {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Hg.TcpProvState', '10': 'state'},
+    {'1': 'error', '3': 2, '4': 1, '5': 14, '6': '.Ciot.Err', '10': 'error'},
+    {'1': 'tries', '3': 3, '4': 1, '5': 5, '10': 'tries'},
+  ],
+};
+
+/// Descriptor for `TcpProvStatus`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List tcpProvStatusDescriptor = $convert.base64Decode(
+    'Cg1UY3BQcm92U3RhdHVzEiYKBXN0YXRlGAEgASgOMhAuSGcuVGNwUHJvdlN0YXRlUgVzdGF0ZR'
+    'IfCgVlcnJvchgCIAEoDjIJLkNpb3QuRXJyUgVlcnJvchIUCgV0cmllcxgDIAEoBVIFdHJpZXM=');
+
 @$core.Deprecated('Use tcpProvAvailableDescriptor instead')
 const TcpProvAvailable$json = {
   '1': 'TcpProvAvailable',
   '2': [
     {'1': 't', '3': 1, '4': 1, '5': 4, '10': 't'},
-    {'1': 'state', '3': 2, '4': 1, '5': 14, '6': '.Hg.TcpProvState', '10': 'state'},
-    {'1': 'app_ver', '3': 3, '4': 1, '5': 12, '10': 'appVer'},
-    {'1': 'hw_ver', '3': 4, '4': 1, '5': 9, '10': 'hwVer'},
-    {'1': 'hw_type', '3': 5, '4': 1, '5': 9, '10': 'hwType'},
-    {'1': 'hw_macs', '3': 6, '4': 1, '5': 11, '6': '.Hg.HardwareMacs', '10': 'hwMacs'},
-    {'1': 'tries', '3': 7, '4': 1, '5': 5, '10': 'tries'},
-    {'1': 'err', '3': 8, '4': 1, '5': 14, '6': '.Hg.TcpProvError', '10': 'err'},
-    {'1': 'sn', '3': 9, '4': 1, '5': 13, '10': 'sn'},
+    {'1': 'app_ver', '3': 2, '4': 1, '5': 12, '10': 'appVer'},
+    {'1': 'hw_ver', '3': 3, '4': 1, '5': 9, '10': 'hwVer'},
+    {'1': 'hw_type', '3': 4, '4': 1, '5': 9, '10': 'hwType'},
+    {'1': 'hw_macs', '3': 5, '4': 1, '5': 11, '6': '.Hg.HardwareMacs', '10': 'hwMacs'},
+    {'1': 'sn', '3': 6, '4': 1, '5': 13, '10': 'sn'},
+    {'1': 'status', '3': 7, '4': 1, '5': 11, '6': '.Hg.TcpProvStatus', '10': 'status'},
   ],
 };
 
 /// Descriptor for `TcpProvAvailable`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List tcpProvAvailableDescriptor = $convert.base64Decode(
-    'ChBUY3BQcm92QXZhaWxhYmxlEgwKAXQYASABKARSAXQSJgoFc3RhdGUYAiABKA4yEC5IZy5UY3'
-    'BQcm92U3RhdGVSBXN0YXRlEhcKB2FwcF92ZXIYAyABKAxSBmFwcFZlchIVCgZod192ZXIYBCAB'
-    'KAlSBWh3VmVyEhcKB2h3X3R5cGUYBSABKAlSBmh3VHlwZRIpCgdod19tYWNzGAYgASgLMhAuSG'
-    'cuSGFyZHdhcmVNYWNzUgZod01hY3MSFAoFdHJpZXMYByABKAVSBXRyaWVzEiIKA2VychgIIAEo'
-    'DjIQLkhnLlRjcFByb3ZFcnJvclIDZXJyEg4KAnNuGAkgASgNUgJzbg==');
+    'ChBUY3BQcm92QXZhaWxhYmxlEgwKAXQYASABKARSAXQSFwoHYXBwX3ZlchgCIAEoDFIGYXBwVm'
+    'VyEhUKBmh3X3ZlchgDIAEoCVIFaHdWZXISFwoHaHdfdHlwZRgEIAEoCVIGaHdUeXBlEikKB2h3'
+    'X21hY3MYBSABKAsyEC5IZy5IYXJkd2FyZU1hY3NSBmh3TWFjcxIOCgJzbhgGIAEoDVICc24SKQ'
+    'oGc3RhdHVzGAcgASgLMhEuSGcuVGNwUHJvdlN0YXR1c1IGc3RhdHVz');
 
 @$core.Deprecated('Use tcpProvReqDescriptor instead')
 const TcpProvReq$json = {
@@ -152,6 +138,7 @@ const TcpProvReq$json = {
     {'1': 'mqtt', '3': 4, '4': 1, '5': 11, '6': '.Ciot.MqttClientCfg', '10': 'mqtt'},
     {'1': 'mqtt_network', '3': 5, '4': 1, '5': 9, '10': 'mqttNetwork'},
     {'1': 'org_id', '3': 6, '4': 1, '5': 9, '10': 'orgId'},
+    {'1': 'sn', '3': 7, '4': 1, '5': 13, '10': 'sn'},
   ],
 };
 
@@ -160,7 +147,7 @@ final $typed_data.Uint8List tcpProvReqDescriptor = $convert.base64Decode(
     'CgpUY3BQcm92UmVxEgwKAXQYASABKARSAXQSHgoDYmxlGAIgASgLMgwuQ2lvdC5CbGVDZmdSA2'
     'JsZRIeCgNudHAYAyABKAsyDC5DaW90Lk50cENmZ1IDbnRwEicKBG1xdHQYBCABKAsyEy5DaW90'
     'Lk1xdHRDbGllbnRDZmdSBG1xdHQSIQoMbXF0dF9uZXR3b3JrGAUgASgJUgttcXR0TmV0d29yax'
-    'IVCgZvcmdfaWQYBiABKAlSBW9yZ0lk');
+    'IVCgZvcmdfaWQYBiABKAlSBW9yZ0lkEg4KAnNuGAcgASgNUgJzbg==');
 
 @$core.Deprecated('Use tcpPersistentDataDescriptor instead')
 const TcpPersistentData$json = {

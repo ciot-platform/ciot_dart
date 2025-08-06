@@ -314,6 +314,7 @@ const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> IfaceManag
   '.Hg.BridgeTagLink': $31.BridgeTagLink$json,
   '.Hg.BridgeTagLinkMbus': $31.BridgeTagLinkMbus$json,
   '.Hg.BridgeReqDeleteItem': $31.BridgeReqDeleteItem$json,
+  '.Hg.TcpProvStatus': $27.TcpProvStatus$json,
   '.Ciot.Common': $1.Common$json,
   '.Ciot.GetData': $1.GetData$json,
   '.Ciot.Data': $6.Data$json,

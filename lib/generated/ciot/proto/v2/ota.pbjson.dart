@@ -69,7 +69,6 @@ const OtaCfg$json = {
   '2': [
     {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
     {'1': 'force', '3': 2, '4': 1, '5': 8, '10': 'force'},
-    {'1': 'encrypted', '3': 3, '4': 1, '5': 8, '10': 'encrypted'},
     {'1': 'restart', '3': 4, '4': 1, '5': 8, '10': 'restart'},
     {'1': 'type', '3': 5, '4': 1, '5': 14, '6': '.Ciot.OtaType', '10': 'type'},
   ],
@@ -77,9 +76,8 @@ const OtaCfg$json = {
 
 /// Descriptor for `OtaCfg`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List otaCfgDescriptor = $convert.base64Decode(
-    'CgZPdGFDZmcSEAoDdXJsGAEgASgJUgN1cmwSFAoFZm9yY2UYAiABKAhSBWZvcmNlEhwKCWVuY3'
-    'J5cHRlZBgDIAEoCFIJZW5jcnlwdGVkEhgKB3Jlc3RhcnQYBCABKAhSB3Jlc3RhcnQSIQoEdHlw'
-    'ZRgFIAEoDjINLkNpb3QuT3RhVHlwZVIEdHlwZQ==');
+    'CgZPdGFDZmcSEAoDdXJsGAEgASgJUgN1cmwSFAoFZm9yY2UYAiABKAhSBWZvcmNlEhgKB3Jlc3'
+    'RhcnQYBCABKAhSB3Jlc3RhcnQSIQoEdHlwZRgFIAEoDjINLkNpb3QuT3RhVHlwZVIEdHlwZQ==');
 
 @$core.Deprecated('Use otaStatusDescriptor instead')
 const OtaStatus$json = {

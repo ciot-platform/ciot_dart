@@ -17,15 +17,16 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import '../../../ciot/proto/v2/mqtt_client.pb.dart' as $9;
 import '../../../pcm/proto/v1/pcm.pb.dart' as $7;
 import 'hg.pbenum.dart';
-import 'hg_ble.pb.dart' as $14;
-import 'hg_bridge.pb.dart' as $16;
-import 'hg_tcp.pb.dart' as $15;
+import 'hg_ble.pb.dart' as $15;
+import 'hg_bridge.pb.dart' as $17;
+import 'hg_tcp.pb.dart' as $16;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'hg.pbenum.dart';
 
 enum Data_Type {
+  getData, 
   cmd, 
   bleHealth, 
   bleAdv, 
@@ -34,6 +35,7 @@ enum Data_Type {
   pcmAck, 
   tcpHealth, 
   bridgeReq, 
+  tcpProvStatus, 
   dfuType, 
   notSet
 }
@@ -41,17 +43,22 @@ enum Data_Type {
 /// Message used to transport data associated with Hedro Gateway
 class Data extends $pb.GeneratedMessage {
   factory Data({
+    DataType? getData,
     CmdType? cmd,
-    $14.BleHealth? bleHealth,
-    $14.BleAdv? bleAdv,
-    $15.TcpProvReq? provReq,
+    $15.BleHealth? bleHealth,
+    $15.BleAdv? bleAdv,
+    $16.TcpProvReq? provReq,
     $7.Req? pcmReq,
     $7.Ack? pcmAck,
-    $15.TcpHealth? tcpHealth,
-    $16.BridgeReq? bridgeReq,
+    $16.TcpHealth? tcpHealth,
+    $17.BridgeReq? bridgeReq,
+    $16.TcpProvStatus? tcpProvStatus,
     DfuType? dfuType,
   }) {
     final $result = create();
+    if (getData != null) {
+      $result.getData = getData;
+    }
     if (cmd != null) {
       $result.cmd = cmd;
     }
@@ -76,6 +83,9 @@ class Data extends $pb.GeneratedMessage {
     if (bridgeReq != null) {
       $result.bridgeReq = bridgeReq;
     }
+    if (tcpProvStatus != null) {
+      $result.tcpProvStatus = tcpProvStatus;
+    }
     if (dfuType != null) {
       $result.dfuType = dfuType;
     }
@@ -86,6 +96,7 @@ class Data extends $pb.GeneratedMessage {
   factory Data.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static const $core.Map<$core.int, Data_Type> _Data_TypeByTag = {
+    1 : Data_Type.getData,
     2 : Data_Type.cmd,
     3 : Data_Type.bleHealth,
     4 : Data_Type.bleAdv,
@@ -94,19 +105,22 @@ class Data extends $pb.GeneratedMessage {
     7 : Data_Type.pcmAck,
     9 : Data_Type.tcpHealth,
     10 : Data_Type.bridgeReq,
+    11 : Data_Type.tcpProvStatus,
     99 : Data_Type.dfuType,
     0 : Data_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Data', package: const $pb.PackageName(_omitMessageNames ? '' : 'Hg'), createEmptyInstance: create)
-    ..oo(0, [2, 3, 4, 5, 6, 7, 9, 10, 99])
+    ..oo(0, [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 99])
+    ..e<DataType>(1, _omitFieldNames ? '' : 'getData', $pb.PbFieldType.OE, defaultOrMaker: DataType.DATA_TYPE_UNKNOWN, valueOf: DataType.valueOf, enumValues: DataType.values)
     ..e<CmdType>(2, _omitFieldNames ? '' : 'cmd', $pb.PbFieldType.OE, defaultOrMaker: CmdType.CMD_TYPE_UNKNOWN, valueOf: CmdType.valueOf, enumValues: CmdType.values)
-    ..aOM<$14.BleHealth>(3, _omitFieldNames ? '' : 'bleHealth', subBuilder: $14.BleHealth.create)
-    ..aOM<$14.BleAdv>(4, _omitFieldNames ? '' : 'bleAdv', subBuilder: $14.BleAdv.create)
-    ..aOM<$15.TcpProvReq>(5, _omitFieldNames ? '' : 'provReq', subBuilder: $15.TcpProvReq.create)
+    ..aOM<$15.BleHealth>(3, _omitFieldNames ? '' : 'bleHealth', subBuilder: $15.BleHealth.create)
+    ..aOM<$15.BleAdv>(4, _omitFieldNames ? '' : 'bleAdv', subBuilder: $15.BleAdv.create)
+    ..aOM<$16.TcpProvReq>(5, _omitFieldNames ? '' : 'provReq', subBuilder: $16.TcpProvReq.create)
     ..aOM<$7.Req>(6, _omitFieldNames ? '' : 'pcmReq', subBuilder: $7.Req.create)
     ..aOM<$7.Ack>(7, _omitFieldNames ? '' : 'pcmAck', subBuilder: $7.Ack.create)
-    ..aOM<$15.TcpHealth>(9, _omitFieldNames ? '' : 'tcpHealth', subBuilder: $15.TcpHealth.create)
-    ..aOM<$16.BridgeReq>(10, _omitFieldNames ? '' : 'bridgeReq', subBuilder: $16.BridgeReq.create)
+    ..aOM<$16.TcpHealth>(9, _omitFieldNames ? '' : 'tcpHealth', subBuilder: $16.TcpHealth.create)
+    ..aOM<$17.BridgeReq>(10, _omitFieldNames ? '' : 'bridgeReq', subBuilder: $17.BridgeReq.create)
+    ..aOM<$16.TcpProvStatus>(11, _omitFieldNames ? '' : 'tcpProvStatus', subBuilder: $16.TcpProvStatus.create)
     ..e<DfuType>(99, _omitFieldNames ? '' : 'dfuType', $pb.PbFieldType.OE, defaultOrMaker: DfuType.DFU_TYPE_OLD, valueOf: DfuType.valueOf, enumValues: DfuType.values)
     ..hasRequiredFields = false
   ;
@@ -135,98 +149,118 @@ class Data extends $pb.GeneratedMessage {
   Data_Type whichType() => _Data_TypeByTag[$_whichOneof(0)]!;
   void clearType() => $_clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
+  DataType get getData => $_getN(0);
+  @$pb.TagNumber(1)
+  set getData(DataType v) { $_setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasGetData() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearGetData() => $_clearField(1);
+
   @$pb.TagNumber(2)
-  CmdType get cmd => $_getN(0);
+  CmdType get cmd => $_getN(1);
   @$pb.TagNumber(2)
   set cmd(CmdType v) { $_setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasCmd() => $_has(0);
+  $core.bool hasCmd() => $_has(1);
   @$pb.TagNumber(2)
   void clearCmd() => $_clearField(2);
 
   @$pb.TagNumber(3)
-  $14.BleHealth get bleHealth => $_getN(1);
+  $15.BleHealth get bleHealth => $_getN(2);
   @$pb.TagNumber(3)
-  set bleHealth($14.BleHealth v) { $_setField(3, v); }
+  set bleHealth($15.BleHealth v) { $_setField(3, v); }
   @$pb.TagNumber(3)
-  $core.bool hasBleHealth() => $_has(1);
+  $core.bool hasBleHealth() => $_has(2);
   @$pb.TagNumber(3)
   void clearBleHealth() => $_clearField(3);
   @$pb.TagNumber(3)
-  $14.BleHealth ensureBleHealth() => $_ensure(1);
+  $15.BleHealth ensureBleHealth() => $_ensure(2);
 
   @$pb.TagNumber(4)
-  $14.BleAdv get bleAdv => $_getN(2);
+  $15.BleAdv get bleAdv => $_getN(3);
   @$pb.TagNumber(4)
-  set bleAdv($14.BleAdv v) { $_setField(4, v); }
+  set bleAdv($15.BleAdv v) { $_setField(4, v); }
   @$pb.TagNumber(4)
-  $core.bool hasBleAdv() => $_has(2);
+  $core.bool hasBleAdv() => $_has(3);
   @$pb.TagNumber(4)
   void clearBleAdv() => $_clearField(4);
   @$pb.TagNumber(4)
-  $14.BleAdv ensureBleAdv() => $_ensure(2);
+  $15.BleAdv ensureBleAdv() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  $15.TcpProvReq get provReq => $_getN(3);
+  $16.TcpProvReq get provReq => $_getN(4);
   @$pb.TagNumber(5)
-  set provReq($15.TcpProvReq v) { $_setField(5, v); }
+  set provReq($16.TcpProvReq v) { $_setField(5, v); }
   @$pb.TagNumber(5)
-  $core.bool hasProvReq() => $_has(3);
+  $core.bool hasProvReq() => $_has(4);
   @$pb.TagNumber(5)
   void clearProvReq() => $_clearField(5);
   @$pb.TagNumber(5)
-  $15.TcpProvReq ensureProvReq() => $_ensure(3);
+  $16.TcpProvReq ensureProvReq() => $_ensure(4);
 
   @$pb.TagNumber(6)
-  $7.Req get pcmReq => $_getN(4);
+  $7.Req get pcmReq => $_getN(5);
   @$pb.TagNumber(6)
   set pcmReq($7.Req v) { $_setField(6, v); }
   @$pb.TagNumber(6)
-  $core.bool hasPcmReq() => $_has(4);
+  $core.bool hasPcmReq() => $_has(5);
   @$pb.TagNumber(6)
   void clearPcmReq() => $_clearField(6);
   @$pb.TagNumber(6)
-  $7.Req ensurePcmReq() => $_ensure(4);
+  $7.Req ensurePcmReq() => $_ensure(5);
 
   @$pb.TagNumber(7)
-  $7.Ack get pcmAck => $_getN(5);
+  $7.Ack get pcmAck => $_getN(6);
   @$pb.TagNumber(7)
   set pcmAck($7.Ack v) { $_setField(7, v); }
   @$pb.TagNumber(7)
-  $core.bool hasPcmAck() => $_has(5);
+  $core.bool hasPcmAck() => $_has(6);
   @$pb.TagNumber(7)
   void clearPcmAck() => $_clearField(7);
   @$pb.TagNumber(7)
-  $7.Ack ensurePcmAck() => $_ensure(5);
+  $7.Ack ensurePcmAck() => $_ensure(6);
 
   @$pb.TagNumber(9)
-  $15.TcpHealth get tcpHealth => $_getN(6);
+  $16.TcpHealth get tcpHealth => $_getN(7);
   @$pb.TagNumber(9)
-  set tcpHealth($15.TcpHealth v) { $_setField(9, v); }
+  set tcpHealth($16.TcpHealth v) { $_setField(9, v); }
   @$pb.TagNumber(9)
-  $core.bool hasTcpHealth() => $_has(6);
+  $core.bool hasTcpHealth() => $_has(7);
   @$pb.TagNumber(9)
   void clearTcpHealth() => $_clearField(9);
   @$pb.TagNumber(9)
-  $15.TcpHealth ensureTcpHealth() => $_ensure(6);
+  $16.TcpHealth ensureTcpHealth() => $_ensure(7);
 
   @$pb.TagNumber(10)
-  $16.BridgeReq get bridgeReq => $_getN(7);
+  $17.BridgeReq get bridgeReq => $_getN(8);
   @$pb.TagNumber(10)
-  set bridgeReq($16.BridgeReq v) { $_setField(10, v); }
+  set bridgeReq($17.BridgeReq v) { $_setField(10, v); }
   @$pb.TagNumber(10)
-  $core.bool hasBridgeReq() => $_has(7);
+  $core.bool hasBridgeReq() => $_has(8);
   @$pb.TagNumber(10)
   void clearBridgeReq() => $_clearField(10);
   @$pb.TagNumber(10)
-  $16.BridgeReq ensureBridgeReq() => $_ensure(7);
+  $17.BridgeReq ensureBridgeReq() => $_ensure(8);
+
+  @$pb.TagNumber(11)
+  $16.TcpProvStatus get tcpProvStatus => $_getN(9);
+  @$pb.TagNumber(11)
+  set tcpProvStatus($16.TcpProvStatus v) { $_setField(11, v); }
+  @$pb.TagNumber(11)
+  $core.bool hasTcpProvStatus() => $_has(9);
+  @$pb.TagNumber(11)
+  void clearTcpProvStatus() => $_clearField(11);
+  @$pb.TagNumber(11)
+  $16.TcpProvStatus ensureTcpProvStatus() => $_ensure(9);
 
   @$pb.TagNumber(99)
-  DfuType get dfuType => $_getN(8);
+  DfuType get dfuType => $_getN(10);
   @$pb.TagNumber(99)
   set dfuType(DfuType v) { $_setField(99, v); }
   @$pb.TagNumber(99)
-  $core.bool hasDfuType() => $_has(8);
+  $core.bool hasDfuType() => $_has(10);
   @$pb.TagNumber(99)
   void clearDfuType() => $_clearField(99);
 }

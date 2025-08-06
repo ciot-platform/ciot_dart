@@ -13,6 +13,25 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+class DataType extends $pb.ProtobufEnum {
+  static const DataType DATA_TYPE_UNKNOWN = DataType._(0, _omitEnumNames ? '' : 'DATA_TYPE_UNKNOWN');
+  static const DataType DATA_TYPE_HEALTH = DataType._(1, _omitEnumNames ? '' : 'DATA_TYPE_HEALTH');
+  static const DataType DATA_TYPE_PROV_STATUS = DataType._(2, _omitEnumNames ? '' : 'DATA_TYPE_PROV_STATUS');
+  static const DataType DATA_TYPE_DFU_TYPE = DataType._(99, _omitEnumNames ? '' : 'DATA_TYPE_DFU_TYPE');
+
+  static const $core.List<DataType> values = <DataType> [
+    DATA_TYPE_UNKNOWN,
+    DATA_TYPE_HEALTH,
+    DATA_TYPE_PROV_STATUS,
+    DATA_TYPE_DFU_TYPE,
+  ];
+
+  static final $core.Map<$core.int, DataType> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static DataType? valueOf($core.int value) => _byValue[value];
+
+  const DataType._(super.v, super.n);
+}
+
 /// HG Cmd Types
 class CmdType extends $pb.ProtobufEnum {
   static const CmdType CMD_TYPE_UNKNOWN = CmdType._(0, _omitEnumNames ? '' : 'CMD_TYPE_UNKNOWN');
@@ -20,10 +39,10 @@ class CmdType extends $pb.ProtobufEnum {
   static const CmdType CMD_TYPE_RESET = CmdType._(2, _omitEnumNames ? '' : 'CMD_TYPE_RESET');
   static const CmdType CMD_TYPE_DFU = CmdType._(3, _omitEnumNames ? '' : 'CMD_TYPE_DFU');
   static const CmdType CMD_TYPE_TOGGLE_AP = CmdType._(4, _omitEnumNames ? '' : 'CMD_TYPE_TOGGLE_AP');
-  static const CmdType CMD_TYPE_GET_IDENTITY = CmdType._(5, _omitEnumNames ? '' : 'CMD_TYPE_GET_IDENTITY');
-  static const CmdType CMD_TYPE_GET_HEALTH = CmdType._(6, _omitEnumNames ? '' : 'CMD_TYPE_GET_HEALTH');
+  /// CMD_TYPE_GET_IDENTITY = 5;                  // Get device identity data
+  /// CMD_TYPE_GET_HEALTH = 6;                    // Get health data
   static const CmdType CMD_TYPE_SET_DFU_TYPE = CmdType._(99, _omitEnumNames ? '' : 'CMD_TYPE_SET_DFU_TYPE');
-  static const CmdType CMD_TYPE_GET_DFU_TYPE = CmdType._(100, _omitEnumNames ? '' : 'CMD_TYPE_GET_DFU_TYPE');
+  /// CMD_TYPE_GET_DFU_TYPE = 100;                // Get DFU type cmd
   static const CmdType CMD_TYPE_DELETE_MIGRATED_SETTINGS = CmdType._(101, _omitEnumNames ? '' : 'CMD_TYPE_DELETE_MIGRATED_SETTINGS');
 
   static const $core.List<CmdType> values = <CmdType> [
@@ -32,10 +51,7 @@ class CmdType extends $pb.ProtobufEnum {
     CMD_TYPE_RESET,
     CMD_TYPE_DFU,
     CMD_TYPE_TOGGLE_AP,
-    CMD_TYPE_GET_IDENTITY,
-    CMD_TYPE_GET_HEALTH,
     CMD_TYPE_SET_DFU_TYPE,
-    CMD_TYPE_GET_DFU_TYPE,
     CMD_TYPE_DELETE_MIGRATED_SETTINGS,
   ];
 
