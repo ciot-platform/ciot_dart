@@ -18,13 +18,12 @@ class HttpClient implements Iface {
   @override
   Stream<Event> get onEvent => _onEventController.stream;
 
-  late HttpClientStatus _status;
-  late HttpClientCfg _cfg;
+  final HttpClientStatus _status = HttpClientStatus();
+  HttpClientCfg? _cfg;
+
   final StreamController<Event> _onEventController = StreamController<Event>();
 
-  HttpClient(this.info) {
-    _status = HttpClientStatus();
-  }
+  HttpClient(this.info);
 
   Either<ErrorBase, Unit> start(HttpClientCfg config)
   {
@@ -47,7 +46,7 @@ class HttpClient implements Iface {
 
     switch (data.httpClient.whichType()) {
       case HttpClientData_Type.config:
-        data.httpClient.config = _cfg;
+        data.httpClient.config = _cfg ?? HttpClientCfg();
         break;
       case HttpClientData_Type.status:
         data.httpClient.status = _status;
@@ -81,8 +80,11 @@ class HttpClient implements Iface {
 
   @override
   Future<Either<ErrorBase, Uint8List>> sendData(Uint8List data) async {
+    if(_cfg == null) {
+      return Either.left(ErrorNullConfig());
+    }
     try {
-      final uri = Uri.parse(_cfg.url);
+      final uri = Uri.parse(_cfg!.url);
       return httpRequest(uri, data);
     } on Exception catch(e) {
       return Either.left(ErrorException(e));
@@ -90,27 +92,37 @@ class HttpClient implements Iface {
   }
 
   Future<Either<ErrorBase, Uint8List>> httpRequest(Uri uri, Uint8List data) async {
-    var duration = Duration(milliseconds: _cfg.timeout);
+    if(_cfg == null) {
+      return Either.left(ErrorNullConfig());
+    }
+
+    var duration = Duration(milliseconds: _cfg!.timeout);
     http.Response response;
 
     try {
-      switch (_cfg.method) {
+      switch (_cfg!.method) {
         case HttpClientMethod.HTTP_METHOD_HEAD:
           response = await http.head(uri).timeout(duration);
+          break;
         case HttpClientMethod.HTTP_METHOD_GET:
           response = await http.get(uri).timeout(duration);
+          break;
         case HttpClientMethod.HTTP_METHOD_POST:
           response = await http.post(uri, body: data).timeout(duration);
+          break;
         case HttpClientMethod.HTTP_METHOD_PUT:
           response = await http.put(uri, body: data).timeout(duration);
+          break;
         case HttpClientMethod.HTTP_METHOD_PATCH:
           response = await http.patch(uri, body: data).timeout(duration);
+          break;
         case HttpClientMethod.HTTP_METHOD_DELETE:
           response = await http.delete(uri, body: data).timeout(duration);
+          break;
         default:
           return Either.left(ErrorNotImplemented());
       }
-
+      
       if(response.statusCode == HttpStatus.ok ||
         response.statusCode == HttpStatus.accepted ||
         response.statusCode == HttpStatus.created)

@@ -24,6 +24,8 @@ class ErrorTimeout implements ErrorBase {}
 
 class ErrorConnection implements ErrorBase {}
 
+class ErrorNullConfig implements ErrorBase {}
+
 class ErrorCiotRequest implements ErrorBase {
   final Err error;
   ErrorCiotRequest(this.error);
