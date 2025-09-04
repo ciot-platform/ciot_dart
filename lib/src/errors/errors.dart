@@ -22,3 +22,5 @@ class ErrorNotFound implements ErrorBase {}
 class ErrorTimeout implements ErrorBase {}
 
 class ErrorConnection implements ErrorBase {}
+
+class ErrorNullConfig implements ErrorBase {}
