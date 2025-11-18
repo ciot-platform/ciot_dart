@@ -63,5 +63,20 @@ class OtaState extends $pb.ProtobufEnum {
   const OtaState._(super.v, super.n);
 }
 
+class OtaCmd extends $pb.ProtobufEnum {
+  static const OtaCmd OTA_CMD_NONE = OtaCmd._(0, _omitEnumNames ? '' : 'OTA_CMD_NONE');
+  static const OtaCmd OTA_CMD_ROLLBACK = OtaCmd._(1, _omitEnumNames ? '' : 'OTA_CMD_ROLLBACK');
+
+  static const $core.List<OtaCmd> values = <OtaCmd> [
+    OTA_CMD_NONE,
+    OTA_CMD_ROLLBACK,
+  ];
+
+  static final $core.Map<$core.int, OtaCmd> _byValue = $pb.ProtobufEnum.initByValue(values);
+  static OtaCmd? valueOf($core.int value) => _byValue[value];
+
+  const OtaCmd._(super.v, super.n);
+}
+
 
 const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

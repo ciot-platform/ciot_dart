@@ -19,13 +19,15 @@ class State extends $pb.ProtobufEnum {
   static const State STATE_STARTED = State._(1, _omitEnumNames ? '' : 'STATE_STARTED');
   static const State STATE_STARTING = State._(2, _omitEnumNames ? '' : 'STATE_STARTING');
   static const State STATE_BUSY = State._(3, _omitEnumNames ? '' : 'STATE_BUSY');
-  static const State STATE_ERROR = State._(4, _omitEnumNames ? '' : 'STATE_ERROR');
+  static const State STATE_PENDING_EVENT = State._(4, _omitEnumNames ? '' : 'STATE_PENDING_EVENT');
+  static const State STATE_ERROR = State._(5, _omitEnumNames ? '' : 'STATE_ERROR');
 
   static const $core.List<State> values = <State> [
     STATE_IDLE,
     STATE_STARTED,
     STATE_STARTING,
     STATE_BUSY,
+    STATE_PENDING_EVENT,
     STATE_ERROR,
   ];
 

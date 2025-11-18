@@ -33,13 +33,13 @@ class WifiType extends $pb.ProtobufEnum {
 class WifiScanState extends $pb.ProtobufEnum {
   static const WifiScanState WIFI_SCAN_STATE_IDLE = WifiScanState._(0, _omitEnumNames ? '' : 'WIFI_SCAN_STATE_IDLE');
   static const WifiScanState WIFI_SCAN_STATE_SCANNING = WifiScanState._(1, _omitEnumNames ? '' : 'WIFI_SCAN_STATE_SCANNING');
-  static const WifiScanState WIFI_SCAN_STATE_SCANNED = WifiScanState._(2, _omitEnumNames ? '' : 'WIFI_SCAN_STATE_SCANNED');
+  static const WifiScanState WIFI_SCAN_STATE_DONE = WifiScanState._(2, _omitEnumNames ? '' : 'WIFI_SCAN_STATE_DONE');
   static const WifiScanState WIFI_SCAN_STATE_ERROR = WifiScanState._(3, _omitEnumNames ? '' : 'WIFI_SCAN_STATE_ERROR');
 
   static const $core.List<WifiScanState> values = <WifiScanState> [
     WIFI_SCAN_STATE_IDLE,
     WIFI_SCAN_STATE_SCANNING,
-    WIFI_SCAN_STATE_SCANNED,
+    WIFI_SCAN_STATE_DONE,
     WIFI_SCAN_STATE_ERROR,
   ];
 

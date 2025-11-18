@@ -21,14 +21,16 @@ const State$json = {
     {'1': 'STATE_STARTED', '2': 1},
     {'1': 'STATE_STARTING', '2': 2},
     {'1': 'STATE_BUSY', '2': 3},
-    {'1': 'STATE_ERROR', '2': 4},
+    {'1': 'STATE_PENDING_EVENT', '2': 4},
+    {'1': 'STATE_ERROR', '2': 5},
   ],
 };
 
 /// Descriptor for `State`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List stateDescriptor = $convert.base64Decode(
     'CgVTdGF0ZRIOCgpTVEFURV9JRExFEAASEQoNU1RBVEVfU1RBUlRFRBABEhIKDlNUQVRFX1NUQV'
-    'JUSU5HEAISDgoKU1RBVEVfQlVTWRADEg8KC1NUQVRFX0VSUk9SEAQ=');
+    'JUSU5HEAISDgoKU1RBVEVfQlVTWRADEhcKE1NUQVRFX1BFTkRJTkdfRVZFTlQQBBIPCgtTVEFU'
+    'RV9FUlJPUhAF');
 
 @$core.Deprecated('Use serializationTypeDescriptor instead')
 const SerializationType$json = {

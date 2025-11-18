@@ -45,11 +45,6 @@ const Event$json = {
     {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.Ciot.EventType', '10': 'type'},
     {'1': 'msg', '3': 2, '4': 1, '5': 11, '6': '.Ciot.Msg', '9': 0, '10': 'msg'},
     {'1': 'raw', '3': 3, '4': 1, '5': 12, '9': 0, '10': 'raw'},
-    {'1': 'pcm_ack', '3': 4, '4': 1, '5': 11, '6': '.Pcm.Ack', '9': 0, '10': 'pcmAck'},
-    {'1': 'prov_available', '3': 5, '4': 1, '5': 11, '6': '.Hg.TcpProvAvailable', '9': 0, '10': 'provAvailable'},
-    {'1': 'tcp_health', '3': 6, '4': 1, '5': 11, '6': '.Hg.TcpHealth', '9': 0, '10': 'tcpHealth'},
-    {'1': 'ble_health', '3': 7, '4': 1, '5': 11, '6': '.Hg.BleHealth', '9': 0, '10': 'bleHealth'},
-    {'1': 'ble_adv', '3': 8, '4': 1, '5': 11, '6': '.Hg.BleAdv', '9': 0, '10': 'bleAdv'},
   ],
   '8': [
     {'1': 'data'},
@@ -59,10 +54,5 @@ const Event$json = {
 /// Descriptor for `Event`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List eventDescriptor = $convert.base64Decode(
     'CgVFdmVudBIjCgR0eXBlGAEgASgOMg8uQ2lvdC5FdmVudFR5cGVSBHR5cGUSHQoDbXNnGAIgAS'
-    'gLMgkuQ2lvdC5Nc2dIAFIDbXNnEhIKA3JhdxgDIAEoDEgAUgNyYXcSIwoHcGNtX2FjaxgEIAEo'
-    'CzIILlBjbS5BY2tIAFIGcGNtQWNrEj0KDnByb3ZfYXZhaWxhYmxlGAUgASgLMhQuSGcuVGNwUH'
-    'JvdkF2YWlsYWJsZUgAUg1wcm92QXZhaWxhYmxlEi4KCnRjcF9oZWFsdGgYBiABKAsyDS5IZy5U'
-    'Y3BIZWFsdGhIAFIJdGNwSGVhbHRoEi4KCmJsZV9oZWFsdGgYByABKAsyDS5IZy5CbGVIZWFsdG'
-    'hIAFIJYmxlSGVhbHRoEiUKB2JsZV9hZHYYCCABKAsyCi5IZy5CbGVBZHZIAFIGYmxlQWR2QgYK'
-    'BGRhdGE=');
+    'gLMgkuQ2lvdC5Nc2dIAFIDbXNnEhIKA3JhdxgDIAEoDEgAUgNyYXdCBgoEZGF0YQ==');
 

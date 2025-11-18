@@ -15,7 +15,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'errors.pbenum.dart' as $0;
 import 'iface.pb.dart' as $1;
-import 'msg_data.pb.dart' as $24;
+import 'msg_data.pb.dart' as $23;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
@@ -25,7 +25,7 @@ class Msg extends $pb.GeneratedMessage {
     $core.int? id,
     $1.IfaceInfo? iface,
     $0.Err? error,
-    $24.MsgData? data,
+    $23.MsgData? data,
   }) {
     final $result = create();
     if (id != null) {
@@ -50,7 +50,7 @@ class Msg extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'id', $pb.PbFieldType.OU3)
     ..aOM<$1.IfaceInfo>(2, _omitFieldNames ? '' : 'iface', subBuilder: $1.IfaceInfo.create)
     ..e<$0.Err>(3, _omitFieldNames ? '' : 'error', $pb.PbFieldType.OE, defaultOrMaker: $0.Err.ERR_OK, valueOf: $0.Err.valueOf, enumValues: $0.Err.values)
-    ..aOM<$24.MsgData>(4, _omitFieldNames ? '' : 'data', subBuilder: $24.MsgData.create)
+    ..aOM<$23.MsgData>(4, _omitFieldNames ? '' : 'data', subBuilder: $23.MsgData.create)
     ..hasRequiredFields = false
   ;
 
@@ -105,15 +105,15 @@ class Msg extends $pb.GeneratedMessage {
   void clearError() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $24.MsgData get data => $_getN(3);
+  $23.MsgData get data => $_getN(3);
   @$pb.TagNumber(4)
-  set data($24.MsgData v) { $_setField(4, v); }
+  set data($23.MsgData v) { $_setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasData() => $_has(3);
   @$pb.TagNumber(4)
   void clearData() => $_clearField(4);
   @$pb.TagNumber(4)
-  $24.MsgData ensureData() => $_ensure(3);
+  $23.MsgData ensureData() => $_ensure(3);
 }
 
 

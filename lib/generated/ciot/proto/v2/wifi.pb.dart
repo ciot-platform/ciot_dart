@@ -541,7 +541,9 @@ class WifiReqGetAp extends $pb.GeneratedMessage {
 
 enum WifiReq_Type {
   scan, 
+  scanResult, 
   getAp, 
+  apInfo, 
   notSet
 }
 
@@ -549,14 +551,22 @@ enum WifiReq_Type {
 class WifiReq extends $pb.GeneratedMessage {
   factory WifiReq({
     WifiReqScan? scan,
+    WifiReqScanResult? scanResult,
     WifiReqGetAp? getAp,
+    WifiApInfo? apInfo,
   }) {
     final $result = create();
     if (scan != null) {
       $result.scan = scan;
     }
+    if (scanResult != null) {
+      $result.scanResult = scanResult;
+    }
     if (getAp != null) {
       $result.getAp = getAp;
+    }
+    if (apInfo != null) {
+      $result.apInfo = apInfo;
     }
     return $result;
   }
@@ -566,13 +576,17 @@ class WifiReq extends $pb.GeneratedMessage {
 
   static const $core.Map<$core.int, WifiReq_Type> _WifiReq_TypeByTag = {
     1 : WifiReq_Type.scan,
-    2 : WifiReq_Type.getAp,
+    2 : WifiReq_Type.scanResult,
+    3 : WifiReq_Type.getAp,
+    4 : WifiReq_Type.apInfo,
     0 : WifiReq_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WifiReq', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..oo(0, [1, 2])
+    ..oo(0, [1, 2, 3, 4])
     ..aOM<WifiReqScan>(1, _omitFieldNames ? '' : 'scan', subBuilder: WifiReqScan.create)
-    ..aOM<WifiReqGetAp>(2, _omitFieldNames ? '' : 'getAp', subBuilder: WifiReqGetAp.create)
+    ..aOM<WifiReqScanResult>(2, _omitFieldNames ? '' : 'scanResult', subBuilder: WifiReqScanResult.create)
+    ..aOM<WifiReqGetAp>(3, _omitFieldNames ? '' : 'getAp', subBuilder: WifiReqGetAp.create)
+    ..aOM<WifiApInfo>(4, _omitFieldNames ? '' : 'apInfo', subBuilder: WifiApInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -612,99 +626,37 @@ class WifiReq extends $pb.GeneratedMessage {
   WifiReqScan ensureScan() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  WifiReqGetAp get getAp => $_getN(1);
+  WifiReqScanResult get scanResult => $_getN(1);
   @$pb.TagNumber(2)
-  set getAp(WifiReqGetAp v) { $_setField(2, v); }
+  set scanResult(WifiReqScanResult v) { $_setField(2, v); }
   @$pb.TagNumber(2)
-  $core.bool hasGetAp() => $_has(1);
+  $core.bool hasScanResult() => $_has(1);
   @$pb.TagNumber(2)
-  void clearGetAp() => $_clearField(2);
+  void clearScanResult() => $_clearField(2);
   @$pb.TagNumber(2)
-  WifiReqGetAp ensureGetAp() => $_ensure(1);
-}
+  WifiReqScanResult ensureScanResult() => $_ensure(1);
 
-enum WifiResp_Type {
-  scan, 
-  getAp, 
-  notSet
-}
+  @$pb.TagNumber(3)
+  WifiReqGetAp get getAp => $_getN(2);
+  @$pb.TagNumber(3)
+  set getAp(WifiReqGetAp v) { $_setField(3, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasGetAp() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearGetAp() => $_clearField(3);
+  @$pb.TagNumber(3)
+  WifiReqGetAp ensureGetAp() => $_ensure(2);
 
-/// Message representing a Wi-Fi response.
-class WifiResp extends $pb.GeneratedMessage {
-  factory WifiResp({
-    WifiReqScanResult? scan,
-    WifiApInfo? getAp,
-  }) {
-    final $result = create();
-    if (scan != null) {
-      $result.scan = scan;
-    }
-    if (getAp != null) {
-      $result.getAp = getAp;
-    }
-    return $result;
-  }
-  WifiResp._() : super();
-  factory WifiResp.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory WifiResp.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static const $core.Map<$core.int, WifiResp_Type> _WifiResp_TypeByTag = {
-    1 : WifiResp_Type.scan,
-    2 : WifiResp_Type.getAp,
-    0 : WifiResp_Type.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WifiResp', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..oo(0, [1, 2])
-    ..aOM<WifiReqScanResult>(1, _omitFieldNames ? '' : 'scan', subBuilder: WifiReqScanResult.create)
-    ..aOM<WifiApInfo>(2, _omitFieldNames ? '' : 'getAp', subBuilder: WifiApInfo.create)
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  WifiResp clone() => WifiResp()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  WifiResp copyWith(void Function(WifiResp) updates) => super.copyWith((message) => updates(message as WifiResp)) as WifiResp;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static WifiResp create() => WifiResp._();
-  WifiResp createEmptyInstance() => create();
-  static $pb.PbList<WifiResp> createRepeated() => $pb.PbList<WifiResp>();
-  @$core.pragma('dart2js:noInline')
-  static WifiResp getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WifiResp>(create);
-  static WifiResp? _defaultInstance;
-
-  WifiResp_Type whichType() => _WifiResp_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
-
-  @$pb.TagNumber(1)
-  WifiReqScanResult get scan => $_getN(0);
-  @$pb.TagNumber(1)
-  set scan(WifiReqScanResult v) { $_setField(1, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasScan() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearScan() => $_clearField(1);
-  @$pb.TagNumber(1)
-  WifiReqScanResult ensureScan() => $_ensure(0);
-
-  @$pb.TagNumber(2)
-  WifiApInfo get getAp => $_getN(1);
-  @$pb.TagNumber(2)
-  set getAp(WifiApInfo v) { $_setField(2, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasGetAp() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearGetAp() => $_clearField(2);
-  @$pb.TagNumber(2)
-  WifiApInfo ensureGetAp() => $_ensure(1);
+  @$pb.TagNumber(4)
+  WifiApInfo get apInfo => $_getN(3);
+  @$pb.TagNumber(4)
+  set apInfo(WifiApInfo v) { $_setField(4, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasApInfo() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearApInfo() => $_clearField(4);
+  @$pb.TagNumber(4)
+  WifiApInfo ensureApInfo() => $_ensure(3);
 }
 
 enum WifiData_Type {
@@ -712,7 +664,6 @@ enum WifiData_Type {
   config, 
   status, 
   request, 
-  response, 
   info, 
   notSet
 }
@@ -724,7 +675,6 @@ class WifiData extends $pb.GeneratedMessage {
     WifiCfg? config,
     WifiStatus? status,
     WifiReq? request,
-    WifiResp? response,
     WifiInfo? info,
   }) {
     final $result = create();
@@ -740,9 +690,6 @@ class WifiData extends $pb.GeneratedMessage {
     if (request != null) {
       $result.request = request;
     }
-    if (response != null) {
-      $result.response = response;
-    }
     if (info != null) {
       $result.info = info;
     }
@@ -757,18 +704,16 @@ class WifiData extends $pb.GeneratedMessage {
     2 : WifiData_Type.config,
     3 : WifiData_Type.status,
     4 : WifiData_Type.request,
-    5 : WifiData_Type.response,
-    6 : WifiData_Type.info,
+    5 : WifiData_Type.info,
     0 : WifiData_Type.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WifiData', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..oo(0, [1, 2, 3, 4, 5, 6])
+    ..oo(0, [1, 2, 3, 4, 5])
     ..aOM<WifiStop>(1, _omitFieldNames ? '' : 'stop', subBuilder: WifiStop.create)
     ..aOM<WifiCfg>(2, _omitFieldNames ? '' : 'config', subBuilder: WifiCfg.create)
     ..aOM<WifiStatus>(3, _omitFieldNames ? '' : 'status', subBuilder: WifiStatus.create)
     ..aOM<WifiReq>(4, _omitFieldNames ? '' : 'request', subBuilder: WifiReq.create)
-    ..aOM<WifiResp>(5, _omitFieldNames ? '' : 'response', subBuilder: WifiResp.create)
-    ..aOM<WifiInfo>(6, _omitFieldNames ? '' : 'info', subBuilder: WifiInfo.create)
+    ..aOM<WifiInfo>(5, _omitFieldNames ? '' : 'info', subBuilder: WifiInfo.create)
     ..hasRequiredFields = false
   ;
 
@@ -841,26 +786,15 @@ class WifiData extends $pb.GeneratedMessage {
   WifiReq ensureRequest() => $_ensure(3);
 
   @$pb.TagNumber(5)
-  WifiResp get response => $_getN(4);
+  WifiInfo get info => $_getN(4);
   @$pb.TagNumber(5)
-  set response(WifiResp v) { $_setField(5, v); }
+  set info(WifiInfo v) { $_setField(5, v); }
   @$pb.TagNumber(5)
-  $core.bool hasResponse() => $_has(4);
+  $core.bool hasInfo() => $_has(4);
   @$pb.TagNumber(5)
-  void clearResponse() => $_clearField(5);
+  void clearInfo() => $_clearField(5);
   @$pb.TagNumber(5)
-  WifiResp ensureResponse() => $_ensure(4);
-
-  @$pb.TagNumber(6)
-  WifiInfo get info => $_getN(5);
-  @$pb.TagNumber(6)
-  set info(WifiInfo v) { $_setField(6, v); }
-  @$pb.TagNumber(6)
-  $core.bool hasInfo() => $_has(5);
-  @$pb.TagNumber(6)
-  void clearInfo() => $_clearField(6);
-  @$pb.TagNumber(6)
-  WifiInfo ensureInfo() => $_ensure(5);
+  WifiInfo ensureInfo() => $_ensure(4);
 }
 
 

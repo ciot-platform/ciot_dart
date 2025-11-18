@@ -15,6 +15,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'mbus.pb.dart' as $4;
 import 'mbus_server.pbenum.dart';
+import 'uart.pb.dart' as $3;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
@@ -57,10 +58,14 @@ class MbusServerStop extends $pb.GeneratedMessage {
 class MbusServerRtuCfg extends $pb.GeneratedMessage {
   factory MbusServerRtuCfg({
     $core.int? serverId,
+    $3.UartCfg? uart,
   }) {
     final $result = create();
     if (serverId != null) {
       $result.serverId = serverId;
+    }
+    if (uart != null) {
+      $result.uart = uart;
     }
     return $result;
   }
@@ -70,6 +75,7 @@ class MbusServerRtuCfg extends $pb.GeneratedMessage {
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MbusServerRtuCfg', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
     ..a<$core.int>(1, _omitFieldNames ? '' : 'serverId', $pb.PbFieldType.OU3)
+    ..aOM<$3.UartCfg>(2, _omitFieldNames ? '' : 'uart', subBuilder: $3.UartCfg.create)
     ..hasRequiredFields = false
   ;
 
@@ -102,6 +108,17 @@ class MbusServerRtuCfg extends $pb.GeneratedMessage {
   $core.bool hasServerId() => $_has(0);
   @$pb.TagNumber(1)
   void clearServerId() => $_clearField(1);
+
+  @$pb.TagNumber(2)
+  $3.UartCfg get uart => $_getN(1);
+  @$pb.TagNumber(2)
+  set uart($3.UartCfg v) { $_setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasUart() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearUart() => $_clearField(2);
+  @$pb.TagNumber(2)
+  $3.UartCfg ensureUart() => $_ensure(1);
 }
 
 /// Message representing Modbus TCP configuration

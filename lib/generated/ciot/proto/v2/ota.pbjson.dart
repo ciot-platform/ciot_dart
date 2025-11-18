@@ -54,6 +54,19 @@ final $typed_data.Uint8List otaStateDescriptor = $convert.base64Decode(
     'X0JPT1RfUEFSVElUSU9OEAgSGAoUT1RBX1NUQVRFX1NUQVRFX0RPTkUQCRITCg9PVEFfU1RBVE'
     'VfRVJST1IQCg==');
 
+@$core.Deprecated('Use otaCmdDescriptor instead')
+const OtaCmd$json = {
+  '1': 'OtaCmd',
+  '2': [
+    {'1': 'OTA_CMD_NONE', '2': 0},
+    {'1': 'OTA_CMD_ROLLBACK', '2': 1},
+  ],
+};
+
+/// Descriptor for `OtaCmd`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List otaCmdDescriptor = $convert.base64Decode(
+    'CgZPdGFDbWQSEAoMT1RBX0NNRF9OT05FEAASFAoQT1RBX0NNRF9ST0xMQkFDSxAB');
+
 @$core.Deprecated('Use otaStopDescriptor instead')
 const OtaStop$json = {
   '1': 'OtaStop',
@@ -99,11 +112,17 @@ final $typed_data.Uint8List otaStatusDescriptor = $convert.base64Decode(
 @$core.Deprecated('Use otaReqDescriptor instead')
 const OtaReq$json = {
   '1': 'OtaReq',
+  '2': [
+    {'1': 'cmd', '3': 1, '4': 1, '5': 14, '6': '.Ciot.OtaCmd', '9': 0, '10': 'cmd'},
+  ],
+  '8': [
+    {'1': 'type'},
+  ],
 };
 
 /// Descriptor for `OtaReq`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List otaReqDescriptor = $convert.base64Decode(
-    'CgZPdGFSZXE=');
+    'CgZPdGFSZXESIAoDY21kGAEgASgOMgwuQ2lvdC5PdGFDbWRIAFIDY21kQgYKBHR5cGU=');
 
 @$core.Deprecated('Use otaDataDescriptor instead')
 const OtaData$json = {

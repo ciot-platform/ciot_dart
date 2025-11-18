@@ -238,14 +238,33 @@ class OtaStatus extends $pb.GeneratedMessage {
   void clearImageWritten() => $_clearField(4);
 }
 
+enum OtaReq_Type {
+  cmd, 
+  notSet
+}
+
 /// Message representing an OTA request.
 class OtaReq extends $pb.GeneratedMessage {
-  factory OtaReq() => create();
+  factory OtaReq({
+    OtaCmd? cmd,
+  }) {
+    final $result = create();
+    if (cmd != null) {
+      $result.cmd = cmd;
+    }
+    return $result;
+  }
   OtaReq._() : super();
   factory OtaReq.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
   factory OtaReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
+  static const $core.Map<$core.int, OtaReq_Type> _OtaReq_TypeByTag = {
+    1 : OtaReq_Type.cmd,
+    0 : OtaReq_Type.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'OtaReq', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
+    ..oo(0, [1])
+    ..e<OtaCmd>(1, _omitFieldNames ? '' : 'cmd', $pb.PbFieldType.OE, defaultOrMaker: OtaCmd.OTA_CMD_NONE, valueOf: OtaCmd.valueOf, enumValues: OtaCmd.values)
     ..hasRequiredFields = false
   ;
 
@@ -269,6 +288,18 @@ class OtaReq extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static OtaReq getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<OtaReq>(create);
   static OtaReq? _defaultInstance;
+
+  OtaReq_Type whichType() => _OtaReq_TypeByTag[$_whichOneof(0)]!;
+  void clearType() => $_clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  OtaCmd get cmd => $_getN(0);
+  @$pb.TagNumber(1)
+  set cmd(OtaCmd v) { $_setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCmd() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCmd() => $_clearField(1);
 }
 
 enum OtaData_Type {

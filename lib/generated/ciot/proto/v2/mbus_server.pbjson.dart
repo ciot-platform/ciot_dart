@@ -42,12 +42,14 @@ const MbusServerRtuCfg$json = {
   '1': 'MbusServerRtuCfg',
   '2': [
     {'1': 'server_id', '3': 1, '4': 1, '5': 13, '10': 'serverId'},
+    {'1': 'uart', '3': 2, '4': 1, '5': 11, '6': '.Ciot.UartCfg', '10': 'uart'},
   ],
 };
 
 /// Descriptor for `MbusServerRtuCfg`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mbusServerRtuCfgDescriptor = $convert.base64Decode(
-    'ChBNYnVzU2VydmVyUnR1Q2ZnEhsKCXNlcnZlcl9pZBgBIAEoDVIIc2VydmVySWQ=');
+    'ChBNYnVzU2VydmVyUnR1Q2ZnEhsKCXNlcnZlcl9pZBgBIAEoDVIIc2VydmVySWQSIQoEdWFydB'
+    'gCIAEoCzINLkNpb3QuVWFydENmZ1IEdWFydA==');
 
 @$core.Deprecated('Use mbusServerTcpCfgDescriptor instead')
 const MbusServerTcpCfg$json = {
