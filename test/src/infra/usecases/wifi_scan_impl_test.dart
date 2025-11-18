@@ -1,4 +1,3 @@
-import 'package:ciot_dart/generated/ciot/proto/v2/iface.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/msg.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/msg_data.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/wifi.pb.dart';
