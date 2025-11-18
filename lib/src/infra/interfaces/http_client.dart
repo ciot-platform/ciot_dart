@@ -2,16 +2,15 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 
-import 'package:ciot_dart/src/errors/errors.dart';
+import 'package:ciot_dart/ciot.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/event.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/http_client.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/iface.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/msg_data.pb.dart';
-import 'package:ciot_dart/src/domain/interfaces/iface.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:http/http.dart' as http;
 
-class HttpClient implements Iface {
+class HttpClient extends IfaceBase {
   @override
   IfaceInfo info;
 
