@@ -1,0 +1,57 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "flutter: pub get",
+            "type": "shell",
+            "command": "flutter pub get",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "flutter: analyze",
+            "type": "shell",
+            "command": "flutter analyze",
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "flutter: test",
+            "type": "shell",
+            "command": "flutter test",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "flutter: test with coverage",
+            "type": "shell",
+            "command": "flutter test --coverage",
+            "problemMatcher": [],
+            "group": "test"
+        },
+        {
+            "label": "flutter: clean",
+            "type": "shell",
+            "command": "flutter clean",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "flutter: format",
+            "type": "shell",
+            "command": "dart format .",
+            "problemMatcher": [],
+            "group": "build"
+        },
+        {
+            "label": "dart: fix",
+            "type": "shell",
+            "command": "dart fix --apply",
+            "problemMatcher": [],
+            "group": "build"
+        }
+    ]
+}
