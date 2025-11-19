@@ -171,7 +171,7 @@ class _GpioTestScreenState extends State<GpioTestScreen> {
                                   vertical: 6,
                                 ),
                                 decoration: BoxDecoration(
-                                  color: Colors.green.withOpacity(0.2),
+                                  color: Colors.green.withValues(alpha: 0.2),
                                   borderRadius: BorderRadius.circular(12),
                                   border: Border.all(color: Colors.green),
                                 ),
@@ -292,7 +292,7 @@ class _OutputGpioTile extends StatelessWidget {
         width: 48,
         height: 48,
         decoration: BoxDecoration(
-          color: isHigh ? Colors.green.withOpacity(0.2) : Colors.grey.withOpacity(0.2),
+          color: isHigh ? Colors.green.withValues(alpha: 0.2) : Colors.grey.withValues(alpha: 0.2),
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: isHigh ? Colors.green : Colors.grey,
@@ -321,7 +321,7 @@ class _OutputGpioTile extends StatelessWidget {
       trailing: Switch(
         value: isHigh,
         onChanged: onToggle,
-        activeColor: Colors.green,
+        activeTrackColor: Colors.green,
       ),
     );
   }
@@ -344,7 +344,7 @@ class _InputGpioTile extends StatelessWidget {
         width: 48,
         height: 48,
         decoration: BoxDecoration(
-          color: isHigh ? Colors.blue.withOpacity(0.2) : Colors.grey.withOpacity(0.2),
+          color: isHigh ? Colors.blue.withValues(alpha: 0.2) : Colors.grey.withValues(alpha: 0.2),
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: isHigh ? Colors.blue : Colors.grey,
@@ -373,7 +373,7 @@ class _InputGpioTile extends StatelessWidget {
       trailing: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
         decoration: BoxDecoration(
-          color: isHigh ? Colors.blue.withOpacity(0.2) : Colors.grey.withOpacity(0.2),
+          color: isHigh ? Colors.blue.withValues(alpha: 0.2) : Colors.grey.withValues(alpha: 0.2),
           borderRadius: BorderRadius.circular(16),
           border: Border.all(
             color: isHigh ? Colors.blue : Colors.grey,
