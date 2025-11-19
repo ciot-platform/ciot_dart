@@ -1,0 +1,133 @@
+name: Auto Release
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+    inputs:
+      version:
+        description: "Version to release (leave empty to use pubspec.yaml version)"
+        required: false
+        type: string
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.24.x"
+          channel: "stable"
+
+      - name: Get version
+        id: version
+        run: |
+          if [ -n "${{ github.event.inputs.version }}" ]; then
+            VERSION="${{ github.event.inputs.version }}"
+          else
+            VERSION=$(grep '^version:' pubspec.yaml | sed 's/version: //')
+          fi
+          echo "version=v$VERSION" >> $GITHUB_OUTPUT
+          echo "raw_version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Using version: $VERSION"
+
+      - name: Check if tag exists
+        id: tag_check
+        run: |
+          if git rev-parse "${{ steps.version.outputs.version }}" >/dev/null 2>&1; then
+            echo "exists=true" >> $GITHUB_OUTPUT
+            echo "❌ Tag ${{ steps.version.outputs.version }} already exists"
+            exit 1
+          else
+            echo "exists=false" >> $GITHUB_OUTPUT
+            echo "✅ Tag ${{ steps.version.outputs.version }} is available"
+          fi
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      - name: Analyze code
+        run: flutter analyze --no-fatal-infos
+
+      - name: Run tests
+        run: flutter test --coverage
+
+      - name: Create package archive
+        run: |
+          mkdir -p release
+          tar -czf release/ciot_dart-${{ steps.version.outputs.raw_version }}.tar.gz \
+            --exclude='.git' \
+            --exclude='.github' \
+            --exclude='build' \
+            --exclude='*.log' \
+            --exclude='release' \
+            .
+
+      - name: Generate changelog
+        run: |
+          echo "# Release Notes for ${{ steps.version.outputs.version }}" > RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+
+          # Obter última tag
+          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+
+          if [ -z "$LAST_TAG" ]; then
+            echo "## 🎉 Initial Release" >> RELEASE_NOTES.md
+            echo "" >> RELEASE_NOTES.md
+            echo "This is the first release of ciot_dart!" >> RELEASE_NOTES.md
+          else
+            echo "## 📋 Changes since $LAST_TAG" >> RELEASE_NOTES.md
+            echo "" >> RELEASE_NOTES.md
+            
+            # Adicionar commits desde a última tag
+            git log $LAST_TAG..HEAD --oneline --no-merges | while read commit; do
+              echo "- $commit" >> RELEASE_NOTES.md
+            done
+          fi
+
+          echo "" >> RELEASE_NOTES.md
+          echo "## 📦 Package Information" >> RELEASE_NOTES.md
+          echo "- **Package**: ciot_dart" >> RELEASE_NOTES.md
+          echo "- **Version**: ${{ steps.version.outputs.raw_version }}" >> RELEASE_NOTES.md
+          echo "- **Build Date**: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> RELEASE_NOTES.md
+          echo "- **Commit**: ${{ github.sha }}" >> RELEASE_NOTES.md
+          echo "" >> RELEASE_NOTES.md
+          echo "## 📚 Installation" >> RELEASE_NOTES.md
+          echo '```yaml' >> RELEASE_NOTES.md
+          echo "dependencies:" >> RELEASE_NOTES.md
+          echo "  ciot_dart:" >> RELEASE_NOTES.md
+          echo "    git:" >> RELEASE_NOTES.md
+          echo "      url: https://github.com/${{ github.repository }}.git" >> RELEASE_NOTES.md
+          echo "      ref: ${{ steps.version.outputs.version }}" >> RELEASE_NOTES.md
+          echo '```' >> RELEASE_NOTES.md
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.version }}
+          name: "ciot_dart ${{ steps.version.outputs.version }}"
+          body_path: RELEASE_NOTES.md
+          draft: false
+          prerelease: ${{ contains(steps.version.outputs.version, '-') }}
+          files: |
+            release/ciot_dart-*.tar.gz
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Release Summary
+        run: |
+          echo "🎉 Release ${{ steps.version.outputs.version }} created successfully!"
+          echo "📦 Files uploaded:"
+          ls -la release/ciot_dart-*.tar.gz
+          echo ""
+          echo "🔗 Release URL: https://github.com/${{ github.repository }}/releases/tag/${{ steps.version.outputs.version }}"
