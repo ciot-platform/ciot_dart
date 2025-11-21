@@ -35,7 +35,7 @@ class IfaceRepositoryImpl implements IfaceRepository {
       if (newIface != null) {
         switch (iface.type) {
           case IfaceType.IFACE_TYPE_HTTP_CLIENT:
-            newIface = HttpClient(iface);
+            newIface = HttpClient(iface.id);
           default:
             return Either.left(ErrorNotImplemented());
         }

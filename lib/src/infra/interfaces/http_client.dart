@@ -22,10 +22,20 @@ class HttpClient extends IfaceBase {
 
   final StreamController<Event> _onEventController = StreamController<Event>();
 
-  HttpClient(this.info);
+  HttpClient(int id)
+      : info = IfaceInfo(
+          id: id,
+          type: IfaceType.IFACE_TYPE_HTTP_CLIENT,
+        );
 
-  Either<ErrorBase, Unit> start(HttpClientCfg config)
-  {
+  HttpClient.withSerializer(int id, super.serializer)
+      : info = IfaceInfo(
+          id: id,
+          type: IfaceType.IFACE_TYPE_HTTP_CLIENT,
+        ),
+        super.withSerializer();
+
+  Either<ErrorBase, Unit> start(HttpClientCfg config) {
     _cfg = config;
     _onEventController.add(Event(type: EventType.EVENT_TYPE_STARTED));
     return Either.right(unit);
@@ -38,8 +48,7 @@ class HttpClient extends IfaceBase {
 
   @override
   Either<ErrorBase, MsgData> getData(MsgData data) {
-    if(data.whichType() != MsgData_Type.httpClient)
-    {
+    if (data.whichType() != MsgData_Type.httpClient) {
       return Either.left(ErrorInvalidType());
     }
 
@@ -59,8 +68,7 @@ class HttpClient extends IfaceBase {
 
   @override
   Either<ErrorBase, Unit> processData(MsgData data) {
-    if(data.whichType() != MsgData_Type.httpClient)
-    {
+    if (data.whichType() != MsgData_Type.httpClient) {
       return Either.left(ErrorInvalidType());
     }
 
@@ -79,19 +87,19 @@ class HttpClient extends IfaceBase {
 
   @override
   Future<Either<ErrorBase, Uint8List>> sendData(Uint8List data) async {
-    if(_cfg == null) {
+    if (_cfg == null) {
       return Either.left(ErrorNullConfig());
     }
     try {
       final uri = Uri.parse(_cfg!.url);
       return httpRequest(uri, data);
-    } on Exception catch(e) {
+    } on Exception catch (e) {
       return Either.left(ErrorException(e));
     }
   }
 
   Future<Either<ErrorBase, Uint8List>> httpRequest(Uri uri, Uint8List data) async {
-    if(_cfg == null) {
+    if (_cfg == null) {
       return Either.left(ErrorNullConfig());
     }
 
@@ -121,21 +129,18 @@ class HttpClient extends IfaceBase {
         default:
           return Either.left(ErrorNotImplemented());
       }
-      
-      if(response.statusCode == HttpStatus.ok ||
-        response.statusCode == HttpStatus.accepted ||
-        response.statusCode == HttpStatus.created)
-      {
+
+      if (response.statusCode == HttpStatus.ok ||
+          response.statusCode == HttpStatus.accepted ||
+          response.statusCode == HttpStatus.created) {
         return Either.right(response.bodyBytes);
-      }
-      else
-      {
+      } else {
         return Either.left(ErrorHttpRequest(response.statusCode, response.bodyBytes));
       }
     } on SocketException catch (_) {
-      return Either.left(ErrorConnection()); 
+      return Either.left(ErrorConnection());
     } on TimeoutException catch (_) {
-      return Either.left(ErrorTimeout());    
+      return Either.left(ErrorTimeout());
     } on Exception catch (e) {
       return Either.left(ErrorException(e));
     }
