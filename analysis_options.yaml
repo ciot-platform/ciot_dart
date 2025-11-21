@@ -5,7 +5,20 @@ include: package:flutter_lints/flutter.yaml
 
 analyzer:
   exclude:
-    - lib/generated/**
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
+    - "**/generated/**"
+    - "lib/generated/**"
+    - "build/**"
+    - ".dart_tool/**"
+    - "examples/**"
+  
   errors:
-    # Ignora warnings em arquivos gerados
+    # Ignora warnings em arquivos gerados pelo protoc
     implementation_imports: ignore
+    depend_on_referenced_packages: ignore
+    
+linter:
+  rules:
+    # Desabilita regras para arquivos gerados
+    depend_on_referenced_packages: false
