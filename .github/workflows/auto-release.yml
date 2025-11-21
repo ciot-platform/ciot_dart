@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+      - develop
+      - release
   workflow_dispatch:
     inputs:
       version:
@@ -37,9 +39,35 @@ jobs:
           else
             VERSION=$(grep '^version:' pubspec.yaml | sed 's/version: //')
           fi
+
+          # Determinar sufixo baseado na branch
+          BRANCH="${{ github.ref_name }}"
+
+          if [ "$BRANCH" = "develop" ]; then
+            # Branch develop: adicionar sufixo -alpha
+            if [[ ! "$VERSION" =~ -alpha ]]; then
+              VERSION="${VERSION}-alpha"
+            fi
+            IS_PRERELEASE="true"
+          elif [ "$BRANCH" = "release" ]; then
+            # Branch release: adicionar sufixo -beta
+            if [[ ! "$VERSION" =~ -beta ]]; then
+              VERSION="${VERSION}-beta"
+            fi
+            IS_PRERELEASE="true"
+          elif [ "$BRANCH" = "main" ]; then
+            # Branch main: release estável (remover qualquer sufixo)
+            VERSION=$(echo "$VERSION" | sed 's/-alpha.*$//' | sed 's/-beta.*$//' | sed 's/-rc.*$//' | sed 's/-dev.*$//')
+            IS_PRERELEASE="false"
+          fi
+
           echo "version=v$VERSION" >> $GITHUB_OUTPUT
           echo "raw_version=$VERSION" >> $GITHUB_OUTPUT
-          echo "Using version: $VERSION"
+          echo "is_prerelease=$IS_PRERELEASE" >> $GITHUB_OUTPUT
+          echo "branch=$BRANCH" >> $GITHUB_OUTPUT
+          echo "📋 Branch: $BRANCH"
+          echo "📦 Version: $VERSION"
+          echo "🏷️  Pre-release: $IS_PRERELEASE"
 
       - name: Check if tag exists
         id: tag_check
@@ -78,6 +106,17 @@ jobs:
           echo "# Release Notes for ${{ steps.version.outputs.version }}" > RELEASE_NOTES.md
           echo "" >> RELEASE_NOTES.md
 
+          # Adicionar badge de tipo de release
+          BRANCH="${{ steps.version.outputs.branch }}"
+          if [ "$BRANCH" = "develop" ]; then
+            echo "🔬 **Alpha Release** - Development build from \`develop\` branch" >> RELEASE_NOTES.md
+          elif [ "$BRANCH" = "release" ]; then
+            echo "🧪 **Beta Release** - Release candidate from \`release\` branch" >> RELEASE_NOTES.md
+          elif [ "$BRANCH" = "main" ]; then
+            echo "✅ **Stable Release** - Production-ready release from \`main\` branch" >> RELEASE_NOTES.md
+          fi
+          echo "" >> RELEASE_NOTES.md
+
           # Obter última tag
           LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
 
@@ -99,6 +138,7 @@ jobs:
           echo "## 📦 Package Information" >> RELEASE_NOTES.md
           echo "- **Package**: ciot_dart" >> RELEASE_NOTES.md
           echo "- **Version**: ${{ steps.version.outputs.raw_version }}" >> RELEASE_NOTES.md
+          echo "- **Branch**: ${{ steps.version.outputs.branch }}" >> RELEASE_NOTES.md
           echo "- **Build Date**: $(date -u '+%Y-%m-%d %H:%M:%S UTC')" >> RELEASE_NOTES.md
           echo "- **Commit**: ${{ github.sha }}" >> RELEASE_NOTES.md
           echo "" >> RELEASE_NOTES.md
@@ -118,7 +158,7 @@ jobs:
           name: "ciot_dart ${{ steps.version.outputs.version }}"
           body_path: RELEASE_NOTES.md
           draft: false
-          prerelease: ${{ contains(steps.version.outputs.version, '-') }}
+          prerelease: ${{ steps.version.outputs.is_prerelease == 'true' }}
           files: |
             release/ciot_dart-*.tar.gz
         env:

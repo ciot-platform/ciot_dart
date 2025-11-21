@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+package CustomData;
+
+import "ciot/proto/v2/iface.proto";
+import "ciot/proto/v2/msg_data.proto";
+import "ciot/proto/v2/errors.proto";
+
+option csharp_namespace = "CustomData.Protos.V2";
+
+message CustomData {
+  string text = 1;               // Custom text field.
+  int32 number = 2;              // Custom number field.
+}
+
+// Represents an CioT message
+message Msg {
+  uint32 id = 1;                   // Message ID.
+  Ciot.IfaceInfo iface = 2;             // Interface information.
+  Ciot.Err error = 3;                   // Error code.
+  Ciot.MsgData data = 4;                // Message data.
+  CustomData custom_data = 5;      // Custom data field.
+}
