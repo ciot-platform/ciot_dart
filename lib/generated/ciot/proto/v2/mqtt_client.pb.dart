@@ -206,98 +206,6 @@ class MqttClientTopicsCfg extends $pb.GeneratedMessage {
   void clearSub() => $_clearField(2);
 }
 
-class MqttClientLastWill extends $pb.GeneratedMessage {
-  factory MqttClientLastWill({
-    $core.String? topic,
-    $core.List<$core.int>? payload,
-    $core.int? qos,
-    $core.bool? retain,
-  }) {
-    final $result = create();
-    if (topic != null) {
-      $result.topic = topic;
-    }
-    if (payload != null) {
-      $result.payload = payload;
-    }
-    if (qos != null) {
-      $result.qos = qos;
-    }
-    if (retain != null) {
-      $result.retain = retain;
-    }
-    return $result;
-  }
-  MqttClientLastWill._() : super();
-  factory MqttClientLastWill.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory MqttClientLastWill.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MqttClientLastWill', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..aOS(1, _omitFieldNames ? '' : 'topic')
-    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'payload', $pb.PbFieldType.OY)
-    ..a<$core.int>(3, _omitFieldNames ? '' : 'qos', $pb.PbFieldType.OU3)
-    ..aOB(4, _omitFieldNames ? '' : 'retain')
-    ..hasRequiredFields = false
-  ;
-
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  MqttClientLastWill clone() => MqttClientLastWill()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  MqttClientLastWill copyWith(void Function(MqttClientLastWill) updates) => super.copyWith((message) => updates(message as MqttClientLastWill)) as MqttClientLastWill;
-
-  $pb.BuilderInfo get info_ => _i;
-
-  @$core.pragma('dart2js:noInline')
-  static MqttClientLastWill create() => MqttClientLastWill._();
-  MqttClientLastWill createEmptyInstance() => create();
-  static $pb.PbList<MqttClientLastWill> createRepeated() => $pb.PbList<MqttClientLastWill>();
-  @$core.pragma('dart2js:noInline')
-  static MqttClientLastWill getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MqttClientLastWill>(create);
-  static MqttClientLastWill? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get topic => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set topic($core.String v) { $_setString(0, v); }
-  @$pb.TagNumber(1)
-  $core.bool hasTopic() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearTopic() => $_clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.List<$core.int> get payload => $_getN(1);
-  @$pb.TagNumber(2)
-  set payload($core.List<$core.int> v) { $_setBytes(1, v); }
-  @$pb.TagNumber(2)
-  $core.bool hasPayload() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearPayload() => $_clearField(2);
-
-  @$pb.TagNumber(3)
-  $core.int get qos => $_getIZ(2);
-  @$pb.TagNumber(3)
-  set qos($core.int v) { $_setUnsignedInt32(2, v); }
-  @$pb.TagNumber(3)
-  $core.bool hasQos() => $_has(2);
-  @$pb.TagNumber(3)
-  void clearQos() => $_clearField(3);
-
-  @$pb.TagNumber(4)
-  $core.bool get retain => $_getBF(3);
-  @$pb.TagNumber(4)
-  set retain($core.bool v) { $_setBool(3, v); }
-  @$pb.TagNumber(4)
-  $core.bool hasRetain() => $_has(3);
-  @$pb.TagNumber(4)
-  void clearRetain() => $_clearField(4);
-}
-
 /// Message used to stop MQTT client interface
 class MqttClientStop extends $pb.GeneratedMessage {
   factory MqttClientStop() => create();
@@ -341,7 +249,6 @@ class MqttClientCfg extends $pb.GeneratedMessage {
     $core.int? qos,
     MqttClientTopicsCfg? topics,
     MqttClientBrokerKind? brokerKind,
-    MqttClientLastWill? lastWill,
   }) {
     final $result = create();
     if (clientId != null) {
@@ -365,9 +272,6 @@ class MqttClientCfg extends $pb.GeneratedMessage {
     if (brokerKind != null) {
       $result.brokerKind = brokerKind;
     }
-    if (lastWill != null) {
-      $result.lastWill = lastWill;
-    }
     return $result;
   }
   MqttClientCfg._() : super();
@@ -382,7 +286,6 @@ class MqttClientCfg extends $pb.GeneratedMessage {
     ..a<$core.int>(5, _omitFieldNames ? '' : 'qos', $pb.PbFieldType.OU3)
     ..aOM<MqttClientTopicsCfg>(6, _omitFieldNames ? '' : 'topics', subBuilder: MqttClientTopicsCfg.create)
     ..e<MqttClientBrokerKind>(7, _omitFieldNames ? '' : 'brokerKind', $pb.PbFieldType.OE, defaultOrMaker: MqttClientBrokerKind.MQTT_CLIENT_BROKER_KIND_DEFAULT, valueOf: MqttClientBrokerKind.valueOf, enumValues: MqttClientBrokerKind.values)
-    ..aOM<MqttClientLastWill>(8, _omitFieldNames ? '' : 'lastWill', subBuilder: MqttClientLastWill.create)
     ..hasRequiredFields = false
   ;
 
@@ -471,17 +374,6 @@ class MqttClientCfg extends $pb.GeneratedMessage {
   $core.bool hasBrokerKind() => $_has(6);
   @$pb.TagNumber(7)
   void clearBrokerKind() => $_clearField(7);
-
-  @$pb.TagNumber(8)
-  MqttClientLastWill get lastWill => $_getN(7);
-  @$pb.TagNumber(8)
-  set lastWill(MqttClientLastWill v) { $_setField(8, v); }
-  @$pb.TagNumber(8)
-  $core.bool hasLastWill() => $_has(7);
-  @$pb.TagNumber(8)
-  void clearLastWill() => $_clearField(8);
-  @$pb.TagNumber(8)
-  MqttClientLastWill ensureLastWill() => $_ensure(7);
 }
 
 /// Message representing status information for the MQTT client.

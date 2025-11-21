@@ -101,22 +101,6 @@ final $typed_data.Uint8List mqttClientTopicsCfgDescriptor = $convert.base64Decod
     'ChNNcXR0Q2xpZW50VG9waWNzQ2ZnEhAKA3B1YhgBIAEoCVIDcHViEhAKA3N1YhgCIAEoCVIDc3'
     'Vi');
 
-@$core.Deprecated('Use mqttClientLastWillDescriptor instead')
-const MqttClientLastWill$json = {
-  '1': 'MqttClientLastWill',
-  '2': [
-    {'1': 'topic', '3': 1, '4': 1, '5': 9, '10': 'topic'},
-    {'1': 'payload', '3': 2, '4': 1, '5': 12, '10': 'payload'},
-    {'1': 'qos', '3': 3, '4': 1, '5': 13, '10': 'qos'},
-    {'1': 'retain', '3': 4, '4': 1, '5': 8, '10': 'retain'},
-  ],
-};
-
-/// Descriptor for `MqttClientLastWill`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mqttClientLastWillDescriptor = $convert.base64Decode(
-    'ChJNcXR0Q2xpZW50TGFzdFdpbGwSFAoFdG9waWMYASABKAlSBXRvcGljEhgKB3BheWxvYWQYAi'
-    'ABKAxSB3BheWxvYWQSEAoDcW9zGAMgASgNUgNxb3MSFgoGcmV0YWluGAQgASgIUgZyZXRhaW4=');
-
 @$core.Deprecated('Use mqttClientStopDescriptor instead')
 const MqttClientStop$json = {
   '1': 'MqttClientStop',
@@ -137,10 +121,6 @@ const MqttClientCfg$json = {
     {'1': 'qos', '3': 5, '4': 1, '5': 13, '10': 'qos'},
     {'1': 'topics', '3': 6, '4': 1, '5': 11, '6': '.Ciot.MqttClientTopicsCfg', '10': 'topics'},
     {'1': 'broker_kind', '3': 7, '4': 1, '5': 14, '6': '.Ciot.MqttClientBrokerKind', '10': 'brokerKind'},
-    {'1': 'last_will', '3': 8, '4': 1, '5': 11, '6': '.Ciot.MqttClientLastWill', '9': 0, '10': 'lastWill', '17': true},
-  ],
-  '8': [
-    {'1': '_last_will'},
   ],
 };
 
@@ -150,8 +130,7 @@ final $typed_data.Uint8List mqttClientCfgDescriptor = $convert.base64Decode(
     'gJUgN1cmwSEgoEdXNlchgDIAEoCVIEdXNlchIaCghwYXNzd29yZBgEIAEoCVIIcGFzc3dvcmQS'
     'EAoDcW9zGAUgASgNUgNxb3MSMQoGdG9waWNzGAYgASgLMhkuQ2lvdC5NcXR0Q2xpZW50VG9waW'
     'NzQ2ZnUgZ0b3BpY3MSOwoLYnJva2VyX2tpbmQYByABKA4yGi5DaW90Lk1xdHRDbGllbnRCcm9r'
-    'ZXJLaW5kUgpicm9rZXJLaW5kEjoKCWxhc3Rfd2lsbBgIIAEoCzIYLkNpb3QuTXF0dENsaWVudE'
-    'xhc3RXaWxsSABSCGxhc3RXaWxsiAEBQgwKCl9sYXN0X3dpbGw=');
+    'ZXJLaW5kUgpicm9rZXJLaW5k');
 
 @$core.Deprecated('Use mqttClientStatusDescriptor instead')
 const MqttClientStatus$json = {

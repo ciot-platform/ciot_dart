@@ -14,16 +14,16 @@ import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../google/protobuf/empty.pb.dart' as $25;
-import 'event.pb.dart' as $26;
+import '../../../google/protobuf/empty.pb.dart' as $29;
+import 'event.pb.dart' as $30;
 import 'iface.pb.dart' as $1;
-import 'msg.pb.dart' as $24;
+import 'msg.pb.dart' as $25;
 
 export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class IfacesList extends $pb.GeneratedMessage {
   factory IfacesList({
-    $core.Iterable<$24.Msg>? items,
+    $core.Iterable<$25.Msg>? items,
   }) {
     final $result = create();
     if (items != null) {
@@ -36,7 +36,7 @@ class IfacesList extends $pb.GeneratedMessage {
   factory IfacesList.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'IfacesList', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..pc<$24.Msg>(1, _omitFieldNames ? '' : 'items', $pb.PbFieldType.PM, subBuilder: $24.Msg.create)
+    ..pc<$25.Msg>(1, _omitFieldNames ? '' : 'items', $pb.PbFieldType.PM, subBuilder: $25.Msg.create)
     ..hasRequiredFields = false
   ;
 
@@ -62,12 +62,12 @@ class IfacesList extends $pb.GeneratedMessage {
   static IfacesList? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<$24.Msg> get items => $_getList(0);
+  $pb.PbList<$25.Msg> get items => $_getList(0);
 }
 
 class CreateIfaceRequest extends $pb.GeneratedMessage {
   factory CreateIfaceRequest({
-    $24.Msg? message,
+    $25.Msg? message,
   }) {
     final $result = create();
     if (message != null) {
@@ -80,7 +80,7 @@ class CreateIfaceRequest extends $pb.GeneratedMessage {
   factory CreateIfaceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateIfaceRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..aOM<$24.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $24.Msg.create)
+    ..aOM<$25.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $25.Msg.create)
     ..hasRequiredFields = false
   ;
 
@@ -106,20 +106,20 @@ class CreateIfaceRequest extends $pb.GeneratedMessage {
   static CreateIfaceRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.Msg get message => $_getN(0);
+  $25.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($25.Msg v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
   void clearMessage() => $_clearField(1);
   @$pb.TagNumber(1)
-  $24.Msg ensureMessage() => $_ensure(0);
+  $25.Msg ensureMessage() => $_ensure(0);
 }
 
 class CreateIfaceResponse extends $pb.GeneratedMessage {
   factory CreateIfaceResponse({
-    $24.Msg? message,
+    $25.Msg? message,
   }) {
     final $result = create();
     if (message != null) {
@@ -132,7 +132,7 @@ class CreateIfaceResponse extends $pb.GeneratedMessage {
   factory CreateIfaceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'CreateIfaceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..aOM<$24.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $24.Msg.create)
+    ..aOM<$25.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $25.Msg.create)
     ..hasRequiredFields = false
   ;
 
@@ -158,15 +158,15 @@ class CreateIfaceResponse extends $pb.GeneratedMessage {
   static CreateIfaceResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.Msg get message => $_getN(0);
+  $25.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($25.Msg v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
   void clearMessage() => $_clearField(1);
   @$pb.TagNumber(1)
-  $24.Msg ensureMessage() => $_ensure(0);
+  $25.Msg ensureMessage() => $_ensure(0);
 }
 
 class GetIfaceRequest extends $pb.GeneratedMessage {
@@ -221,7 +221,7 @@ class GetIfaceRequest extends $pb.GeneratedMessage {
 
 class GetIfaceResponse extends $pb.GeneratedMessage {
   factory GetIfaceResponse({
-    $24.Msg? message,
+    $25.Msg? message,
   }) {
     final $result = create();
     if (message != null) {
@@ -234,7 +234,7 @@ class GetIfaceResponse extends $pb.GeneratedMessage {
   factory GetIfaceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetIfaceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..aOM<$24.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $24.Msg.create)
+    ..aOM<$25.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $25.Msg.create)
     ..hasRequiredFields = false
   ;
 
@@ -260,20 +260,20 @@ class GetIfaceResponse extends $pb.GeneratedMessage {
   static GetIfaceResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.Msg get message => $_getN(0);
+  $25.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($25.Msg v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
   void clearMessage() => $_clearField(1);
   @$pb.TagNumber(1)
-  $24.Msg ensureMessage() => $_ensure(0);
+  $25.Msg ensureMessage() => $_ensure(0);
 }
 
 class GetIfacesResponse extends $pb.GeneratedMessage {
   factory GetIfacesResponse({
-    $core.Iterable<$24.Msg>? list,
+    $core.Iterable<$25.Msg>? list,
   }) {
     final $result = create();
     if (list != null) {
@@ -286,7 +286,7 @@ class GetIfacesResponse extends $pb.GeneratedMessage {
   factory GetIfacesResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'GetIfacesResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..pc<$24.Msg>(1, _omitFieldNames ? '' : 'list', $pb.PbFieldType.PM, subBuilder: $24.Msg.create)
+    ..pc<$25.Msg>(1, _omitFieldNames ? '' : 'list', $pb.PbFieldType.PM, subBuilder: $25.Msg.create)
     ..hasRequiredFields = false
   ;
 
@@ -312,12 +312,12 @@ class GetIfacesResponse extends $pb.GeneratedMessage {
   static GetIfacesResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<$24.Msg> get list => $_getList(0);
+  $pb.PbList<$25.Msg> get list => $_getList(0);
 }
 
 class UpdateIfaceRequest extends $pb.GeneratedMessage {
   factory UpdateIfaceRequest({
-    $24.Msg? message,
+    $25.Msg? message,
   }) {
     final $result = create();
     if (message != null) {
@@ -330,7 +330,7 @@ class UpdateIfaceRequest extends $pb.GeneratedMessage {
   factory UpdateIfaceRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateIfaceRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..aOM<$24.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $24.Msg.create)
+    ..aOM<$25.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $25.Msg.create)
     ..hasRequiredFields = false
   ;
 
@@ -356,20 +356,20 @@ class UpdateIfaceRequest extends $pb.GeneratedMessage {
   static UpdateIfaceRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.Msg get message => $_getN(0);
+  $25.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($25.Msg v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
   void clearMessage() => $_clearField(1);
   @$pb.TagNumber(1)
-  $24.Msg ensureMessage() => $_ensure(0);
+  $25.Msg ensureMessage() => $_ensure(0);
 }
 
 class UpdateIfaceResponse extends $pb.GeneratedMessage {
   factory UpdateIfaceResponse({
-    $24.Msg? message,
+    $25.Msg? message,
   }) {
     final $result = create();
     if (message != null) {
@@ -382,7 +382,7 @@ class UpdateIfaceResponse extends $pb.GeneratedMessage {
   factory UpdateIfaceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'UpdateIfaceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..aOM<$24.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $24.Msg.create)
+    ..aOM<$25.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $25.Msg.create)
     ..hasRequiredFields = false
   ;
 
@@ -408,15 +408,15 @@ class UpdateIfaceResponse extends $pb.GeneratedMessage {
   static UpdateIfaceResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.Msg get message => $_getN(0);
+  $25.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($25.Msg v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
   void clearMessage() => $_clearField(1);
   @$pb.TagNumber(1)
-  $24.Msg ensureMessage() => $_ensure(0);
+  $25.Msg ensureMessage() => $_ensure(0);
 }
 
 class DeleteIfaceRequest extends $pb.GeneratedMessage {
@@ -471,7 +471,7 @@ class DeleteIfaceRequest extends $pb.GeneratedMessage {
 
 class DeleteIfaceResponse extends $pb.GeneratedMessage {
   factory DeleteIfaceResponse({
-    $24.Msg? message,
+    $25.Msg? message,
   }) {
     final $result = create();
     if (message != null) {
@@ -484,7 +484,7 @@ class DeleteIfaceResponse extends $pb.GeneratedMessage {
   factory DeleteIfaceResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DeleteIfaceResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..aOM<$24.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $24.Msg.create)
+    ..aOM<$25.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $25.Msg.create)
     ..hasRequiredFields = false
   ;
 
@@ -510,15 +510,15 @@ class DeleteIfaceResponse extends $pb.GeneratedMessage {
   static DeleteIfaceResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.Msg get message => $_getN(0);
+  $25.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($25.Msg v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
   void clearMessage() => $_clearField(1);
   @$pb.TagNumber(1)
-  $24.Msg ensureMessage() => $_ensure(0);
+  $25.Msg ensureMessage() => $_ensure(0);
 }
 
 class SelectIfaceRequest extends $pb.GeneratedMessage {
@@ -677,7 +677,7 @@ class GetSelectedIfaceResponse extends $pb.GeneratedMessage {
 
 class SendMessageRequest extends $pb.GeneratedMessage {
   factory SendMessageRequest({
-    $24.Msg? message,
+    $25.Msg? message,
   }) {
     final $result = create();
     if (message != null) {
@@ -690,7 +690,7 @@ class SendMessageRequest extends $pb.GeneratedMessage {
   factory SendMessageRequest.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendMessageRequest', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..aOM<$24.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $24.Msg.create)
+    ..aOM<$25.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $25.Msg.create)
     ..hasRequiredFields = false
   ;
 
@@ -716,20 +716,20 @@ class SendMessageRequest extends $pb.GeneratedMessage {
   static SendMessageRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.Msg get message => $_getN(0);
+  $25.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($25.Msg v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
   void clearMessage() => $_clearField(1);
   @$pb.TagNumber(1)
-  $24.Msg ensureMessage() => $_ensure(0);
+  $25.Msg ensureMessage() => $_ensure(0);
 }
 
 class SendMessageResponse extends $pb.GeneratedMessage {
   factory SendMessageResponse({
-    $24.Msg? message,
+    $25.Msg? message,
   }) {
     final $result = create();
     if (message != null) {
@@ -742,7 +742,7 @@ class SendMessageResponse extends $pb.GeneratedMessage {
   factory SendMessageResponse.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'SendMessageResponse', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..aOM<$24.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $24.Msg.create)
+    ..aOM<$25.Msg>(1, _omitFieldNames ? '' : 'message', subBuilder: $25.Msg.create)
     ..hasRequiredFields = false
   ;
 
@@ -768,15 +768,15 @@ class SendMessageResponse extends $pb.GeneratedMessage {
   static SendMessageResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $24.Msg get message => $_getN(0);
+  $25.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($25.Msg v) { $_setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
   void clearMessage() => $_clearField(1);
   @$pb.TagNumber(1)
-  $24.Msg ensureMessage() => $_ensure(0);
+  $25.Msg ensureMessage() => $_ensure(0);
 }
 
 class SubscribeToEventsRequest extends $pb.GeneratedMessage {
@@ -855,7 +855,7 @@ class IfaceManagerServiceApi {
   $async.Future<GetIfaceResponse> getIface($pb.ClientContext? ctx, GetIfaceRequest request) =>
     _client.invoke<GetIfaceResponse>(ctx, 'IfaceManagerService', 'GetIface', request, GetIfaceResponse())
   ;
-  $async.Future<GetIfacesResponse> getIfaces($pb.ClientContext? ctx, $25.Empty request) =>
+  $async.Future<GetIfacesResponse> getIfaces($pb.ClientContext? ctx, $29.Empty request) =>
     _client.invoke<GetIfacesResponse>(ctx, 'IfaceManagerService', 'GetIfaces', request, GetIfacesResponse())
   ;
   $async.Future<UpdateIfaceResponse> updateIface($pb.ClientContext? ctx, UpdateIfaceRequest request) =>
@@ -867,14 +867,14 @@ class IfaceManagerServiceApi {
   $async.Future<SelectIfaceResponse> selectIface($pb.ClientContext? ctx, SelectIfaceRequest request) =>
     _client.invoke<SelectIfaceResponse>(ctx, 'IfaceManagerService', 'SelectIface', request, SelectIfaceResponse())
   ;
-  $async.Future<GetSelectedIfaceResponse> getSelectedIface($pb.ClientContext? ctx, $25.Empty request) =>
+  $async.Future<GetSelectedIfaceResponse> getSelectedIface($pb.ClientContext? ctx, $29.Empty request) =>
     _client.invoke<GetSelectedIfaceResponse>(ctx, 'IfaceManagerService', 'GetSelectedIface', request, GetSelectedIfaceResponse())
   ;
   $async.Future<SendMessageResponse> sendMessage($pb.ClientContext? ctx, SendMessageRequest request) =>
     _client.invoke<SendMessageResponse>(ctx, 'IfaceManagerService', 'SendMessage', request, SendMessageResponse())
   ;
-  $async.Future<$26.Event> subscribeToEvents($pb.ClientContext? ctx, SubscribeToEventsRequest request) =>
-    _client.invoke<$26.Event>(ctx, 'IfaceManagerService', 'SubscribeToEvents', request, $26.Event())
+  $async.Future<$30.Event> subscribeToEvents($pb.ClientContext? ctx, SubscribeToEventsRequest request) =>
+    _client.invoke<$30.Event>(ctx, 'IfaceManagerService', 'SubscribeToEvents', request, $30.Event())
   ;
 }
 
