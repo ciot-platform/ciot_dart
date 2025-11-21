@@ -1,5 +1,4 @@
 import 'package:ciot_dart/generated/ciot/proto/v2/http_client.pb.dart';
-import 'package:ciot_dart/generated/ciot/proto/v2/iface.pb.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -31,10 +30,7 @@ Future<IfaceBase> _setupCiotInterface() async {
   const defaultUrl = '192.168.4.1:80/v1/ciot';
   final url = dotenv.env['CIOT_URL'] ?? defaultUrl;
   
-  final iface = HttpClient(IfaceInfo(
-    id: 0,
-    type: IfaceType.IFACE_TYPE_HTTP_CLIENT,
-  ));
+  final iface = HttpClient(0);
   final cfg = HttpClientCfg(
     url: url, 
     timeout: 5000,
