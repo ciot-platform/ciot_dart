@@ -1,3 +1,3 @@
-## 0.0.1
+## 0.3.0
 
-* TODO: Describe initial release.
+* enhance message sending with busy state management
