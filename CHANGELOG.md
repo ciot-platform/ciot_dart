@@ -1,3 +1,3 @@
-## 0.3.0
+## 0.4.0
 
-* enhance message sending with busy state management
+* added wifi scan usecase
