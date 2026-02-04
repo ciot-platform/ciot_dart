@@ -28,7 +28,9 @@ abstract class IfaceBase implements Iface {
   }
 
   Future<Either<ErrorBase, T>> send<T>(T msg, { bool force = false }) async {
-    if (_sending && !force) return Either.left(ErrorBusy());
+    if (_sending && !force) {
+      return Either.left(ErrorBusy());
+    }
     _sending = true;
     try {
       var result = await sendData(_serializer.serialize(msg));
