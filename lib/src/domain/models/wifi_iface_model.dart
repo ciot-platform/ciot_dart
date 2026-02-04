@@ -1,3 +1,8 @@
 import 'package:ciot_dart/generated/ciot/proto/v2/iface.pb.dart';
 
-mixin WifiIfaceModel implements IfaceInfo {}
+class WifiIfaceModel {
+  final int? id;
+  final IfaceType? type;
+
+  WifiIfaceModel({this.id, this.type});
+}
