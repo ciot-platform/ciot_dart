@@ -25,6 +25,11 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Fetch tags
+        run: |
+          # Garantir que todas as tags remotas estejam disponíveis localmente
+          git fetch --tags --prune
+
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
@@ -69,16 +74,20 @@ jobs:
           echo "📦 Version: $VERSION"
           echo "🏷️  Pre-release: $IS_PRERELEASE"
 
-      - name: Check if tag exists
+      - name: Check if tag exists on remote
         id: tag_check
         run: |
-          if git rev-parse "${{ steps.version.outputs.version }}" >/dev/null 2>&1; then
+          # Garantir que as tags remotas foram buscadas
+          git fetch --tags --prune
+
+          # Verifica no remoto (origin) se a tag já existe
+          if git ls-remote --tags origin | grep -q "refs/tags/${{ steps.version.outputs.version }}$"; then
             echo "exists=true" >> $GITHUB_OUTPUT
-            echo "❌ Tag ${{ steps.version.outputs.version }} already exists"
+            echo "❌ Tag ${{ steps.version.outputs.version }} already exists on remote"
             exit 1
           else
             echo "exists=false" >> $GITHUB_OUTPUT
-            echo "✅ Tag ${{ steps.version.outputs.version }} is available"
+            echo "✅ Tag ${{ steps.version.outputs.version }} is available on remote"
           fi
 
       - name: Install dependencies
@@ -117,8 +126,8 @@ jobs:
           fi
           echo "" >> RELEASE_NOTES.md
 
-          # Obter última tag
-          LAST_TAG=$(git describe --tags --abbrev=0 2>/dev/null || echo "")
+          # Obter última tag que está mesclada em HEAD (evita pegar tags de outras branches)
+          LAST_TAG=$(git tag --sort=-creatordate --merged HEAD | head -n1 || echo "")
 
           if [ -z "$LAST_TAG" ]; then
             echo "## 🎉 Initial Release" >> RELEASE_NOTES.md
@@ -150,6 +159,15 @@ jobs:
           echo "      url: https://github.com/${{ github.repository }}.git" >> RELEASE_NOTES.md
           echo "      ref: ${{ steps.version.outputs.version }}" >> RELEASE_NOTES.md
           echo '```' >> RELEASE_NOTES.md
+
+      - name: Create and push tag
+        if: steps.tag_check.outputs.exists == 'false'
+        run: |
+          # Criar tag anotada e enviar para o remoto para garantir que ela aponte para o commit do workflow
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "${{ steps.version.outputs.version }}" -m "${{ steps.version.outputs.version }} from ${{ steps.version.outputs.branch }}"
+          git push origin "${{ steps.version.outputs.version }}"
 
       - name: Create Release
         uses: softprops/action-gh-release@v2

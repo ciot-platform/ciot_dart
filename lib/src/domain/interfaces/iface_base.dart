@@ -7,24 +7,37 @@ import 'package:fpdart/fpdart.dart';
 
 abstract class IfaceBase implements Iface {
   final Serializer _serializer;
+  bool _sending = false;
 
   IfaceBase() : _serializer = SerializerPb.instance;
 
   IfaceBase.withSerializer(this._serializer);
 
-  Future<Either<ErrorBase, Msg>> sendMsg(Msg msg) async {
-    var result = await sendData(_serializer.serialize(msg));
-    return result.match(
-      (l) => Either.left(l),
-      (r) => Either.right(_serializer.deserialize<Msg>(r)),
-    );
+  Future<Either<ErrorBase, Msg>> sendMsg(Msg msg, { bool force = false }) async {
+    if (_sending && !force) return Either.left(ErrorBusy());
+    _sending = true;
+    try {
+      var result = await sendData(_serializer.serialize(msg));
+      return result.match(
+        (l) => Either.left(l),
+        (r) => Either.right(_serializer.deserialize<Msg>(r)),
+      );
+    } finally {
+      _sending = false;
+    }
   }
 
-  Future<Either<ErrorBase, T>> send<T>(T msg) async {
-    var result = await sendData(_serializer.serialize(msg));
-    return result.match(
-      (l) => Either.left(l),
-      (r) => Either.right(_serializer.deserialize<T>(r)),
-    );
+  Future<Either<ErrorBase, T>> send<T>(T msg, { bool force = false }) async {
+    if (_sending && !force) return Either.left(ErrorBusy());
+    _sending = true;
+    try {
+      var result = await sendData(_serializer.serialize(msg));
+      return result.match(
+        (l) => Either.left(l),
+        (r) => Either.right(_serializer.deserialize<T>(r)),
+      );
+    } finally {
+      _sending = false;
+    }
   }
 }

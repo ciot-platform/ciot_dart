@@ -28,6 +28,8 @@ class ErrorNullConfig implements ErrorBase {}
 
 class ErrorInvalidState implements ErrorBase {}
 
+class ErrorBusy implements ErrorBase {}
+
 class ErrorCiotRequest implements ErrorBase {
   final Err error;
   ErrorCiotRequest(this.error);
