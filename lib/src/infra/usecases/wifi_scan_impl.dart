@@ -20,19 +20,21 @@ class WifiScanImpl implements WifiScan {
         var getScannerAp = await _getScannedAp(i, force: force);
         getScannerAp.match((l) => null, (r) => apInfos.add(r));
       }
-      return right(apInfos);
+      return right(apInfos..sort((a, b) => b.rssi.compareTo(a.rssi)));
     });
   }
 
   Future<Either<ErrorBase, WifiReqScanResult>> _startScan({bool force = false}) async {
-    final ifaceInfo = IfaceInfo(id: _wifiIfaceInfo.id, type: _wifiIfaceInfo.type);
+    final ifaceInfo = IfaceInfo(id: _wifiIfaceInfo.id, type: IfaceType.IFACE_TYPE_WIFI);
     final msg = Msg(iface: ifaceInfo, data: MsgData(wifi: WifiData(request: WifiReq(scan: WifiReqScan()))));
     final result = await _iface.sendMsg(msg, force: force);
-    return result.match((l) => left(l), (r) => right(r.data.wifi.request.scanResult));
+    return result.match(
+      (l) => left(l), 
+      (r) => right(r.data.wifi.request.scanResult));
   }
 
   Future<Either<ErrorBase, WifiApInfo>> _getScannedAp(int apId, {bool force = false}) async {
-    final ifaceInfo = IfaceInfo(id: _wifiIfaceInfo.id, type: _wifiIfaceInfo.type);
+    final ifaceInfo = IfaceInfo(id: _wifiIfaceInfo.id, type: IfaceType.IFACE_TYPE_WIFI);
     final msg = Msg(iface: ifaceInfo, data: MsgData(wifi: WifiData(request: WifiReq(getAp: WifiReqGetAp(id: apId)))));
     final result = await _iface.sendMsg(msg, force: force);
     return result.match((l) => left(l), (r) => right(r.data.wifi.request.apInfo));
