@@ -48,22 +48,26 @@ class HttpClient extends IfaceBase {
 
   @override
   Either<ErrorBase, MsgData> getData(MsgData data) {
-    if (data.whichType() != MsgData_Type.httpClient) {
+    if (data.whichType() != MsgData_Type.getData) {
       return Either.left(ErrorInvalidType());
     }
 
-    switch (data.httpClient.whichType()) {
-      case HttpClientData_Type.config:
-        data.httpClient.config = _cfg ?? HttpClientCfg();
-        break;
-      case HttpClientData_Type.status:
-        data.httpClient.status = _status;
-        break;
+    switch (data.getData.type) {
+      case DataType.DATA_TYPE_CONFIG:
+        return Either.right(MsgData(
+          httpClient: HttpClientData(
+            config: _cfg,
+          ),
+        ));
+      case DataType.DATA_TYPE_STATUS:
+        return Either.right(MsgData(
+          httpClient: HttpClientData(
+            status: _status,
+          ),
+        ));
       default:
         return Either.left(ErrorInvalidType());
     }
-
-    return Either.right(data);
   }
 
   @override
