@@ -43,7 +43,7 @@ class OtaStartImpl implements OtaStart {
   }
 
   @override
-  Future<Either<ErrorBase, OtaStatus>> call(OtaCfg req) async {
+  Future<Either<ErrorBase, OtaStatus>> call(OtaCfg req, {bool force = false}) async {
     if (cfg.serverCfg != null) {
       await _startServer(cfg.serverCfg!);
     }
@@ -54,7 +54,7 @@ class OtaStartImpl implements OtaStart {
               config: req),
         ));
     log('OTA request url: ${msg.data.ota.config.url}');
-    var result = await iface.send(msg);
+    var result = await iface.send(msg, force: force);
     return result.match(
       (l) => Left(l), 
       (r) => Right(r.data.ota.status));

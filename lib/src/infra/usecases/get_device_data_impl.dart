@@ -2,7 +2,6 @@ import 'package:ciot_dart/ciot.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/iface.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/msg.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/msg_data.pb.dart';
-import 'package:ciot_dart/src/domain/usecases/get_device_data.dart';
 import 'package:fpdart/fpdart.dart';
 
 class GetDeviceDataImpl implements GetDeviceData {
@@ -11,7 +10,7 @@ class GetDeviceDataImpl implements GetDeviceData {
   GetDeviceDataImpl(this.iface);
 
   @override
-  Future<Either<ErrorBase, T>> call<T>(int ifaceId, IfaceType ifaceType, DataType dataType) async {
+  Future<Either<ErrorBase, T>> call<T>(int ifaceId, IfaceType ifaceType, DataType dataType, {bool force = false}) async {
     var msg = Msg(
       iface: IfaceInfo(
         id: ifaceId,
@@ -23,7 +22,7 @@ class GetDeviceDataImpl implements GetDeviceData {
         ),
       ),
     );
-    var result = await iface.send(msg);
+    var result = await iface.send(msg, force: force);
     return result.match(
       (l) => left((l)),
       (r) {
@@ -109,6 +108,8 @@ class GetDeviceDataImpl implements GetDeviceData {
           //   data = _mapData(dataType, r.data.pwm);
           //   break;
           case IfaceType.IFACE_TYPE_CUSTOM:
+            return left(ErrorInvalidType());
+          default:
             return left(ErrorInvalidType());
         }
 
