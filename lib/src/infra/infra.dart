@@ -1,5 +1,6 @@
 export 'interfaces/http_client.dart';
 export 'interfaces/http_server.dart';
+export 'interfaces/message_bus_mqtt.dart';
 export 'usecases/check_firmware_version_impl.dart';
 export 'usecases/get_device_data_impl.dart';
 export 'usecases/mqtt_client_start_impl.dart';
