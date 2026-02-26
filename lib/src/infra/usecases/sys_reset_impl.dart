@@ -11,7 +11,7 @@ class SysResetImpl implements SysReset {
   SysResetImpl(this.iface);
 
   @override
-  Future<Either<ErrorBase, void>> call(int sysIfaceId) {
+  Future<Either<ErrorBase, void>> call(int sysIfaceId, {bool force = false}) async {
     var msg = Msg(
       iface: IfaceInfo(
         id: sysIfaceId,

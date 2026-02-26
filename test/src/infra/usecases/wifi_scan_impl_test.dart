@@ -2,7 +2,6 @@ import 'package:ciot_dart/generated/ciot/proto/v2/msg.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/msg_data.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/wifi.pb.dart';
 import 'package:ciot_dart/src/domain/interfaces/iface_base.dart';
-import 'package:ciot_dart/src/domain/models/wifi_iface_model.dart';
 import 'package:ciot_dart/src/errors/errors.dart';
 import 'package:ciot_dart/src/infra/usecases/wifi_scan_impl.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -12,14 +11,11 @@ import 'package:mocktail/mocktail.dart';
 // Mock classes
 class MockIfaceBase extends Mock implements IfaceBase {}
 
-class MockWifiIfaceModel extends Mock implements WifiIfaceModel {}
-
 // Fake classes for Msg (needed for mocktail's any() matcher)
 class FakeMsg extends Fake implements Msg {}
 
 void main() {
   late MockIfaceBase mockIface;
-  late MockWifiIfaceModel mockWifiIfaceModel;
   late WifiScanImpl wifiScanImpl;
 
   setUpAll(() {
@@ -29,8 +25,7 @@ void main() {
 
   setUp(() {
     mockIface = MockIfaceBase();
-    mockWifiIfaceModel = MockWifiIfaceModel();
-    wifiScanImpl = WifiScanImpl(mockIface, mockWifiIfaceModel);
+    wifiScanImpl = WifiScanImpl(mockIface);
   });
 
   group('WifiScanImpl', () {
@@ -94,7 +89,7 @@ void main() {
         });
 
         // Act
-        final result = await wifiScanImpl.call();
+        final result = await wifiScanImpl.call(0);
 
         // Assert
         expect(result.isRight(), true);
@@ -119,7 +114,7 @@ void main() {
         when(() => mockIface.sendMsg(any())).thenAnswer((_) async => left(error));
 
         // Act
-        final result = await wifiScanImpl.call();
+        final result = await wifiScanImpl.call(0);
 
         // Assert
         expect(result.isLeft(), true);
@@ -146,7 +141,7 @@ void main() {
         when(() => mockIface.sendMsg(any())).thenAnswer((_) async => right(msgResponseScan));
 
         // Act
-        final result = await wifiScanImpl.call();
+        final result = await wifiScanImpl.call(0);
 
         // Assert
         expect(result.isRight(), true);
@@ -206,7 +201,7 @@ void main() {
         });
 
         // Act
-        final result = await wifiScanImpl.call();
+        final result = await wifiScanImpl.call(0);
 
         // Assert
         expect(result.isRight(), true);
@@ -240,7 +235,7 @@ void main() {
         });
 
         // Act
-        await wifiScanImpl.call();
+        await wifiScanImpl.call(0);
 
         // Assert
         expect(capturedMsg, isNotNull);
@@ -282,7 +277,7 @@ void main() {
         });
 
         // Act
-        await wifiScanImpl.call();
+        await wifiScanImpl.call(0);
 
         // Assert
         expect(capturedMsgs.length, 2);

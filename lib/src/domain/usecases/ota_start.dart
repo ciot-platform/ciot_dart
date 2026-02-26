@@ -5,5 +5,5 @@ import 'package:fpdart/fpdart.dart';
 abstract class OtaStart {
   Stream<Either<ErrorBase, OtaStatus>> get statusStream;
   Future<String> serverUrl(String deviceIP);
-  Future<Either<ErrorBase, OtaStatus>> call(OtaCfg req);
+  Future<Either<ErrorBase, OtaStatus>> call(OtaCfg req, {bool force = false});
 }
