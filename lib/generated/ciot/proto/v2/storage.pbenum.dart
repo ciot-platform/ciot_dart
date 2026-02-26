@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/storage.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -24,7 +24,7 @@ class StorageState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, StorageState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static StorageState? valueOf($core.int value) => _byValue[value];
 
-  const StorageState._(super.v, super.n);
+  const StorageState._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different types of storage.
@@ -44,7 +44,7 @@ class StorageType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, StorageType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static StorageType? valueOf($core.int value) => _byValue[value];
 
-  const StorageType._(super.v, super.n);
+  const StorageType._($core.int v, $core.String n) : super(v, n);
 }
 
 

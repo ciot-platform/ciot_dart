@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/wifi.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,8 +15,6 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'tcp.pb.dart' as $2;
 import 'wifi.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'wifi.pbenum.dart';
 
@@ -83,7 +81,7 @@ class WifiApInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasBssid() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBssid() => $_clearField(1);
+  void clearBssid() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get ssid => $_getSZ(1);
@@ -92,7 +90,7 @@ class WifiApInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasSsid() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSsid() => $_clearField(2);
+  void clearSsid() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get rssi => $_getIZ(2);
@@ -101,7 +99,7 @@ class WifiApInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasRssi() => $_has(2);
   @$pb.TagNumber(3)
-  void clearRssi() => $_clearField(3);
+  void clearRssi() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.int get authmode => $_getIZ(3);
@@ -110,7 +108,7 @@ class WifiApInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasAuthmode() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAuthmode() => $_clearField(4);
+  void clearAuthmode() => clearField(4);
 }
 
 /// Stop Wi-Fi interface.
@@ -214,7 +212,7 @@ class WifiCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasDisabled() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDisabled() => $_clearField(1);
+  void clearDisabled() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get ssid => $_getSZ(1);
@@ -223,7 +221,7 @@ class WifiCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasSsid() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSsid() => $_clearField(2);
+  void clearSsid() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get password => $_getSZ(2);
@@ -232,25 +230,25 @@ class WifiCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasPassword() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPassword() => $_clearField(3);
+  void clearPassword() => clearField(3);
 
   @$pb.TagNumber(4)
   WifiType get type => $_getN(3);
   @$pb.TagNumber(4)
-  set type(WifiType v) { $_setField(4, v); }
+  set type(WifiType v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
-  void clearType() => $_clearField(4);
+  void clearType() => clearField(4);
 
   @$pb.TagNumber(5)
   $2.TcpCfg get tcp => $_getN(4);
   @$pb.TagNumber(5)
-  set tcp($2.TcpCfg v) { $_setField(5, v); }
+  set tcp($2.TcpCfg v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasTcp() => $_has(4);
   @$pb.TagNumber(5)
-  void clearTcp() => $_clearField(5);
+  void clearTcp() => clearField(5);
   @$pb.TagNumber(5)
   $2.TcpCfg ensureTcp() => $_ensure(4);
 }
@@ -261,6 +259,7 @@ class WifiStatus extends $pb.GeneratedMessage {
     $core.int? disconnectReason,
     $2.TcpStatus? tcp,
     WifiScanState? scanState,
+    $core.int? rssi,
   }) {
     final $result = create();
     if (disconnectReason != null) {
@@ -272,6 +271,9 @@ class WifiStatus extends $pb.GeneratedMessage {
     if (scanState != null) {
       $result.scanState = scanState;
     }
+    if (rssi != null) {
+      $result.rssi = rssi;
+    }
     return $result;
   }
   WifiStatus._() : super();
@@ -282,6 +284,7 @@ class WifiStatus extends $pb.GeneratedMessage {
     ..a<$core.int>(1, _omitFieldNames ? '' : 'disconnectReason', $pb.PbFieldType.OU3)
     ..aOM<$2.TcpStatus>(2, _omitFieldNames ? '' : 'tcp', subBuilder: $2.TcpStatus.create)
     ..e<WifiScanState>(3, _omitFieldNames ? '' : 'scanState', $pb.PbFieldType.OE, defaultOrMaker: WifiScanState.WIFI_SCAN_STATE_IDLE, valueOf: WifiScanState.valueOf, enumValues: WifiScanState.values)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'rssi', $pb.PbFieldType.O3)
     ..hasRequiredFields = false
   ;
 
@@ -313,27 +316,36 @@ class WifiStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasDisconnectReason() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDisconnectReason() => $_clearField(1);
+  void clearDisconnectReason() => clearField(1);
 
   @$pb.TagNumber(2)
   $2.TcpStatus get tcp => $_getN(1);
   @$pb.TagNumber(2)
-  set tcp($2.TcpStatus v) { $_setField(2, v); }
+  set tcp($2.TcpStatus v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasTcp() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTcp() => $_clearField(2);
+  void clearTcp() => clearField(2);
   @$pb.TagNumber(2)
   $2.TcpStatus ensureTcp() => $_ensure(1);
 
   @$pb.TagNumber(3)
   WifiScanState get scanState => $_getN(2);
   @$pb.TagNumber(3)
-  set scanState(WifiScanState v) { $_setField(3, v); }
+  set scanState(WifiScanState v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasScanState() => $_has(2);
   @$pb.TagNumber(3)
-  void clearScanState() => $_clearField(3);
+  void clearScanState() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.int get rssi => $_getIZ(3);
+  @$pb.TagNumber(4)
+  set rssi($core.int v) { $_setSignedInt32(3, v); }
+  @$pb.TagNumber(4)
+  $core.bool hasRssi() => $_has(3);
+  @$pb.TagNumber(4)
+  void clearRssi() => clearField(4);
 }
 
 class WifiInfo extends $pb.GeneratedMessage {
@@ -384,22 +396,22 @@ class WifiInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $2.TcpInfo get tcp => $_getN(0);
   @$pb.TagNumber(1)
-  set tcp($2.TcpInfo v) { $_setField(1, v); }
+  set tcp($2.TcpInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasTcp() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTcp() => $_clearField(1);
+  void clearTcp() => clearField(1);
   @$pb.TagNumber(1)
   $2.TcpInfo ensureTcp() => $_ensure(0);
 
   @$pb.TagNumber(2)
   WifiApInfo get ap => $_getN(1);
   @$pb.TagNumber(2)
-  set ap(WifiApInfo v) { $_setField(2, v); }
+  set ap(WifiApInfo v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasAp() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAp() => $_clearField(2);
+  void clearAp() => clearField(2);
   @$pb.TagNumber(2)
   WifiApInfo ensureAp() => $_ensure(1);
 }
@@ -485,7 +497,7 @@ class WifiReqScanResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasCount() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCount() => $_clearField(1);
+  void clearCount() => clearField(1);
 }
 
 /// Wifi request to get the scanned access point information
@@ -536,7 +548,7 @@ class WifiReqGetAp extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => $_clearField(1);
+  void clearId() => clearField(1);
 }
 
 enum WifiReq_Type {
@@ -612,49 +624,49 @@ class WifiReq extends $pb.GeneratedMessage {
   static WifiReq? _defaultInstance;
 
   WifiReq_Type whichType() => _WifiReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   WifiReqScan get scan => $_getN(0);
   @$pb.TagNumber(1)
-  set scan(WifiReqScan v) { $_setField(1, v); }
+  set scan(WifiReqScan v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasScan() => $_has(0);
   @$pb.TagNumber(1)
-  void clearScan() => $_clearField(1);
+  void clearScan() => clearField(1);
   @$pb.TagNumber(1)
   WifiReqScan ensureScan() => $_ensure(0);
 
   @$pb.TagNumber(2)
   WifiReqScanResult get scanResult => $_getN(1);
   @$pb.TagNumber(2)
-  set scanResult(WifiReqScanResult v) { $_setField(2, v); }
+  set scanResult(WifiReqScanResult v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasScanResult() => $_has(1);
   @$pb.TagNumber(2)
-  void clearScanResult() => $_clearField(2);
+  void clearScanResult() => clearField(2);
   @$pb.TagNumber(2)
   WifiReqScanResult ensureScanResult() => $_ensure(1);
 
   @$pb.TagNumber(3)
   WifiReqGetAp get getAp => $_getN(2);
   @$pb.TagNumber(3)
-  set getAp(WifiReqGetAp v) { $_setField(3, v); }
+  set getAp(WifiReqGetAp v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasGetAp() => $_has(2);
   @$pb.TagNumber(3)
-  void clearGetAp() => $_clearField(3);
+  void clearGetAp() => clearField(3);
   @$pb.TagNumber(3)
   WifiReqGetAp ensureGetAp() => $_ensure(2);
 
   @$pb.TagNumber(4)
   WifiApInfo get apInfo => $_getN(3);
   @$pb.TagNumber(4)
-  set apInfo(WifiApInfo v) { $_setField(4, v); }
+  set apInfo(WifiApInfo v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasApInfo() => $_has(3);
   @$pb.TagNumber(4)
-  void clearApInfo() => $_clearField(4);
+  void clearApInfo() => clearField(4);
   @$pb.TagNumber(4)
   WifiApInfo ensureApInfo() => $_ensure(3);
 }
@@ -739,60 +751,60 @@ class WifiData extends $pb.GeneratedMessage {
   static WifiData? _defaultInstance;
 
   WifiData_Type whichType() => _WifiData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   WifiStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(WifiStop v) { $_setField(1, v); }
+  set stop(WifiStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   WifiStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   WifiCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(WifiCfg v) { $_setField(2, v); }
+  set config(WifiCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   WifiCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   WifiStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(WifiStatus v) { $_setField(3, v); }
+  set status(WifiStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   WifiStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   WifiReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(WifiReq v) { $_setField(4, v); }
+  set request(WifiReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   WifiReq ensureRequest() => $_ensure(3);
 
   @$pb.TagNumber(5)
   WifiInfo get info => $_getN(4);
   @$pb.TagNumber(5)
-  set info(WifiInfo v) { $_setField(5, v); }
+  set info(WifiInfo v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasInfo() => $_has(4);
   @$pb.TagNumber(5)
-  void clearInfo() => $_clearField(5);
+  void clearInfo() => clearField(5);
   @$pb.TagNumber(5)
   WifiInfo ensureInfo() => $_ensure(4);
 }

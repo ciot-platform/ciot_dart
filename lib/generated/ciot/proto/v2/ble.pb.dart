@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/ble.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'ble.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'ble.pbenum.dart';
 
@@ -100,7 +98,7 @@ class BleCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasMac() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMac() => $_clearField(1);
+  void clearMac() => clearField(1);
 }
 
 /// Bluetooth module information
@@ -157,7 +155,7 @@ class BleInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasHwMac() => $_has(0);
   @$pb.TagNumber(1)
-  void clearHwMac() => $_clearField(1);
+  void clearHwMac() => clearField(1);
 
   /// Software mac address
   @$pb.TagNumber(2)
@@ -167,7 +165,7 @@ class BleInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasSwMac() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSwMac() => $_clearField(2);
+  void clearSwMac() => clearField(2);
 }
 
 /// Bluetooth module status
@@ -225,11 +223,11 @@ class BleStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   BleState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(BleState v) { $_setField(1, v); }
+  set state(BleState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   /// Current error code
   @$pb.TagNumber(2)
@@ -239,7 +237,7 @@ class BleStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasErrCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearErrCode() => $_clearField(2);
+  void clearErrCode() => clearField(2);
 
   /// Software mac assigned
   @$pb.TagNumber(3)
@@ -249,7 +247,7 @@ class BleStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasUsingSwMac() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUsingSwMac() => $_clearField(3);
+  void clearUsingSwMac() => clearField(3);
 }
 
 enum BleReq_Type {
@@ -304,7 +302,7 @@ class BleReq extends $pb.GeneratedMessage {
   static BleReq? _defaultInstance;
 
   BleReq_Type whichType() => _BleReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get setMac => $_getN(0);
@@ -313,7 +311,7 @@ class BleReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasSetMac() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSetMac() => $_clearField(1);
+  void clearSetMac() => clearField(1);
 }
 
 enum BleData_Type {
@@ -396,60 +394,60 @@ class BleData extends $pb.GeneratedMessage {
   static BleData? _defaultInstance;
 
   BleData_Type whichType() => _BleData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   BleStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(BleStop v) { $_setField(1, v); }
+  set stop(BleStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   BleStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   BleCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(BleCfg v) { $_setField(2, v); }
+  set config(BleCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   BleCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   BleStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(BleStatus v) { $_setField(3, v); }
+  set status(BleStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   BleStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   BleReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(BleReq v) { $_setField(4, v); }
+  set request(BleReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   BleReq ensureRequest() => $_ensure(3);
 
   @$pb.TagNumber(6)
   BleInfo get info => $_getN(4);
   @$pb.TagNumber(6)
-  set info(BleInfo v) { $_setField(6, v); }
+  set info(BleInfo v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasInfo() => $_has(4);
   @$pb.TagNumber(6)
-  void clearInfo() => $_clearField(6);
+  void clearInfo() => clearField(6);
   @$pb.TagNumber(6)
   BleInfo ensureInfo() => $_ensure(4);
 }

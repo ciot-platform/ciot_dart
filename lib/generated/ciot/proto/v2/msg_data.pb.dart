@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/msg_data.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -34,8 +34,6 @@ import 'tcp.pb.dart' as $2;
 import 'uart.pb.dart' as $3;
 import 'usb.pb.dart' as $20;
 import 'wifi.pb.dart' as $18;
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 enum MsgData_Type {
   common, 
@@ -235,248 +233,248 @@ class MsgData extends $pb.GeneratedMessage {
   static MsgData? _defaultInstance;
 
   MsgData_Type whichType() => _MsgData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   /// CustomType custom = 1;        // Custom data.
   @$pb.TagNumber(2)
   $1.Common get common => $_getN(0);
   @$pb.TagNumber(2)
-  set common($1.Common v) { $_setField(2, v); }
+  set common($1.Common v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasCommon() => $_has(0);
   @$pb.TagNumber(2)
-  void clearCommon() => $_clearField(2);
+  void clearCommon() => clearField(2);
   @$pb.TagNumber(2)
   $1.Common ensureCommon() => $_ensure(0);
 
   @$pb.TagNumber(3)
   $1.GetData get getData => $_getN(1);
   @$pb.TagNumber(3)
-  set getData($1.GetData v) { $_setField(3, v); }
+  set getData($1.GetData v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasGetData() => $_has(1);
   @$pb.TagNumber(3)
-  void clearGetData() => $_clearField(3);
+  void clearGetData() => clearField(3);
   @$pb.TagNumber(3)
   $1.GetData ensureGetData() => $_ensure(1);
 
   @$pb.TagNumber(4)
   $5.Data get ciot => $_getN(2);
   @$pb.TagNumber(4)
-  set ciot($5.Data v) { $_setField(4, v); }
+  set ciot($5.Data v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasCiot() => $_has(2);
   @$pb.TagNumber(4)
-  void clearCiot() => $_clearField(4);
+  void clearCiot() => clearField(4);
   @$pb.TagNumber(4)
   $5.Data ensureCiot() => $_ensure(2);
 
   @$pb.TagNumber(5)
   $6.SysData get sys => $_getN(3);
   @$pb.TagNumber(5)
-  set sys($6.SysData v) { $_setField(5, v); }
+  set sys($6.SysData v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasSys() => $_has(3);
   @$pb.TagNumber(5)
-  void clearSys() => $_clearField(5);
+  void clearSys() => clearField(5);
   @$pb.TagNumber(5)
   $6.SysData ensureSys() => $_ensure(3);
 
   @$pb.TagNumber(6)
   $7.HttpClientData get httpClient => $_getN(4);
   @$pb.TagNumber(6)
-  set httpClient($7.HttpClientData v) { $_setField(6, v); }
+  set httpClient($7.HttpClientData v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasHttpClient() => $_has(4);
   @$pb.TagNumber(6)
-  void clearHttpClient() => $_clearField(6);
+  void clearHttpClient() => clearField(6);
   @$pb.TagNumber(6)
   $7.HttpClientData ensureHttpClient() => $_ensure(4);
 
   @$pb.TagNumber(7)
   $8.HttpServerData get httpServer => $_getN(5);
   @$pb.TagNumber(7)
-  set httpServer($8.HttpServerData v) { $_setField(7, v); }
+  set httpServer($8.HttpServerData v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasHttpServer() => $_has(5);
   @$pb.TagNumber(7)
-  void clearHttpServer() => $_clearField(7);
+  void clearHttpServer() => clearField(7);
   @$pb.TagNumber(7)
   $8.HttpServerData ensureHttpServer() => $_ensure(5);
 
   @$pb.TagNumber(8)
   $9.MqttClientData get mqttClient => $_getN(6);
   @$pb.TagNumber(8)
-  set mqttClient($9.MqttClientData v) { $_setField(8, v); }
+  set mqttClient($9.MqttClientData v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasMqttClient() => $_has(6);
   @$pb.TagNumber(8)
-  void clearMqttClient() => $_clearField(8);
+  void clearMqttClient() => clearField(8);
   @$pb.TagNumber(8)
   $9.MqttClientData ensureMqttClient() => $_ensure(6);
 
   @$pb.TagNumber(9)
   $3.UartData get uart => $_getN(7);
   @$pb.TagNumber(9)
-  set uart($3.UartData v) { $_setField(9, v); }
+  set uart($3.UartData v) { setField(9, v); }
   @$pb.TagNumber(9)
   $core.bool hasUart() => $_has(7);
   @$pb.TagNumber(9)
-  void clearUart() => $_clearField(9);
+  void clearUart() => clearField(9);
   @$pb.TagNumber(9)
   $3.UartData ensureUart() => $_ensure(7);
 
   @$pb.TagNumber(10)
   $10.NtpData get ntp => $_getN(8);
   @$pb.TagNumber(10)
-  set ntp($10.NtpData v) { $_setField(10, v); }
+  set ntp($10.NtpData v) { setField(10, v); }
   @$pb.TagNumber(10)
   $core.bool hasNtp() => $_has(8);
   @$pb.TagNumber(10)
-  void clearNtp() => $_clearField(10);
+  void clearNtp() => clearField(10);
   @$pb.TagNumber(10)
   $10.NtpData ensureNtp() => $_ensure(8);
 
   @$pb.TagNumber(11)
   $11.BleAdvData get bleAdv => $_getN(9);
   @$pb.TagNumber(11)
-  set bleAdv($11.BleAdvData v) { $_setField(11, v); }
+  set bleAdv($11.BleAdvData v) { setField(11, v); }
   @$pb.TagNumber(11)
   $core.bool hasBleAdv() => $_has(9);
   @$pb.TagNumber(11)
-  void clearBleAdv() => $_clearField(11);
+  void clearBleAdv() => clearField(11);
   @$pb.TagNumber(11)
   $11.BleAdvData ensureBleAdv() => $_ensure(9);
 
   @$pb.TagNumber(12)
   $12.BleScnData get bleScn => $_getN(10);
   @$pb.TagNumber(12)
-  set bleScn($12.BleScnData v) { $_setField(12, v); }
+  set bleScn($12.BleScnData v) { setField(12, v); }
   @$pb.TagNumber(12)
   $core.bool hasBleScn() => $_has(10);
   @$pb.TagNumber(12)
-  void clearBleScn() => $_clearField(12);
+  void clearBleScn() => clearField(12);
   @$pb.TagNumber(12)
   $12.BleScnData ensureBleScn() => $_ensure(10);
 
   @$pb.TagNumber(13)
   $13.BleData get ble => $_getN(11);
   @$pb.TagNumber(13)
-  set ble($13.BleData v) { $_setField(13, v); }
+  set ble($13.BleData v) { setField(13, v); }
   @$pb.TagNumber(13)
   $core.bool hasBle() => $_has(11);
   @$pb.TagNumber(13)
-  void clearBle() => $_clearField(13);
+  void clearBle() => clearField(13);
   @$pb.TagNumber(13)
   $13.BleData ensureBle() => $_ensure(11);
 
   @$pb.TagNumber(14)
   $14.DfuData get dfu => $_getN(12);
   @$pb.TagNumber(14)
-  set dfu($14.DfuData v) { $_setField(14, v); }
+  set dfu($14.DfuData v) { setField(14, v); }
   @$pb.TagNumber(14)
   $core.bool hasDfu() => $_has(12);
   @$pb.TagNumber(14)
-  void clearDfu() => $_clearField(14);
+  void clearDfu() => clearField(14);
   @$pb.TagNumber(14)
   $14.DfuData ensureDfu() => $_ensure(12);
 
   @$pb.TagNumber(15)
   $15.GpioData get gpio => $_getN(13);
   @$pb.TagNumber(15)
-  set gpio($15.GpioData v) { $_setField(15, v); }
+  set gpio($15.GpioData v) { setField(15, v); }
   @$pb.TagNumber(15)
   $core.bool hasGpio() => $_has(13);
   @$pb.TagNumber(15)
-  void clearGpio() => $_clearField(15);
+  void clearGpio() => clearField(15);
   @$pb.TagNumber(15)
   $15.GpioData ensureGpio() => $_ensure(13);
 
   @$pb.TagNumber(16)
   $16.OtaData get ota => $_getN(14);
   @$pb.TagNumber(16)
-  set ota($16.OtaData v) { $_setField(16, v); }
+  set ota($16.OtaData v) { setField(16, v); }
   @$pb.TagNumber(16)
   $core.bool hasOta() => $_has(14);
   @$pb.TagNumber(16)
-  void clearOta() => $_clearField(16);
+  void clearOta() => clearField(16);
   @$pb.TagNumber(16)
   $16.OtaData ensureOta() => $_ensure(14);
 
   @$pb.TagNumber(17)
   $17.StorageData get storage => $_getN(15);
   @$pb.TagNumber(17)
-  set storage($17.StorageData v) { $_setField(17, v); }
+  set storage($17.StorageData v) { setField(17, v); }
   @$pb.TagNumber(17)
   $core.bool hasStorage() => $_has(15);
   @$pb.TagNumber(17)
-  void clearStorage() => $_clearField(17);
+  void clearStorage() => clearField(17);
   @$pb.TagNumber(17)
   $17.StorageData ensureStorage() => $_ensure(15);
 
   @$pb.TagNumber(18)
   $2.TcpData get eth => $_getN(16);
   @$pb.TagNumber(18)
-  set eth($2.TcpData v) { $_setField(18, v); }
+  set eth($2.TcpData v) { setField(18, v); }
   @$pb.TagNumber(18)
   $core.bool hasEth() => $_has(16);
   @$pb.TagNumber(18)
-  void clearEth() => $_clearField(18);
+  void clearEth() => clearField(18);
   @$pb.TagNumber(18)
   $2.TcpData ensureEth() => $_ensure(16);
 
   @$pb.TagNumber(19)
   $18.WifiData get wifi => $_getN(17);
   @$pb.TagNumber(19)
-  set wifi($18.WifiData v) { $_setField(19, v); }
+  set wifi($18.WifiData v) { setField(19, v); }
   @$pb.TagNumber(19)
   $core.bool hasWifi() => $_has(17);
   @$pb.TagNumber(19)
-  void clearWifi() => $_clearField(19);
+  void clearWifi() => clearField(19);
   @$pb.TagNumber(19)
   $18.WifiData ensureWifi() => $_ensure(17);
 
   @$pb.TagNumber(20)
   $19.LogData get log => $_getN(18);
   @$pb.TagNumber(20)
-  set log($19.LogData v) { $_setField(20, v); }
+  set log($19.LogData v) { setField(20, v); }
   @$pb.TagNumber(20)
   $core.bool hasLog() => $_has(18);
   @$pb.TagNumber(20)
-  void clearLog() => $_clearField(20);
+  void clearLog() => clearField(20);
   @$pb.TagNumber(20)
   $19.LogData ensureLog() => $_ensure(18);
 
   @$pb.TagNumber(21)
   $20.UsbData get usb => $_getN(19);
   @$pb.TagNumber(21)
-  set usb($20.UsbData v) { $_setField(21, v); }
+  set usb($20.UsbData v) { setField(21, v); }
   @$pb.TagNumber(21)
   $core.bool hasUsb() => $_has(19);
   @$pb.TagNumber(21)
-  void clearUsb() => $_clearField(21);
+  void clearUsb() => clearField(21);
   @$pb.TagNumber(21)
   $20.UsbData ensureUsb() => $_ensure(19);
 
   @$pb.TagNumber(22)
   $21.MbusClientData get mbusClient => $_getN(20);
   @$pb.TagNumber(22)
-  set mbusClient($21.MbusClientData v) { $_setField(22, v); }
+  set mbusClient($21.MbusClientData v) { setField(22, v); }
   @$pb.TagNumber(22)
   $core.bool hasMbusClient() => $_has(20);
   @$pb.TagNumber(22)
-  void clearMbusClient() => $_clearField(22);
+  void clearMbusClient() => clearField(22);
   @$pb.TagNumber(22)
   $21.MbusClientData ensureMbusClient() => $_ensure(20);
 
   @$pb.TagNumber(23)
   $22.MbusServerData get mbusServer => $_getN(21);
   @$pb.TagNumber(23)
-  set mbusServer($22.MbusServerData v) { $_setField(23, v); }
+  set mbusServer($22.MbusServerData v) { setField(23, v); }
   @$pb.TagNumber(23)
   $core.bool hasMbusServer() => $_has(21);
   @$pb.TagNumber(23)
-  void clearMbusServer() => $_clearField(23);
+  void clearMbusServer() => clearField(23);
   @$pb.TagNumber(23)
   $22.MbusServerData ensureMbusServer() => $_ensure(21);
 }

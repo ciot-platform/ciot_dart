@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/mqtt_client.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -32,7 +32,7 @@ class MqttClientState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, MqttClientState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static MqttClientState? valueOf($core.int value) => _byValue[value];
 
-  const MqttClientState._(super.v, super.n);
+  const MqttClientState._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different types of MQTT client requests.
@@ -50,7 +50,7 @@ class MqttClientReqType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, MqttClientReqType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static MqttClientReqType? valueOf($core.int value) => _byValue[value];
 
-  const MqttClientReqType._(super.v, super.n);
+  const MqttClientReqType._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different MQTT Broker kinds
@@ -72,7 +72,7 @@ class MqttClientBrokerKind extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, MqttClientBrokerKind> _byValue = $pb.ProtobufEnum.initByValue(values);
   static MqttClientBrokerKind? valueOf($core.int value) => _byValue[value];
 
-  const MqttClientBrokerKind._(super.v, super.n);
+  const MqttClientBrokerKind._($core.int v, $core.String n) : super(v, n);
 }
 
 

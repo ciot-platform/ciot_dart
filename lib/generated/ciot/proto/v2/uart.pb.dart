@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/uart.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'uart.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'uart.pbenum.dart';
 
@@ -114,7 +112,7 @@ class UartGpioCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasRx() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRx() => $_clearField(1);
+  void clearRx() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get tx => $_getIZ(1);
@@ -123,7 +121,7 @@ class UartGpioCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasTx() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTx() => $_clearField(2);
+  void clearTx() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get rts => $_getIZ(2);
@@ -132,7 +130,7 @@ class UartGpioCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasRts() => $_has(2);
   @$pb.TagNumber(3)
-  void clearRts() => $_clearField(3);
+  void clearRts() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.int get cts => $_getIZ(3);
@@ -141,7 +139,7 @@ class UartGpioCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasCts() => $_has(3);
   @$pb.TagNumber(4)
-  void clearCts() => $_clearField(4);
+  void clearCts() => clearField(4);
 }
 
 /// Message representing configuration for the UART module.
@@ -232,7 +230,7 @@ class UartCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasBaudRate() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBaudRate() => $_clearField(1);
+  void clearBaudRate() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get num => $_getIZ(1);
@@ -241,16 +239,16 @@ class UartCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasNum() => $_has(1);
   @$pb.TagNumber(2)
-  void clearNum() => $_clearField(2);
+  void clearNum() => clearField(2);
 
   @$pb.TagNumber(3)
   UartGpioCfg get gpio => $_getN(2);
   @$pb.TagNumber(3)
-  set gpio(UartGpioCfg v) { $_setField(3, v); }
+  set gpio(UartGpioCfg v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasGpio() => $_has(2);
   @$pb.TagNumber(3)
-  void clearGpio() => $_clearField(3);
+  void clearGpio() => clearField(3);
   @$pb.TagNumber(3)
   UartGpioCfg ensureGpio() => $_ensure(2);
 
@@ -261,7 +259,7 @@ class UartCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasParity() => $_has(3);
   @$pb.TagNumber(4)
-  void clearParity() => $_clearField(4);
+  void clearParity() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get flowControl => $_getBF(4);
@@ -270,7 +268,7 @@ class UartCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasFlowControl() => $_has(4);
   @$pb.TagNumber(5)
-  void clearFlowControl() => $_clearField(5);
+  void clearFlowControl() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.bool get dtr => $_getBF(5);
@@ -279,7 +277,7 @@ class UartCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasDtr() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDtr() => $_clearField(6);
+  void clearDtr() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.int get mode => $_getIZ(6);
@@ -288,7 +286,7 @@ class UartCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.bool hasMode() => $_has(6);
   @$pb.TagNumber(7)
-  void clearMode() => $_clearField(7);
+  void clearMode() => clearField(7);
 
   @$pb.TagNumber(8)
   $core.int get readTimeout => $_getIZ(7);
@@ -297,7 +295,7 @@ class UartCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.bool hasReadTimeout() => $_has(7);
   @$pb.TagNumber(8)
-  void clearReadTimeout() => $_clearField(8);
+  void clearReadTimeout() => clearField(8);
 
   @$pb.TagNumber(9)
   $core.int get writeTimeout => $_getIZ(8);
@@ -306,7 +304,7 @@ class UartCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.bool hasWriteTimeout() => $_has(8);
   @$pb.TagNumber(9)
-  void clearWriteTimeout() => $_clearField(9);
+  void clearWriteTimeout() => clearField(9);
 }
 
 /// Message representing status for the UART module.
@@ -358,20 +356,20 @@ class UartStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   UartState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(UartState v) { $_setField(1, v); }
+  set state(UartState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   UartError get error => $_getN(1);
   @$pb.TagNumber(2)
-  set error(UartError v) { $_setField(2, v); }
+  set error(UartError v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasError() => $_has(1);
   @$pb.TagNumber(2)
-  void clearError() => $_clearField(2);
+  void clearError() => clearField(2);
 }
 
 enum UartReq_Type {
@@ -426,7 +424,7 @@ class UartReq extends $pb.GeneratedMessage {
   static UartReq? _defaultInstance;
 
   UartReq_Type whichType() => _UartReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get sendData => $_getN(0);
@@ -435,7 +433,7 @@ class UartReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasSendData() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSendData() => $_clearField(1);
+  void clearSendData() => clearField(1);
 }
 
 enum UartData_Type {
@@ -511,49 +509,49 @@ class UartData extends $pb.GeneratedMessage {
   static UartData? _defaultInstance;
 
   UartData_Type whichType() => _UartData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   UartStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(UartStop v) { $_setField(1, v); }
+  set stop(UartStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   UartStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   UartCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(UartCfg v) { $_setField(2, v); }
+  set config(UartCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   UartCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   UartStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(UartStatus v) { $_setField(3, v); }
+  set status(UartStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   UartStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   UartReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(UartReq v) { $_setField(4, v); }
+  set request(UartReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   UartReq ensureRequest() => $_ensure(3);
 }

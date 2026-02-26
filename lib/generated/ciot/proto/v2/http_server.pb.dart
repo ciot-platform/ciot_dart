@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/http_server.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'http_server.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'http_server.pbenum.dart';
 
@@ -115,7 +113,7 @@ class HttpServerCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasAddress() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAddress() => $_clearField(1);
+  void clearAddress() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get route => $_getSZ(1);
@@ -124,7 +122,7 @@ class HttpServerCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasRoute() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRoute() => $_clearField(2);
+  void clearRoute() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get port => $_getIZ(2);
@@ -133,7 +131,7 @@ class HttpServerCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasPort() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPort() => $_clearField(3);
+  void clearPort() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get root => $_getSZ(3);
@@ -142,7 +140,7 @@ class HttpServerCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasRoot() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRoot() => $_clearField(4);
+  void clearRoot() => clearField(4);
 }
 
 /// Message representing HTTP server status.
@@ -194,11 +192,11 @@ class HttpServerStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   HttpServerState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(HttpServerState v) { $_setField(1, v); }
+  set state(HttpServerState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get error => $_getIZ(1);
@@ -207,7 +205,7 @@ class HttpServerStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasError() => $_has(1);
   @$pb.TagNumber(2)
-  void clearError() => $_clearField(2);
+  void clearError() => clearField(2);
 }
 
 /// Message representing an HTTP server request.
@@ -316,49 +314,49 @@ class HttpServerData extends $pb.GeneratedMessage {
   static HttpServerData? _defaultInstance;
 
   HttpServerData_Type whichType() => _HttpServerData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   HttpServerStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(HttpServerStop v) { $_setField(1, v); }
+  set stop(HttpServerStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   HttpServerStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   HttpServerCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(HttpServerCfg v) { $_setField(2, v); }
+  set config(HttpServerCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   HttpServerCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   HttpServerStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(HttpServerStatus v) { $_setField(3, v); }
+  set status(HttpServerStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   HttpServerStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   HttpServerReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(HttpServerReq v) { $_setField(4, v); }
+  set request(HttpServerReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   HttpServerReq ensureRequest() => $_ensure(3);
 }

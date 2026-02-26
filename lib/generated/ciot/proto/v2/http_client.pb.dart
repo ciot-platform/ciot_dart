@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/http_client.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'http_client.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'http_client.pbenum.dart';
 
@@ -115,25 +113,25 @@ class HttpClientCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasUrl() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUrl() => $_clearField(1);
+  void clearUrl() => clearField(1);
 
   @$pb.TagNumber(2)
   HttpClientMethod get method => $_getN(1);
   @$pb.TagNumber(2)
-  set method(HttpClientMethod v) { $_setField(2, v); }
+  set method(HttpClientMethod v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMethod() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMethod() => $_clearField(2);
+  void clearMethod() => clearField(2);
 
   @$pb.TagNumber(3)
   HttpClientTransportType get transport => $_getN(2);
   @$pb.TagNumber(3)
-  set transport(HttpClientTransportType v) { $_setField(3, v); }
+  set transport(HttpClientTransportType v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasTransport() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTransport() => $_clearField(3);
+  void clearTransport() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.int get timeout => $_getIZ(3);
@@ -142,7 +140,7 @@ class HttpClientCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasTimeout() => $_has(3);
   @$pb.TagNumber(4)
-  void clearTimeout() => $_clearField(4);
+  void clearTimeout() => clearField(4);
 }
 
 /// Message representing HTTP client status.
@@ -194,11 +192,11 @@ class HttpClientStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   HttpClientState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(HttpClientState v) { $_setField(1, v); }
+  set state(HttpClientState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get error => $_getIZ(1);
@@ -207,7 +205,7 @@ class HttpClientStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasError() => $_has(1);
   @$pb.TagNumber(2)
-  void clearError() => $_clearField(2);
+  void clearError() => clearField(2);
 }
 
 /// Message representing data to be sent by the HTTP client.
@@ -259,11 +257,11 @@ class HttpClientReqSend extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   HttpClientCfg get config => $_getN(0);
   @$pb.TagNumber(1)
-  set config(HttpClientCfg v) { $_setField(1, v); }
+  set config(HttpClientCfg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasConfig() => $_has(0);
   @$pb.TagNumber(1)
-  void clearConfig() => $_clearField(1);
+  void clearConfig() => clearField(1);
   @$pb.TagNumber(1)
   HttpClientCfg ensureConfig() => $_ensure(0);
 
@@ -274,7 +272,7 @@ class HttpClientReqSend extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasBody() => $_has(1);
   @$pb.TagNumber(2)
-  void clearBody() => $_clearField(2);
+  void clearBody() => clearField(2);
 }
 
 /// Message representing setting a header for the HTTP client request.
@@ -330,7 +328,7 @@ class HttpClientReqSetHeader extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasHeader() => $_has(0);
   @$pb.TagNumber(1)
-  void clearHeader() => $_clearField(1);
+  void clearHeader() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get value => $_getSZ(1);
@@ -339,7 +337,7 @@ class HttpClientReqSetHeader extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValue() => $_clearField(2);
+  void clearValue() => clearField(2);
 }
 
 enum HttpClientReq_Type {
@@ -401,27 +399,27 @@ class HttpClientReq extends $pb.GeneratedMessage {
   static HttpClientReq? _defaultInstance;
 
   HttpClientReq_Type whichType() => _HttpClientReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   HttpClientReqSend get send => $_getN(0);
   @$pb.TagNumber(1)
-  set send(HttpClientReqSend v) { $_setField(1, v); }
+  set send(HttpClientReqSend v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSend() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSend() => $_clearField(1);
+  void clearSend() => clearField(1);
   @$pb.TagNumber(1)
   HttpClientReqSend ensureSend() => $_ensure(0);
 
   @$pb.TagNumber(2)
   HttpClientReqSetHeader get setHeader => $_getN(1);
   @$pb.TagNumber(2)
-  set setHeader(HttpClientReqSetHeader v) { $_setField(2, v); }
+  set setHeader(HttpClientReqSetHeader v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasSetHeader() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSetHeader() => $_clearField(2);
+  void clearSetHeader() => clearField(2);
   @$pb.TagNumber(2)
   HttpClientReqSetHeader ensureSetHeader() => $_ensure(1);
 }
@@ -499,49 +497,49 @@ class HttpClientData extends $pb.GeneratedMessage {
   static HttpClientData? _defaultInstance;
 
   HttpClientData_Type whichType() => _HttpClientData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   HttpClientStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(HttpClientStop v) { $_setField(1, v); }
+  set stop(HttpClientStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   HttpClientStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   HttpClientCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(HttpClientCfg v) { $_setField(2, v); }
+  set config(HttpClientCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   HttpClientCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   HttpClientStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(HttpClientStatus v) { $_setField(3, v); }
+  set status(HttpClientStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   HttpClientStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   HttpClientReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(HttpClientReq v) { $_setField(4, v); }
+  set request(HttpClientReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   HttpClientReq ensureRequest() => $_ensure(3);
 }

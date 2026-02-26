@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/dfu.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,8 +15,6 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'dfu.pbenum.dart';
 import 'errors.pbenum.dart' as $0;
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'dfu.pbenum.dart';
 
@@ -97,11 +95,11 @@ class DfuCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   DfuType get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(DfuType v) { $_setField(1, v); }
+  set type(DfuType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => $_clearField(1);
+  void clearType() => clearField(1);
 }
 
 /// Dfu status
@@ -168,11 +166,11 @@ class DfuStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   DfuState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(DfuState v) { $_setField(1, v); }
+  set state(DfuState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get code => $_getIZ(1);
@@ -181,16 +179,16 @@ class DfuStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearCode() => $_clearField(2);
+  void clearCode() => clearField(2);
 
   @$pb.TagNumber(3)
   $0.Err get error => $_getN(2);
   @$pb.TagNumber(3)
-  set error($0.Err v) { $_setField(3, v); }
+  set error($0.Err v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasError() => $_has(2);
   @$pb.TagNumber(3)
-  void clearError() => $_clearField(3);
+  void clearError() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.int get imageSize => $_getIZ(3);
@@ -199,7 +197,7 @@ class DfuStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasImageSize() => $_has(3);
   @$pb.TagNumber(4)
-  void clearImageSize() => $_clearField(4);
+  void clearImageSize() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.int get imageWritten => $_getIZ(4);
@@ -208,7 +206,7 @@ class DfuStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasImageWritten() => $_has(4);
   @$pb.TagNumber(5)
-  void clearImageWritten() => $_clearField(5);
+  void clearImageWritten() => clearField(5);
 }
 
 /// Dfu request
@@ -317,49 +315,49 @@ class DfuData extends $pb.GeneratedMessage {
   static DfuData? _defaultInstance;
 
   DfuData_Type whichType() => _DfuData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   DfuStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(DfuStop v) { $_setField(1, v); }
+  set stop(DfuStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   DfuStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   DfuCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(DfuCfg v) { $_setField(2, v); }
+  set config(DfuCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   DfuCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   DfuStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(DfuStatus v) { $_setField(3, v); }
+  set status(DfuStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   DfuStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   DfuReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(DfuReq v) { $_setField(4, v); }
+  set request(DfuReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   DfuReq ensureRequest() => $_ensure(3);
 }
