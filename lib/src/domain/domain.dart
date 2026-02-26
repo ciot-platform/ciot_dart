@@ -1,4 +1,5 @@
 export 'extensions/sys_info_extension.dart';
+export 'extensions/tcp_info_extension.dart';
 export 'extensions/wifi_ap_info_extension.dart';
 export 'interfaces/iface.dart';
 export 'interfaces/iface_base.dart';
@@ -13,3 +14,4 @@ export 'usecases/save_iface_cfg.dart';
 export 'usecases/sys_reset.dart';
 export 'usecases/wifi_scan.dart';
 export 'usecases/wifi_start.dart';
+export 'usecases/delete_iface_cfg.dart';
