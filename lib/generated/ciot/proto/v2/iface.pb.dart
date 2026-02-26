@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/iface.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'iface.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'iface.pbenum.dart';
 
@@ -63,11 +61,11 @@ class GetData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   DataType get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(DataType v) { $_setField(1, v); }
+  set type(DataType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => $_clearField(1);
+  void clearType() => clearField(1);
 }
 
 enum Common_Type {
@@ -122,7 +120,7 @@ class Common extends $pb.GeneratedMessage {
   static Common? _defaultInstance;
 
   Common_Type whichType() => _Common_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.bool get stop => $_getBF(0);
@@ -131,7 +129,7 @@ class Common extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
 }
 
 /// Message representing information about an interface.
@@ -187,16 +185,16 @@ class IfaceInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => $_clearField(1);
+  void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
   IfaceType get type => $_getN(1);
   @$pb.TagNumber(2)
-  set type(IfaceType v) { $_setField(2, v); }
+  set type(IfaceType v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
   @$pb.TagNumber(2)
-  void clearType() => $_clearField(2);
+  void clearType() => clearField(2);
 }
 
 /// Message representing interface request status.enum
@@ -262,16 +260,16 @@ class IfaceReqStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => $_clearField(1);
+  void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
   IfaceReqState get state => $_getN(1);
   @$pb.TagNumber(2)
-  set state(IfaceReqState v) { $_setField(2, v); }
+  set state(IfaceReqState v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasState() => $_has(1);
   @$pb.TagNumber(2)
-  void clearState() => $_clearField(2);
+  void clearState() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get dataType => $_getIZ(2);
@@ -280,16 +278,16 @@ class IfaceReqStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasDataType() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDataType() => $_clearField(3);
+  void clearDataType() => clearField(3);
 
   @$pb.TagNumber(4)
   IfaceInfo get iface => $_getN(3);
   @$pb.TagNumber(4)
-  set iface(IfaceInfo v) { $_setField(4, v); }
+  set iface(IfaceInfo v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasIface() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIface() => $_clearField(4);
+  void clearIface() => clearField(4);
   @$pb.TagNumber(4)
   IfaceInfo ensureIface() => $_ensure(3);
 }

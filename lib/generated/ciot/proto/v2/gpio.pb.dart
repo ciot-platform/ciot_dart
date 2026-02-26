@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/gpio.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'gpio.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'gpio.pbenum.dart';
 
@@ -63,11 +61,11 @@ class GpioStop extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   GpioCfg get cfg => $_getN(0);
   @$pb.TagNumber(1)
-  set cfg(GpioCfg v) { $_setField(1, v); }
+  set cfg(GpioCfg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasCfg() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCfg() => $_clearField(1);
+  void clearCfg() => clearField(1);
   @$pb.TagNumber(1)
   GpioCfg ensureCfg() => $_ensure(0);
 }
@@ -130,25 +128,25 @@ class GpioPinCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasNum() => $_has(0);
   @$pb.TagNumber(1)
-  void clearNum() => $_clearField(1);
+  void clearNum() => clearField(1);
 
   @$pb.TagNumber(2)
   GpioMode get mode => $_getN(1);
   @$pb.TagNumber(2)
-  set mode(GpioMode v) { $_setField(2, v); }
+  set mode(GpioMode v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMode() => $_clearField(2);
+  void clearMode() => clearField(2);
 
   @$pb.TagNumber(3)
   GpioPull get pull => $_getN(2);
   @$pb.TagNumber(3)
-  set pull(GpioPull v) { $_setField(3, v); }
+  set pull(GpioPull v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasPull() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPull() => $_clearField(3);
+  void clearPull() => clearField(3);
 }
 
 /// Message representing gpio configuration
@@ -198,7 +196,7 @@ class GpioCfg extends $pb.GeneratedMessage {
   static GpioCfg? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<GpioPinCfg> get pins => $_getList(0);
+  $core.List<GpioPinCfg> get pins => $_getList(0);
 
   @$pb.TagNumber(2)
   $core.int get blinkInterval => $_getIZ(1);
@@ -207,7 +205,7 @@ class GpioCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasBlinkInterval() => $_has(1);
   @$pb.TagNumber(2)
-  void clearBlinkInterval() => $_clearField(2);
+  void clearBlinkInterval() => clearField(2);
 }
 
 /// Message used to read/set all gpio states
@@ -258,7 +256,7 @@ class GpioStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasStates() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStates() => $_clearField(1);
+  void clearStates() => clearField(1);
 }
 
 /// Message used to set/read signle gpio state info
@@ -314,16 +312,16 @@ class GpioStateInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasNum() => $_has(0);
   @$pb.TagNumber(1)
-  void clearNum() => $_clearField(1);
+  void clearNum() => clearField(1);
 
   @$pb.TagNumber(2)
   GpioState get state => $_getN(1);
   @$pb.TagNumber(2)
-  set state(GpioState v) { $_setField(2, v); }
+  set state(GpioState v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasState() => $_has(1);
   @$pb.TagNumber(2)
-  void clearState() => $_clearField(2);
+  void clearState() => clearField(2);
 }
 
 enum GpioReq_Type {
@@ -385,27 +383,27 @@ class GpioReq extends $pb.GeneratedMessage {
   static GpioReq? _defaultInstance;
 
   GpioReq_Type whichType() => _GpioReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   GpioStatus get setStatus => $_getN(0);
   @$pb.TagNumber(1)
-  set setStatus(GpioStatus v) { $_setField(1, v); }
+  set setStatus(GpioStatus v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSetStatus() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSetStatus() => $_clearField(1);
+  void clearSetStatus() => clearField(1);
   @$pb.TagNumber(1)
   GpioStatus ensureSetStatus() => $_ensure(0);
 
   @$pb.TagNumber(2)
   GpioStateInfo get setState => $_getN(1);
   @$pb.TagNumber(2)
-  set setState(GpioStateInfo v) { $_setField(2, v); }
+  set setState(GpioStateInfo v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasSetState() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSetState() => $_clearField(2);
+  void clearSetState() => clearField(2);
   @$pb.TagNumber(2)
   GpioStateInfo ensureSetState() => $_ensure(1);
 }
@@ -483,49 +481,49 @@ class GpioData extends $pb.GeneratedMessage {
   static GpioData? _defaultInstance;
 
   GpioData_Type whichType() => _GpioData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   GpioStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(GpioStop v) { $_setField(1, v); }
+  set stop(GpioStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   GpioStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   GpioCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(GpioCfg v) { $_setField(2, v); }
+  set config(GpioCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   GpioCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   GpioStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(GpioStatus v) { $_setField(3, v); }
+  set status(GpioStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   GpioStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   GpioReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(GpioReq v) { $_setField(4, v); }
+  set request(GpioReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   GpioReq ensureRequest() => $_ensure(3);
 }

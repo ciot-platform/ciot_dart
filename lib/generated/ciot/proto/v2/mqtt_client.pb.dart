@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/mqtt_client.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,8 +15,6 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'mqtt_client.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'mqtt_client.pbenum.dart';
 
@@ -93,7 +91,7 @@ class MqttClientError extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasTlsLastErr() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTlsLastErr() => $_clearField(1);
+  void clearTlsLastErr() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get tlsStackErr => $_getIZ(1);
@@ -102,7 +100,7 @@ class MqttClientError extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasTlsStackErr() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTlsStackErr() => $_clearField(2);
+  void clearTlsStackErr() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get tlsCertVerifyFlags => $_getIZ(2);
@@ -111,7 +109,7 @@ class MqttClientError extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasTlsCertVerifyFlags() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTlsCertVerifyFlags() => $_clearField(3);
+  void clearTlsCertVerifyFlags() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.int get type => $_getIZ(3);
@@ -120,7 +118,7 @@ class MqttClientError extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(4)
-  void clearType() => $_clearField(4);
+  void clearType() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.int get code => $_getIZ(4);
@@ -129,7 +127,7 @@ class MqttClientError extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasCode() => $_has(4);
   @$pb.TagNumber(5)
-  void clearCode() => $_clearField(5);
+  void clearCode() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.int get transportSock => $_getIZ(5);
@@ -138,7 +136,7 @@ class MqttClientError extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasTransportSock() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTransportSock() => $_clearField(6);
+  void clearTransportSock() => clearField(6);
 }
 
 /// Message representing configuration for MQTT client topics.
@@ -194,7 +192,7 @@ class MqttClientTopicsCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasPub() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPub() => $_clearField(1);
+  void clearPub() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get sub => $_getSZ(1);
@@ -203,7 +201,7 @@ class MqttClientTopicsCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasSub() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSub() => $_clearField(2);
+  void clearSub() => clearField(2);
 }
 
 class MqttClientLastWill extends $pb.GeneratedMessage {
@@ -268,7 +266,7 @@ class MqttClientLastWill extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTopic() => $_clearField(1);
+  void clearTopic() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get payload => $_getN(1);
@@ -277,7 +275,7 @@ class MqttClientLastWill extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasPayload() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPayload() => $_clearField(2);
+  void clearPayload() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get qos => $_getIZ(2);
@@ -286,7 +284,7 @@ class MqttClientLastWill extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasQos() => $_has(2);
   @$pb.TagNumber(3)
-  void clearQos() => $_clearField(3);
+  void clearQos() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.bool get retain => $_getBF(3);
@@ -295,7 +293,7 @@ class MqttClientLastWill extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasRetain() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRetain() => $_clearField(4);
+  void clearRetain() => clearField(4);
 }
 
 /// Message used to stop MQTT client interface
@@ -331,6 +329,70 @@ class MqttClientStop extends $pb.GeneratedMessage {
   static MqttClientStop? _defaultInstance;
 }
 
+class MqttClientSessionCfg extends $pb.GeneratedMessage {
+  factory MqttClientSessionCfg({
+    $core.bool? cleanSession,
+    $core.int? keepAlive,
+  }) {
+    final $result = create();
+    if (cleanSession != null) {
+      $result.cleanSession = cleanSession;
+    }
+    if (keepAlive != null) {
+      $result.keepAlive = keepAlive;
+    }
+    return $result;
+  }
+  MqttClientSessionCfg._() : super();
+  factory MqttClientSessionCfg.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory MqttClientSessionCfg.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'MqttClientSessionCfg', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'cleanSession')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'keepAlive', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  MqttClientSessionCfg clone() => MqttClientSessionCfg()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  MqttClientSessionCfg copyWith(void Function(MqttClientSessionCfg) updates) => super.copyWith((message) => updates(message as MqttClientSessionCfg)) as MqttClientSessionCfg;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static MqttClientSessionCfg create() => MqttClientSessionCfg._();
+  MqttClientSessionCfg createEmptyInstance() => create();
+  static $pb.PbList<MqttClientSessionCfg> createRepeated() => $pb.PbList<MqttClientSessionCfg>();
+  @$core.pragma('dart2js:noInline')
+  static MqttClientSessionCfg getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MqttClientSessionCfg>(create);
+  static MqttClientSessionCfg? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $core.bool get cleanSession => $_getBF(0);
+  @$pb.TagNumber(1)
+  set cleanSession($core.bool v) { $_setBool(0, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasCleanSession() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearCleanSession() => clearField(1);
+
+  @$pb.TagNumber(2)
+  $core.int get keepAlive => $_getIZ(1);
+  @$pb.TagNumber(2)
+  set keepAlive($core.int v) { $_setSignedInt32(1, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasKeepAlive() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearKeepAlive() => clearField(2);
+}
+
 /// Message representing configuration for the MQTT client.
 class MqttClientCfg extends $pb.GeneratedMessage {
   factory MqttClientCfg({
@@ -342,6 +404,7 @@ class MqttClientCfg extends $pb.GeneratedMessage {
     MqttClientTopicsCfg? topics,
     MqttClientBrokerKind? brokerKind,
     MqttClientLastWill? lastWill,
+    MqttClientSessionCfg? session,
   }) {
     final $result = create();
     if (clientId != null) {
@@ -368,6 +431,9 @@ class MqttClientCfg extends $pb.GeneratedMessage {
     if (lastWill != null) {
       $result.lastWill = lastWill;
     }
+    if (session != null) {
+      $result.session = session;
+    }
     return $result;
   }
   MqttClientCfg._() : super();
@@ -383,6 +449,7 @@ class MqttClientCfg extends $pb.GeneratedMessage {
     ..aOM<MqttClientTopicsCfg>(6, _omitFieldNames ? '' : 'topics', subBuilder: MqttClientTopicsCfg.create)
     ..e<MqttClientBrokerKind>(7, _omitFieldNames ? '' : 'brokerKind', $pb.PbFieldType.OE, defaultOrMaker: MqttClientBrokerKind.MQTT_CLIENT_BROKER_KIND_DEFAULT, valueOf: MqttClientBrokerKind.valueOf, enumValues: MqttClientBrokerKind.values)
     ..aOM<MqttClientLastWill>(8, _omitFieldNames ? '' : 'lastWill', subBuilder: MqttClientLastWill.create)
+    ..aOM<MqttClientSessionCfg>(9, _omitFieldNames ? '' : 'session', subBuilder: MqttClientSessionCfg.create)
     ..hasRequiredFields = false
   ;
 
@@ -414,7 +481,7 @@ class MqttClientCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasClientId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearClientId() => $_clearField(1);
+  void clearClientId() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get url => $_getSZ(1);
@@ -423,7 +490,7 @@ class MqttClientCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasUrl() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUrl() => $_clearField(2);
+  void clearUrl() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get user => $_getSZ(2);
@@ -432,7 +499,7 @@ class MqttClientCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasUser() => $_has(2);
   @$pb.TagNumber(3)
-  void clearUser() => $_clearField(3);
+  void clearUser() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get password => $_getSZ(3);
@@ -441,7 +508,7 @@ class MqttClientCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasPassword() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPassword() => $_clearField(4);
+  void clearPassword() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.int get qos => $_getIZ(4);
@@ -450,38 +517,49 @@ class MqttClientCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasQos() => $_has(4);
   @$pb.TagNumber(5)
-  void clearQos() => $_clearField(5);
+  void clearQos() => clearField(5);
 
   @$pb.TagNumber(6)
   MqttClientTopicsCfg get topics => $_getN(5);
   @$pb.TagNumber(6)
-  set topics(MqttClientTopicsCfg v) { $_setField(6, v); }
+  set topics(MqttClientTopicsCfg v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasTopics() => $_has(5);
   @$pb.TagNumber(6)
-  void clearTopics() => $_clearField(6);
+  void clearTopics() => clearField(6);
   @$pb.TagNumber(6)
   MqttClientTopicsCfg ensureTopics() => $_ensure(5);
 
   @$pb.TagNumber(7)
   MqttClientBrokerKind get brokerKind => $_getN(6);
   @$pb.TagNumber(7)
-  set brokerKind(MqttClientBrokerKind v) { $_setField(7, v); }
+  set brokerKind(MqttClientBrokerKind v) { setField(7, v); }
   @$pb.TagNumber(7)
   $core.bool hasBrokerKind() => $_has(6);
   @$pb.TagNumber(7)
-  void clearBrokerKind() => $_clearField(7);
+  void clearBrokerKind() => clearField(7);
 
   @$pb.TagNumber(8)
   MqttClientLastWill get lastWill => $_getN(7);
   @$pb.TagNumber(8)
-  set lastWill(MqttClientLastWill v) { $_setField(8, v); }
+  set lastWill(MqttClientLastWill v) { setField(8, v); }
   @$pb.TagNumber(8)
   $core.bool hasLastWill() => $_has(7);
   @$pb.TagNumber(8)
-  void clearLastWill() => $_clearField(8);
+  void clearLastWill() => clearField(8);
   @$pb.TagNumber(8)
   MqttClientLastWill ensureLastWill() => $_ensure(7);
+
+  @$pb.TagNumber(9)
+  MqttClientSessionCfg get session => $_getN(8);
+  @$pb.TagNumber(9)
+  set session(MqttClientSessionCfg v) { setField(9, v); }
+  @$pb.TagNumber(9)
+  $core.bool hasSession() => $_has(8);
+  @$pb.TagNumber(9)
+  void clearSession() => clearField(9);
+  @$pb.TagNumber(9)
+  MqttClientSessionCfg ensureSession() => $_ensure(8);
 }
 
 /// Message representing status information for the MQTT client.
@@ -548,11 +626,11 @@ class MqttClientStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   MqttClientState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(MqttClientState v) { $_setField(1, v); }
+  set state(MqttClientState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get connCount => $_getIZ(1);
@@ -561,7 +639,7 @@ class MqttClientStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasConnCount() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConnCount() => $_clearField(2);
+  void clearConnCount() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get dataRate => $_getIZ(2);
@@ -570,7 +648,7 @@ class MqttClientStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasDataRate() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDataRate() => $_clearField(3);
+  void clearDataRate() => clearField(3);
 
   @$pb.TagNumber(4)
   $fixnum.Int64 get lastMsgTime => $_getI64(3);
@@ -579,16 +657,16 @@ class MqttClientStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasLastMsgTime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearLastMsgTime() => $_clearField(4);
+  void clearLastMsgTime() => clearField(4);
 
   @$pb.TagNumber(5)
   MqttClientError get error => $_getN(4);
   @$pb.TagNumber(5)
-  set error(MqttClientError v) { $_setField(5, v); }
+  set error(MqttClientError v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasError() => $_has(4);
   @$pb.TagNumber(5)
-  void clearError() => $_clearField(5);
+  void clearError() => clearField(5);
   @$pb.TagNumber(5)
   MqttClientError ensureError() => $_ensure(4);
 }
@@ -651,7 +729,7 @@ class MqttClientReqPublish extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTopic() => $_clearField(1);
+  void clearTopic() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get payload => $_getN(1);
@@ -660,7 +738,7 @@ class MqttClientReqPublish extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasPayload() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPayload() => $_clearField(2);
+  void clearPayload() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get qos => $_getIZ(2);
@@ -669,7 +747,7 @@ class MqttClientReqPublish extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasQos() => $_has(2);
   @$pb.TagNumber(3)
-  void clearQos() => $_clearField(3);
+  void clearQos() => clearField(3);
 }
 
 /// Message representing a subscribe request for the MQTT client.
@@ -725,7 +803,7 @@ class MqttClientReqSubscribe extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasTopic() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTopic() => $_clearField(1);
+  void clearTopic() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get qos => $_getIZ(1);
@@ -734,7 +812,7 @@ class MqttClientReqSubscribe extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasQos() => $_has(1);
   @$pb.TagNumber(2)
-  void clearQos() => $_clearField(2);
+  void clearQos() => clearField(2);
 }
 
 enum MqttClientReq_Type {
@@ -796,27 +874,27 @@ class MqttClientReq extends $pb.GeneratedMessage {
   static MqttClientReq? _defaultInstance;
 
   MqttClientReq_Type whichType() => _MqttClientReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   MqttClientReqPublish get publish => $_getN(0);
   @$pb.TagNumber(1)
-  set publish(MqttClientReqPublish v) { $_setField(1, v); }
+  set publish(MqttClientReqPublish v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPublish() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPublish() => $_clearField(1);
+  void clearPublish() => clearField(1);
   @$pb.TagNumber(1)
   MqttClientReqPublish ensurePublish() => $_ensure(0);
 
   @$pb.TagNumber(2)
   MqttClientReqSubscribe get subscribe => $_getN(1);
   @$pb.TagNumber(2)
-  set subscribe(MqttClientReqSubscribe v) { $_setField(2, v); }
+  set subscribe(MqttClientReqSubscribe v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasSubscribe() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSubscribe() => $_clearField(2);
+  void clearSubscribe() => clearField(2);
   @$pb.TagNumber(2)
   MqttClientReqSubscribe ensureSubscribe() => $_ensure(1);
 }
@@ -894,49 +972,49 @@ class MqttClientData extends $pb.GeneratedMessage {
   static MqttClientData? _defaultInstance;
 
   MqttClientData_Type whichType() => _MqttClientData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   MqttClientStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(MqttClientStop v) { $_setField(1, v); }
+  set stop(MqttClientStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   MqttClientStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   MqttClientCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(MqttClientCfg v) { $_setField(2, v); }
+  set config(MqttClientCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   MqttClientCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   MqttClientStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(MqttClientStatus v) { $_setField(3, v); }
+  set status(MqttClientStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   MqttClientStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   MqttClientReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(MqttClientReq v) { $_setField(4, v); }
+  set request(MqttClientReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   MqttClientReq ensureRequest() => $_ensure(3);
 }

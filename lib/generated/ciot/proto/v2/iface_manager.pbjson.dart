@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/iface_manager.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -296,6 +296,7 @@ const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> IfaceManag
   '.Ciot.MqttClientCfg': $9.MqttClientCfg$json,
   '.Ciot.MqttClientTopicsCfg': $9.MqttClientTopicsCfg$json,
   '.Ciot.MqttClientLastWill': $9.MqttClientLastWill$json,
+  '.Ciot.MqttClientSessionCfg': $9.MqttClientSessionCfg$json,
   '.Ciot.MqttClientStatus': $9.MqttClientStatus$json,
   '.Ciot.MqttClientError': $9.MqttClientError$json,
   '.Ciot.MqttClientReq': $9.MqttClientReq$json,
@@ -391,6 +392,7 @@ const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> IfaceManag
   '.Ciot.MbusServerTcpCfg': $22.MbusServerTcpCfg$json,
   '.Ciot.MbusServerStatus': $22.MbusServerStatus$json,
   '.Ciot.MbusServerReq': $22.MbusServerReq$json,
+  '.Ciot.Proxy': $24.Proxy$json,
   '.Ciot.CreateIfaceResponse': CreateIfaceResponse$json,
   '.Ciot.GetIfaceRequest': GetIfaceRequest$json,
   '.Ciot.GetIfaceResponse': GetIfaceResponse$json,

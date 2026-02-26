@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/errors.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -66,6 +66,7 @@ class Err extends $pb.ProtobufEnum {
   static const Err ERR_TRANSPORT = Err._(49, _omitEnumNames ? '' : 'ERR_TRANSPORT');
   static const Err ERR_INVALID_RESPONSE = Err._(50, _omitEnumNames ? '' : 'ERR_INVALID_RESPONSE');
   static const Err ERR_NULL_EVENT_HANDLER = Err._(51, _omitEnumNames ? '' : 'ERR_NULL_EVENT_HANDLER');
+  static const Err ERR_DEPRECATED = Err._(52, _omitEnumNames ? '' : 'ERR_DEPRECATED');
   static const Err ERR_MBUS_EXCEPTION_ILLEGAL_FUNCTION = Err._(101, _omitEnumNames ? '' : 'ERR_MBUS_EXCEPTION_ILLEGAL_FUNCTION');
   static const Err ERR_MBUS_EXCEPTION_ILLEGAL_DATA_ADDR = Err._(102, _omitEnumNames ? '' : 'ERR_MBUS_EXCEPTION_ILLEGAL_DATA_ADDR');
   static const Err ERR_MBUS_EXCEPTION_ILLEGAL_DATA_VAL = Err._(103, _omitEnumNames ? '' : 'ERR_MBUS_EXCEPTION_ILLEGAL_DATA_VAL');
@@ -123,6 +124,7 @@ class Err extends $pb.ProtobufEnum {
     ERR_TRANSPORT,
     ERR_INVALID_RESPONSE,
     ERR_NULL_EVENT_HANDLER,
+    ERR_DEPRECATED,
     ERR_MBUS_EXCEPTION_ILLEGAL_FUNCTION,
     ERR_MBUS_EXCEPTION_ILLEGAL_DATA_ADDR,
     ERR_MBUS_EXCEPTION_ILLEGAL_DATA_VAL,
@@ -132,7 +134,7 @@ class Err extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, Err> _byValue = $pb.ProtobufEnum.initByValue(values);
   static Err? valueOf($core.int value) => _byValue[value];
 
-  const Err._(super.v, super.n);
+  const Err._($core.int v, $core.String n) : super(v, n);
 }
 
 

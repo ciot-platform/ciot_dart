@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/mbus_client.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -17,8 +17,6 @@ import 'mbus.pb.dart' as $4;
 import 'mbus.pbenum.dart' as $4;
 import 'mbus_client.pbenum.dart';
 import 'uart.pb.dart' as $3;
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'mbus_client.pbenum.dart';
 
@@ -108,16 +106,16 @@ class MbusClientRtuCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasServerId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearServerId() => $_clearField(1);
+  void clearServerId() => clearField(1);
 
   @$pb.TagNumber(2)
   $3.UartCfg get serialCfg => $_getN(1);
   @$pb.TagNumber(2)
-  set serialCfg($3.UartCfg v) { $_setField(2, v); }
+  set serialCfg($3.UartCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasSerialCfg() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSerialCfg() => $_clearField(2);
+  void clearSerialCfg() => clearField(2);
   @$pb.TagNumber(2)
   $3.UartCfg ensureSerialCfg() => $_ensure(1);
 }
@@ -175,7 +173,7 @@ class MbusClientTcpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasIp() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIp() => $_clearField(1);
+  void clearIp() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get port => $_getIZ(1);
@@ -184,7 +182,7 @@ class MbusClientTcpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasPort() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPort() => $_clearField(2);
+  void clearPort() => clearField(2);
 }
 
 enum MbusClientCfg_Type {
@@ -251,27 +249,27 @@ class MbusClientCfg extends $pb.GeneratedMessage {
   static MbusClientCfg? _defaultInstance;
 
   MbusClientCfg_Type whichType() => _MbusClientCfg_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   MbusClientRtuCfg get rtu => $_getN(0);
   @$pb.TagNumber(1)
-  set rtu(MbusClientRtuCfg v) { $_setField(1, v); }
+  set rtu(MbusClientRtuCfg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasRtu() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRtu() => $_clearField(1);
+  void clearRtu() => clearField(1);
   @$pb.TagNumber(1)
   MbusClientRtuCfg ensureRtu() => $_ensure(0);
 
   @$pb.TagNumber(2)
   MbusClientTcpCfg get tcp => $_getN(1);
   @$pb.TagNumber(2)
-  set tcp(MbusClientTcpCfg v) { $_setField(2, v); }
+  set tcp(MbusClientTcpCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasTcp() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTcp() => $_clearField(2);
+  void clearTcp() => clearField(2);
   @$pb.TagNumber(2)
   MbusClientTcpCfg ensureTcp() => $_ensure(1);
 
@@ -282,7 +280,7 @@ class MbusClientCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasTimeout() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTimeout() => $_clearField(3);
+  void clearTimeout() => clearField(3);
 }
 
 /// Message representing Modbus client status.
@@ -334,20 +332,20 @@ class MbusClientStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   MbusClientState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(MbusClientState v) { $_setField(1, v); }
+  set state(MbusClientState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $4.MbusError get error => $_getN(1);
   @$pb.TagNumber(2)
-  set error($4.MbusError v) { $_setField(2, v); }
+  set error($4.MbusError v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasError() => $_has(1);
   @$pb.TagNumber(2)
-  void clearError() => $_clearField(2);
+  void clearError() => clearField(2);
 }
 
 enum MbusClientReq_Type {
@@ -402,16 +400,16 @@ class MbusClientReq extends $pb.GeneratedMessage {
   static MbusClientReq? _defaultInstance;
 
   MbusClientReq_Type whichType() => _MbusClientReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $4.MbusFunctionReq get function => $_getN(0);
   @$pb.TagNumber(1)
-  set function($4.MbusFunctionReq v) { $_setField(1, v); }
+  set function($4.MbusFunctionReq v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasFunction() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFunction() => $_clearField(1);
+  void clearFunction() => clearField(1);
   @$pb.TagNumber(1)
   $4.MbusFunctionReq ensureFunction() => $_ensure(0);
 }
@@ -489,49 +487,49 @@ class MbusClientData extends $pb.GeneratedMessage {
   static MbusClientData? _defaultInstance;
 
   MbusClientData_Type whichType() => _MbusClientData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   MbusClientStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(MbusClientStop v) { $_setField(1, v); }
+  set stop(MbusClientStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   MbusClientStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   MbusClientCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(MbusClientCfg v) { $_setField(2, v); }
+  set config(MbusClientCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   MbusClientCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   MbusClientStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(MbusClientStatus v) { $_setField(3, v); }
+  set status(MbusClientStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   MbusClientStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   MbusClientReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(MbusClientReq v) { $_setField(4, v); }
+  set request(MbusClientReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   MbusClientReq ensureRequest() => $_ensure(3);
 }

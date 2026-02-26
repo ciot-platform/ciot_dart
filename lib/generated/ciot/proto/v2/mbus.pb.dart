@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/mbus.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'mbus.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'mbus.pbenum.dart';
 
@@ -88,11 +86,11 @@ class MbusFunctionReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   MbusFuncCode get code => $_getN(0);
   @$pb.TagNumber(1)
-  set code(MbusFuncCode v) { $_setField(1, v); }
+  set code(MbusFuncCode v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasCode() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCode() => $_clearField(1);
+  void clearCode() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get address => $_getIZ(1);
@@ -101,10 +99,10 @@ class MbusFunctionReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasAddress() => $_has(1);
   @$pb.TagNumber(2)
-  void clearAddress() => $_clearField(2);
+  void clearAddress() => clearField(2);
 
   @$pb.TagNumber(3)
-  $pb.PbList<$core.int> get data => $_getList(2);
+  $core.List<$core.int> get data => $_getList(2);
 
   @$pb.TagNumber(4)
   $core.int get readCount => $_getIZ(3);
@@ -113,7 +111,7 @@ class MbusFunctionReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasReadCount() => $_has(3);
   @$pb.TagNumber(4)
-  void clearReadCount() => $_clearField(4);
+  void clearReadCount() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.int get maxAttempts => $_getIZ(4);
@@ -122,7 +120,7 @@ class MbusFunctionReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasMaxAttempts() => $_has(4);
   @$pb.TagNumber(5)
-  void clearMaxAttempts() => $_clearField(5);
+  void clearMaxAttempts() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.int get error => $_getIZ(5);
@@ -131,7 +129,7 @@ class MbusFunctionReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasError() => $_has(5);
   @$pb.TagNumber(6)
-  void clearError() => $_clearField(6);
+  void clearError() => clearField(6);
 }
 
 

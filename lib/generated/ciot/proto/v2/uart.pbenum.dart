@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/uart.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -30,7 +30,7 @@ class UartState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, UartState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static UartState? valueOf($core.int value) => _byValue[value];
 
-  const UartState._(super.v, super.n);
+  const UartState._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different types of UART requests.
@@ -48,7 +48,7 @@ class UartReqType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, UartReqType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static UartReqType? valueOf($core.int value) => _byValue[value];
 
-  const UartReqType._(super.v, super.n);
+  const UartReqType._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different UART error types.
@@ -78,7 +78,7 @@ class UartError extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, UartError> _byValue = $pb.ProtobufEnum.initByValue(values);
   static UartError? valueOf($core.int value) => _byValue[value];
 
-  const UartError._(super.v, super.n);
+  const UartError._($core.int v, $core.String n) : super(v, n);
 }
 
 

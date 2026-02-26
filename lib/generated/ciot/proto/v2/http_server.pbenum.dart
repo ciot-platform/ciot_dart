@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/http_server.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -28,7 +28,7 @@ class HttpServerState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, HttpServerState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static HttpServerState? valueOf($core.int value) => _byValue[value];
 
-  const HttpServerState._(super.v, super.n);
+  const HttpServerState._($core.int v, $core.String n) : super(v, n);
 }
 
 

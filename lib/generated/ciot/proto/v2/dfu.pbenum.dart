@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/dfu.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,17 +15,11 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 /// Possible dfu states
 class DfuState extends $pb.ProtobufEnum {
-  /// Idle state
   static const DfuState DFU_STATE_IDLE = DfuState._(0, _omitEnumNames ? '' : 'DFU_STATE_IDLE');
-  /// Dfu Starting
   static const DfuState DFU_STATE_STARTING = DfuState._(1, _omitEnumNames ? '' : 'DFU_STATE_STARTING');
-  /// Dfu Interrface started
   static const DfuState DFU_STATE_STARTED = DfuState._(2, _omitEnumNames ? '' : 'DFU_STATE_STARTED');
-  /// Dfu in progress
   static const DfuState DFU_STATE_IN_PROGRESS = DfuState._(3, _omitEnumNames ? '' : 'DFU_STATE_IN_PROGRESS');
-  /// Dfu completed
   static const DfuState DFU_STATE_COMPLETED = DfuState._(4, _omitEnumNames ? '' : 'DFU_STATE_COMPLETED');
-  /// Dfu error
   static const DfuState DFU_STATE_ERROR = DfuState._(5, _omitEnumNames ? '' : 'DFU_STATE_ERROR');
 
   static const $core.List<DfuState> values = <DfuState> [
@@ -40,7 +34,7 @@ class DfuState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, DfuState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static DfuState? valueOf($core.int value) => _byValue[value];
 
-  const DfuState._(super.v, super.n);
+  const DfuState._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Dfu types
@@ -60,7 +54,7 @@ class DfuType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, DfuType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static DfuType? valueOf($core.int value) => _byValue[value];
 
-  const DfuType._(super.v, super.n);
+  const DfuType._($core.int v, $core.String n) : super(v, n);
 }
 
 

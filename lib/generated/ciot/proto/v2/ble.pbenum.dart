@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/ble.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,9 +15,7 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 /// Possible ble states
 class BleState extends $pb.ProtobufEnum {
-  /// Idle state
   static const BleState BLE_STATE_IDLE = BleState._(0, _omitEnumNames ? '' : 'BLE_STATE_IDLE');
-  /// Bluetooth module started
   static const BleState BLE_STATE_STARTED = BleState._(1, _omitEnumNames ? '' : 'BLE_STATE_STARTED');
 
   static const $core.List<BleState> values = <BleState> [
@@ -28,7 +26,7 @@ class BleState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, BleState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static BleState? valueOf($core.int value) => _byValue[value];
 
-  const BleState._(super.v, super.n);
+  const BleState._($core.int v, $core.String n) : super(v, n);
 }
 
 

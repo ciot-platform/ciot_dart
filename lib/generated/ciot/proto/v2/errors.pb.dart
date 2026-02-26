@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/errors.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'errors.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'errors.pbenum.dart';
 
@@ -62,11 +60,11 @@ class ErrData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Err get err => $_getN(0);
   @$pb.TagNumber(1)
-  set err(Err v) { $_setField(1, v); }
+  set err(Err v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasErr() => $_has(0);
   @$pb.TagNumber(1)
-  void clearErr() => $_clearField(1);
+  void clearErr() => clearField(1);
 }
 
 
