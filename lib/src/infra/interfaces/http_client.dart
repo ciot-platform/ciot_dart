@@ -111,7 +111,6 @@ class HttpClient extends IfaceBase {
     return const Right(unit);
   }
 
-  @override
   Either<ErrorBase, Unit> setIp(String ip) {
     if (_cfg == null) {
       return Left(ErrorNullConfig());
