@@ -13,4 +13,5 @@ abstract class Iface {
   Either<ErrorBase, Unit> processData(MsgData data);
   Future<Either<ErrorBase, Uint8List>> sendData(Uint8List data);
   Either<ErrorBase, MsgData> getData(MsgData data);
+  Either<ErrorBase, Unit> setTimeout(int timeout);
 }

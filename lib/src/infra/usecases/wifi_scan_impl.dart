@@ -26,16 +26,14 @@ class WifiScanImpl implements WifiScan {
   Future<Either<ErrorBase, WifiReqScanResult>> _startScan(int ifaceId, {bool force = false}) async {
     final ifaceInfo = IfaceInfo(id: ifaceId, type: IfaceType.IFACE_TYPE_WIFI);
     final msg = Msg(iface: ifaceInfo, data: MsgData(wifi: WifiData(request: WifiReq(scan: WifiReqScan()))));
-    final result = await _iface.sendMsg(msg, force: force);
-    return result.match(
-      (l) => left(l), 
-      (r) => right(r.data.wifi.request.scanResult));
+    final result = await _iface.sendMsg(msg, force: force, timeout: 5000);
+    return result.match((l) => left(l), (r) => right(r.data.wifi.request.scanResult));
   }
 
   Future<Either<ErrorBase, WifiApInfo>> _getScannedAp(int ifaceId, int apId, {bool force = false}) async {
     final ifaceInfo = IfaceInfo(id: ifaceId, type: IfaceType.IFACE_TYPE_WIFI);
     final msg = Msg(iface: ifaceInfo, data: MsgData(wifi: WifiData(request: WifiReq(getAp: WifiReqGetAp(id: apId)))));
-    final result = await _iface.sendMsg(msg, force: force);
+    final result = await _iface.sendMsg(msg, force: force, timeout: 5000);
     return result.match((l) => left(l), (r) => right(r.data.wifi.request.apInfo));
   }
 }
