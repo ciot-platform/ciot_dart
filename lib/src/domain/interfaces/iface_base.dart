@@ -17,8 +17,9 @@ abstract class IfaceBase implements Iface {
 
   IfaceBase.withSerializer(this._serializer);
 
-  Future<Either<ErrorBase, Msg>> sendMsg(Msg msg, {bool force = false}) async {
+  Future<Either<ErrorBase, Msg>> sendMsg(Msg msg, {bool force = false, int? timeout}) async {
     if (_sending && !force) return Either.left(ErrorBusy());
+    if (timeout != null) setTimeout(timeout);
     _sending = true;
     try {
       _sentMsgId = Random().nextInt(1 << 31);
@@ -33,11 +34,12 @@ abstract class IfaceBase implements Iface {
     }
   }
 
-  Future<Either<ErrorBase, T>> send<T>(T msg, {bool force = false}) async {
+  Future<Either<ErrorBase, T>> send<T>(T msg, {bool force = false, int? timeout}) async {
     if (_sending && !force) {
       return Either.left(ErrorBusy());
     }
     _sending = true;
+    if (timeout != null) setTimeout(timeout);
     try {
       _sentMsgId = Random().nextInt(1 << 31);
       (msg as dynamic).id = _sentMsgId;

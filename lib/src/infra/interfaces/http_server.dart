@@ -110,4 +110,9 @@ class HttpServer extends IfaceBase {
       }
     });
   }
+  
+  @override
+  Either<ErrorBase, Unit> setTimeout(int timeout) {
+    return Left(ErrorNotSupported());
+  }
 }

@@ -43,6 +43,8 @@ class MqttClient extends IfaceBase {
 
   final List<String> _subscribedTopics = [];
 
+  int _completerTimeout = 5000;
+
   MqttClient(int id)
       : info = IfaceInfo(
           id: id,
@@ -166,8 +168,8 @@ class MqttClient extends IfaceBase {
     final builder = mqtt.MqttClientPayloadBuilder();
     builder.addBuffer(buffer);
     _client!.publishMessage(_cfg!.topics.pub, mqtt.MqttQos.values[_cfg!.qos], builder.payload!);
-    var result =
-        await _responseCompleter!.future.timeout(const Duration(seconds: 5), onTimeout: () => Left(ErrorTimeout()));
+    var result = await _responseCompleter!.future
+        .timeout(Duration(milliseconds: _completerTimeout), onTimeout: () => Left(ErrorTimeout()));
     return result;
   }
 
@@ -261,5 +263,11 @@ class MqttClient extends IfaceBase {
 
     _subscribedTopics.clear();
     _onEventController.add(Event(type: EventType.EVENT_TYPE_STOPPED));
+  }
+
+  @override
+  Either<ErrorBase, Unit> setTimeout(int timeout) {
+    _completerTimeout = timeout;
+    return Either.right(unit);
   }
 }

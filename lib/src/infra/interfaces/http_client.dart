@@ -102,6 +102,24 @@ class HttpClient extends IfaceBase {
     }
   }
 
+  @override
+  Either<ErrorBase, Unit> setTimeout(int timeout) {
+    if (_cfg == null) {
+      return Left(ErrorNullConfig());
+    }
+    _cfg!.timeout = timeout;
+    return const Right(unit);
+  }
+
+  @override
+  Either<ErrorBase, Unit> setIp(String ip) {
+    if (_cfg == null) {
+      return Left(ErrorNullConfig());
+    }
+    _cfg!.url = ip;
+    return const Right(unit);
+  }
+
   Future<Either<ErrorBase, Uint8List>> httpRequest(Uri uri, Uint8List data) async {
     if (_cfg == null) {
       return Either.left(ErrorNullConfig());
