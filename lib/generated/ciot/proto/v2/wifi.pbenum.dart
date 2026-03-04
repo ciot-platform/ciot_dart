@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/wifi.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -26,7 +26,7 @@ class WifiType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, WifiType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static WifiType? valueOf($core.int value) => _byValue[value];
 
-  const WifiType._(super.v, super.n);
+  const WifiType._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing the state of Wi-Fi scanning.
@@ -46,7 +46,7 @@ class WifiScanState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, WifiScanState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static WifiScanState? valueOf($core.int value) => _byValue[value];
 
-  const WifiScanState._(super.v, super.n);
+  const WifiScanState._($core.int v, $core.String n) : super(v, n);
 }
 
 

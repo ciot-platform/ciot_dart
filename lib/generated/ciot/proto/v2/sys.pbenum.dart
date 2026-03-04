@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/sys.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -28,7 +28,7 @@ class SysReqCmd extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, SysReqCmd> _byValue = $pb.ProtobufEnum.initByValue(values);
   static SysReqCmd? valueOf($core.int value) => _byValue[value];
 
-  const SysReqCmd._(super.v, super.n);
+  const SysReqCmd._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing hardware version
@@ -56,7 +56,7 @@ class SysHw extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, SysHw> _byValue = $pb.ProtobufEnum.initByValue(values);
   static SysHw? valueOf($core.int value) => _byValue[value];
 
-  const SysHw._(super.v, super.n);
+  const SysHw._($core.int v, $core.String n) : super(v, n);
 }
 
 

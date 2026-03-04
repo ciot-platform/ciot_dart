@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/tcp.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'tcp.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'tcp.pbenum.dart';
 
@@ -125,16 +123,16 @@ class TcpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasDisabled() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDisabled() => $_clearField(1);
+  void clearDisabled() => clearField(1);
 
   @$pb.TagNumber(2)
   TcpDhcpCfg get dhcp => $_getN(1);
   @$pb.TagNumber(2)
-  set dhcp(TcpDhcpCfg v) { $_setField(2, v); }
+  set dhcp(TcpDhcpCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasDhcp() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDhcp() => $_clearField(2);
+  void clearDhcp() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.List<$core.int> get ip => $_getN(2);
@@ -143,7 +141,7 @@ class TcpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasIp() => $_has(2);
   @$pb.TagNumber(3)
-  void clearIp() => $_clearField(3);
+  void clearIp() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.List<$core.int> get gateway => $_getN(3);
@@ -152,7 +150,7 @@ class TcpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasGateway() => $_has(3);
   @$pb.TagNumber(4)
-  void clearGateway() => $_clearField(4);
+  void clearGateway() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.List<$core.int> get mask => $_getN(4);
@@ -161,7 +159,7 @@ class TcpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasMask() => $_has(4);
   @$pb.TagNumber(5)
-  void clearMask() => $_clearField(5);
+  void clearMask() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.List<$core.int> get dns => $_getN(5);
@@ -170,7 +168,7 @@ class TcpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasDns() => $_has(5);
   @$pb.TagNumber(6)
-  void clearDns() => $_clearField(6);
+  void clearDns() => clearField(6);
 }
 
 /// Message representing DHCP status for the TCP module.
@@ -222,20 +220,20 @@ class TcpDhcpStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   TcpDhcpState get client => $_getN(0);
   @$pb.TagNumber(1)
-  set client(TcpDhcpState v) { $_setField(1, v); }
+  set client(TcpDhcpState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasClient() => $_has(0);
   @$pb.TagNumber(1)
-  void clearClient() => $_clearField(1);
+  void clearClient() => clearField(1);
 
   @$pb.TagNumber(2)
   TcpDhcpState get server => $_getN(1);
   @$pb.TagNumber(2)
-  set server(TcpDhcpState v) { $_setField(2, v); }
+  set server(TcpDhcpState v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasServer() => $_has(1);
   @$pb.TagNumber(2)
-  void clearServer() => $_clearField(2);
+  void clearServer() => clearField(2);
 }
 
 /// Message representing TCP information.
@@ -291,7 +289,7 @@ class TcpInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasMac() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMac() => $_clearField(1);
+  void clearMac() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get ip => $_getN(1);
@@ -300,7 +298,7 @@ class TcpInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasIp() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIp() => $_clearField(2);
+  void clearIp() => clearField(2);
 }
 
 /// Message representing status for the TCP module.
@@ -357,11 +355,11 @@ class TcpStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   TcpState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(TcpState v) { $_setField(1, v); }
+  set state(TcpState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get connCount => $_getIZ(1);
@@ -370,16 +368,16 @@ class TcpStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasConnCount() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConnCount() => $_clearField(2);
+  void clearConnCount() => clearField(2);
 
   @$pb.TagNumber(3)
   TcpDhcpStatus get dhcp => $_getN(2);
   @$pb.TagNumber(3)
-  set dhcp(TcpDhcpStatus v) { $_setField(3, v); }
+  set dhcp(TcpDhcpStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasDhcp() => $_has(2);
   @$pb.TagNumber(3)
-  void clearDhcp() => $_clearField(3);
+  void clearDhcp() => clearField(3);
   @$pb.TagNumber(3)
   TcpDhcpStatus ensureDhcp() => $_ensure(2);
 }
@@ -497,60 +495,60 @@ class TcpData extends $pb.GeneratedMessage {
   static TcpData? _defaultInstance;
 
   TcpData_Type whichType() => _TcpData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   TcpStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(TcpStop v) { $_setField(1, v); }
+  set stop(TcpStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   TcpStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   TcpCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(TcpCfg v) { $_setField(2, v); }
+  set config(TcpCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   TcpCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   TcpStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(TcpStatus v) { $_setField(3, v); }
+  set status(TcpStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   TcpStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   TcpReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(TcpReq v) { $_setField(4, v); }
+  set request(TcpReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   TcpReq ensureRequest() => $_ensure(3);
 
   @$pb.TagNumber(6)
   TcpInfo get info => $_getN(4);
   @$pb.TagNumber(6)
-  set info(TcpInfo v) { $_setField(6, v); }
+  set info(TcpInfo v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasInfo() => $_has(4);
   @$pb.TagNumber(6)
-  void clearInfo() => $_clearField(6);
+  void clearInfo() => clearField(6);
   @$pb.TagNumber(6)
   TcpInfo ensureInfo() => $_ensure(4);
 }

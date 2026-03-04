@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/sys.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'sys.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'sys.pbenum.dart';
 
@@ -243,7 +241,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasBleAdv() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBleAdv() => $_clearField(1);
+  void clearBleAdv() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.bool get bleScn => $_getBF(1);
@@ -252,7 +250,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasBleScn() => $_has(1);
   @$pb.TagNumber(2)
-  void clearBleScn() => $_clearField(2);
+  void clearBleScn() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.bool get ble => $_getBF(2);
@@ -261,7 +259,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasBle() => $_has(2);
   @$pb.TagNumber(3)
-  void clearBle() => $_clearField(3);
+  void clearBle() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.bool get eth => $_getBF(3);
@@ -270,7 +268,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasEth() => $_has(3);
   @$pb.TagNumber(4)
-  void clearEth() => $_clearField(4);
+  void clearEth() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get gpio => $_getBF(4);
@@ -279,7 +277,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasGpio() => $_has(4);
   @$pb.TagNumber(5)
-  void clearGpio() => $_clearField(5);
+  void clearGpio() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.bool get httpClient => $_getBF(5);
@@ -288,7 +286,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasHttpClient() => $_has(5);
   @$pb.TagNumber(6)
-  void clearHttpClient() => $_clearField(6);
+  void clearHttpClient() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.bool get httpServer => $_getBF(6);
@@ -297,7 +295,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.bool hasHttpServer() => $_has(6);
   @$pb.TagNumber(7)
-  void clearHttpServer() => $_clearField(7);
+  void clearHttpServer() => clearField(7);
 
   @$pb.TagNumber(8)
   $core.bool get mbusClient => $_getBF(7);
@@ -306,7 +304,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   $core.bool hasMbusClient() => $_has(7);
   @$pb.TagNumber(8)
-  void clearMbusClient() => $_clearField(8);
+  void clearMbusClient() => clearField(8);
 
   @$pb.TagNumber(9)
   $core.bool get mbusServer => $_getBF(8);
@@ -315,7 +313,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   $core.bool hasMbusServer() => $_has(8);
   @$pb.TagNumber(9)
-  void clearMbusServer() => $_clearField(9);
+  void clearMbusServer() => clearField(9);
 
   @$pb.TagNumber(10)
   $core.bool get mqttClient => $_getBF(9);
@@ -324,7 +322,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   $core.bool hasMqttClient() => $_has(9);
   @$pb.TagNumber(10)
-  void clearMqttClient() => $_clearField(10);
+  void clearMqttClient() => clearField(10);
 
   @$pb.TagNumber(11)
   $core.bool get ntp => $_getBF(10);
@@ -333,7 +331,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   $core.bool hasNtp() => $_has(10);
   @$pb.TagNumber(11)
-  void clearNtp() => $_clearField(11);
+  void clearNtp() => clearField(11);
 
   @$pb.TagNumber(12)
   $core.bool get ota => $_getBF(11);
@@ -342,7 +340,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   $core.bool hasOta() => $_has(11);
   @$pb.TagNumber(12)
-  void clearOta() => $_clearField(12);
+  void clearOta() => clearField(12);
 
   @$pb.TagNumber(13)
   $core.bool get pwm => $_getBF(12);
@@ -351,7 +349,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(13)
   $core.bool hasPwm() => $_has(12);
   @$pb.TagNumber(13)
-  void clearPwm() => $_clearField(13);
+  void clearPwm() => clearField(13);
 
   @$pb.TagNumber(14)
   $core.bool get sys => $_getBF(13);
@@ -360,7 +358,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(14)
   $core.bool hasSys() => $_has(13);
   @$pb.TagNumber(14)
-  void clearSys() => $_clearField(14);
+  void clearSys() => clearField(14);
 
   @$pb.TagNumber(15)
   $core.bool get tcp => $_getBF(14);
@@ -369,7 +367,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   $core.bool hasTcp() => $_has(14);
   @$pb.TagNumber(15)
-  void clearTcp() => $_clearField(15);
+  void clearTcp() => clearField(15);
 
   @$pb.TagNumber(16)
   $core.bool get timer => $_getBF(15);
@@ -378,7 +376,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(16)
   $core.bool hasTimer() => $_has(15);
   @$pb.TagNumber(16)
-  void clearTimer() => $_clearField(16);
+  void clearTimer() => clearField(16);
 
   @$pb.TagNumber(17)
   $core.bool get uart => $_getBF(16);
@@ -387,7 +385,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(17)
   $core.bool hasUart() => $_has(16);
   @$pb.TagNumber(17)
-  void clearUart() => $_clearField(17);
+  void clearUart() => clearField(17);
 
   @$pb.TagNumber(18)
   $core.bool get usb => $_getBF(17);
@@ -396,7 +394,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   $core.bool hasUsb() => $_has(17);
   @$pb.TagNumber(18)
-  void clearUsb() => $_clearField(18);
+  void clearUsb() => clearField(18);
 
   @$pb.TagNumber(19)
   $core.bool get wifi => $_getBF(18);
@@ -405,7 +403,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(19)
   $core.bool hasWifi() => $_has(18);
   @$pb.TagNumber(19)
-  void clearWifi() => $_clearField(19);
+  void clearWifi() => clearField(19);
 
   @$pb.TagNumber(20)
   $core.bool get storage => $_getBF(19);
@@ -414,7 +412,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(20)
   $core.bool hasStorage() => $_has(19);
   @$pb.TagNumber(20)
-  void clearStorage() => $_clearField(20);
+  void clearStorage() => clearField(20);
 
   @$pb.TagNumber(21)
   $core.bool get serializer => $_getBF(20);
@@ -423,7 +421,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   $core.bool hasSerializer() => $_has(20);
   @$pb.TagNumber(21)
-  void clearSerializer() => $_clearField(21);
+  void clearSerializer() => clearField(21);
 
   @$pb.TagNumber(22)
   $core.bool get crypt => $_getBF(21);
@@ -432,7 +430,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(22)
   $core.bool hasCrypt() => $_has(21);
   @$pb.TagNumber(22)
-  void clearCrypt() => $_clearField(22);
+  void clearCrypt() => clearField(22);
 
   @$pb.TagNumber(23)
   $core.bool get dfu => $_getBF(22);
@@ -441,7 +439,7 @@ class SysFeatures extends $pb.GeneratedMessage {
   @$pb.TagNumber(23)
   $core.bool hasDfu() => $_has(22);
   @$pb.TagNumber(23)
-  void clearDfu() => $_clearField(23);
+  void clearDfu() => clearField(23);
 }
 
 /// Message representing system information.
@@ -507,7 +505,7 @@ class SysInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasAppVer() => $_has(0);
   @$pb.TagNumber(1)
-  void clearAppVer() => $_clearField(1);
+  void clearAppVer() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get hwName => $_getSZ(1);
@@ -516,25 +514,25 @@ class SysInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasHwName() => $_has(1);
   @$pb.TagNumber(2)
-  void clearHwName() => $_clearField(2);
+  void clearHwName() => clearField(2);
 
   @$pb.TagNumber(3)
   SysHw get hwType => $_getN(2);
   @$pb.TagNumber(3)
-  set hwType(SysHw v) { $_setField(3, v); }
+  set hwType(SysHw v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasHwType() => $_has(2);
   @$pb.TagNumber(3)
-  void clearHwType() => $_clearField(3);
+  void clearHwType() => clearField(3);
 
   @$pb.TagNumber(4)
   SysFeatures get features => $_getN(3);
   @$pb.TagNumber(4)
-  set features(SysFeatures v) { $_setField(4, v); }
+  set features(SysFeatures v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasFeatures() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFeatures() => $_clearField(4);
+  void clearFeatures() => clearField(4);
   @$pb.TagNumber(4)
   SysFeatures ensureFeatures() => $_ensure(3);
 }
@@ -602,7 +600,7 @@ class SysStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasResetReason() => $_has(0);
   @$pb.TagNumber(1)
-  void clearResetReason() => $_clearField(1);
+  void clearResetReason() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get resetCount => $_getIZ(1);
@@ -611,7 +609,7 @@ class SysStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasResetCount() => $_has(1);
   @$pb.TagNumber(2)
-  void clearResetCount() => $_clearField(2);
+  void clearResetCount() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get freeMemory => $_getIZ(2);
@@ -620,7 +618,7 @@ class SysStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasFreeMemory() => $_has(2);
   @$pb.TagNumber(3)
-  void clearFreeMemory() => $_clearField(3);
+  void clearFreeMemory() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.int get lifetime => $_getIZ(3);
@@ -629,7 +627,7 @@ class SysStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasLifetime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearLifetime() => $_clearField(4);
+  void clearLifetime() => clearField(4);
 }
 
 enum SysReq_Type {
@@ -684,16 +682,16 @@ class SysReq extends $pb.GeneratedMessage {
   static SysReq? _defaultInstance;
 
   SysReq_Type whichType() => _SysReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   SysReqCmd get cmd => $_getN(0);
   @$pb.TagNumber(1)
-  set cmd(SysReqCmd v) { $_setField(1, v); }
+  set cmd(SysReqCmd v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasCmd() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCmd() => $_clearField(1);
+  void clearCmd() => clearField(1);
 }
 
 enum SysData_Type {
@@ -776,60 +774,60 @@ class SysData extends $pb.GeneratedMessage {
   static SysData? _defaultInstance;
 
   SysData_Type whichType() => _SysData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   SysStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(SysStop v) { $_setField(1, v); }
+  set stop(SysStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   SysStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   SysCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(SysCfg v) { $_setField(2, v); }
+  set config(SysCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   SysCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   SysStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(SysStatus v) { $_setField(3, v); }
+  set status(SysStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   SysStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   SysReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(SysReq v) { $_setField(4, v); }
+  set request(SysReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   SysReq ensureRequest() => $_ensure(3);
 
   @$pb.TagNumber(5)
   SysInfo get info => $_getN(4);
   @$pb.TagNumber(5)
-  set info(SysInfo v) { $_setField(5, v); }
+  set info(SysInfo v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasInfo() => $_has(4);
   @$pb.TagNumber(5)
-  void clearInfo() => $_clearField(5);
+  void clearInfo() => clearField(5);
   @$pb.TagNumber(5)
   SysInfo ensureInfo() => $_ensure(4);
 }

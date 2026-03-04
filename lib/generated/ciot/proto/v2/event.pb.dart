@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/event.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,8 +15,6 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'event.pbenum.dart';
 import 'msg.pb.dart' as $24;
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'event.pbenum.dart';
 
@@ -84,25 +82,25 @@ class Event extends $pb.GeneratedMessage {
   static Event? _defaultInstance;
 
   Event_Data whichData() => _Event_DataByTag[$_whichOneof(0)]!;
-  void clearData() => $_clearField($_whichOneof(0));
+  void clearData() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   EventType get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(EventType v) { $_setField(1, v); }
+  set type(EventType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => $_clearField(1);
+  void clearType() => clearField(1);
 
   @$pb.TagNumber(2)
   $24.Msg get msg => $_getN(1);
   @$pb.TagNumber(2)
-  set msg($24.Msg v) { $_setField(2, v); }
+  set msg($24.Msg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasMsg() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMsg() => $_clearField(2);
+  void clearMsg() => clearField(2);
   @$pb.TagNumber(2)
   $24.Msg ensureMsg() => $_ensure(1);
 
@@ -113,7 +111,7 @@ class Event extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasRaw() => $_has(2);
   @$pb.TagNumber(3)
-  void clearRaw() => $_clearField(3);
+  void clearRaw() => clearField(3);
 }
 
 

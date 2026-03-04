@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/wifi.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -93,6 +93,7 @@ const WifiStatus$json = {
     {'1': 'disconnect_reason', '3': 1, '4': 1, '5': 13, '10': 'disconnectReason'},
     {'1': 'tcp', '3': 2, '4': 1, '5': 11, '6': '.Ciot.TcpStatus', '10': 'tcp'},
     {'1': 'scan_state', '3': 3, '4': 1, '5': 14, '6': '.Ciot.WifiScanState', '10': 'scanState'},
+    {'1': 'rssi', '3': 4, '4': 1, '5': 5, '10': 'rssi'},
   ],
 };
 
@@ -100,7 +101,7 @@ const WifiStatus$json = {
 final $typed_data.Uint8List wifiStatusDescriptor = $convert.base64Decode(
     'CgpXaWZpU3RhdHVzEisKEWRpc2Nvbm5lY3RfcmVhc29uGAEgASgNUhBkaXNjb25uZWN0UmVhc2'
     '9uEiEKA3RjcBgCIAEoCzIPLkNpb3QuVGNwU3RhdHVzUgN0Y3ASMgoKc2Nhbl9zdGF0ZRgDIAEo'
-    'DjITLkNpb3QuV2lmaVNjYW5TdGF0ZVIJc2NhblN0YXRl');
+    'DjITLkNpb3QuV2lmaVNjYW5TdGF0ZVIJc2NhblN0YXRlEhIKBHJzc2kYBCABKAVSBHJzc2k=');
 
 @$core.Deprecated('Use wifiInfoDescriptor instead')
 const WifiInfo$json = {

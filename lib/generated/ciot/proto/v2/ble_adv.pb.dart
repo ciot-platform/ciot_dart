@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/ble_adv.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'ble_adv.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'ble_adv.pbenum.dart';
 
@@ -120,7 +118,7 @@ class BleAdvCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasInterval() => $_has(0);
   @$pb.TagNumber(1)
-  void clearInterval() => $_clearField(1);
+  void clearInterval() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get duration => $_getIZ(1);
@@ -129,7 +127,7 @@ class BleAdvCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasDuration() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDuration() => $_clearField(2);
+  void clearDuration() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get type => $_getIZ(2);
@@ -138,7 +136,7 @@ class BleAdvCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasType() => $_has(2);
   @$pb.TagNumber(3)
-  void clearType() => $_clearField(3);
+  void clearType() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.int get filterPolicy => $_getIZ(3);
@@ -147,7 +145,7 @@ class BleAdvCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasFilterPolicy() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFilterPolicy() => $_clearField(4);
+  void clearFilterPolicy() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.int get txPower => $_getIZ(4);
@@ -156,7 +154,7 @@ class BleAdvCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasTxPower() => $_has(4);
   @$pb.TagNumber(5)
-  void clearTxPower() => $_clearField(5);
+  void clearTxPower() => clearField(5);
 }
 
 /// Ble adv status
@@ -208,11 +206,11 @@ class BleAdvStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   BleAdvState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(BleAdvState v) { $_setField(1, v); }
+  set state(BleAdvState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get errCode => $_getIZ(1);
@@ -221,7 +219,7 @@ class BleAdvStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasErrCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearErrCode() => $_clearField(2);
+  void clearErrCode() => clearField(2);
 }
 
 /// Ble adv request
@@ -330,49 +328,49 @@ class BleAdvData extends $pb.GeneratedMessage {
   static BleAdvData? _defaultInstance;
 
   BleAdvData_Type whichType() => _BleAdvData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   BleAdvStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(BleAdvStop v) { $_setField(1, v); }
+  set stop(BleAdvStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   BleAdvStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   BleAdvCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(BleAdvCfg v) { $_setField(2, v); }
+  set config(BleAdvCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   BleAdvCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   BleAdvStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(BleAdvStatus v) { $_setField(3, v); }
+  set status(BleAdvStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   BleAdvStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   BleAdvReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(BleAdvReq v) { $_setField(4, v); }
+  set request(BleAdvReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   BleAdvReq ensureRequest() => $_ensure(3);
 }

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/ciot.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -34,7 +34,7 @@ class State extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, State> _byValue = $pb.ProtobufEnum.initByValue(values);
   static State? valueOf($core.int value) => _byValue[value];
 
-  const State._(super.v, super.n);
+  const State._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different serialization types for CIOT.
@@ -48,7 +48,7 @@ class SerializationType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, SerializationType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static SerializationType? valueOf($core.int value) => _byValue[value];
 
-  const SerializationType._(super.v, super.n);
+  const SerializationType._($core.int v, $core.String n) : super(v, n);
 }
 
 

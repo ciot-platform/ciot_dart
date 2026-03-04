@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/mqtt_client.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -126,6 +126,20 @@ const MqttClientStop$json = {
 final $typed_data.Uint8List mqttClientStopDescriptor = $convert.base64Decode(
     'Cg5NcXR0Q2xpZW50U3RvcA==');
 
+@$core.Deprecated('Use mqttClientSessionCfgDescriptor instead')
+const MqttClientSessionCfg$json = {
+  '1': 'MqttClientSessionCfg',
+  '2': [
+    {'1': 'clean_session', '3': 1, '4': 1, '5': 8, '10': 'cleanSession'},
+    {'1': 'keep_alive', '3': 2, '4': 1, '5': 5, '10': 'keepAlive'},
+  ],
+};
+
+/// Descriptor for `MqttClientSessionCfg`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mqttClientSessionCfgDescriptor = $convert.base64Decode(
+    'ChRNcXR0Q2xpZW50U2Vzc2lvbkNmZxIjCg1jbGVhbl9zZXNzaW9uGAEgASgIUgxjbGVhblNlc3'
+    'Npb24SHQoKa2VlcF9hbGl2ZRgCIAEoBVIJa2VlcEFsaXZl');
+
 @$core.Deprecated('Use mqttClientCfgDescriptor instead')
 const MqttClientCfg$json = {
   '1': 'MqttClientCfg',
@@ -138,9 +152,11 @@ const MqttClientCfg$json = {
     {'1': 'topics', '3': 6, '4': 1, '5': 11, '6': '.Ciot.MqttClientTopicsCfg', '10': 'topics'},
     {'1': 'broker_kind', '3': 7, '4': 1, '5': 14, '6': '.Ciot.MqttClientBrokerKind', '10': 'brokerKind'},
     {'1': 'last_will', '3': 8, '4': 1, '5': 11, '6': '.Ciot.MqttClientLastWill', '9': 0, '10': 'lastWill', '17': true},
+    {'1': 'session', '3': 9, '4': 1, '5': 11, '6': '.Ciot.MqttClientSessionCfg', '9': 1, '10': 'session', '17': true},
   ],
   '8': [
     {'1': '_last_will'},
+    {'1': '_session'},
   ],
 };
 
@@ -151,7 +167,8 @@ final $typed_data.Uint8List mqttClientCfgDescriptor = $convert.base64Decode(
     'EAoDcW9zGAUgASgNUgNxb3MSMQoGdG9waWNzGAYgASgLMhkuQ2lvdC5NcXR0Q2xpZW50VG9waW'
     'NzQ2ZnUgZ0b3BpY3MSOwoLYnJva2VyX2tpbmQYByABKA4yGi5DaW90Lk1xdHRDbGllbnRCcm9r'
     'ZXJLaW5kUgpicm9rZXJLaW5kEjoKCWxhc3Rfd2lsbBgIIAEoCzIYLkNpb3QuTXF0dENsaWVudE'
-    'xhc3RXaWxsSABSCGxhc3RXaWxsiAEBQgwKCl9sYXN0X3dpbGw=');
+    'xhc3RXaWxsSABSCGxhc3RXaWxsiAEBEjkKB3Nlc3Npb24YCSABKAsyGi5DaW90Lk1xdHRDbGll'
+    'bnRTZXNzaW9uQ2ZnSAFSB3Nlc3Npb26IAQFCDAoKX2xhc3Rfd2lsbEIKCghfc2Vzc2lvbg==');
 
 @$core.Deprecated('Use mqttClientStatusDescriptor instead')
 const MqttClientStatus$json = {

@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/iface_manager.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -18,8 +18,6 @@ import '../../../google/protobuf/empty.pb.dart' as $25;
 import 'event.pb.dart' as $26;
 import 'iface.pb.dart' as $1;
 import 'msg.pb.dart' as $24;
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 class IfacesList extends $pb.GeneratedMessage {
   factory IfacesList({
@@ -62,7 +60,7 @@ class IfacesList extends $pb.GeneratedMessage {
   static IfacesList? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<$24.Msg> get items => $_getList(0);
+  $core.List<$24.Msg> get items => $_getList(0);
 }
 
 class CreateIfaceRequest extends $pb.GeneratedMessage {
@@ -108,11 +106,11 @@ class CreateIfaceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $24.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($24.Msg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMessage() => $_clearField(1);
+  void clearMessage() => clearField(1);
   @$pb.TagNumber(1)
   $24.Msg ensureMessage() => $_ensure(0);
 }
@@ -160,11 +158,11 @@ class CreateIfaceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $24.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($24.Msg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMessage() => $_clearField(1);
+  void clearMessage() => clearField(1);
   @$pb.TagNumber(1)
   $24.Msg ensureMessage() => $_ensure(0);
 }
@@ -216,7 +214,7 @@ class GetIfaceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => $_clearField(1);
+  void clearId() => clearField(1);
 }
 
 class GetIfaceResponse extends $pb.GeneratedMessage {
@@ -262,11 +260,11 @@ class GetIfaceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $24.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($24.Msg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMessage() => $_clearField(1);
+  void clearMessage() => clearField(1);
   @$pb.TagNumber(1)
   $24.Msg ensureMessage() => $_ensure(0);
 }
@@ -312,7 +310,7 @@ class GetIfacesResponse extends $pb.GeneratedMessage {
   static GetIfacesResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<$24.Msg> get list => $_getList(0);
+  $core.List<$24.Msg> get list => $_getList(0);
 }
 
 class UpdateIfaceRequest extends $pb.GeneratedMessage {
@@ -358,11 +356,11 @@ class UpdateIfaceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $24.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($24.Msg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMessage() => $_clearField(1);
+  void clearMessage() => clearField(1);
   @$pb.TagNumber(1)
   $24.Msg ensureMessage() => $_ensure(0);
 }
@@ -410,11 +408,11 @@ class UpdateIfaceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $24.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($24.Msg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMessage() => $_clearField(1);
+  void clearMessage() => clearField(1);
   @$pb.TagNumber(1)
   $24.Msg ensureMessage() => $_ensure(0);
 }
@@ -466,7 +464,7 @@ class DeleteIfaceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => $_clearField(1);
+  void clearId() => clearField(1);
 }
 
 class DeleteIfaceResponse extends $pb.GeneratedMessage {
@@ -512,11 +510,11 @@ class DeleteIfaceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $24.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($24.Msg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMessage() => $_clearField(1);
+  void clearMessage() => clearField(1);
   @$pb.TagNumber(1)
   $24.Msg ensureMessage() => $_ensure(0);
 }
@@ -568,7 +566,7 @@ class SelectIfaceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => $_clearField(1);
+  void clearId() => clearField(1);
 }
 
 class SelectIfaceResponse extends $pb.GeneratedMessage {
@@ -614,11 +612,11 @@ class SelectIfaceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.IfaceInfo get iface => $_getN(0);
   @$pb.TagNumber(1)
-  set iface($1.IfaceInfo v) { $_setField(1, v); }
+  set iface($1.IfaceInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasIface() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIface() => $_clearField(1);
+  void clearIface() => clearField(1);
   @$pb.TagNumber(1)
   $1.IfaceInfo ensureIface() => $_ensure(0);
 }
@@ -666,11 +664,11 @@ class GetSelectedIfaceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.IfaceInfo get iface => $_getN(0);
   @$pb.TagNumber(1)
-  set iface($1.IfaceInfo v) { $_setField(1, v); }
+  set iface($1.IfaceInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasIface() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIface() => $_clearField(1);
+  void clearIface() => clearField(1);
   @$pb.TagNumber(1)
   $1.IfaceInfo ensureIface() => $_ensure(0);
 }
@@ -718,11 +716,11 @@ class SendMessageRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $24.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($24.Msg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMessage() => $_clearField(1);
+  void clearMessage() => clearField(1);
   @$pb.TagNumber(1)
   $24.Msg ensureMessage() => $_ensure(0);
 }
@@ -770,11 +768,11 @@ class SendMessageResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $24.Msg get message => $_getN(0);
   @$pb.TagNumber(1)
-  set message($24.Msg v) { $_setField(1, v); }
+  set message($24.Msg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasMessage() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMessage() => $_clearField(1);
+  void clearMessage() => clearField(1);
   @$pb.TagNumber(1)
   $24.Msg ensureMessage() => $_ensure(0);
 }
@@ -831,16 +829,16 @@ class SubscribeToEventsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => $_clearField(1);
+  void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
   $1.IfaceInfo get iface => $_getN(1);
   @$pb.TagNumber(2)
-  set iface($1.IfaceInfo v) { $_setField(2, v); }
+  set iface($1.IfaceInfo v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasIface() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIface() => $_clearField(2);
+  void clearIface() => clearField(2);
   @$pb.TagNumber(2)
   $1.IfaceInfo ensureIface() => $_ensure(1);
 }

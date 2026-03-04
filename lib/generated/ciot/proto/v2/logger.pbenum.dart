@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/logger.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -33,7 +33,7 @@ class LogLevel extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, LogLevel> _byValue = $pb.ProtobufEnum.initByValue(values);
   static LogLevel? valueOf($core.int value) => _byValue[value];
 
-  const LogLevel._(super.v, super.n);
+  const LogLevel._($core.int v, $core.String n) : super(v, n);
 }
 
 

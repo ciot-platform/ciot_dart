@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/event.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -22,7 +22,7 @@ const EventType$json = {
     {'1': 'EVENT_TYPE_STARTED', '2': 2},
     {'1': 'EVENT_TYPE_STOPPED', '2': 3},
     {'1': 'EVENT_TYPE_ERROR', '2': 4},
-    {'1': 'EVENT_TYPE_REQUEST', '2': 5},
+    {'1': 'EVENT_TYPE_MSG', '2': 5},
     {'1': 'EVENT_TYPE_DONE', '2': 6},
     {'1': 'EVENT_TYPE_STATE_CHANGED', '2': 7},
     {'1': 'EVENT_TYPE_INTERNAL', '2': 8},
@@ -34,9 +34,9 @@ const EventType$json = {
 final $typed_data.Uint8List eventTypeDescriptor = $convert.base64Decode(
     'CglFdmVudFR5cGUSFgoSRVZFTlRfVFlQRV9VTktOT1dOEAASEwoPRVZFTlRfVFlQRV9EQVRBEA'
     'ESFgoSRVZFTlRfVFlQRV9TVEFSVEVEEAISFgoSRVZFTlRfVFlQRV9TVE9QUEVEEAMSFAoQRVZF'
-    'TlRfVFlQRV9FUlJPUhAEEhYKEkVWRU5UX1RZUEVfUkVRVUVTVBAFEhMKD0VWRU5UX1RZUEVfRE'
-    '9ORRAGEhwKGEVWRU5UX1RZUEVfU1RBVEVfQ0hBTkdFRBAHEhcKE0VWRU5UX1RZUEVfSU5URVJO'
-    'QUwQCBIVChFFVkVOVF9UWVBFX0NVU1RPTRAJ');
+    'TlRfVFlQRV9FUlJPUhAEEhIKDkVWRU5UX1RZUEVfTVNHEAUSEwoPRVZFTlRfVFlQRV9ET05FEA'
+    'YSHAoYRVZFTlRfVFlQRV9TVEFURV9DSEFOR0VEEAcSFwoTRVZFTlRfVFlQRV9JTlRFUk5BTBAI'
+    'EhUKEUVWRU5UX1RZUEVfQ1VTVE9NEAk=');
 
 @$core.Deprecated('Use eventDescriptor instead')
 const Event$json = {

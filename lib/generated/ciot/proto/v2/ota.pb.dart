@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/ota.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'ota.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'ota.pbenum.dart';
 
@@ -115,7 +113,7 @@ class OtaCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasUrl() => $_has(0);
   @$pb.TagNumber(1)
-  void clearUrl() => $_clearField(1);
+  void clearUrl() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.bool get force => $_getBF(1);
@@ -124,7 +122,7 @@ class OtaCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasForce() => $_has(1);
   @$pb.TagNumber(2)
-  void clearForce() => $_clearField(2);
+  void clearForce() => clearField(2);
 
   @$pb.TagNumber(4)
   $core.bool get restart => $_getBF(2);
@@ -133,16 +131,16 @@ class OtaCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasRestart() => $_has(2);
   @$pb.TagNumber(4)
-  void clearRestart() => $_clearField(4);
+  void clearRestart() => clearField(4);
 
   @$pb.TagNumber(5)
   OtaType get type => $_getN(3);
   @$pb.TagNumber(5)
-  set type(OtaType v) { $_setField(5, v); }
+  set type(OtaType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasType() => $_has(3);
   @$pb.TagNumber(5)
-  void clearType() => $_clearField(5);
+  void clearType() => clearField(5);
 }
 
 /// Message representing status for the OTA process.
@@ -204,11 +202,11 @@ class OtaStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   OtaState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(OtaState v) { $_setField(1, v); }
+  set state(OtaState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get error => $_getIZ(1);
@@ -217,7 +215,7 @@ class OtaStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasError() => $_has(1);
   @$pb.TagNumber(2)
-  void clearError() => $_clearField(2);
+  void clearError() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get imageSize => $_getIZ(2);
@@ -226,7 +224,7 @@ class OtaStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasImageSize() => $_has(2);
   @$pb.TagNumber(3)
-  void clearImageSize() => $_clearField(3);
+  void clearImageSize() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.int get imageWritten => $_getIZ(3);
@@ -235,7 +233,7 @@ class OtaStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasImageWritten() => $_has(3);
   @$pb.TagNumber(4)
-  void clearImageWritten() => $_clearField(4);
+  void clearImageWritten() => clearField(4);
 }
 
 enum OtaReq_Type {
@@ -290,16 +288,16 @@ class OtaReq extends $pb.GeneratedMessage {
   static OtaReq? _defaultInstance;
 
   OtaReq_Type whichType() => _OtaReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   OtaCmd get cmd => $_getN(0);
   @$pb.TagNumber(1)
-  set cmd(OtaCmd v) { $_setField(1, v); }
+  set cmd(OtaCmd v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasCmd() => $_has(0);
   @$pb.TagNumber(1)
-  void clearCmd() => $_clearField(1);
+  void clearCmd() => clearField(1);
 }
 
 enum OtaData_Type {
@@ -375,49 +373,49 @@ class OtaData extends $pb.GeneratedMessage {
   static OtaData? _defaultInstance;
 
   OtaData_Type whichType() => _OtaData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   OtaStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(OtaStop v) { $_setField(1, v); }
+  set stop(OtaStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   OtaStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   OtaCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(OtaCfg v) { $_setField(2, v); }
+  set config(OtaCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   OtaCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   OtaStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(OtaStatus v) { $_setField(3, v); }
+  set status(OtaStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   OtaStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   OtaReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(OtaReq v) { $_setField(4, v); }
+  set request(OtaReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   OtaReq ensureRequest() => $_ensure(3);
 }

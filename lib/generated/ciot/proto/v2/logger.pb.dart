@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/logger.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'logger.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'logger.pbenum.dart';
 
@@ -72,11 +70,11 @@ class LogData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   LogLevel get level => $_getN(0);
   @$pb.TagNumber(1)
-  set level(LogLevel v) { $_setField(1, v); }
+  set level(LogLevel v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasLevel() => $_has(0);
   @$pb.TagNumber(1)
-  void clearLevel() => $_clearField(1);
+  void clearLevel() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get tag => $_getSZ(1);
@@ -85,7 +83,7 @@ class LogData extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasTag() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTag() => $_clearField(2);
+  void clearTag() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get message => $_getSZ(2);
@@ -94,7 +92,7 @@ class LogData extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasMessage() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMessage() => $_clearField(3);
+  void clearMessage() => clearField(3);
 }
 
 

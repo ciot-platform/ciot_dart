@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/msg.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,9 +15,90 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'errors.pbenum.dart' as $0;
 import 'iface.pb.dart' as $1;
+import 'msg.pbenum.dart';
 import 'msg_data.pb.dart' as $23;
 
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
+export 'msg.pbenum.dart';
+
+class Proxy extends $pb.GeneratedMessage {
+  factory Proxy({
+    $1.IfaceInfo? iface,
+    ProxyState? state,
+    $core.bool? save,
+  }) {
+    final $result = create();
+    if (iface != null) {
+      $result.iface = iface;
+    }
+    if (state != null) {
+      $result.state = state;
+    }
+    if (save != null) {
+      $result.save = save;
+    }
+    return $result;
+  }
+  Proxy._() : super();
+  factory Proxy.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory Proxy.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proxy', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
+    ..aOM<$1.IfaceInfo>(1, _omitFieldNames ? '' : 'iface', subBuilder: $1.IfaceInfo.create)
+    ..e<ProxyState>(2, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: ProxyState.PROXY_STATE_PENDING, valueOf: ProxyState.valueOf, enumValues: ProxyState.values)
+    ..aOB(3, _omitFieldNames ? '' : 'save')
+    ..hasRequiredFields = false
+  ;
+
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  Proxy clone() => Proxy()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  Proxy copyWith(void Function(Proxy) updates) => super.copyWith((message) => updates(message as Proxy)) as Proxy;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static Proxy create() => Proxy._();
+  Proxy createEmptyInstance() => create();
+  static $pb.PbList<Proxy> createRepeated() => $pb.PbList<Proxy>();
+  @$core.pragma('dart2js:noInline')
+  static Proxy getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Proxy>(create);
+  static Proxy? _defaultInstance;
+
+  @$pb.TagNumber(1)
+  $1.IfaceInfo get iface => $_getN(0);
+  @$pb.TagNumber(1)
+  set iface($1.IfaceInfo v) { setField(1, v); }
+  @$pb.TagNumber(1)
+  $core.bool hasIface() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearIface() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.IfaceInfo ensureIface() => $_ensure(0);
+
+  @$pb.TagNumber(2)
+  ProxyState get state => $_getN(1);
+  @$pb.TagNumber(2)
+  set state(ProxyState v) { setField(2, v); }
+  @$pb.TagNumber(2)
+  $core.bool hasState() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearState() => clearField(2);
+
+  @$pb.TagNumber(3)
+  $core.bool get save => $_getBF(2);
+  @$pb.TagNumber(3)
+  set save($core.bool v) { $_setBool(2, v); }
+  @$pb.TagNumber(3)
+  $core.bool hasSave() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearSave() => clearField(3);
+}
 
 /// Represents an CioT message
 class Msg extends $pb.GeneratedMessage {
@@ -26,6 +107,8 @@ class Msg extends $pb.GeneratedMessage {
     $1.IfaceInfo? iface,
     $0.Err? error,
     $23.MsgData? data,
+    MsgType? type,
+    Proxy? proxy,
   }) {
     final $result = create();
     if (id != null) {
@@ -40,6 +123,12 @@ class Msg extends $pb.GeneratedMessage {
     if (data != null) {
       $result.data = data;
     }
+    if (type != null) {
+      $result.type = type;
+    }
+    if (proxy != null) {
+      $result.proxy = proxy;
+    }
     return $result;
   }
   Msg._() : super();
@@ -51,6 +140,8 @@ class Msg extends $pb.GeneratedMessage {
     ..aOM<$1.IfaceInfo>(2, _omitFieldNames ? '' : 'iface', subBuilder: $1.IfaceInfo.create)
     ..e<$0.Err>(3, _omitFieldNames ? '' : 'error', $pb.PbFieldType.OE, defaultOrMaker: $0.Err.ERR_OK, valueOf: $0.Err.valueOf, enumValues: $0.Err.values)
     ..aOM<$23.MsgData>(4, _omitFieldNames ? '' : 'data', subBuilder: $23.MsgData.create)
+    ..e<MsgType>(5, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: MsgType.MSG_TYPE_REQUEST, valueOf: MsgType.valueOf, enumValues: MsgType.values)
+    ..aOM<Proxy>(6, _omitFieldNames ? '' : 'proxy', subBuilder: Proxy.create)
     ..hasRequiredFields = false
   ;
 
@@ -82,38 +173,58 @@ class Msg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => $_clearField(1);
+  void clearId() => clearField(1);
 
   @$pb.TagNumber(2)
   $1.IfaceInfo get iface => $_getN(1);
   @$pb.TagNumber(2)
-  set iface($1.IfaceInfo v) { $_setField(2, v); }
+  set iface($1.IfaceInfo v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasIface() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIface() => $_clearField(2);
+  void clearIface() => clearField(2);
   @$pb.TagNumber(2)
   $1.IfaceInfo ensureIface() => $_ensure(1);
 
   @$pb.TagNumber(3)
   $0.Err get error => $_getN(2);
   @$pb.TagNumber(3)
-  set error($0.Err v) { $_setField(3, v); }
+  set error($0.Err v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasError() => $_has(2);
   @$pb.TagNumber(3)
-  void clearError() => $_clearField(3);
+  void clearError() => clearField(3);
 
   @$pb.TagNumber(4)
   $23.MsgData get data => $_getN(3);
   @$pb.TagNumber(4)
-  set data($23.MsgData v) { $_setField(4, v); }
+  set data($23.MsgData v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasData() => $_has(3);
   @$pb.TagNumber(4)
-  void clearData() => $_clearField(4);
+  void clearData() => clearField(4);
   @$pb.TagNumber(4)
   $23.MsgData ensureData() => $_ensure(3);
+
+  @$pb.TagNumber(5)
+  MsgType get type => $_getN(4);
+  @$pb.TagNumber(5)
+  set type(MsgType v) { setField(5, v); }
+  @$pb.TagNumber(5)
+  $core.bool hasType() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearType() => clearField(5);
+
+  @$pb.TagNumber(6)
+  Proxy get proxy => $_getN(5);
+  @$pb.TagNumber(6)
+  set proxy(Proxy v) { setField(6, v); }
+  @$pb.TagNumber(6)
+  $core.bool hasProxy() => $_has(5);
+  @$pb.TagNumber(6)
+  void clearProxy() => clearField(6);
+  @$pb.TagNumber(6)
+  Proxy ensureProxy() => $_ensure(5);
 }
 
 

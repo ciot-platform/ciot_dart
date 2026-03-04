@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/iface.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -27,7 +27,7 @@ class IfaceState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, IfaceState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static IfaceState? valueOf($core.int value) => _byValue[value];
 
-  const IfaceState._(super.v, super.n);
+  const IfaceState._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different interface types.
@@ -95,7 +95,7 @@ class IfaceType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, IfaceType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static IfaceType? valueOf($core.int value) => _byValue[value];
 
-  const IfaceType._(super.v, super.n);
+  const IfaceType._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different states of the interface request.
@@ -113,7 +113,7 @@ class IfaceReqState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, IfaceReqState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static IfaceReqState? valueOf($core.int value) => _byValue[value];
 
-  const IfaceReqState._(super.v, super.n);
+  const IfaceReqState._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different data types for the interface request.
@@ -137,7 +137,7 @@ class DataType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, DataType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static DataType? valueOf($core.int value) => _byValue[value];
 
-  const DataType._(super.v, super.n);
+  const DataType._($core.int v, $core.String n) : super(v, n);
 }
 
 

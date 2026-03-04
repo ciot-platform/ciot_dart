@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/ntp.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,8 +15,6 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'ntp.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'ntp.pbenum.dart';
 
@@ -131,7 +129,7 @@ class NtpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasOpMode() => $_has(0);
   @$pb.TagNumber(1)
-  void clearOpMode() => $_clearField(1);
+  void clearOpMode() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get syncMode => $_getIZ(1);
@@ -140,7 +138,7 @@ class NtpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasSyncMode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSyncMode() => $_clearField(2);
+  void clearSyncMode() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get syncInterval => $_getIZ(2);
@@ -149,7 +147,7 @@ class NtpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasSyncInterval() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSyncInterval() => $_clearField(3);
+  void clearSyncInterval() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get timezone => $_getSZ(3);
@@ -158,7 +156,7 @@ class NtpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasTimezone() => $_has(3);
   @$pb.TagNumber(4)
-  void clearTimezone() => $_clearField(4);
+  void clearTimezone() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.String get server1 => $_getSZ(4);
@@ -167,7 +165,7 @@ class NtpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasServer1() => $_has(4);
   @$pb.TagNumber(5)
-  void clearServer1() => $_clearField(5);
+  void clearServer1() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.String get server2 => $_getSZ(5);
@@ -176,7 +174,7 @@ class NtpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   $core.bool hasServer2() => $_has(5);
   @$pb.TagNumber(6)
-  void clearServer2() => $_clearField(6);
+  void clearServer2() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.String get server3 => $_getSZ(6);
@@ -185,7 +183,7 @@ class NtpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   $core.bool hasServer3() => $_has(6);
   @$pb.TagNumber(7)
-  void clearServer3() => $_clearField(7);
+  void clearServer3() => clearField(7);
 }
 
 /// Message representing status for the NTP module.
@@ -252,11 +250,11 @@ class NtpStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   NtpState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(NtpState v) { $_setField(1, v); }
+  set state(NtpState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get lastSync => $_getI64(1);
@@ -265,7 +263,7 @@ class NtpStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasLastSync() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLastSync() => $_clearField(2);
+  void clearLastSync() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get syncCount => $_getIZ(2);
@@ -274,7 +272,7 @@ class NtpStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasSyncCount() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSyncCount() => $_clearField(3);
+  void clearSyncCount() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.bool get init => $_getBF(3);
@@ -283,7 +281,7 @@ class NtpStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasInit() => $_has(3);
   @$pb.TagNumber(4)
-  void clearInit() => $_clearField(4);
+  void clearInit() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get sync => $_getBF(4);
@@ -292,7 +290,7 @@ class NtpStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasSync() => $_has(4);
   @$pb.TagNumber(5)
-  void clearSync() => $_clearField(5);
+  void clearSync() => clearField(5);
 }
 
 /// Message representing an NTP request.
@@ -401,49 +399,49 @@ class NtpData extends $pb.GeneratedMessage {
   static NtpData? _defaultInstance;
 
   NtpData_Type whichType() => _NtpData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   NtpStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(NtpStop v) { $_setField(1, v); }
+  set stop(NtpStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   NtpStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   NtpCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(NtpCfg v) { $_setField(2, v); }
+  set config(NtpCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   NtpCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   NtpStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(NtpStatus v) { $_setField(3, v); }
+  set status(NtpStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   NtpStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   NtpReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(NtpReq v) { $_setField(4, v); }
+  set request(NtpReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   NtpReq ensureRequest() => $_ensure(3);
 }

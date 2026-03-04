@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/ble_scn.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,8 +15,6 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'ble_scn.pbenum.dart';
 import 'errors.pbenum.dart' as $0;
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'ble_scn.pbenum.dart';
 
@@ -122,7 +120,7 @@ class BleScnCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasInterval() => $_has(0);
   @$pb.TagNumber(1)
-  void clearInterval() => $_clearField(1);
+  void clearInterval() => clearField(1);
 
   /// Scanner window
   @$pb.TagNumber(2)
@@ -132,7 +130,7 @@ class BleScnCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasWindow() => $_has(1);
   @$pb.TagNumber(2)
-  void clearWindow() => $_clearField(2);
+  void clearWindow() => clearField(2);
 
   /// Scanner timeout
   @$pb.TagNumber(3)
@@ -142,7 +140,7 @@ class BleScnCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasTimeout() => $_has(2);
   @$pb.TagNumber(3)
-  void clearTimeout() => $_clearField(3);
+  void clearTimeout() => clearField(3);
 
   /// Enable/disable active scan mode
   @$pb.TagNumber(4)
@@ -152,7 +150,7 @@ class BleScnCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasActive() => $_has(3);
   @$pb.TagNumber(4)
-  void clearActive() => $_clearField(4);
+  void clearActive() => clearField(4);
 
   /// Enable/disable bridge. On bridge mode ciot lib dosen't interpret adv
   /// messages as an CioT requests and send all of them to the main application
@@ -164,7 +162,7 @@ class BleScnCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasBridgeMode() => $_has(4);
   @$pb.TagNumber(5)
-  void clearBridgeMode() => $_clearField(5);
+  void clearBridgeMode() => clearField(5);
 }
 
 /// Ble scanner advertisement information
@@ -221,7 +219,7 @@ class BleScnAdvInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasMac() => $_has(0);
   @$pb.TagNumber(1)
-  void clearMac() => $_clearField(1);
+  void clearMac() => clearField(1);
 
   /// Signal strenght
   @$pb.TagNumber(2)
@@ -231,7 +229,7 @@ class BleScnAdvInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasRssi() => $_has(1);
   @$pb.TagNumber(2)
-  void clearRssi() => $_clearField(2);
+  void clearRssi() => clearField(2);
 }
 
 /// Ble scanner advertisement
@@ -284,11 +282,11 @@ class BleScnAdv extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   BleScnAdvInfo get info => $_getN(0);
   @$pb.TagNumber(1)
-  set info(BleScnAdvInfo v) { $_setField(1, v); }
+  set info(BleScnAdvInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasInfo() => $_has(0);
   @$pb.TagNumber(1)
-  void clearInfo() => $_clearField(1);
+  void clearInfo() => clearField(1);
   @$pb.TagNumber(1)
   BleScnAdvInfo ensureInfo() => $_ensure(0);
 
@@ -300,7 +298,7 @@ class BleScnAdv extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasPayload() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPayload() => $_clearField(2);
+  void clearPayload() => clearField(2);
 }
 
 /// Ble scanner status
@@ -368,21 +366,21 @@ class BleScnStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   BleScnState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(BleScnState v) { $_setField(1, v); }
+  set state(BleScnState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   /// Current error code
   @$pb.TagNumber(2)
   $0.Err get errCode => $_getN(1);
   @$pb.TagNumber(2)
-  set errCode($0.Err v) { $_setField(2, v); }
+  set errCode($0.Err v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasErrCode() => $_has(1);
   @$pb.TagNumber(2)
-  void clearErrCode() => $_clearField(2);
+  void clearErrCode() => clearField(2);
 
   /// ADVs counter
   @$pb.TagNumber(3)
@@ -392,7 +390,7 @@ class BleScnStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool hasAdvsLosted() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAdvsLosted() => $_clearField(3);
+  void clearAdvsLosted() => clearField(3);
 
   /// Current fifo lenght
   @$pb.TagNumber(4)
@@ -402,7 +400,7 @@ class BleScnStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   $core.bool hasFifoLen() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFifoLen() => $_clearField(4);
+  void clearFifoLen() => clearField(4);
 
   /// Fifo maximum size
   @$pb.TagNumber(5)
@@ -412,7 +410,7 @@ class BleScnStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   $core.bool hasFifoMax() => $_has(4);
   @$pb.TagNumber(5)
-  void clearFifoMax() => $_clearField(5);
+  void clearFifoMax() => clearField(5);
 }
 
 /// Ble scanner request
@@ -521,17 +519,17 @@ class BleScnData extends $pb.GeneratedMessage {
   static BleScnData? _defaultInstance;
 
   BleScnData_Type whichType() => _BleScnData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   /// Stop ble scanner interface
   @$pb.TagNumber(1)
   BleScnStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(BleScnStop v) { $_setField(1, v); }
+  set stop(BleScnStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   BleScnStop ensureStop() => $_ensure(0);
 
@@ -539,11 +537,11 @@ class BleScnData extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   BleScnCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(BleScnCfg v) { $_setField(2, v); }
+  set config(BleScnCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   BleScnCfg ensureConfig() => $_ensure(1);
 
@@ -551,11 +549,11 @@ class BleScnData extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   BleScnStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(BleScnStatus v) { $_setField(3, v); }
+  set status(BleScnStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   BleScnStatus ensureStatus() => $_ensure(2);
 
@@ -563,11 +561,11 @@ class BleScnData extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   BleScnReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(BleScnReq v) { $_setField(4, v); }
+  set request(BleScnReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   BleScnReq ensureRequest() => $_ensure(3);
 }

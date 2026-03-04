@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/mbus_server.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -16,8 +16,6 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'mbus.pb.dart' as $4;
 import 'mbus_server.pbenum.dart';
 import 'uart.pb.dart' as $3;
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'mbus_server.pbenum.dart';
 
@@ -107,16 +105,16 @@ class MbusServerRtuCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasServerId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearServerId() => $_clearField(1);
+  void clearServerId() => clearField(1);
 
   @$pb.TagNumber(2)
   $3.UartCfg get uart => $_getN(1);
   @$pb.TagNumber(2)
-  set uart($3.UartCfg v) { $_setField(2, v); }
+  set uart($3.UartCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasUart() => $_has(1);
   @$pb.TagNumber(2)
-  void clearUart() => $_clearField(2);
+  void clearUart() => clearField(2);
   @$pb.TagNumber(2)
   $3.UartCfg ensureUart() => $_ensure(1);
 }
@@ -174,7 +172,7 @@ class MbusServerTcpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasPort() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPort() => $_clearField(1);
+  void clearPort() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get maxConnections => $_getIZ(1);
@@ -183,7 +181,7 @@ class MbusServerTcpCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasMaxConnections() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMaxConnections() => $_clearField(2);
+  void clearMaxConnections() => clearField(2);
 }
 
 enum MbusServerCfg_Type {
@@ -245,27 +243,27 @@ class MbusServerCfg extends $pb.GeneratedMessage {
   static MbusServerCfg? _defaultInstance;
 
   MbusServerCfg_Type whichType() => _MbusServerCfg_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   MbusServerRtuCfg get rtu => $_getN(0);
   @$pb.TagNumber(1)
-  set rtu(MbusServerRtuCfg v) { $_setField(1, v); }
+  set rtu(MbusServerRtuCfg v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasRtu() => $_has(0);
   @$pb.TagNumber(1)
-  void clearRtu() => $_clearField(1);
+  void clearRtu() => clearField(1);
   @$pb.TagNumber(1)
   MbusServerRtuCfg ensureRtu() => $_ensure(0);
 
   @$pb.TagNumber(2)
   MbusServerTcpCfg get tcp => $_getN(1);
   @$pb.TagNumber(2)
-  set tcp(MbusServerTcpCfg v) { $_setField(2, v); }
+  set tcp(MbusServerTcpCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasTcp() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTcp() => $_clearField(2);
+  void clearTcp() => clearField(2);
   @$pb.TagNumber(2)
   MbusServerTcpCfg ensureTcp() => $_ensure(1);
 }
@@ -314,11 +312,11 @@ class MbusServerStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   MbusServerState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(MbusServerState v) { $_setField(1, v); }
+  set state(MbusServerState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 }
 
 enum MbusServerReq_Type {
@@ -373,16 +371,16 @@ class MbusServerReq extends $pb.GeneratedMessage {
   static MbusServerReq? _defaultInstance;
 
   MbusServerReq_Type whichType() => _MbusServerReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $4.MbusFunctionReq get function => $_getN(0);
   @$pb.TagNumber(1)
-  set function($4.MbusFunctionReq v) { $_setField(1, v); }
+  set function($4.MbusFunctionReq v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasFunction() => $_has(0);
   @$pb.TagNumber(1)
-  void clearFunction() => $_clearField(1);
+  void clearFunction() => clearField(1);
   @$pb.TagNumber(1)
   $4.MbusFunctionReq ensureFunction() => $_ensure(0);
 }
@@ -460,49 +458,49 @@ class MbusServerData extends $pb.GeneratedMessage {
   static MbusServerData? _defaultInstance;
 
   MbusServerData_Type whichType() => _MbusServerData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   MbusServerStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(MbusServerStop v) { $_setField(1, v); }
+  set stop(MbusServerStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   MbusServerStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   MbusServerCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(MbusServerCfg v) { $_setField(2, v); }
+  set config(MbusServerCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   MbusServerCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   MbusServerStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(MbusServerStatus v) { $_setField(3, v); }
+  set status(MbusServerStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   MbusServerStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   MbusServerReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(MbusServerReq v) { $_setField(4, v); }
+  set request(MbusServerReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   MbusServerReq ensureRequest() => $_ensure(3);
 }

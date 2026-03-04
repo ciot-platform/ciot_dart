@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/http_client.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -36,7 +36,7 @@ class HttpClientState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, HttpClientState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static HttpClientState? valueOf($core.int value) => _byValue[value];
 
-  const HttpClientState._(super.v, super.n);
+  const HttpClientState._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different HTTP methods.
@@ -84,7 +84,7 @@ class HttpClientMethod extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, HttpClientMethod> _byValue = $pb.ProtobufEnum.initByValue(values);
   static HttpClientMethod? valueOf($core.int value) => _byValue[value];
 
-  const HttpClientMethod._(super.v, super.n);
+  const HttpClientMethod._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different HTTP transport types.
@@ -102,7 +102,7 @@ class HttpClientTransportType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, HttpClientTransportType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static HttpClientTransportType? valueOf($core.int value) => _byValue[value];
 
-  const HttpClientTransportType._(super.v, super.n);
+  const HttpClientTransportType._($core.int v, $core.String n) : super(v, n);
 }
 
 

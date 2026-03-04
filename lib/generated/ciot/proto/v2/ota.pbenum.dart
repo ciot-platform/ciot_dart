@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/ota.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -26,7 +26,7 @@ class OtaType extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, OtaType> _byValue = $pb.ProtobufEnum.initByValue(values);
   static OtaType? valueOf($core.int value) => _byValue[value];
 
-  const OtaType._(super.v, super.n);
+  const OtaType._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing the state of the OTA (Over-the-Air) update process.
@@ -60,7 +60,7 @@ class OtaState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, OtaState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static OtaState? valueOf($core.int value) => _byValue[value];
 
-  const OtaState._(super.v, super.n);
+  const OtaState._($core.int v, $core.String n) : super(v, n);
 }
 
 class OtaCmd extends $pb.ProtobufEnum {
@@ -75,7 +75,7 @@ class OtaCmd extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, OtaCmd> _byValue = $pb.ProtobufEnum.initByValue(values);
   static OtaCmd? valueOf($core.int value) => _byValue[value];
 
-  const OtaCmd._(super.v, super.n);
+  const OtaCmd._($core.int v, $core.String n) : super(v, n);
 }
 
 

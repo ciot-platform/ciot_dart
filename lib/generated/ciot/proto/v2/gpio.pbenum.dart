@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/gpio.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -34,7 +34,7 @@ class GpioState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, GpioState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static GpioState? valueOf($core.int value) => _byValue[value];
 
-  const GpioState._(super.v, super.n);
+  const GpioState._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing gpio modes
@@ -52,7 +52,7 @@ class GpioMode extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, GpioMode> _byValue = $pb.ProtobufEnum.initByValue(values);
   static GpioMode? valueOf($core.int value) => _byValue[value];
 
-  const GpioMode._(super.v, super.n);
+  const GpioMode._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing gpio internal pullup/pulldown modes
@@ -70,7 +70,7 @@ class GpioPull extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, GpioPull> _byValue = $pb.ProtobufEnum.initByValue(values);
   static GpioPull? valueOf($core.int value) => _byValue[value];
 
-  const GpioPull._(super.v, super.n);
+  const GpioPull._($core.int v, $core.String n) : super(v, n);
 }
 
 

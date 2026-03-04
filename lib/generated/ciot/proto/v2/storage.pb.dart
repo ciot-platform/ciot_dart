@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/storage.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'storage.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'storage.pbenum.dart';
 
@@ -96,11 +94,11 @@ class StorageCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   StorageType get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type(StorageType v) { $_setField(1, v); }
+  set type(StorageType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => $_clearField(1);
+  void clearType() => clearField(1);
 }
 
 /// Message representing status for the storage module.
@@ -152,11 +150,11 @@ class StorageStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   StorageState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(StorageState v) { $_setField(1, v); }
+  set state(StorageState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get freeSpace => $_getIZ(1);
@@ -165,7 +163,7 @@ class StorageStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasFreeSpace() => $_has(1);
   @$pb.TagNumber(2)
-  void clearFreeSpace() => $_clearField(2);
+  void clearFreeSpace() => clearField(2);
 }
 
 /// Message representing storage module information.
@@ -216,7 +214,7 @@ class StorageInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasTotalSize() => $_has(0);
   @$pb.TagNumber(1)
-  void clearTotalSize() => $_clearField(1);
+  void clearTotalSize() => clearField(1);
 }
 
 /// Message representing data for a storage request.
@@ -272,7 +270,7 @@ class StorageFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasPath() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPath() => $_clearField(1);
+  void clearPath() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get data => $_getN(1);
@@ -281,7 +279,7 @@ class StorageFile extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasData() => $_has(1);
   @$pb.TagNumber(2)
-  void clearData() => $_clearField(2);
+  void clearData() => clearField(2);
 }
 
 /// Message representing a request to delete a file.
@@ -332,7 +330,7 @@ class StorageReqDelete extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasPath() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPath() => $_clearField(1);
+  void clearPath() => clearField(1);
 }
 
 /// Message representing a request to format the storage interface.
@@ -441,49 +439,49 @@ class StorageReq extends $pb.GeneratedMessage {
   static StorageReq? _defaultInstance;
 
   StorageReq_Type whichType() => _StorageReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   StorageFile get save => $_getN(0);
   @$pb.TagNumber(1)
-  set save(StorageFile v) { $_setField(1, v); }
+  set save(StorageFile v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSave() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSave() => $_clearField(1);
+  void clearSave() => clearField(1);
   @$pb.TagNumber(1)
   StorageFile ensureSave() => $_ensure(0);
 
   @$pb.TagNumber(2)
   StorageFile get load => $_getN(1);
   @$pb.TagNumber(2)
-  set load(StorageFile v) { $_setField(2, v); }
+  set load(StorageFile v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasLoad() => $_has(1);
   @$pb.TagNumber(2)
-  void clearLoad() => $_clearField(2);
+  void clearLoad() => clearField(2);
   @$pb.TagNumber(2)
   StorageFile ensureLoad() => $_ensure(1);
 
   @$pb.TagNumber(3)
   StorageFile get remove => $_getN(2);
   @$pb.TagNumber(3)
-  set remove(StorageFile v) { $_setField(3, v); }
+  set remove(StorageFile v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasRemove() => $_has(2);
   @$pb.TagNumber(3)
-  void clearRemove() => $_clearField(3);
+  void clearRemove() => clearField(3);
   @$pb.TagNumber(3)
   StorageFile ensureRemove() => $_ensure(2);
 
   @$pb.TagNumber(4)
   StorageReqFormat get format => $_getN(3);
   @$pb.TagNumber(4)
-  set format(StorageReqFormat v) { $_setField(4, v); }
+  set format(StorageReqFormat v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasFormat() => $_has(3);
   @$pb.TagNumber(4)
-  void clearFormat() => $_clearField(4);
+  void clearFormat() => clearField(4);
   @$pb.TagNumber(4)
   StorageReqFormat ensureFormat() => $_ensure(3);
 }
@@ -568,60 +566,60 @@ class StorageData extends $pb.GeneratedMessage {
   static StorageData? _defaultInstance;
 
   StorageData_Type whichType() => _StorageData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   StorageStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(StorageStop v) { $_setField(1, v); }
+  set stop(StorageStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   StorageStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   StorageCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(StorageCfg v) { $_setField(2, v); }
+  set config(StorageCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   StorageCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   StorageStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(StorageStatus v) { $_setField(3, v); }
+  set status(StorageStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   StorageStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   StorageReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(StorageReq v) { $_setField(4, v); }
+  set request(StorageReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   StorageReq ensureRequest() => $_ensure(3);
 
   @$pb.TagNumber(6)
   StorageInfo get info => $_getN(4);
   @$pb.TagNumber(6)
-  set info(StorageInfo v) { $_setField(6, v); }
+  set info(StorageInfo v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasInfo() => $_has(4);
   @$pb.TagNumber(6)
-  void clearInfo() => $_clearField(6);
+  void clearInfo() => clearField(6);
   @$pb.TagNumber(6)
   StorageInfo ensureInfo() => $_ensure(4);
 }

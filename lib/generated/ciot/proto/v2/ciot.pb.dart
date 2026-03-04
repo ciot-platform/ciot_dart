@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/ciot.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -16,8 +16,6 @@ import 'package:protobuf/protobuf.dart' as $pb;
 import 'ciot.pbenum.dart';
 import 'iface.pb.dart' as $1;
 import 'iface.pbenum.dart' as $1;
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'ciot.pbenum.dart';
 
@@ -74,10 +72,10 @@ class Info extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasVersion() => $_has(0);
   @$pb.TagNumber(1)
-  void clearVersion() => $_clearField(1);
+  void clearVersion() => clearField(1);
 
   @$pb.TagNumber(2)
-  $pb.PbList<$1.IfaceType> get ifaces => $_getList(1);
+  $core.List<$1.IfaceType> get ifaces => $_getList(1);
 }
 
 /// Message representing CIOT status.
@@ -129,14 +127,14 @@ class Status extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   State get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(State v) { $_setField(1, v); }
+  set state(State v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
-  $pb.PbList<IfaceStatus> get ifaces => $_getList(1);
+  $core.List<IfaceStatus> get ifaces => $_getList(1);
 }
 
 /// Message representing an CIOT iface status.
@@ -188,20 +186,20 @@ class IfaceStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $1.IfaceType get type => $_getN(0);
   @$pb.TagNumber(1)
-  set type($1.IfaceType v) { $_setField(1, v); }
+  set type($1.IfaceType v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
   @$pb.TagNumber(1)
-  void clearType() => $_clearField(1);
+  void clearType() => clearField(1);
 
   @$pb.TagNumber(2)
   $1.IfaceState get state => $_getN(1);
   @$pb.TagNumber(2)
-  set state($1.IfaceState v) { $_setField(2, v); }
+  set state($1.IfaceState v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasState() => $_has(1);
   @$pb.TagNumber(2)
-  void clearState() => $_clearField(2);
+  void clearState() => clearField(2);
 }
 
 enum Req_Type {
@@ -263,27 +261,27 @@ class Req extends $pb.GeneratedMessage {
   static Req? _defaultInstance;
 
   Req_Type whichType() => _Req_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $1.IfaceInfo get saveCfg => $_getN(0);
   @$pb.TagNumber(1)
-  set saveCfg($1.IfaceInfo v) { $_setField(1, v); }
+  set saveCfg($1.IfaceInfo v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasSaveCfg() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSaveCfg() => $_clearField(1);
+  void clearSaveCfg() => clearField(1);
   @$pb.TagNumber(1)
   $1.IfaceInfo ensureSaveCfg() => $_ensure(0);
 
   @$pb.TagNumber(2)
   $1.IfaceInfo get deleteCfg => $_getN(1);
   @$pb.TagNumber(2)
-  set deleteCfg($1.IfaceInfo v) { $_setField(2, v); }
+  set deleteCfg($1.IfaceInfo v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasDeleteCfg() => $_has(1);
   @$pb.TagNumber(2)
-  void clearDeleteCfg() => $_clearField(2);
+  void clearDeleteCfg() => clearField(2);
   @$pb.TagNumber(2)
   $1.IfaceInfo ensureDeleteCfg() => $_ensure(1);
 }
@@ -354,38 +352,38 @@ class Data extends $pb.GeneratedMessage {
   static Data? _defaultInstance;
 
   Data_Type whichType() => _Data_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(2)
   Status get status => $_getN(0);
   @$pb.TagNumber(2)
-  set status(Status v) { $_setField(2, v); }
+  set status(Status v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasStatus() => $_has(0);
   @$pb.TagNumber(2)
-  void clearStatus() => $_clearField(2);
+  void clearStatus() => clearField(2);
   @$pb.TagNumber(2)
   Status ensureStatus() => $_ensure(0);
 
   @$pb.TagNumber(3)
   Req get request => $_getN(1);
   @$pb.TagNumber(3)
-  set request(Req v) { $_setField(3, v); }
+  set request(Req v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasRequest() => $_has(1);
   @$pb.TagNumber(3)
-  void clearRequest() => $_clearField(3);
+  void clearRequest() => clearField(3);
   @$pb.TagNumber(3)
   Req ensureRequest() => $_ensure(1);
 
   @$pb.TagNumber(6)
   Info get info => $_getN(2);
   @$pb.TagNumber(6)
-  set info(Info v) { $_setField(6, v); }
+  set info(Info v) { setField(6, v); }
   @$pb.TagNumber(6)
   $core.bool hasInfo() => $_has(2);
   @$pb.TagNumber(6)
-  void clearInfo() => $_clearField(6);
+  void clearInfo() => clearField(6);
   @$pb.TagNumber(6)
   Info ensureInfo() => $_ensure(2);
 }

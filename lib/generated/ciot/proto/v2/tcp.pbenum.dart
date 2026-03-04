@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/tcp.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -36,7 +36,7 @@ class TcpState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, TcpState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static TcpState? valueOf($core.int value) => _byValue[value];
 
-  const TcpState._(super.v, super.n);
+  const TcpState._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing the state of the TCP DHCP (Dynamic Host Configuration
@@ -55,7 +55,7 @@ class TcpDhcpState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, TcpDhcpState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static TcpDhcpState? valueOf($core.int value) => _byValue[value];
 
-  const TcpDhcpState._(super.v, super.n);
+  const TcpDhcpState._($core.int v, $core.String n) : super(v, n);
 }
 
 /// Enum representing different TCP DHCP configurations.
@@ -75,7 +75,7 @@ class TcpDhcpCfg extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, TcpDhcpCfg> _byValue = $pb.ProtobufEnum.initByValue(values);
   static TcpDhcpCfg? valueOf($core.int value) => _byValue[value];
 
-  const TcpDhcpCfg._(super.v, super.n);
+  const TcpDhcpCfg._($core.int v, $core.String n) : super(v, n);
 }
 
 

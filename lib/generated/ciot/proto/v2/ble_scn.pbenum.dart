@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/ble_scn.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -15,11 +15,8 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 /// Possible ble scanner states
 class BleScnState extends $pb.ProtobufEnum {
-  /// Idle state
   static const BleScnState BLE_SCN_STATE_IDLE = BleScnState._(0, _omitEnumNames ? '' : 'BLE_SCN_STATE_IDLE');
-  /// Passive scan enabled
   static const BleScnState BLE_SCN_STATE_PASSIVE = BleScnState._(1, _omitEnumNames ? '' : 'BLE_SCN_STATE_PASSIVE');
-  /// Active scan enabled
   static const BleScnState BLE_SCN_STATE_ACTIVE = BleScnState._(2, _omitEnumNames ? '' : 'BLE_SCN_STATE_ACTIVE');
 
   static const $core.List<BleScnState> values = <BleScnState> [
@@ -31,7 +28,7 @@ class BleScnState extends $pb.ProtobufEnum {
   static final $core.Map<$core.int, BleScnState> _byValue = $pb.ProtobufEnum.initByValue(values);
   static BleScnState? valueOf($core.int value) => _byValue[value];
 
-  const BleScnState._(super.v, super.n);
+  const BleScnState._($core.int v, $core.String n) : super(v, n);
 }
 
 

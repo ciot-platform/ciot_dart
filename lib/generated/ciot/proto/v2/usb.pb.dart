@@ -2,7 +2,7 @@
 //  Generated code. Do not modify.
 //  source: ciot/proto/v2/usb.proto
 //
-// @dart = 3.3
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
 // ignore_for_file: constant_identifier_names, library_prefixes
@@ -14,8 +14,6 @@ import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'usb.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'usb.pbenum.dart';
 
@@ -100,7 +98,7 @@ class UsbCfg extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasBridgeMode() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBridgeMode() => $_clearField(1);
+  void clearBridgeMode() => clearField(1);
 }
 
 /// Message representing status for the USB module.
@@ -147,11 +145,11 @@ class UsbStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   UsbState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(UsbState v) { $_setField(1, v); }
+  set state(UsbState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 }
 
 enum UsbReq_Type {
@@ -213,7 +211,7 @@ class UsbReq extends $pb.GeneratedMessage {
   static UsbReq? _defaultInstance;
 
   UsbReq_Type whichType() => _UsbReq_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get sendData => $_getN(0);
@@ -222,7 +220,7 @@ class UsbReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   $core.bool hasSendData() => $_has(0);
   @$pb.TagNumber(1)
-  void clearSendData() => $_clearField(1);
+  void clearSendData() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.List<$core.int> get sendBytes => $_getN(1);
@@ -231,7 +229,7 @@ class UsbReq extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.bool hasSendBytes() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSendBytes() => $_clearField(2);
+  void clearSendBytes() => clearField(2);
 }
 
 enum UsbData_Type {
@@ -307,49 +305,49 @@ class UsbData extends $pb.GeneratedMessage {
   static UsbData? _defaultInstance;
 
   UsbData_Type whichType() => _UsbData_TypeByTag[$_whichOneof(0)]!;
-  void clearType() => $_clearField($_whichOneof(0));
+  void clearType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   UsbStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(UsbStop v) { $_setField(1, v); }
+  set stop(UsbStop v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
-  void clearStop() => $_clearField(1);
+  void clearStop() => clearField(1);
   @$pb.TagNumber(1)
   UsbStop ensureStop() => $_ensure(0);
 
   @$pb.TagNumber(2)
   UsbCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(UsbCfg v) { $_setField(2, v); }
+  set config(UsbCfg v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
-  void clearConfig() => $_clearField(2);
+  void clearConfig() => clearField(2);
   @$pb.TagNumber(2)
   UsbCfg ensureConfig() => $_ensure(1);
 
   @$pb.TagNumber(3)
   UsbStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(UsbStatus v) { $_setField(3, v); }
+  set status(UsbStatus v) { setField(3, v); }
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
-  void clearStatus() => $_clearField(3);
+  void clearStatus() => clearField(3);
   @$pb.TagNumber(3)
   UsbStatus ensureStatus() => $_ensure(2);
 
   @$pb.TagNumber(4)
   UsbReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(UsbReq v) { $_setField(4, v); }
+  set request(UsbReq v) { setField(4, v); }
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRequest() => $_clearField(4);
+  void clearRequest() => clearField(4);
   @$pb.TagNumber(4)
   UsbReq ensureRequest() => $_ensure(3);
 }
