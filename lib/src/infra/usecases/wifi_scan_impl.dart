@@ -11,29 +11,29 @@ class WifiScanImpl implements WifiScan {
   WifiScanImpl(this._iface);
 
   @override
-  Future<Either<ErrorBase, List<WifiApInfo>>> call(int ifaceId, {bool force = false, int timeout = 8000}) async {
-    var startScan = await _startScan(ifaceId, force: force, timeout: timeout);
+  Future<Either<ErrorBase, List<WifiApInfo>>> call(int ifaceId, {int timeout = 8000}) async {
+    var startScan = await _startScan(ifaceId, timeout: timeout);
     return startScan.match((l) => left(l), (r) async {
       var apInfos = <WifiApInfo>[];
       for (var i = 0; i < r.count; i++) {
-        var getScannerAp = await _getScannedAp(ifaceId, i, force: force, timeout: timeout);
+        var getScannerAp = await _getScannedAp(ifaceId, i, timeout: timeout);
         getScannerAp.match((l) => null, (r) => apInfos.add(r));
       }
       return right(apInfos..sort((a, b) => b.rssi.compareTo(a.rssi)));
     });
   }
 
-  Future<Either<ErrorBase, WifiReqScanResult>> _startScan(int ifaceId, {bool force = false, required int timeout}) async {
+  Future<Either<ErrorBase, WifiReqScanResult>> _startScan(int ifaceId, {required int timeout}) async {
     final ifaceInfo = IfaceInfo(id: ifaceId, type: IfaceType.IFACE_TYPE_WIFI);
     final msg = Msg(iface: ifaceInfo, data: MsgData(wifi: WifiData(request: WifiReq(scan: WifiReqScan()))));
-    final result = await _iface.sendMsg(msg, force: force, timeout: timeout);
+    final result = await _iface.sendMsg(msg, timeout: timeout);
     return result.match((l) => left(l), (r) => right(r.data.wifi.request.scanResult));
   }
 
-  Future<Either<ErrorBase, WifiApInfo>> _getScannedAp(int ifaceId, int apId, {bool force = false, required int timeout}) async {
+  Future<Either<ErrorBase, WifiApInfo>> _getScannedAp(int ifaceId, int apId, {required int timeout}) async {
     final ifaceInfo = IfaceInfo(id: ifaceId, type: IfaceType.IFACE_TYPE_WIFI);
     final msg = Msg(iface: ifaceInfo, data: MsgData(wifi: WifiData(request: WifiReq(getAp: WifiReqGetAp(id: apId)))));
-    final result = await _iface.sendMsg(msg, force: force, timeout: timeout);
+    final result = await _iface.sendMsg(msg, timeout: timeout);
     return result.match((l) => left(l), (r) => right(r.data.wifi.request.apInfo));
   }
 }

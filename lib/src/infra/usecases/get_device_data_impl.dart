@@ -10,7 +10,7 @@ class GetDeviceDataImpl implements GetDeviceData {
   GetDeviceDataImpl(this.iface);
 
   @override
-  Future<Either<ErrorBase, T>> call<T>(int ifaceId, IfaceType ifaceType, DataType dataType, {bool force = false}) async {
+  Future<Either<ErrorBase, T>> call<T>(int ifaceId, IfaceType ifaceType, DataType dataType, {int? timeout}) async {
     var msg = Msg(
       iface: IfaceInfo(
         id: ifaceId,
@@ -22,7 +22,7 @@ class GetDeviceDataImpl implements GetDeviceData {
         ),
       ),
     );
-    var result = await iface.send(msg, force: force);
+    var result = await iface.send(msg, timeout: timeout);
     return result.match(
       (l) => left((l)),
       (r) {

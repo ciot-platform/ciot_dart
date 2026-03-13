@@ -11,11 +11,11 @@ class MqttClientStartImpl implements MqttClientStart {
   MqttClientStartImpl(this.iface);
 
   @override
-  Future<Either<ErrorBase, MqttClientStatus>> call(int ifaceId, MqttClientCfg cfg, {bool force = false}) async {
+  Future<Either<ErrorBase, MqttClientStatus>> call(int ifaceId, MqttClientCfg cfg, {int? timeout}) async {
     final msg = Msg(
         iface: IfaceInfo(id: ifaceId, type: IfaceType.IFACE_TYPE_MQTT_CLIENT),
         data: MsgData(mqttClient: MqttClientData(config: cfg)));
-    final result = await iface.send(msg, force: force);
+    final result = await iface.send(msg, timeout: timeout);
     return result.match(
       (l) => Left(l),
       (r) => Right(r.data.mqttClient.status),
