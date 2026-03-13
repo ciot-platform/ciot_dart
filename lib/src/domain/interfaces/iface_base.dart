@@ -17,18 +17,18 @@ abstract class IfaceBase implements Iface {
 
   IfaceBase.withSerializer(this._serializer);
 
-  Future<Either<ErrorBase, Msg>> sendMsg(Msg msg, {bool force = false, int? timeout}) async {
-    var result = await send(_serializer.serialize(msg));
+  Future<Either<ErrorBase, Msg>> sendMsg(Msg msg, {int? timeout}) async {
+    var result = await send(msg);
     return result.match(
       (l) => Either.left(l),
-      (r) => Either.right(_serializer.deserialize<Msg>(r)),
+      (r) => Either.right(r),
     );
   }
 
-  Future<Either<ErrorBase, T>> send<T>(T msg, {bool force = false, int? timeout}) async {
+  Future<Either<ErrorBase, T>> send<T>(T msg, {int? timeout}) async {
     final startedAt = DateTime.now();
 
-    if (_sending && !force) {
+    if (_sending) {
       while (_sending) {
         if (timeout != null) {
           final elapsed = DateTime.now().difference(startedAt).inMilliseconds;

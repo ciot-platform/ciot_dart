@@ -3,5 +3,5 @@ import 'package:ciot_dart/src/errors/errors.dart';
 import 'package:fpdart/fpdart.dart';
 
 abstract class WifiStart {
-  Future<Either<ErrorBase, WifiStatus>> call(int ifaceId, WifiCfg cfg, {bool force = false});
+  Future<Either<ErrorBase, WifiStatus>> call(int ifaceId, WifiCfg cfg, {int? timeout});
 }
