@@ -1,5 +1,6 @@
-import 'dart:math';
+import 'dart:math' as math;
 import 'dart:typed_data';
+import 'dart:developer';
 
 import 'package:ciot_dart/generated/ciot/proto/v2/msg.pb.dart';
 import 'package:ciot_dart/src/domain/interfaces/iface.dart';
@@ -22,7 +23,7 @@ abstract class IfaceBase implements Iface {
     if (timeout != null) setTimeout(timeout);
     _sending = true;
     try {
-      _sentMsgId = Random().nextInt(1 << 31);
+      _sentMsgId = math.Random().nextInt(1 << 31);
       msg.id = _sentMsgId;
       var result = await sendData(_serializer.serialize(msg));
       return result.match(
@@ -35,13 +36,39 @@ abstract class IfaceBase implements Iface {
   }
 
   Future<Either<ErrorBase, T>> send<T>(T msg, {bool force = false, int? timeout}) async {
+    final startedAt = DateTime.now();
+
     if (_sending && !force) {
-      return Either.left(ErrorBusy());
+      log('Already sending a message, waiting for it to finish before sending the next one...');
+      while (_sending) {
+        if (timeout != null) {
+          final elapsed = DateTime.now().difference(startedAt).inMilliseconds;
+          if (elapsed >= timeout) {
+            return Either.left(ErrorTimeout());
+          }
+          final remaining = timeout - elapsed;
+          final delayMs = remaining < 10 ? remaining : 10;
+          await Future.delayed(Duration(milliseconds: delayMs));
+        } else {
+          await Future.delayed(const Duration(milliseconds: 10));
+        }
+      }
     }
+
     _sending = true;
-    if (timeout != null) setTimeout(timeout);
+
+    if (timeout != null) {
+      final elapsed = DateTime.now().difference(startedAt).inMilliseconds;
+      final remaining = timeout - elapsed;
+      if (remaining <= 0) {
+        _sending = false;
+        return Either.left(ErrorTimeout());
+      }
+      setTimeout(remaining);
+    }
+
     try {
-      _sentMsgId = Random().nextInt(1 << 31);
+      _sentMsgId = math.Random().nextInt(1 << 31);
       (msg as dynamic).id = _sentMsgId;
       var result = await sendData(_serializer.serialize(msg));
       return result.match(
