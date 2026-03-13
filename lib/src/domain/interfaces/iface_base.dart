@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'dart:math' as math;
 import 'dart:typed_data';
 
 import 'package:ciot_dart/generated/ciot/proto/v2/msg.pb.dart';
@@ -18,30 +18,46 @@ abstract class IfaceBase implements Iface {
   IfaceBase.withSerializer(this._serializer);
 
   Future<Either<ErrorBase, Msg>> sendMsg(Msg msg, {bool force = false, int? timeout}) async {
-    if (_sending && !force) return Either.left(ErrorBusy());
-    if (timeout != null) setTimeout(timeout);
-    _sending = true;
-    try {
-      _sentMsgId = Random().nextInt(1 << 31);
-      msg.id = _sentMsgId;
-      var result = await sendData(_serializer.serialize(msg));
-      return result.match(
-        (l) => Either.left(l),
-        (r) => Either.right(_serializer.deserialize<Msg>(r)),
-      );
-    } finally {
-      _sending = false;
-    }
+    var result = await send(_serializer.serialize(msg));
+    return result.match(
+      (l) => Either.left(l),
+      (r) => Either.right(_serializer.deserialize<Msg>(r)),
+    );
   }
 
   Future<Either<ErrorBase, T>> send<T>(T msg, {bool force = false, int? timeout}) async {
+    final startedAt = DateTime.now();
+
     if (_sending && !force) {
-      return Either.left(ErrorBusy());
+      while (_sending) {
+        if (timeout != null) {
+          final elapsed = DateTime.now().difference(startedAt).inMilliseconds;
+          if (elapsed >= timeout) {
+            return Either.left(ErrorTimeout());
+          }
+          final remaining = timeout - elapsed;
+          final delayMs = remaining < 10 ? remaining : 10;
+          await Future.delayed(Duration(milliseconds: delayMs));
+        } else {
+          await Future.delayed(const Duration(milliseconds: 10));
+        }
+      }
     }
+
     _sending = true;
-    if (timeout != null) setTimeout(timeout);
+
+    if (timeout != null) {
+      final elapsed = DateTime.now().difference(startedAt).inMilliseconds;
+      final remaining = timeout - elapsed;
+      if (remaining <= 0) {
+        _sending = false;
+        return Either.left(ErrorTimeout());
+      }
+      setTimeout(remaining);
+    }
+
     try {
-      _sentMsgId = Random().nextInt(1 << 31);
+      _sentMsgId = math.Random().nextInt(1 << 31);
       (msg as dynamic).id = _sentMsgId;
       var result = await sendData(_serializer.serialize(msg));
       return result.match(
