@@ -1,6 +1,5 @@
 import 'dart:math' as math;
 import 'dart:typed_data';
-import 'dart:developer';
 
 import 'package:ciot_dart/generated/ciot/proto/v2/msg.pb.dart';
 import 'package:ciot_dart/src/domain/interfaces/iface.dart';
@@ -19,27 +18,17 @@ abstract class IfaceBase implements Iface {
   IfaceBase.withSerializer(this._serializer);
 
   Future<Either<ErrorBase, Msg>> sendMsg(Msg msg, {bool force = false, int? timeout}) async {
-    if (_sending && !force) return Either.left(ErrorBusy());
-    if (timeout != null) setTimeout(timeout);
-    _sending = true;
-    try {
-      _sentMsgId = math.Random().nextInt(1 << 31);
-      msg.id = _sentMsgId;
-      var result = await sendData(_serializer.serialize(msg));
-      return result.match(
-        (l) => Either.left(l),
-        (r) => Either.right(_serializer.deserialize<Msg>(r)),
-      );
-    } finally {
-      _sending = false;
-    }
+    var result = await send(_serializer.serialize(msg));
+    return result.match(
+      (l) => Either.left(l),
+      (r) => Either.right(_serializer.deserialize<Msg>(r)),
+    );
   }
 
   Future<Either<ErrorBase, T>> send<T>(T msg, {bool force = false, int? timeout}) async {
     final startedAt = DateTime.now();
 
     if (_sending && !force) {
-      log('Already sending a message, waiting for it to finish before sending the next one...');
       while (_sending) {
         if (timeout != null) {
           final elapsed = DateTime.now().difference(startedAt).inMilliseconds;
