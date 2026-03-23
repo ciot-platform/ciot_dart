@@ -28,6 +28,6 @@ class WifiStartImpl implements WifiStart {
     return result.match(
       (l) => Left(l),
       (r) => Right(r.data.wifi.status),
-    );    
+    );
   }
 }
