@@ -14,4 +14,5 @@ export 'usecases/save_iface_cfg.dart';
 export 'usecases/sys_reset.dart';
 export 'usecases/wifi_scan.dart';
 export 'usecases/wifi_start.dart';
+export 'usecases/wifi_stop.dart';
 export 'usecases/delete_iface_cfg.dart';

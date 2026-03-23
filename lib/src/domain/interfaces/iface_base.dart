@@ -18,7 +18,7 @@ abstract class IfaceBase implements Iface {
   IfaceBase.withSerializer(this._serializer);
 
   Future<Either<ErrorBase, Msg>> sendMsg(Msg msg, {int? timeout}) async {
-    var result = await send(msg);
+    var result = await send(msg, timeout: timeout);
     return result.match(
       (l) => Either.left(l),
       (r) => Either.right(r),
