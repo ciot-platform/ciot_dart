@@ -9,6 +9,7 @@ import 'package:ciot_dart/generated/ciot/proto/v2/iface.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/msg_data.pb.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:http/http.dart' as http;
+import 'package:http/http.dart' show ClientException;
 
 class HttpClient extends IfaceBase {
   @override
@@ -159,6 +160,8 @@ class HttpClient extends IfaceBase {
         return Either.left(ErrorHttpRequest(response.statusCode, response.bodyBytes));
       }
     } on SocketException catch (_) {
+      return Either.left(ErrorConnection());
+    } on ClientException catch (_) {
       return Either.left(ErrorConnection());
     } on TimeoutException catch (_) {
       return Either.left(ErrorTimeout());
