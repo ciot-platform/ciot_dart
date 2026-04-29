@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/mbus_server.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/mbus_server.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -34,8 +36,8 @@ const MbusServerStop$json = {
 };
 
 /// Descriptor for `MbusServerStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mbusServerStopDescriptor = $convert.base64Decode(
-    'Cg5NYnVzU2VydmVyU3RvcA==');
+final $typed_data.Uint8List mbusServerStopDescriptor =
+    $convert.base64Decode('Cg5NYnVzU2VydmVyU3RvcA==');
 
 @$core.Deprecated('Use mbusServerRtuCfgDescriptor instead')
 const MbusServerRtuCfg$json = {
@@ -69,8 +71,24 @@ final $typed_data.Uint8List mbusServerTcpCfgDescriptor = $convert.base64Decode(
 const MbusServerCfg$json = {
   '1': 'MbusServerCfg',
   '2': [
-    {'1': 'rtu', '3': 1, '4': 1, '5': 11, '6': '.Ciot.MbusServerRtuCfg', '9': 0, '10': 'rtu'},
-    {'1': 'tcp', '3': 2, '4': 1, '5': 11, '6': '.Ciot.MbusServerTcpCfg', '9': 0, '10': 'tcp'},
+    {
+      '1': 'rtu',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MbusServerRtuCfg',
+      '9': 0,
+      '10': 'rtu'
+    },
+    {
+      '1': 'tcp',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MbusServerTcpCfg',
+      '9': 0,
+      '10': 'tcp'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -86,20 +104,43 @@ final $typed_data.Uint8List mbusServerCfgDescriptor = $convert.base64Decode(
 const MbusServerStatus$json = {
   '1': 'MbusServerStatus',
   '2': [
-    {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Ciot.MbusServerState', '10': 'state'},
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.MbusServerState',
+      '10': 'state'
+    },
+    {'1': 'error', '3': 2, '4': 1, '5': 14, '6': '.Ciot.Err', '10': 'error'},
+    {'1': 'last_poll', '3': 3, '4': 1, '5': 4, '10': 'lastPoll'},
+    {'1': 'last_update', '3': 4, '4': 1, '5': 4, '10': 'lastUpdate'},
+    {'1': 'last_request', '3': 5, '4': 1, '5': 4, '10': 'lastRequest'},
+    {'1': 'request_count', '3': 6, '4': 1, '5': 13, '10': 'requestCount'},
   ],
 };
 
 /// Descriptor for `MbusServerStatus`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List mbusServerStatusDescriptor = $convert.base64Decode(
     'ChBNYnVzU2VydmVyU3RhdHVzEisKBXN0YXRlGAEgASgOMhUuQ2lvdC5NYnVzU2VydmVyU3RhdG'
-    'VSBXN0YXRl');
+    'VSBXN0YXRlEh8KBWVycm9yGAIgASgOMgkuQ2lvdC5FcnJSBWVycm9yEhsKCWxhc3RfcG9sbBgD'
+    'IAEoBFIIbGFzdFBvbGwSHwoLbGFzdF91cGRhdGUYBCABKARSCmxhc3RVcGRhdGUSIQoMbGFzdF'
+    '9yZXF1ZXN0GAUgASgEUgtsYXN0UmVxdWVzdBIjCg1yZXF1ZXN0X2NvdW50GAYgASgNUgxyZXF1'
+    'ZXN0Q291bnQ=');
 
 @$core.Deprecated('Use mbusServerReqDescriptor instead')
 const MbusServerReq$json = {
   '1': 'MbusServerReq',
   '2': [
-    {'1': 'function', '3': 1, '4': 1, '5': 11, '6': '.Ciot.MbusFunctionReq', '9': 0, '10': 'function'},
+    {
+      '1': 'function',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MbusFunctionReq',
+      '9': 0,
+      '10': 'function'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -115,10 +156,42 @@ final $typed_data.Uint8List mbusServerReqDescriptor = $convert.base64Decode(
 const MbusServerData$json = {
   '1': 'MbusServerData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.MbusServerStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.MbusServerCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.MbusServerStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.MbusServerReq', '9': 0, '10': 'request'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MbusServerStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MbusServerCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MbusServerStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MbusServerReq',
+      '9': 0,
+      '10': 'request'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -131,4 +204,3 @@ final $typed_data.Uint8List mbusServerDataDescriptor = $convert.base64Decode(
     'RzdG9wEi0KBmNvbmZpZxgCIAEoCzITLkNpb3QuTWJ1c1NlcnZlckNmZ0gAUgZjb25maWcSMAoG'
     'c3RhdHVzGAMgASgLMhYuQ2lvdC5NYnVzU2VydmVyU3RhdHVzSABSBnN0YXR1cxIvCgdyZXF1ZX'
     'N0GAQgASgLMhMuQ2lvdC5NYnVzU2VydmVyUmVxSABSB3JlcXVlc3RCBgoEdHlwZQ==');
-

@@ -1,232 +1,232 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/msg.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/msg.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'errors.pbenum.dart' as $0;
-import 'iface.pb.dart' as $1;
+import 'errors.pbenum.dart' as $2;
+import 'iface.pb.dart' as $0;
 import 'msg.pbenum.dart';
-import 'msg_data.pb.dart' as $23;
+import 'msg_data.pb.dart' as $1;
+
+export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'msg.pbenum.dart';
 
 class Proxy extends $pb.GeneratedMessage {
   factory Proxy({
-    $1.IfaceInfo? iface,
+    $0.IfaceInfo? iface,
     ProxyState? state,
     $core.bool? save,
   }) {
-    final $result = create();
-    if (iface != null) {
-      $result.iface = iface;
-    }
-    if (state != null) {
-      $result.state = state;
-    }
-    if (save != null) {
-      $result.save = save;
-    }
-    return $result;
+    final result = create();
+    if (iface != null) result.iface = iface;
+    if (state != null) result.state = state;
+    if (save != null) result.save = save;
+    return result;
   }
-  Proxy._() : super();
-  factory Proxy.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Proxy.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Proxy', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..aOM<$1.IfaceInfo>(1, _omitFieldNames ? '' : 'iface', subBuilder: $1.IfaceInfo.create)
-    ..e<ProxyState>(2, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: ProxyState.PROXY_STATE_PENDING, valueOf: ProxyState.valueOf, enumValues: ProxyState.values)
+  Proxy._();
+
+  factory Proxy.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Proxy.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Proxy',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'),
+      createEmptyInstance: create)
+    ..aOM<$0.IfaceInfo>(1, _omitFieldNames ? '' : 'iface',
+        subBuilder: $0.IfaceInfo.create)
+    ..aE<ProxyState>(2, _omitFieldNames ? '' : 'state',
+        enumValues: ProxyState.values)
     ..aOB(3, _omitFieldNames ? '' : 'save')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Proxy clone() => Proxy()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Proxy copyWith(void Function(Proxy) updates) => super.copyWith((message) => updates(message as Proxy)) as Proxy;
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Proxy clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Proxy copyWith(void Function(Proxy) updates) =>
+      super.copyWith((message) => updates(message as Proxy)) as Proxy;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Proxy create() => Proxy._();
+  @$core.override
   Proxy createEmptyInstance() => create();
-  static $pb.PbList<Proxy> createRepeated() => $pb.PbList<Proxy>();
   @$core.pragma('dart2js:noInline')
-  static Proxy getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Proxy>(create);
+  static Proxy getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Proxy>(create);
   static Proxy? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $1.IfaceInfo get iface => $_getN(0);
+  $0.IfaceInfo get iface => $_getN(0);
   @$pb.TagNumber(1)
-  set iface($1.IfaceInfo v) { setField(1, v); }
+  set iface($0.IfaceInfo value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasIface() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIface() => clearField(1);
+  void clearIface() => $_clearField(1);
   @$pb.TagNumber(1)
-  $1.IfaceInfo ensureIface() => $_ensure(0);
+  $0.IfaceInfo ensureIface() => $_ensure(0);
 
   @$pb.TagNumber(2)
   ProxyState get state => $_getN(1);
   @$pb.TagNumber(2)
-  set state(ProxyState v) { setField(2, v); }
+  set state(ProxyState value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasState() => $_has(1);
   @$pb.TagNumber(2)
-  void clearState() => clearField(2);
+  void clearState() => $_clearField(2);
 
   @$pb.TagNumber(3)
   $core.bool get save => $_getBF(2);
   @$pb.TagNumber(3)
-  set save($core.bool v) { $_setBool(2, v); }
+  set save($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasSave() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSave() => clearField(3);
+  void clearSave() => $_clearField(3);
 }
 
 /// Represents an CioT message
 class Msg extends $pb.GeneratedMessage {
   factory Msg({
     $core.int? id,
-    $1.IfaceInfo? iface,
-    $0.Err? error,
-    $23.MsgData? data,
+    $0.IfaceInfo? iface,
+    $2.Err? error,
+    $1.MsgData? data,
     MsgType? type,
     Proxy? proxy,
   }) {
-    final $result = create();
-    if (id != null) {
-      $result.id = id;
-    }
-    if (iface != null) {
-      $result.iface = iface;
-    }
-    if (error != null) {
-      $result.error = error;
-    }
-    if (data != null) {
-      $result.data = data;
-    }
-    if (type != null) {
-      $result.type = type;
-    }
-    if (proxy != null) {
-      $result.proxy = proxy;
-    }
-    return $result;
+    final result = create();
+    if (id != null) result.id = id;
+    if (iface != null) result.iface = iface;
+    if (error != null) result.error = error;
+    if (data != null) result.data = data;
+    if (type != null) result.type = type;
+    if (proxy != null) result.proxy = proxy;
+    return result;
   }
-  Msg._() : super();
-  factory Msg.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory Msg.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'Msg', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..a<$core.int>(1, _omitFieldNames ? '' : 'id', $pb.PbFieldType.OU3)
-    ..aOM<$1.IfaceInfo>(2, _omitFieldNames ? '' : 'iface', subBuilder: $1.IfaceInfo.create)
-    ..e<$0.Err>(3, _omitFieldNames ? '' : 'error', $pb.PbFieldType.OE, defaultOrMaker: $0.Err.ERR_OK, valueOf: $0.Err.valueOf, enumValues: $0.Err.values)
-    ..aOM<$23.MsgData>(4, _omitFieldNames ? '' : 'data', subBuilder: $23.MsgData.create)
-    ..e<MsgType>(5, _omitFieldNames ? '' : 'type', $pb.PbFieldType.OE, defaultOrMaker: MsgType.MSG_TYPE_REQUEST, valueOf: MsgType.valueOf, enumValues: MsgType.values)
+  Msg._();
+
+  factory Msg.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory Msg.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Msg',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'),
+      createEmptyInstance: create)
+    ..aI(1, _omitFieldNames ? '' : 'id', fieldType: $pb.PbFieldType.OU3)
+    ..aOM<$0.IfaceInfo>(2, _omitFieldNames ? '' : 'iface',
+        subBuilder: $0.IfaceInfo.create)
+    ..aE<$2.Err>(3, _omitFieldNames ? '' : 'error', enumValues: $2.Err.values)
+    ..aOM<$1.MsgData>(4, _omitFieldNames ? '' : 'data',
+        subBuilder: $1.MsgData.create)
+    ..aE<MsgType>(5, _omitFieldNames ? '' : 'type', enumValues: MsgType.values)
     ..aOM<Proxy>(6, _omitFieldNames ? '' : 'proxy', subBuilder: Proxy.create)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  Msg clone() => Msg()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  Msg copyWith(void Function(Msg) updates) => super.copyWith((message) => updates(message as Msg)) as Msg;
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Msg clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  Msg copyWith(void Function(Msg) updates) =>
+      super.copyWith((message) => updates(message as Msg)) as Msg;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static Msg create() => Msg._();
+  @$core.override
   Msg createEmptyInstance() => create();
-  static $pb.PbList<Msg> createRepeated() => $pb.PbList<Msg>();
   @$core.pragma('dart2js:noInline')
-  static Msg getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Msg>(create);
+  static Msg getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Msg>(create);
   static Msg? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get id => $_getIZ(0);
   @$pb.TagNumber(1)
-  set id($core.int v) { $_setUnsignedInt32(0, v); }
+  set id($core.int value) => $_setUnsignedInt32(0, value);
   @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
   @$pb.TagNumber(1)
-  void clearId() => clearField(1);
+  void clearId() => $_clearField(1);
 
   @$pb.TagNumber(2)
-  $1.IfaceInfo get iface => $_getN(1);
+  $0.IfaceInfo get iface => $_getN(1);
   @$pb.TagNumber(2)
-  set iface($1.IfaceInfo v) { setField(2, v); }
+  set iface($0.IfaceInfo value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasIface() => $_has(1);
   @$pb.TagNumber(2)
-  void clearIface() => clearField(2);
+  void clearIface() => $_clearField(2);
   @$pb.TagNumber(2)
-  $1.IfaceInfo ensureIface() => $_ensure(1);
+  $0.IfaceInfo ensureIface() => $_ensure(1);
 
   @$pb.TagNumber(3)
-  $0.Err get error => $_getN(2);
+  $2.Err get error => $_getN(2);
   @$pb.TagNumber(3)
-  set error($0.Err v) { setField(3, v); }
+  set error($2.Err value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasError() => $_has(2);
   @$pb.TagNumber(3)
-  void clearError() => clearField(3);
+  void clearError() => $_clearField(3);
 
   @$pb.TagNumber(4)
-  $23.MsgData get data => $_getN(3);
+  $1.MsgData get data => $_getN(3);
   @$pb.TagNumber(4)
-  set data($23.MsgData v) { setField(4, v); }
+  set data($1.MsgData value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasData() => $_has(3);
   @$pb.TagNumber(4)
-  void clearData() => clearField(4);
+  void clearData() => $_clearField(4);
   @$pb.TagNumber(4)
-  $23.MsgData ensureData() => $_ensure(3);
+  $1.MsgData ensureData() => $_ensure(3);
 
   @$pb.TagNumber(5)
   MsgType get type => $_getN(4);
   @$pb.TagNumber(5)
-  set type(MsgType v) { setField(5, v); }
+  set type(MsgType value) => $_setField(5, value);
   @$pb.TagNumber(5)
   $core.bool hasType() => $_has(4);
   @$pb.TagNumber(5)
-  void clearType() => clearField(5);
+  void clearType() => $_clearField(5);
 
   @$pb.TagNumber(6)
   Proxy get proxy => $_getN(5);
   @$pb.TagNumber(6)
-  set proxy(Proxy v) { setField(6, v); }
+  set proxy(Proxy value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasProxy() => $_has(5);
   @$pb.TagNumber(6)
-  void clearProxy() => clearField(6);
+  void clearProxy() => $_clearField(6);
   @$pb.TagNumber(6)
   Proxy ensureProxy() => $_ensure(5);
 }
 
-
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

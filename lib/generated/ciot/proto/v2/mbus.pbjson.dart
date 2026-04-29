@@ -1,39 +1,19 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/mbus.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/mbus.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
-
-@$core.Deprecated('Use mbusErrorDescriptor instead')
-const MbusError$json = {
-  '1': 'MbusError',
-  '2': [
-    {'1': 'MBUS_ERROR_NONE', '2': 0},
-    {'1': 'MBUS_ERROR_REG_ADDR', '2': 1},
-    {'1': 'MBUS_ERROR_ARG', '2': 2},
-    {'1': 'MBUS_ERROR_PORT_LAYER', '2': 3},
-    {'1': 'MBUS_ERROR_NO_RESOURCE', '2': 4},
-    {'1': 'MBUS_ERROR_IO', '2': 5},
-    {'1': 'MBUS_ERROR_STATE', '2': 6},
-    {'1': 'MBUS_ERROR_TIMEOUT', '2': 7},
-  ],
-};
-
-/// Descriptor for `MbusError`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List mbusErrorDescriptor = $convert.base64Decode(
-    'CglNYnVzRXJyb3ISEwoPTUJVU19FUlJPUl9OT05FEAASFwoTTUJVU19FUlJPUl9SRUdfQUREUh'
-    'ABEhIKDk1CVVNfRVJST1JfQVJHEAISGQoVTUJVU19FUlJPUl9QT1JUX0xBWUVSEAMSGgoWTUJV'
-    'U19FUlJPUl9OT19SRVNPVVJDRRAEEhEKDU1CVVNfRVJST1JfSU8QBRIUChBNQlVTX0VSUk9SX1'
-    'NUQVRFEAYSFgoSTUJVU19FUlJPUl9USU1FT1VUEAc=');
 
 @$core.Deprecated('Use mbusFuncCodeDescriptor instead')
 const MbusFuncCode$json = {
@@ -64,7 +44,14 @@ final $typed_data.Uint8List mbusFuncCodeDescriptor = $convert.base64Decode(
 const MbusFunctionReq$json = {
   '1': 'MbusFunctionReq',
   '2': [
-    {'1': 'code', '3': 1, '4': 1, '5': 14, '6': '.Ciot.MbusFuncCode', '10': 'code'},
+    {
+      '1': 'code',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.MbusFuncCode',
+      '10': 'code'
+    },
     {'1': 'address', '3': 2, '4': 1, '5': 13, '10': 'address'},
     {'1': 'data', '3': 3, '4': 3, '5': 13, '10': 'data'},
     {'1': 'read_count', '3': 4, '4': 1, '5': 13, '10': 'readCount'},
@@ -79,4 +66,3 @@ final $typed_data.Uint8List mbusFunctionReqDescriptor = $convert.base64Decode(
     'RlEhgKB2FkZHJlc3MYAiABKA1SB2FkZHJlc3MSEgoEZGF0YRgDIAMoDVIEZGF0YRIdCgpyZWFk'
     'X2NvdW50GAQgASgNUglyZWFkQ291bnQSIQoMbWF4X2F0dGVtcHRzGAUgASgNUgttYXhBdHRlbX'
     'B0cxIUCgVlcnJvchgGIAEoDVIFZXJyb3I=');
-

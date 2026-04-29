@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/storage.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/storage.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -22,8 +24,8 @@ const StorageState$json = {
 };
 
 /// Descriptor for `StorageState`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List storageStateDescriptor = $convert.base64Decode(
-    'CgxTdG9yYWdlU3RhdGUSFgoSU1RPUkFHRV9TVEFURV9JRExFEAA=');
+final $typed_data.Uint8List storageStateDescriptor = $convert
+    .base64Decode('CgxTdG9yYWdlU3RhdGUSFgoSU1RPUkFHRV9TVEFURV9JRExFEAA=');
 
 @$core.Deprecated('Use storageTypeDescriptor instead')
 const StorageType$json = {
@@ -47,14 +49,21 @@ const StorageStop$json = {
 };
 
 /// Descriptor for `StorageStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List storageStopDescriptor = $convert.base64Decode(
-    'CgtTdG9yYWdlU3RvcA==');
+final $typed_data.Uint8List storageStopDescriptor =
+    $convert.base64Decode('CgtTdG9yYWdlU3RvcA==');
 
 @$core.Deprecated('Use storageCfgDescriptor instead')
 const StorageCfg$json = {
   '1': 'StorageCfg',
   '2': [
-    {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.Ciot.StorageType', '10': 'type'},
+    {
+      '1': 'type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.StorageType',
+      '10': 'type'
+    },
   ],
 };
 
@@ -66,7 +75,14 @@ final $typed_data.Uint8List storageCfgDescriptor = $convert.base64Decode(
 const StorageStatus$json = {
   '1': 'StorageStatus',
   '2': [
-    {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Ciot.StorageState', '10': 'state'},
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.StorageState',
+      '10': 'state'
+    },
     {'1': 'free_space', '3': 2, '4': 1, '5': 13, '10': 'freeSpace'},
   ],
 };
@@ -110,8 +126,8 @@ const StorageReqDelete$json = {
 };
 
 /// Descriptor for `StorageReqDelete`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List storageReqDeleteDescriptor = $convert.base64Decode(
-    'ChBTdG9yYWdlUmVxRGVsZXRlEhIKBHBhdGgYASABKAlSBHBhdGg=');
+final $typed_data.Uint8List storageReqDeleteDescriptor = $convert
+    .base64Decode('ChBTdG9yYWdlUmVxRGVsZXRlEhIKBHBhdGgYASABKAlSBHBhdGg=');
 
 @$core.Deprecated('Use storageReqFormatDescriptor instead')
 const StorageReqFormat$json = {
@@ -119,17 +135,49 @@ const StorageReqFormat$json = {
 };
 
 /// Descriptor for `StorageReqFormat`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List storageReqFormatDescriptor = $convert.base64Decode(
-    'ChBTdG9yYWdlUmVxRm9ybWF0');
+final $typed_data.Uint8List storageReqFormatDescriptor =
+    $convert.base64Decode('ChBTdG9yYWdlUmVxRm9ybWF0');
 
 @$core.Deprecated('Use storageReqDescriptor instead')
 const StorageReq$json = {
   '1': 'StorageReq',
   '2': [
-    {'1': 'save', '3': 1, '4': 1, '5': 11, '6': '.Ciot.StorageFile', '9': 0, '10': 'save'},
-    {'1': 'load', '3': 2, '4': 1, '5': 11, '6': '.Ciot.StorageFile', '9': 0, '10': 'load'},
-    {'1': 'remove', '3': 3, '4': 1, '5': 11, '6': '.Ciot.StorageFile', '9': 0, '10': 'remove'},
-    {'1': 'format', '3': 4, '4': 1, '5': 11, '6': '.Ciot.StorageReqFormat', '9': 0, '10': 'format'},
+    {
+      '1': 'save',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.StorageFile',
+      '9': 0,
+      '10': 'save'
+    },
+    {
+      '1': 'load',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.StorageFile',
+      '9': 0,
+      '10': 'load'
+    },
+    {
+      '1': 'remove',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.StorageFile',
+      '9': 0,
+      '10': 'remove'
+    },
+    {
+      '1': 'format',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.StorageReqFormat',
+      '9': 0,
+      '10': 'format'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -147,11 +195,51 @@ final $typed_data.Uint8List storageReqDescriptor = $convert.base64Decode(
 const StorageData$json = {
   '1': 'StorageData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.StorageStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.StorageCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.StorageStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.StorageReq', '9': 0, '10': 'request'},
-    {'1': 'info', '3': 6, '4': 1, '5': 11, '6': '.Ciot.StorageInfo', '9': 0, '10': 'info'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.StorageStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.StorageCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.StorageStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.StorageReq',
+      '9': 0,
+      '10': 'request'
+    },
+    {
+      '1': 'info',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.StorageInfo',
+      '9': 0,
+      '10': 'info'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -165,4 +253,3 @@ final $typed_data.Uint8List storageDataDescriptor = $convert.base64Decode(
     'ASgLMhMuQ2lvdC5TdG9yYWdlU3RhdHVzSABSBnN0YXR1cxIsCgdyZXF1ZXN0GAQgASgLMhAuQ2'
     'lvdC5TdG9yYWdlUmVxSABSB3JlcXVlc3QSJwoEaW5mbxgGIAEoCzIRLkNpb3QuU3RvcmFnZUlu'
     'Zm9IAFIEaW5mb0IGCgR0eXBl');
-

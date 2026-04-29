@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/http_client.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/http_client.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -82,9 +84,10 @@ const HttpClientTransportType$json = {
 };
 
 /// Descriptor for `HttpClientTransportType`. Decode as a `google.protobuf.EnumDescriptorProto`.
-final $typed_data.Uint8List httpClientTransportTypeDescriptor = $convert.base64Decode(
-    'ChdIdHRwQ2xpZW50VHJhbnNwb3J0VHlwZRIaChZIVFRQX1RSQU5TUE9SVF9VTktOT1dOEAASFg'
-    'oSSFRUUF9UUkFOU1BPUlRfVENQEAESFgoSSFRUUF9UUkFOU1BPUlRfU1NMEAI=');
+final $typed_data.Uint8List httpClientTransportTypeDescriptor =
+    $convert.base64Decode(
+        'ChdIdHRwQ2xpZW50VHJhbnNwb3J0VHlwZRIaChZIVFRQX1RSQU5TUE9SVF9VTktOT1dOEAASFg'
+        'oSSFRUUF9UUkFOU1BPUlRfVENQEAESFgoSSFRUUF9UUkFOU1BPUlRfU1NMEAI=');
 
 @$core.Deprecated('Use httpClientStopDescriptor instead')
 const HttpClientStop$json = {
@@ -92,16 +95,30 @@ const HttpClientStop$json = {
 };
 
 /// Descriptor for `HttpClientStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List httpClientStopDescriptor = $convert.base64Decode(
-    'Cg5IdHRwQ2xpZW50U3RvcA==');
+final $typed_data.Uint8List httpClientStopDescriptor =
+    $convert.base64Decode('Cg5IdHRwQ2xpZW50U3RvcA==');
 
 @$core.Deprecated('Use httpClientCfgDescriptor instead')
 const HttpClientCfg$json = {
   '1': 'HttpClientCfg',
   '2': [
     {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
-    {'1': 'method', '3': 2, '4': 1, '5': 14, '6': '.Ciot.HttpClientMethod', '10': 'method'},
-    {'1': 'transport', '3': 3, '4': 1, '5': 14, '6': '.Ciot.HttpClientTransportType', '10': 'transport'},
+    {
+      '1': 'method',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.HttpClientMethod',
+      '10': 'method'
+    },
+    {
+      '1': 'transport',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.HttpClientTransportType',
+      '10': 'transport'
+    },
     {'1': 'timeout', '3': 4, '4': 1, '5': 13, '10': 'timeout'},
   ],
 };
@@ -117,7 +134,14 @@ final $typed_data.Uint8List httpClientCfgDescriptor = $convert.base64Decode(
 const HttpClientStatus$json = {
   '1': 'HttpClientStatus',
   '2': [
-    {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Ciot.HttpClientState', '10': 'state'},
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.HttpClientState',
+      '10': 'state'
+    },
     {'1': 'error', '3': 2, '4': 1, '5': 13, '10': 'error'},
   ],
 };
@@ -131,7 +155,14 @@ final $typed_data.Uint8List httpClientStatusDescriptor = $convert.base64Decode(
 const HttpClientReqSend$json = {
   '1': 'HttpClientReqSend',
   '2': [
-    {'1': 'config', '3': 1, '4': 1, '5': 11, '6': '.Ciot.HttpClientCfg', '10': 'config'},
+    {
+      '1': 'config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.HttpClientCfg',
+      '10': 'config'
+    },
     {'1': 'body', '3': 2, '4': 1, '5': 12, '10': 'body'},
   ],
 };
@@ -151,16 +182,33 @@ const HttpClientReqSetHeader$json = {
 };
 
 /// Descriptor for `HttpClientReqSetHeader`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List httpClientReqSetHeaderDescriptor = $convert.base64Decode(
-    'ChZIdHRwQ2xpZW50UmVxU2V0SGVhZGVyEhYKBmhlYWRlchgBIAEoCVIGaGVhZGVyEhQKBXZhbH'
-    'VlGAIgASgJUgV2YWx1ZQ==');
+final $typed_data.Uint8List httpClientReqSetHeaderDescriptor =
+    $convert.base64Decode(
+        'ChZIdHRwQ2xpZW50UmVxU2V0SGVhZGVyEhYKBmhlYWRlchgBIAEoCVIGaGVhZGVyEhQKBXZhbH'
+        'VlGAIgASgJUgV2YWx1ZQ==');
 
 @$core.Deprecated('Use httpClientReqDescriptor instead')
 const HttpClientReq$json = {
   '1': 'HttpClientReq',
   '2': [
-    {'1': 'send', '3': 1, '4': 1, '5': 11, '6': '.Ciot.HttpClientReqSend', '9': 0, '10': 'send'},
-    {'1': 'set_header', '3': 2, '4': 1, '5': 11, '6': '.Ciot.HttpClientReqSetHeader', '9': 0, '10': 'setHeader'},
+    {
+      '1': 'send',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.HttpClientReqSend',
+      '9': 0,
+      '10': 'send'
+    },
+    {
+      '1': 'set_header',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.HttpClientReqSetHeader',
+      '9': 0,
+      '10': 'setHeader'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -177,10 +225,42 @@ final $typed_data.Uint8List httpClientReqDescriptor = $convert.base64Decode(
 const HttpClientData$json = {
   '1': 'HttpClientData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.HttpClientStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.HttpClientCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.HttpClientStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.HttpClientReq', '9': 0, '10': 'request'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.HttpClientStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.HttpClientCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.HttpClientStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.HttpClientReq',
+      '9': 0,
+      '10': 'request'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -193,4 +273,3 @@ final $typed_data.Uint8List httpClientDataDescriptor = $convert.base64Decode(
     'RzdG9wEi0KBmNvbmZpZxgCIAEoCzITLkNpb3QuSHR0cENsaWVudENmZ0gAUgZjb25maWcSMAoG'
     'c3RhdHVzGAMgASgLMhYuQ2lvdC5IdHRwQ2xpZW50U3RhdHVzSABSBnN0YXR1cxIvCgdyZXF1ZX'
     'N0GAQgASgLMhMuQ2lvdC5IdHRwQ2xpZW50UmVxSABSB3JlcXVlc3RCBgoEdHlwZQ==');
-

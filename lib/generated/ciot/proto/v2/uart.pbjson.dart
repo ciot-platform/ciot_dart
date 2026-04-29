@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/uart.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/uart.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -75,8 +77,8 @@ const UartStop$json = {
 };
 
 /// Descriptor for `UartStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List uartStopDescriptor = $convert.base64Decode(
-    'CghVYXJ0U3RvcA==');
+final $typed_data.Uint8List uartStopDescriptor =
+    $convert.base64Decode('CghVYXJ0U3RvcA==');
 
 @$core.Deprecated('Use uartGpioCfgDescriptor instead')
 const UartGpioCfg$json = {
@@ -100,7 +102,14 @@ const UartCfg$json = {
   '2': [
     {'1': 'baud_rate', '3': 1, '4': 1, '5': 13, '10': 'baudRate'},
     {'1': 'num', '3': 2, '4': 1, '5': 13, '10': 'num'},
-    {'1': 'gpio', '3': 3, '4': 1, '5': 11, '6': '.Ciot.UartGpioCfg', '10': 'gpio'},
+    {
+      '1': 'gpio',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.UartGpioCfg',
+      '10': 'gpio'
+    },
     {'1': 'parity', '3': 4, '4': 1, '5': 13, '10': 'parity'},
     {'1': 'flow_control', '3': 5, '4': 1, '5': 8, '10': 'flowControl'},
     {'1': 'dtr', '3': 6, '4': 1, '5': 8, '10': 'dtr'},
@@ -122,8 +131,22 @@ final $typed_data.Uint8List uartCfgDescriptor = $convert.base64Decode(
 const UartStatus$json = {
   '1': 'UartStatus',
   '2': [
-    {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Ciot.UartState', '10': 'state'},
-    {'1': 'error', '3': 2, '4': 1, '5': 14, '6': '.Ciot.UartError', '10': 'error'},
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.UartState',
+      '10': 'state'
+    },
+    {
+      '1': 'error',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.UartError',
+      '10': 'error'
+    },
   ],
 };
 
@@ -151,10 +174,42 @@ final $typed_data.Uint8List uartReqDescriptor = $convert.base64Decode(
 const UartData$json = {
   '1': 'UartData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.UartStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.UartCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.UartStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.UartReq', '9': 0, '10': 'request'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.UartStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.UartCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.UartStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.UartReq',
+      '9': 0,
+      '10': 'request'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -167,4 +222,3 @@ final $typed_data.Uint8List uartDataDescriptor = $convert.base64Decode(
     'ZpZxgCIAEoCzINLkNpb3QuVWFydENmZ0gAUgZjb25maWcSKgoGc3RhdHVzGAMgASgLMhAuQ2lv'
     'dC5VYXJ0U3RhdHVzSABSBnN0YXR1cxIpCgdyZXF1ZXN0GAQgASgLMg0uQ2lvdC5VYXJ0UmVxSA'
     'BSB3JlcXVlc3RCBgoEdHlwZQ==');
-

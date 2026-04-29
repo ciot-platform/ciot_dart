@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/tcp.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/tcp.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -72,15 +74,22 @@ const TcpStop$json = {
 };
 
 /// Descriptor for `TcpStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List tcpStopDescriptor = $convert.base64Decode(
-    'CgdUY3BTdG9w');
+final $typed_data.Uint8List tcpStopDescriptor =
+    $convert.base64Decode('CgdUY3BTdG9w');
 
 @$core.Deprecated('Use tcpCfgDescriptor instead')
 const TcpCfg$json = {
   '1': 'TcpCfg',
   '2': [
     {'1': 'disabled', '3': 1, '4': 1, '5': 8, '10': 'disabled'},
-    {'1': 'dhcp', '3': 2, '4': 1, '5': 14, '6': '.Ciot.TcpDhcpCfg', '10': 'dhcp'},
+    {
+      '1': 'dhcp',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.TcpDhcpCfg',
+      '10': 'dhcp'
+    },
     {'1': 'ip', '3': 3, '4': 1, '5': 12, '10': 'ip'},
     {'1': 'gateway', '3': 4, '4': 1, '5': 12, '10': 'gateway'},
     {'1': 'mask', '3': 5, '4': 1, '5': 12, '10': 'mask'},
@@ -98,8 +107,22 @@ final $typed_data.Uint8List tcpCfgDescriptor = $convert.base64Decode(
 const TcpDhcpStatus$json = {
   '1': 'TcpDhcpStatus',
   '2': [
-    {'1': 'client', '3': 1, '4': 1, '5': 14, '6': '.Ciot.TcpDhcpState', '10': 'client'},
-    {'1': 'server', '3': 2, '4': 1, '5': 14, '6': '.Ciot.TcpDhcpState', '10': 'server'},
+    {
+      '1': 'client',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.TcpDhcpState',
+      '10': 'client'
+    },
+    {
+      '1': 'server',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.TcpDhcpState',
+      '10': 'server'
+    },
   ],
 };
 
@@ -125,9 +148,23 @@ final $typed_data.Uint8List tcpInfoDescriptor = $convert.base64Decode(
 const TcpStatus$json = {
   '1': 'TcpStatus',
   '2': [
-    {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Ciot.TcpState', '10': 'state'},
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.TcpState',
+      '10': 'state'
+    },
     {'1': 'conn_count', '3': 2, '4': 1, '5': 13, '10': 'connCount'},
-    {'1': 'dhcp', '3': 3, '4': 1, '5': 11, '6': '.Ciot.TcpDhcpStatus', '10': 'dhcp'},
+    {
+      '1': 'dhcp',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.TcpDhcpStatus',
+      '10': 'dhcp'
+    },
   ],
 };
 
@@ -143,18 +180,58 @@ const TcpReq$json = {
 };
 
 /// Descriptor for `TcpReq`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List tcpReqDescriptor = $convert.base64Decode(
-    'CgZUY3BSZXE=');
+final $typed_data.Uint8List tcpReqDescriptor =
+    $convert.base64Decode('CgZUY3BSZXE=');
 
 @$core.Deprecated('Use tcpDataDescriptor instead')
 const TcpData$json = {
   '1': 'TcpData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.TcpStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.TcpCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.TcpStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.TcpReq', '9': 0, '10': 'request'},
-    {'1': 'info', '3': 6, '4': 1, '5': 11, '6': '.Ciot.TcpInfo', '9': 0, '10': 'info'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.TcpStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.TcpCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.TcpStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.TcpReq',
+      '9': 0,
+      '10': 'request'
+    },
+    {
+      '1': 'info',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.TcpInfo',
+      '9': 0,
+      '10': 'info'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -167,4 +244,3 @@ final $typed_data.Uint8List tcpDataDescriptor = $convert.base64Decode(
     'cYAiABKAsyDC5DaW90LlRjcENmZ0gAUgZjb25maWcSKQoGc3RhdHVzGAMgASgLMg8uQ2lvdC5U'
     'Y3BTdGF0dXNIAFIGc3RhdHVzEigKB3JlcXVlc3QYBCABKAsyDC5DaW90LlRjcFJlcUgAUgdyZX'
     'F1ZXN0EiMKBGluZm8YBiABKAsyDS5DaW90LlRjcEluZm9IAFIEaW5mb0IGCgR0eXBl');
-

@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/mqtt_client.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/mqtt_client.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -73,7 +75,13 @@ const MqttClientError$json = {
   '2': [
     {'1': 'tls_last_err', '3': 1, '4': 1, '5': 13, '10': 'tlsLastErr'},
     {'1': 'tls_stack_err', '3': 2, '4': 1, '5': 13, '10': 'tlsStackErr'},
-    {'1': 'tls_cert_verify_flags', '3': 3, '4': 1, '5': 13, '10': 'tlsCertVerifyFlags'},
+    {
+      '1': 'tls_cert_verify_flags',
+      '3': 3,
+      '4': 1,
+      '5': 13,
+      '10': 'tlsCertVerifyFlags'
+    },
     {'1': 'type', '3': 4, '4': 1, '5': 13, '10': 'type'},
     {'1': 'code', '3': 5, '4': 1, '5': 13, '10': 'code'},
     {'1': 'transport_sock', '3': 6, '4': 1, '5': 13, '10': 'transportSock'},
@@ -123,8 +131,8 @@ const MqttClientStop$json = {
 };
 
 /// Descriptor for `MqttClientStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mqttClientStopDescriptor = $convert.base64Decode(
-    'Cg5NcXR0Q2xpZW50U3RvcA==');
+final $typed_data.Uint8List mqttClientStopDescriptor =
+    $convert.base64Decode('Cg5NcXR0Q2xpZW50U3RvcA==');
 
 @$core.Deprecated('Use mqttClientSessionCfgDescriptor instead')
 const MqttClientSessionCfg$json = {
@@ -149,10 +157,42 @@ const MqttClientCfg$json = {
     {'1': 'user', '3': 3, '4': 1, '5': 9, '10': 'user'},
     {'1': 'password', '3': 4, '4': 1, '5': 9, '10': 'password'},
     {'1': 'qos', '3': 5, '4': 1, '5': 13, '10': 'qos'},
-    {'1': 'topics', '3': 6, '4': 1, '5': 11, '6': '.Ciot.MqttClientTopicsCfg', '10': 'topics'},
-    {'1': 'broker_kind', '3': 7, '4': 1, '5': 14, '6': '.Ciot.MqttClientBrokerKind', '10': 'brokerKind'},
-    {'1': 'last_will', '3': 8, '4': 1, '5': 11, '6': '.Ciot.MqttClientLastWill', '9': 0, '10': 'lastWill', '17': true},
-    {'1': 'session', '3': 9, '4': 1, '5': 11, '6': '.Ciot.MqttClientSessionCfg', '9': 1, '10': 'session', '17': true},
+    {
+      '1': 'topics',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MqttClientTopicsCfg',
+      '10': 'topics'
+    },
+    {
+      '1': 'broker_kind',
+      '3': 7,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.MqttClientBrokerKind',
+      '10': 'brokerKind'
+    },
+    {
+      '1': 'last_will',
+      '3': 8,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MqttClientLastWill',
+      '9': 0,
+      '10': 'lastWill',
+      '17': true
+    },
+    {
+      '1': 'session',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MqttClientSessionCfg',
+      '9': 1,
+      '10': 'session',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_last_will'},
@@ -174,11 +214,25 @@ final $typed_data.Uint8List mqttClientCfgDescriptor = $convert.base64Decode(
 const MqttClientStatus$json = {
   '1': 'MqttClientStatus',
   '2': [
-    {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Ciot.MqttClientState', '10': 'state'},
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.MqttClientState',
+      '10': 'state'
+    },
     {'1': 'conn_count', '3': 2, '4': 1, '5': 13, '10': 'connCount'},
     {'1': 'data_rate', '3': 3, '4': 1, '5': 13, '10': 'dataRate'},
     {'1': 'last_msg_time', '3': 4, '4': 1, '5': 4, '10': 'lastMsgTime'},
-    {'1': 'error', '3': 5, '4': 1, '5': 11, '6': '.Ciot.MqttClientError', '10': 'error'},
+    {
+      '1': 'error',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MqttClientError',
+      '10': 'error'
+    },
   ],
 };
 
@@ -214,16 +268,33 @@ const MqttClientReqSubscribe$json = {
 };
 
 /// Descriptor for `MqttClientReqSubscribe`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List mqttClientReqSubscribeDescriptor = $convert.base64Decode(
-    'ChZNcXR0Q2xpZW50UmVxU3Vic2NyaWJlEhQKBXRvcGljGAEgASgJUgV0b3BpYxIQCgNxb3MYAi'
-    'ABKA1SA3Fvcw==');
+final $typed_data.Uint8List mqttClientReqSubscribeDescriptor =
+    $convert.base64Decode(
+        'ChZNcXR0Q2xpZW50UmVxU3Vic2NyaWJlEhQKBXRvcGljGAEgASgJUgV0b3BpYxIQCgNxb3MYAi'
+        'ABKA1SA3Fvcw==');
 
 @$core.Deprecated('Use mqttClientReqDescriptor instead')
 const MqttClientReq$json = {
   '1': 'MqttClientReq',
   '2': [
-    {'1': 'publish', '3': 1, '4': 1, '5': 11, '6': '.Ciot.MqttClientReqPublish', '9': 0, '10': 'publish'},
-    {'1': 'subscribe', '3': 2, '4': 1, '5': 11, '6': '.Ciot.MqttClientReqSubscribe', '9': 0, '10': 'subscribe'},
+    {
+      '1': 'publish',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MqttClientReqPublish',
+      '9': 0,
+      '10': 'publish'
+    },
+    {
+      '1': 'subscribe',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MqttClientReqSubscribe',
+      '9': 0,
+      '10': 'subscribe'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -240,10 +311,42 @@ final $typed_data.Uint8List mqttClientReqDescriptor = $convert.base64Decode(
 const MqttClientData$json = {
   '1': 'MqttClientData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.MqttClientStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.MqttClientCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.MqttClientStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.MqttClientReq', '9': 0, '10': 'request'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MqttClientStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MqttClientCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MqttClientStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.MqttClientReq',
+      '9': 0,
+      '10': 'request'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -256,4 +359,3 @@ final $typed_data.Uint8List mqttClientDataDescriptor = $convert.base64Decode(
     'RzdG9wEi0KBmNvbmZpZxgCIAEoCzITLkNpb3QuTXF0dENsaWVudENmZ0gAUgZjb25maWcSMAoG'
     'c3RhdHVzGAMgASgLMhYuQ2lvdC5NcXR0Q2xpZW50U3RhdHVzSABSBnN0YXR1cxIvCgdyZXF1ZX'
     'N0GAQgASgLMhMuQ2lvdC5NcXR0Q2xpZW50UmVxSABSB3JlcXVlc3RCBgoEdHlwZQ==');
-
