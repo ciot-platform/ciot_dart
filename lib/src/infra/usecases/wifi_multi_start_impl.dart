@@ -6,7 +6,6 @@ import 'package:ciot_dart/src/errors/errors.dart';
 import 'package:fpdart/src/either.dart';
 
 import '../../../generated/ciot/proto/v2/wifi_multi.pb.dart';
-import '../../domain/usecases/wifi_multi_start.dart';
 
 class WifiMultiStartImpl implements WifiMultiStart {
   final IfaceBase iface;
