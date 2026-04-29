@@ -15,16 +15,8 @@ class WifiMultiStartImpl implements WifiMultiStart {
   @override
   Future<Either<ErrorBase, WifiMultiStatus>> call(int ifaceId, WifiMultiCfg cfg, {int? timeout}) async {
     final msg = Msg(
-      iface: IfaceInfo(
-        id: ifaceId,
-        type: IfaceType.IFACE_TYPE_WIFI
-      ),
-      data: MsgData(
-        wifiMulti: WifiMultiData(
-          config: cfg
-        )
-      )
-    );
+        iface: IfaceInfo(id: ifaceId, type: IfaceType.IFACE_TYPE_WIFI),
+        data: MsgData(wifiMulti: WifiMultiData(config: cfg)));
     final result = await iface.send(msg, timeout: timeout);
     return result.match(
       (l) => Left(l),
