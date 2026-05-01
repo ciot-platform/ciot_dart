@@ -12,7 +12,7 @@ class WifiStartImpl implements WifiStart {
   WifiStartImpl(this.iface);
 
   @override
-  Future<Either<ErrorBase, WifiStatus>> call(int ifaceId, WifiCfg cfg, {bool force = false}) async {
+  Future<Either<ErrorBase, WifiStatus>> call(int ifaceId, WifiCfg cfg, {int? timeout}) async {
     final msg = Msg(
       iface: IfaceInfo(
         id: ifaceId,
@@ -24,10 +24,10 @@ class WifiStartImpl implements WifiStart {
         )
       )
     );
-    final result = await iface.send(msg, force: force);
+    final result = await iface.send(msg, timeout: timeout);
     return result.match(
       (l) => Left(l),
       (r) => Right(r.data.wifi.status),
-    );    
+    );
   }
 }

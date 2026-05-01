@@ -1,6 +1,6 @@
 name: ciot_dart
 description: "A new Flutter package project."
-version: 0.7.0+1
+version: 1.0.0+9
 publish_to: none
 
 environment:
@@ -11,7 +11,7 @@ dependencies:
   flutter:
     sdk: flutter
   fpdart: ^1.1.1
-  protobuf: ^4.0.0
+  protobuf: ^5.1.0
   http: ^1.1.0
   shared_preferences: ^2.5.1
   fixnum: ^1.1.0
