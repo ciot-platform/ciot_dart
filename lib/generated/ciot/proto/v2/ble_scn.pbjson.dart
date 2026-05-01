@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/ble_scn.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/ble_scn.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -34,8 +36,8 @@ const BleScnStop$json = {
 };
 
 /// Descriptor for `BleScnStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List bleScnStopDescriptor = $convert.base64Decode(
-    'CgpCbGVTY25TdG9w');
+final $typed_data.Uint8List bleScnStopDescriptor =
+    $convert.base64Decode('CgpCbGVTY25TdG9w');
 
 @$core.Deprecated('Use bleScnCfgDescriptor instead')
 const BleScnCfg$json = {
@@ -72,7 +74,14 @@ final $typed_data.Uint8List bleScnAdvInfoDescriptor = $convert.base64Decode(
 const BleScnAdv$json = {
   '1': 'BleScnAdv',
   '2': [
-    {'1': 'info', '3': 1, '4': 1, '5': 11, '6': '.Ciot.BleScnAdvInfo', '10': 'info'},
+    {
+      '1': 'info',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.BleScnAdvInfo',
+      '10': 'info'
+    },
     {'1': 'payload', '3': 2, '4': 1, '5': 12, '10': 'payload'},
   ],
 };
@@ -86,8 +95,22 @@ final $typed_data.Uint8List bleScnAdvDescriptor = $convert.base64Decode(
 const BleScnStatus$json = {
   '1': 'BleScnStatus',
   '2': [
-    {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Ciot.BleScnState', '10': 'state'},
-    {'1': 'err_code', '3': 2, '4': 1, '5': 14, '6': '.Ciot.Err', '10': 'errCode'},
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.BleScnState',
+      '10': 'state'
+    },
+    {
+      '1': 'err_code',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.Err',
+      '10': 'errCode'
+    },
     {'1': 'advs_losted', '3': 3, '4': 1, '5': 13, '10': 'advsLosted'},
     {'1': 'fifo_len', '3': 4, '4': 1, '5': 13, '10': 'fifoLen'},
     {'1': 'fifo_max', '3': 5, '4': 1, '5': 13, '10': 'fifoMax'},
@@ -107,17 +130,49 @@ const BleScnReq$json = {
 };
 
 /// Descriptor for `BleScnReq`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List bleScnReqDescriptor = $convert.base64Decode(
-    'CglCbGVTY25SZXE=');
+final $typed_data.Uint8List bleScnReqDescriptor =
+    $convert.base64Decode('CglCbGVTY25SZXE=');
 
 @$core.Deprecated('Use bleScnDataDescriptor instead')
 const BleScnData$json = {
   '1': 'BleScnData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.BleScnStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.BleScnCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.BleScnStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.BleScnReq', '9': 0, '10': 'request'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.BleScnStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.BleScnCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.BleScnStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.BleScnReq',
+      '9': 0,
+      '10': 'request'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -130,4 +185,3 @@ final $typed_data.Uint8List bleScnDataDescriptor = $convert.base64Decode(
     'Zjb25maWcYAiABKAsyDy5DaW90LkJsZVNjbkNmZ0gAUgZjb25maWcSLAoGc3RhdHVzGAMgASgL'
     'MhIuQ2lvdC5CbGVTY25TdGF0dXNIAFIGc3RhdHVzEisKB3JlcXVlc3QYBCABKAsyDy5DaW90Lk'
     'JsZVNjblJlcUgAUgdyZXF1ZXN0QgYKBHR5cGU=');
-

@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/iface.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/iface.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -60,6 +62,7 @@ const IfaceType$json = {
     {'1': 'IFACE_TYPE_MBUS_CLIENT', '2': 25},
     {'1': 'IFACE_TYPE_MBUS_SERVER', '2': 26},
     {'1': 'IFACE_TYPE_PWM', '2': 27},
+    {'1': 'IFACE_TYPE_WIFI_MULTI', '2': 28},
   ],
 };
 
@@ -76,7 +79,8 @@ final $typed_data.Uint8List ifaceTypeDescriptor = $convert.base64Decode(
     'UEVfTVFUVF9DTElFTlQQExIVChFJRkFDRV9UWVBFX1NPQ0tFVBAUEhUKEUlGQUNFX1RZUEVfQl'
     'JJREdFEBUSGgoWSUZBQ0VfVFlQRV9JT1RBX0NMSUVOVBAWEhoKFklGQUNFX1RZUEVfSU9UQV9T'
     'RVJWRVIQFxISCg5JRkFDRV9UWVBFX0xPRxAYEhoKFklGQUNFX1RZUEVfTUJVU19DTElFTlQQGR'
-    'IaChZJRkFDRV9UWVBFX01CVVNfU0VSVkVSEBoSEgoOSUZBQ0VfVFlQRV9QV00QGw==');
+    'IaChZJRkFDRV9UWVBFX01CVVNfU0VSVkVSEBoSEgoOSUZBQ0VfVFlQRV9QV00QGxIZChVJRkFD'
+    'RV9UWVBFX1dJRklfTVVMVEkQHA==');
 
 @$core.Deprecated('Use ifaceReqStateDescriptor instead')
 const IfaceReqState$json = {
@@ -136,15 +140,22 @@ const Common$json = {
 };
 
 /// Descriptor for `Common`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List commonDescriptor = $convert.base64Decode(
-    'CgZDb21tb24SFAoEc3RvcBgBIAEoCEgAUgRzdG9wQgYKBHR5cGU=');
+final $typed_data.Uint8List commonDescriptor = $convert
+    .base64Decode('CgZDb21tb24SFAoEc3RvcBgBIAEoCEgAUgRzdG9wQgYKBHR5cGU=');
 
 @$core.Deprecated('Use ifaceInfoDescriptor instead')
 const IfaceInfo$json = {
   '1': 'IfaceInfo',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 13, '10': 'id'},
-    {'1': 'type', '3': 2, '4': 1, '5': 14, '6': '.Ciot.IfaceType', '10': 'type'},
+    {
+      '1': 'type',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.IfaceType',
+      '10': 'type'
+    },
   ],
 };
 
@@ -158,9 +169,23 @@ const IfaceReqStatus$json = {
   '1': 'IfaceReqStatus',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 13, '10': 'id'},
-    {'1': 'state', '3': 2, '4': 1, '5': 14, '6': '.Ciot.IfaceReqState', '10': 'state'},
+    {
+      '1': 'state',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.IfaceReqState',
+      '10': 'state'
+    },
     {'1': 'data_type', '3': 3, '4': 1, '5': 13, '10': 'dataType'},
-    {'1': 'iface', '3': 4, '4': 1, '5': 11, '6': '.Ciot.IfaceInfo', '10': 'iface'},
+    {
+      '1': 'iface',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.IfaceInfo',
+      '10': 'iface'
+    },
   ],
 };
 
@@ -169,4 +194,3 @@ final $typed_data.Uint8List ifaceReqStatusDescriptor = $convert.base64Decode(
     'Cg5JZmFjZVJlcVN0YXR1cxIOCgJpZBgBIAEoDVICaWQSKQoFc3RhdGUYAiABKA4yEy5DaW90Lk'
     'lmYWNlUmVxU3RhdGVSBXN0YXRlEhsKCWRhdGFfdHlwZRgDIAEoDVIIZGF0YVR5cGUSJQoFaWZh'
     'Y2UYBCABKAsyDy5DaW90LklmYWNlSW5mb1IFaWZhY2U=');
-

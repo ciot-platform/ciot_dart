@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/sys.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/sys.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -55,8 +57,8 @@ const SysStop$json = {
 };
 
 /// Descriptor for `SysStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List sysStopDescriptor = $convert.base64Decode(
-    'CgdTeXNTdG9w');
+final $typed_data.Uint8List sysStopDescriptor =
+    $convert.base64Decode('CgdTeXNTdG9w');
 
 @$core.Deprecated('Use sysCfgDescriptor instead')
 const SysCfg$json = {
@@ -64,8 +66,8 @@ const SysCfg$json = {
 };
 
 /// Descriptor for `SysCfg`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List sysCfgDescriptor = $convert.base64Decode(
-    'CgZTeXNDZmc=');
+final $typed_data.Uint8List sysCfgDescriptor =
+    $convert.base64Decode('CgZTeXNDZmc=');
 
 @$core.Deprecated('Use sysFeaturesDescriptor instead')
 const SysFeatures$json = {
@@ -116,8 +118,22 @@ const SysInfo$json = {
   '2': [
     {'1': 'app_ver', '3': 1, '4': 1, '5': 12, '10': 'appVer'},
     {'1': 'hw_name', '3': 2, '4': 1, '5': 9, '10': 'hwName'},
-    {'1': 'hw_type', '3': 3, '4': 1, '5': 14, '6': '.Ciot.SysHw', '10': 'hwType'},
-    {'1': 'features', '3': 4, '4': 1, '5': 11, '6': '.Ciot.SysFeatures', '10': 'features'},
+    {
+      '1': 'hw_type',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.SysHw',
+      '10': 'hwType'
+    },
+    {
+      '1': 'features',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.SysFeatures',
+      '10': 'features'
+    },
   ],
 };
 
@@ -148,7 +164,15 @@ final $typed_data.Uint8List sysStatusDescriptor = $convert.base64Decode(
 const SysReq$json = {
   '1': 'SysReq',
   '2': [
-    {'1': 'cmd', '3': 1, '4': 1, '5': 14, '6': '.Ciot.SysReqCmd', '9': 0, '10': 'cmd'},
+    {
+      '1': 'cmd',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.SysReqCmd',
+      '9': 0,
+      '10': 'cmd'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -163,11 +187,51 @@ final $typed_data.Uint8List sysReqDescriptor = $convert.base64Decode(
 const SysData$json = {
   '1': 'SysData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.SysStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.SysCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.SysStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.SysReq', '9': 0, '10': 'request'},
-    {'1': 'info', '3': 5, '4': 1, '5': 11, '6': '.Ciot.SysInfo', '9': 0, '10': 'info'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.SysStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.SysCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.SysStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.SysReq',
+      '9': 0,
+      '10': 'request'
+    },
+    {
+      '1': 'info',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.SysInfo',
+      '9': 0,
+      '10': 'info'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -180,4 +244,3 @@ final $typed_data.Uint8List sysDataDescriptor = $convert.base64Decode(
     'cYAiABKAsyDC5DaW90LlN5c0NmZ0gAUgZjb25maWcSKQoGc3RhdHVzGAMgASgLMg8uQ2lvdC5T'
     'eXNTdGF0dXNIAFIGc3RhdHVzEigKB3JlcXVlc3QYBCABKAsyDC5DaW90LlN5c1JlcUgAUgdyZX'
     'F1ZXN0EiMKBGluZm8YBSABKAsyDS5DaW90LlN5c0luZm9IAFIEaW5mb0IGCgR0eXBl');
-

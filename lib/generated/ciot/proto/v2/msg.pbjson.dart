@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/msg.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/msg.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -47,8 +49,22 @@ final $typed_data.Uint8List proxyStateDescriptor = $convert.base64Decode(
 const Proxy$json = {
   '1': 'Proxy',
   '2': [
-    {'1': 'iface', '3': 1, '4': 1, '5': 11, '6': '.Ciot.IfaceInfo', '10': 'iface'},
-    {'1': 'state', '3': 2, '4': 1, '5': 14, '6': '.Ciot.ProxyState', '10': 'state'},
+    {
+      '1': 'iface',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.IfaceInfo',
+      '10': 'iface'
+    },
+    {
+      '1': 'state',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.ProxyState',
+      '10': 'state'
+    },
     {'1': 'save', '3': 3, '4': 1, '5': 8, '10': 'save'},
   ],
 };
@@ -63,11 +79,27 @@ const Msg$json = {
   '1': 'Msg',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 13, '10': 'id'},
-    {'1': 'iface', '3': 2, '4': 1, '5': 11, '6': '.Ciot.IfaceInfo', '10': 'iface'},
+    {
+      '1': 'iface',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.IfaceInfo',
+      '10': 'iface'
+    },
     {'1': 'error', '3': 3, '4': 1, '5': 14, '6': '.Ciot.Err', '10': 'error'},
     {'1': 'data', '3': 4, '4': 1, '5': 11, '6': '.Ciot.MsgData', '10': 'data'},
     {'1': 'type', '3': 5, '4': 1, '5': 14, '6': '.Ciot.MsgType', '10': 'type'},
-    {'1': 'proxy', '3': 6, '4': 1, '5': 11, '6': '.Ciot.Proxy', '9': 0, '10': 'proxy', '17': true},
+    {
+      '1': 'proxy',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Proxy',
+      '9': 0,
+      '10': 'proxy',
+      '17': true
+    },
   ],
   '8': [
     {'1': '_proxy'},
@@ -80,4 +112,3 @@ final $typed_data.Uint8List msgDescriptor = $convert.base64Decode(
     'lmYWNlEh8KBWVycm9yGAMgASgOMgkuQ2lvdC5FcnJSBWVycm9yEiEKBGRhdGEYBCABKAsyDS5D'
     'aW90Lk1zZ0RhdGFSBGRhdGESIQoEdHlwZRgFIAEoDjINLkNpb3QuTXNnVHlwZVIEdHlwZRImCg'
     'Vwcm94eRgGIAEoCzILLkNpb3QuUHJveHlIAFIFcHJveHmIAQFCCAoGX3Byb3h5');
-

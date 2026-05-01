@@ -1,6 +1,6 @@
 // This is a generated file - do not edit.
 //
-// Generated from ciot/proto/v2/msg_data.proto.
+// Generated from ciot/proto/v2/wifi_multi.proto.
 
 // @dart = 3.3
 

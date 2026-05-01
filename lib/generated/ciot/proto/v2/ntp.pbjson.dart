@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/ntp.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/ntp.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -34,8 +36,8 @@ const NtpStop$json = {
 };
 
 /// Descriptor for `NtpStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List ntpStopDescriptor = $convert.base64Decode(
-    'CgdOdHBTdG9w');
+final $typed_data.Uint8List ntpStopDescriptor =
+    $convert.base64Decode('CgdOdHBTdG9w');
 
 @$core.Deprecated('Use ntpCfgDescriptor instead')
 const NtpCfg$json = {
@@ -62,7 +64,14 @@ final $typed_data.Uint8List ntpCfgDescriptor = $convert.base64Decode(
 const NtpStatus$json = {
   '1': 'NtpStatus',
   '2': [
-    {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Ciot.NtpState', '10': 'state'},
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.NtpState',
+      '10': 'state'
+    },
     {'1': 'last_sync', '3': 2, '4': 1, '5': 4, '10': 'lastSync'},
     {'1': 'sync_count', '3': 3, '4': 1, '5': 13, '10': 'syncCount'},
     {'1': 'init', '3': 4, '4': 1, '5': 8, '10': 'init'},
@@ -82,17 +91,49 @@ const NtpReq$json = {
 };
 
 /// Descriptor for `NtpReq`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List ntpReqDescriptor = $convert.base64Decode(
-    'CgZOdHBSZXE=');
+final $typed_data.Uint8List ntpReqDescriptor =
+    $convert.base64Decode('CgZOdHBSZXE=');
 
 @$core.Deprecated('Use ntpDataDescriptor instead')
 const NtpData$json = {
   '1': 'NtpData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.NtpStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.NtpCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.NtpStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.NtpReq', '9': 0, '10': 'request'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.NtpStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.NtpCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.NtpStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.NtpReq',
+      '9': 0,
+      '10': 'request'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -105,4 +146,3 @@ final $typed_data.Uint8List ntpDataDescriptor = $convert.base64Decode(
     'cYAiABKAsyDC5DaW90Lk50cENmZ0gAUgZjb25maWcSKQoGc3RhdHVzGAMgASgLMg8uQ2lvdC5O'
     'dHBTdGF0dXNIAFIGc3RhdHVzEigKB3JlcXVlc3QYBCABKAsyDC5DaW90Lk50cFJlcUgAUgdyZX'
     'F1ZXN0QgYKBHR5cGU=');
-
