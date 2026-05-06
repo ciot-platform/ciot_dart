@@ -1,4 +1,5 @@
 import 'dart:typed_data';
+
 import 'package:ciot_dart/generated/ciot/proto/v2/errors.pbenum.dart';
 
 abstract class ErrorBase {}
@@ -10,7 +11,7 @@ class ErrorInvalidType implements ErrorBase {}
 class ErrorHttpRequest implements ErrorBase {
   final int status;
   final Uint8List body;
-  ErrorHttpRequest(this.status,this.body);
+  ErrorHttpRequest(this.status, this.body);
 }
 
 class ErrorException implements ErrorBase {
@@ -35,6 +36,24 @@ class ErrorInvalidState implements ErrorBase {}
 class ErrorBusy implements ErrorBase {}
 
 class ErrorValidation extends ErrorBase {}
+
+/// Validation error with details about the field and type of failure
+class ErrorValidationData extends ErrorBase {
+  /// The type of field that failed validation (e.g. 'ip', 'url', 'email', 'password')
+  final String fieldType;
+
+  /// Descriptive error message
+  final String message;
+
+  /// The invalid value that was provided (may be omitted for security reasons)
+  final String? invalidValue;
+
+  ErrorValidationData({
+    required this.fieldType,
+    required this.message,
+    this.invalidValue,
+  });
+}
 
 class ErrorCredentials extends ErrorBase {}
 
