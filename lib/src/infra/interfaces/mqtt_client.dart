@@ -60,8 +60,10 @@ class MqttClient extends IfaceBase {
 
   void init(mqtt.MqttClient client) {
     _client = client;
+    _client!.keepAlivePeriod = 10;
     _client!.onConnected = _onConnected;
     _client!.onDisconnected = _onDisconnected;
+    _client!.onAutoReconnect = _onDisconnected;
     _cfg = MqttClientCfg(
       url: client.server,
       clientId: client.clientIdentifier,

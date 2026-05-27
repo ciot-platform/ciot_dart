@@ -8,6 +8,9 @@ class MessageEvent<T> {
 }
 
 abstract class MessageBus<T> {
+  /// Emits `true` when connected to the broker and `false` when disconnected.
+  Stream<bool> get onConnectionState;
+
   /// Starts listening to the given [topic] and returns a stream of
   /// [MessageEvent]s where each event includes the original topic and the
   /// decoded payload.

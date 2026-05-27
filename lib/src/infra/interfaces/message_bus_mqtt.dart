@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:developer';
 import 'dart:typed_data';
 
+import 'package:ciot_dart/generated/ciot/proto/v2/event.pb.dart';
 import 'package:ciot_dart/src/domain/domain.dart';
 import 'package:ciot_dart/src/infra/interfaces/mqtt_client.dart' as ciot;
 import 'package:ciot_dart/src/infra/interfaces/serializer_pb.dart';
@@ -11,11 +12,31 @@ class MessageBusMqtt<T> implements MessageBus<T> {
   final Map<String, StreamController<MessageEvent<T>>> _controllers = {};
   final Serializer _serializer;
   StreamSubscription? _updatesSub;
+  StreamSubscription? _connectionSub;
   Stream<ciot.MqttClientEvent>? _clientBroadcast;
 
-  MessageBusMqtt(this._client) : _serializer = SerializerPb.instance;
+  final StreamController<bool> _connectionStateController = StreamController<bool>.broadcast();
 
-  MessageBusMqtt.withSerializer(this._client, this._serializer);
+  MessageBusMqtt(this._client) : _serializer = SerializerPb.instance {
+    _listenToConnectionState();
+  }
+
+  MessageBusMqtt.withSerializer(this._client, this._serializer) {
+    _listenToConnectionState();
+  }
+
+  void _listenToConnectionState() {
+    _connectionSub = _client.onEvent.listen((event) {
+      if (event.type == EventType.EVENT_TYPE_STARTED) {
+        _connectionStateController.add(true);
+      } else if (event.type == EventType.EVENT_TYPE_STOPPED) {
+        _connectionStateController.add(false);
+      }
+    });
+  }
+
+  @override
+  Stream<bool> get onConnectionState => _connectionStateController.stream;
 
   @override
   Stream<MessageEvent<T>> startListening(String topic) {
@@ -87,5 +108,11 @@ class MessageBusMqtt<T> implements MessageBus<T> {
       await _updatesSub?.cancel();
       _updatesSub = null;
     }
+  }
+
+  Future<void> dispose() async {
+    await _connectionSub?.cancel();
+    await _connectionStateController.close();
+    _cleanupAll();
   }
 }
