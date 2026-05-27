@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/dfu.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/dfu.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -54,8 +56,8 @@ const DfuStop$json = {
 };
 
 /// Descriptor for `DfuStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List dfuStopDescriptor = $convert.base64Decode(
-    'CgdEZnVTdG9w');
+final $typed_data.Uint8List dfuStopDescriptor =
+    $convert.base64Decode('CgdEZnVTdG9w');
 
 @$core.Deprecated('Use dfuCfgDescriptor instead')
 const DfuCfg$json = {
@@ -73,7 +75,14 @@ final $typed_data.Uint8List dfuCfgDescriptor = $convert.base64Decode(
 const DfuStatus$json = {
   '1': 'DfuStatus',
   '2': [
-    {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Ciot.DfuState', '10': 'state'},
+    {
+      '1': 'state',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.DfuState',
+      '10': 'state'
+    },
     {'1': 'code', '3': 2, '4': 1, '5': 13, '10': 'code'},
     {'1': 'error', '3': 3, '4': 1, '5': 14, '6': '.Ciot.Err', '10': 'error'},
     {'1': 'image_size', '3': 4, '4': 1, '5': 13, '10': 'imageSize'},
@@ -94,17 +103,49 @@ const DfuReq$json = {
 };
 
 /// Descriptor for `DfuReq`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List dfuReqDescriptor = $convert.base64Decode(
-    'CgZEZnVSZXE=');
+final $typed_data.Uint8List dfuReqDescriptor =
+    $convert.base64Decode('CgZEZnVSZXE=');
 
 @$core.Deprecated('Use dfuDataDescriptor instead')
 const DfuData$json = {
   '1': 'DfuData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.DfuStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.DfuCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.DfuStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.DfuReq', '9': 0, '10': 'request'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.DfuStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.DfuCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.DfuStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.DfuReq',
+      '9': 0,
+      '10': 'request'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -117,4 +158,3 @@ final $typed_data.Uint8List dfuDataDescriptor = $convert.base64Decode(
     'cYAiABKAsyDC5DaW90LkRmdUNmZ0gAUgZjb25maWcSKQoGc3RhdHVzGAMgASgLMg8uQ2lvdC5E'
     'ZnVTdGF0dXNIAFIGc3RhdHVzEigKB3JlcXVlc3QYBCABKAsyDC5DaW90LkRmdVJlcUgAUgdyZX'
     'F1ZXN0QgYKBHR5cGU=');
-

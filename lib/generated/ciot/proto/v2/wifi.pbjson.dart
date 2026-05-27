@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/wifi.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/wifi.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -65,8 +67,8 @@ const WifiStop$json = {
 };
 
 /// Descriptor for `WifiStop`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List wifiStopDescriptor = $convert.base64Decode(
-    'CghXaWZpU3RvcA==');
+final $typed_data.Uint8List wifiStopDescriptor =
+    $convert.base64Decode('CghXaWZpU3RvcA==');
 
 @$core.Deprecated('Use wifiCfgDescriptor instead')
 const WifiCfg$json = {
@@ -90,9 +92,22 @@ final $typed_data.Uint8List wifiCfgDescriptor = $convert.base64Decode(
 const WifiStatus$json = {
   '1': 'WifiStatus',
   '2': [
-    {'1': 'disconnect_reason', '3': 1, '4': 1, '5': 13, '10': 'disconnectReason'},
+    {
+      '1': 'disconnect_reason',
+      '3': 1,
+      '4': 1,
+      '5': 13,
+      '10': 'disconnectReason'
+    },
     {'1': 'tcp', '3': 2, '4': 1, '5': 11, '6': '.Ciot.TcpStatus', '10': 'tcp'},
-    {'1': 'scan_state', '3': 3, '4': 1, '5': 14, '6': '.Ciot.WifiScanState', '10': 'scanState'},
+    {
+      '1': 'scan_state',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.WifiScanState',
+      '10': 'scanState'
+    },
     {'1': 'rssi', '3': 4, '4': 1, '5': 5, '10': 'rssi'},
   ],
 };
@@ -123,8 +138,8 @@ const WifiReqScan$json = {
 };
 
 /// Descriptor for `WifiReqScan`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List wifiReqScanDescriptor = $convert.base64Decode(
-    'CgtXaWZpUmVxU2Nhbg==');
+final $typed_data.Uint8List wifiReqScanDescriptor =
+    $convert.base64Decode('CgtXaWZpUmVxU2Nhbg==');
 
 @$core.Deprecated('Use wifiReqScanResultDescriptor instead')
 const WifiReqScanResult$json = {
@@ -135,8 +150,8 @@ const WifiReqScanResult$json = {
 };
 
 /// Descriptor for `WifiReqScanResult`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List wifiReqScanResultDescriptor = $convert.base64Decode(
-    'ChFXaWZpUmVxU2NhblJlc3VsdBIUCgVjb3VudBgBIAEoDVIFY291bnQ=');
+final $typed_data.Uint8List wifiReqScanResultDescriptor = $convert
+    .base64Decode('ChFXaWZpUmVxU2NhblJlc3VsdBIUCgVjb3VudBgBIAEoDVIFY291bnQ=');
 
 @$core.Deprecated('Use wifiReqGetApDescriptor instead')
 const WifiReqGetAp$json = {
@@ -147,17 +162,49 @@ const WifiReqGetAp$json = {
 };
 
 /// Descriptor for `WifiReqGetAp`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List wifiReqGetApDescriptor = $convert.base64Decode(
-    'CgxXaWZpUmVxR2V0QXASDgoCaWQYASABKA1SAmlk');
+final $typed_data.Uint8List wifiReqGetApDescriptor =
+    $convert.base64Decode('CgxXaWZpUmVxR2V0QXASDgoCaWQYASABKA1SAmlk');
 
 @$core.Deprecated('Use wifiReqDescriptor instead')
 const WifiReq$json = {
   '1': 'WifiReq',
   '2': [
-    {'1': 'scan', '3': 1, '4': 1, '5': 11, '6': '.Ciot.WifiReqScan', '9': 0, '10': 'scan'},
-    {'1': 'scan_result', '3': 2, '4': 1, '5': 11, '6': '.Ciot.WifiReqScanResult', '9': 0, '10': 'scanResult'},
-    {'1': 'get_ap', '3': 3, '4': 1, '5': 11, '6': '.Ciot.WifiReqGetAp', '9': 0, '10': 'getAp'},
-    {'1': 'ap_info', '3': 4, '4': 1, '5': 11, '6': '.Ciot.WifiApInfo', '9': 0, '10': 'apInfo'},
+    {
+      '1': 'scan',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.WifiReqScan',
+      '9': 0,
+      '10': 'scan'
+    },
+    {
+      '1': 'scan_result',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.WifiReqScanResult',
+      '9': 0,
+      '10': 'scanResult'
+    },
+    {
+      '1': 'get_ap',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.WifiReqGetAp',
+      '9': 0,
+      '10': 'getAp'
+    },
+    {
+      '1': 'ap_info',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.WifiApInfo',
+      '9': 0,
+      '10': 'apInfo'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -175,11 +222,51 @@ final $typed_data.Uint8List wifiReqDescriptor = $convert.base64Decode(
 const WifiData$json = {
   '1': 'WifiData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.WifiStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.WifiCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.WifiStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.WifiReq', '9': 0, '10': 'request'},
-    {'1': 'info', '3': 5, '4': 1, '5': 11, '6': '.Ciot.WifiInfo', '9': 0, '10': 'info'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.WifiStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.WifiCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.WifiStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.WifiReq',
+      '9': 0,
+      '10': 'request'
+    },
+    {
+      '1': 'info',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.WifiInfo',
+      '9': 0,
+      '10': 'info'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -192,4 +279,3 @@ final $typed_data.Uint8List wifiDataDescriptor = $convert.base64Decode(
     'ZpZxgCIAEoCzINLkNpb3QuV2lmaUNmZ0gAUgZjb25maWcSKgoGc3RhdHVzGAMgASgLMhAuQ2lv'
     'dC5XaWZpU3RhdHVzSABSBnN0YXR1cxIpCgdyZXF1ZXN0GAQgASgLMg0uQ2lvdC5XaWZpUmVxSA'
     'BSB3JlcXVlc3QSJAoEaW5mbxgFIAEoCzIOLkNpb3QuV2lmaUluZm9IAFIEaW5mb0IGCgR0eXBl');
-

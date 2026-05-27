@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/logger.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/logger.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -36,7 +38,14 @@ final $typed_data.Uint8List logLevelDescriptor = $convert.base64Decode(
 const LogData$json = {
   '1': 'LogData',
   '2': [
-    {'1': 'level', '3': 1, '4': 1, '5': 14, '6': '.Ciot.LogLevel', '10': 'level'},
+    {
+      '1': 'level',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.LogLevel',
+      '10': 'level'
+    },
     {'1': 'tag', '3': 2, '4': 1, '5': 9, '10': 'tag'},
     {'1': 'message', '3': 3, '4': 1, '5': 9, '10': 'message'},
   ],
@@ -46,4 +55,3 @@ const LogData$json = {
 final $typed_data.Uint8List logDataDescriptor = $convert.base64Decode(
     'CgdMb2dEYXRhEiQKBWxldmVsGAEgASgOMg4uQ2lvdC5Mb2dMZXZlbFIFbGV2ZWwSEAoDdGFnGA'
     'IgASgJUgN0YWcSGAoHbWVzc2FnZRgDIAEoCVIHbWVzc2FnZQ==');
-

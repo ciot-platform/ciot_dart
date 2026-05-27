@@ -1,44 +1,49 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/iface_manager.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/iface_manager.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
-import '../../../google/protobuf/empty.pbjson.dart' as $25;
-import 'ble.pbjson.dart' as $13;
-import 'ble_adv.pbjson.dart' as $11;
-import 'ble_scn.pbjson.dart' as $12;
+import 'package:protobuf/well_known_types/google/protobuf/empty.pbjson.dart'
+    as $2;
+
+import 'ble.pbjson.dart' as $14;
+import 'ble_adv.pbjson.dart' as $12;
+import 'ble_scn.pbjson.dart' as $13;
 import 'ciot.pbjson.dart' as $5;
-import 'dfu.pbjson.dart' as $14;
-import 'event.pbjson.dart' as $26;
-import 'gpio.pbjson.dart' as $15;
+import 'dfu.pbjson.dart' as $15;
+import 'event.pbjson.dart' as $3;
+import 'gpio.pbjson.dart' as $16;
 import 'http_client.pbjson.dart' as $7;
 import 'http_server.pbjson.dart' as $8;
 import 'iface.pbjson.dart' as $1;
-import 'logger.pbjson.dart' as $19;
-import 'mbus.pbjson.dart' as $4;
-import 'mbus_client.pbjson.dart' as $21;
-import 'mbus_server.pbjson.dart' as $22;
+import 'logger.pbjson.dart' as $21;
+import 'mbus.pbjson.dart' as $24;
+import 'mbus_client.pbjson.dart' as $23;
+import 'mbus_server.pbjson.dart' as $25;
 import 'mqtt_client.pbjson.dart' as $9;
-import 'msg.pbjson.dart' as $24;
-import 'msg_data.pbjson.dart' as $23;
-import 'ntp.pbjson.dart' as $10;
-import 'ota.pbjson.dart' as $16;
-import 'storage.pbjson.dart' as $17;
+import 'msg.pbjson.dart' as $0;
+import 'msg_data.pbjson.dart' as $4;
+import 'ntp.pbjson.dart' as $11;
+import 'ota.pbjson.dart' as $17;
+import 'storage.pbjson.dart' as $18;
 import 'sys.pbjson.dart' as $6;
-import 'tcp.pbjson.dart' as $2;
-import 'uart.pbjson.dart' as $3;
-import 'usb.pbjson.dart' as $20;
-import 'wifi.pbjson.dart' as $18;
+import 'tcp.pbjson.dart' as $19;
+import 'uart.pbjson.dart' as $10;
+import 'usb.pbjson.dart' as $22;
+import 'wifi.pbjson.dart' as $20;
+import 'wifi_multi.pbjson.dart' as $26;
 
 @$core.Deprecated('Use ifacesListDescriptor instead')
 const IfacesList$json = {
@@ -56,7 +61,14 @@ final $typed_data.Uint8List ifacesListDescriptor = $convert.base64Decode(
 const CreateIfaceRequest$json = {
   '1': 'CreateIfaceRequest',
   '2': [
-    {'1': 'message', '3': 1, '4': 1, '5': 11, '6': '.Ciot.Msg', '10': 'message'},
+    {
+      '1': 'message',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Msg',
+      '10': 'message'
+    },
   ],
 };
 
@@ -69,7 +81,14 @@ final $typed_data.Uint8List createIfaceRequestDescriptor = $convert.base64Decode
 const CreateIfaceResponse$json = {
   '1': 'CreateIfaceResponse',
   '2': [
-    {'1': 'message', '3': 1, '4': 1, '5': 11, '6': '.Ciot.Msg', '10': 'message'},
+    {
+      '1': 'message',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Msg',
+      '10': 'message'
+    },
   ],
 };
 
@@ -87,14 +106,21 @@ const GetIfaceRequest$json = {
 };
 
 /// Descriptor for `GetIfaceRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getIfaceRequestDescriptor = $convert.base64Decode(
-    'Cg9HZXRJZmFjZVJlcXVlc3QSDgoCaWQYASABKA1SAmlk');
+final $typed_data.Uint8List getIfaceRequestDescriptor =
+    $convert.base64Decode('Cg9HZXRJZmFjZVJlcXVlc3QSDgoCaWQYASABKA1SAmlk');
 
 @$core.Deprecated('Use getIfaceResponseDescriptor instead')
 const GetIfaceResponse$json = {
   '1': 'GetIfaceResponse',
   '2': [
-    {'1': 'message', '3': 1, '4': 1, '5': 11, '6': '.Ciot.Msg', '10': 'message'},
+    {
+      '1': 'message',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Msg',
+      '10': 'message'
+    },
   ],
 };
 
@@ -119,7 +145,14 @@ final $typed_data.Uint8List getIfacesResponseDescriptor = $convert.base64Decode(
 const UpdateIfaceRequest$json = {
   '1': 'UpdateIfaceRequest',
   '2': [
-    {'1': 'message', '3': 1, '4': 1, '5': 11, '6': '.Ciot.Msg', '10': 'message'},
+    {
+      '1': 'message',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Msg',
+      '10': 'message'
+    },
   ],
 };
 
@@ -132,7 +165,14 @@ final $typed_data.Uint8List updateIfaceRequestDescriptor = $convert.base64Decode
 const UpdateIfaceResponse$json = {
   '1': 'UpdateIfaceResponse',
   '2': [
-    {'1': 'message', '3': 1, '4': 1, '5': 11, '6': '.Ciot.Msg', '10': 'message'},
+    {
+      '1': 'message',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Msg',
+      '10': 'message'
+    },
   ],
 };
 
@@ -150,14 +190,21 @@ const DeleteIfaceRequest$json = {
 };
 
 /// Descriptor for `DeleteIfaceRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List deleteIfaceRequestDescriptor = $convert.base64Decode(
-    'ChJEZWxldGVJZmFjZVJlcXVlc3QSDgoCaWQYASABKA1SAmlk');
+final $typed_data.Uint8List deleteIfaceRequestDescriptor =
+    $convert.base64Decode('ChJEZWxldGVJZmFjZVJlcXVlc3QSDgoCaWQYASABKA1SAmlk');
 
 @$core.Deprecated('Use deleteIfaceResponseDescriptor instead')
 const DeleteIfaceResponse$json = {
   '1': 'DeleteIfaceResponse',
   '2': [
-    {'1': 'message', '3': 1, '4': 1, '5': 11, '6': '.Ciot.Msg', '10': 'message'},
+    {
+      '1': 'message',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Msg',
+      '10': 'message'
+    },
   ],
 };
 
@@ -175,14 +222,21 @@ const SelectIfaceRequest$json = {
 };
 
 /// Descriptor for `SelectIfaceRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List selectIfaceRequestDescriptor = $convert.base64Decode(
-    'ChJTZWxlY3RJZmFjZVJlcXVlc3QSDgoCaWQYASABKA1SAmlk');
+final $typed_data.Uint8List selectIfaceRequestDescriptor =
+    $convert.base64Decode('ChJTZWxlY3RJZmFjZVJlcXVlc3QSDgoCaWQYASABKA1SAmlk');
 
 @$core.Deprecated('Use selectIfaceResponseDescriptor instead')
 const SelectIfaceResponse$json = {
   '1': 'SelectIfaceResponse',
   '2': [
-    {'1': 'iface', '3': 1, '4': 1, '5': 11, '6': '.Ciot.IfaceInfo', '10': 'iface'},
+    {
+      '1': 'iface',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.IfaceInfo',
+      '10': 'iface'
+    },
   ],
 };
 
@@ -195,20 +249,35 @@ final $typed_data.Uint8List selectIfaceResponseDescriptor = $convert.base64Decod
 const GetSelectedIfaceResponse$json = {
   '1': 'GetSelectedIfaceResponse',
   '2': [
-    {'1': 'iface', '3': 1, '4': 1, '5': 11, '6': '.Ciot.IfaceInfo', '10': 'iface'},
+    {
+      '1': 'iface',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.IfaceInfo',
+      '10': 'iface'
+    },
   ],
 };
 
 /// Descriptor for `GetSelectedIfaceResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getSelectedIfaceResponseDescriptor = $convert.base64Decode(
-    'ChhHZXRTZWxlY3RlZElmYWNlUmVzcG9uc2USJQoFaWZhY2UYASABKAsyDy5DaW90LklmYWNlSW'
-    '5mb1IFaWZhY2U=');
+final $typed_data.Uint8List getSelectedIfaceResponseDescriptor =
+    $convert.base64Decode(
+        'ChhHZXRTZWxlY3RlZElmYWNlUmVzcG9uc2USJQoFaWZhY2UYASABKAsyDy5DaW90LklmYWNlSW'
+        '5mb1IFaWZhY2U=');
 
 @$core.Deprecated('Use sendMessageRequestDescriptor instead')
 const SendMessageRequest$json = {
   '1': 'SendMessageRequest',
   '2': [
-    {'1': 'message', '3': 1, '4': 1, '5': 11, '6': '.Ciot.Msg', '10': 'message'},
+    {
+      '1': 'message',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Msg',
+      '10': 'message'
+    },
   ],
 };
 
@@ -221,7 +290,14 @@ final $typed_data.Uint8List sendMessageRequestDescriptor = $convert.base64Decode
 const SendMessageResponse$json = {
   '1': 'SendMessageResponse',
   '2': [
-    {'1': 'message', '3': 1, '4': 1, '5': 11, '6': '.Ciot.Msg', '10': 'message'},
+    {
+      '1': 'message',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Msg',
+      '10': 'message'
+    },
   ],
 };
 
@@ -235,36 +311,82 @@ const SubscribeToEventsRequest$json = {
   '1': 'SubscribeToEventsRequest',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    {'1': 'iface', '3': 2, '4': 1, '5': 11, '6': '.Ciot.IfaceInfo', '10': 'iface'},
+    {
+      '1': 'iface',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.IfaceInfo',
+      '10': 'iface'
+    },
   ],
 };
 
 /// Descriptor for `SubscribeToEventsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List subscribeToEventsRequestDescriptor = $convert.base64Decode(
-    'ChhTdWJzY3JpYmVUb0V2ZW50c1JlcXVlc3QSDgoCaWQYASABKAlSAmlkEiUKBWlmYWNlGAIgAS'
-    'gLMg8uQ2lvdC5JZmFjZUluZm9SBWlmYWNl');
+final $typed_data.Uint8List subscribeToEventsRequestDescriptor =
+    $convert.base64Decode(
+        'ChhTdWJzY3JpYmVUb0V2ZW50c1JlcXVlc3QSDgoCaWQYASABKAlSAmlkEiUKBWlmYWNlGAIgAS'
+        'gLMg8uQ2lvdC5JZmFjZUluZm9SBWlmYWNl');
 
 const $core.Map<$core.String, $core.dynamic> IfaceManagerServiceBase$json = {
   '1': 'IfaceManagerService',
   '2': [
-    {'1': 'CreateIface', '2': '.Ciot.CreateIfaceRequest', '3': '.Ciot.CreateIfaceResponse'},
-    {'1': 'GetIface', '2': '.Ciot.GetIfaceRequest', '3': '.Ciot.GetIfaceResponse'},
-    {'1': 'GetIfaces', '2': '.google.protobuf.Empty', '3': '.Ciot.GetIfacesResponse'},
-    {'1': 'UpdateIface', '2': '.Ciot.UpdateIfaceRequest', '3': '.Ciot.UpdateIfaceResponse'},
-    {'1': 'DeleteIface', '2': '.Ciot.DeleteIfaceRequest', '3': '.Ciot.DeleteIfaceResponse'},
-    {'1': 'SelectIface', '2': '.Ciot.SelectIfaceRequest', '3': '.Ciot.SelectIfaceResponse'},
-    {'1': 'GetSelectedIface', '2': '.google.protobuf.Empty', '3': '.Ciot.GetSelectedIfaceResponse'},
-    {'1': 'SendMessage', '2': '.Ciot.SendMessageRequest', '3': '.Ciot.SendMessageResponse'},
-    {'1': 'SubscribeToEvents', '2': '.Ciot.SubscribeToEventsRequest', '3': '.Ciot.Event', '6': true},
+    {
+      '1': 'CreateIface',
+      '2': '.Ciot.CreateIfaceRequest',
+      '3': '.Ciot.CreateIfaceResponse'
+    },
+    {
+      '1': 'GetIface',
+      '2': '.Ciot.GetIfaceRequest',
+      '3': '.Ciot.GetIfaceResponse'
+    },
+    {
+      '1': 'GetIfaces',
+      '2': '.google.protobuf.Empty',
+      '3': '.Ciot.GetIfacesResponse'
+    },
+    {
+      '1': 'UpdateIface',
+      '2': '.Ciot.UpdateIfaceRequest',
+      '3': '.Ciot.UpdateIfaceResponse'
+    },
+    {
+      '1': 'DeleteIface',
+      '2': '.Ciot.DeleteIfaceRequest',
+      '3': '.Ciot.DeleteIfaceResponse'
+    },
+    {
+      '1': 'SelectIface',
+      '2': '.Ciot.SelectIfaceRequest',
+      '3': '.Ciot.SelectIfaceResponse'
+    },
+    {
+      '1': 'GetSelectedIface',
+      '2': '.google.protobuf.Empty',
+      '3': '.Ciot.GetSelectedIfaceResponse'
+    },
+    {
+      '1': 'SendMessage',
+      '2': '.Ciot.SendMessageRequest',
+      '3': '.Ciot.SendMessageResponse'
+    },
+    {
+      '1': 'SubscribeToEvents',
+      '2': '.Ciot.SubscribeToEventsRequest',
+      '3': '.Ciot.Event',
+      '6': true
+    },
   ],
 };
 
 @$core.Deprecated('Use ifaceManagerServiceDescriptor instead')
-const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> IfaceManagerServiceBase$messageJson = {
+const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
+    IfaceManagerServiceBase$messageJson = {
   '.Ciot.CreateIfaceRequest': CreateIfaceRequest$json,
-  '.Ciot.Msg': $24.Msg$json,
+  '.Ciot.Msg': $0.Msg$json,
   '.Ciot.IfaceInfo': $1.IfaceInfo$json,
-  '.Ciot.MsgData': $23.MsgData$json,
+  '.Ciot.MsgData': $4.MsgData$json,
   '.Ciot.Common': $1.Common$json,
   '.Ciot.GetData': $1.GetData$json,
   '.Ciot.Data': $5.Data$json,
@@ -302,101 +424,115 @@ const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> IfaceManag
   '.Ciot.MqttClientReq': $9.MqttClientReq$json,
   '.Ciot.MqttClientReqPublish': $9.MqttClientReqPublish$json,
   '.Ciot.MqttClientReqSubscribe': $9.MqttClientReqSubscribe$json,
-  '.Ciot.UartData': $3.UartData$json,
-  '.Ciot.UartStop': $3.UartStop$json,
-  '.Ciot.UartCfg': $3.UartCfg$json,
-  '.Ciot.UartGpioCfg': $3.UartGpioCfg$json,
-  '.Ciot.UartStatus': $3.UartStatus$json,
-  '.Ciot.UartReq': $3.UartReq$json,
-  '.Ciot.NtpData': $10.NtpData$json,
-  '.Ciot.NtpStop': $10.NtpStop$json,
-  '.Ciot.NtpCfg': $10.NtpCfg$json,
-  '.Ciot.NtpStatus': $10.NtpStatus$json,
-  '.Ciot.NtpReq': $10.NtpReq$json,
-  '.Ciot.BleAdvData': $11.BleAdvData$json,
-  '.Ciot.BleAdvStop': $11.BleAdvStop$json,
-  '.Ciot.BleAdvCfg': $11.BleAdvCfg$json,
-  '.Ciot.BleAdvStatus': $11.BleAdvStatus$json,
-  '.Ciot.BleAdvReq': $11.BleAdvReq$json,
-  '.Ciot.BleScnData': $12.BleScnData$json,
-  '.Ciot.BleScnStop': $12.BleScnStop$json,
-  '.Ciot.BleScnCfg': $12.BleScnCfg$json,
-  '.Ciot.BleScnStatus': $12.BleScnStatus$json,
-  '.Ciot.BleScnReq': $12.BleScnReq$json,
-  '.Ciot.BleData': $13.BleData$json,
-  '.Ciot.BleStop': $13.BleStop$json,
-  '.Ciot.BleCfg': $13.BleCfg$json,
-  '.Ciot.BleStatus': $13.BleStatus$json,
-  '.Ciot.BleReq': $13.BleReq$json,
-  '.Ciot.BleInfo': $13.BleInfo$json,
-  '.Ciot.DfuData': $14.DfuData$json,
-  '.Ciot.DfuStop': $14.DfuStop$json,
-  '.Ciot.DfuCfg': $14.DfuCfg$json,
-  '.Ciot.DfuStatus': $14.DfuStatus$json,
-  '.Ciot.DfuReq': $14.DfuReq$json,
-  '.Ciot.GpioData': $15.GpioData$json,
-  '.Ciot.GpioStop': $15.GpioStop$json,
-  '.Ciot.GpioCfg': $15.GpioCfg$json,
-  '.Ciot.GpioPinCfg': $15.GpioPinCfg$json,
-  '.Ciot.GpioStatus': $15.GpioStatus$json,
-  '.Ciot.GpioReq': $15.GpioReq$json,
-  '.Ciot.GpioStateInfo': $15.GpioStateInfo$json,
-  '.Ciot.OtaData': $16.OtaData$json,
-  '.Ciot.OtaStop': $16.OtaStop$json,
-  '.Ciot.OtaCfg': $16.OtaCfg$json,
-  '.Ciot.OtaStatus': $16.OtaStatus$json,
-  '.Ciot.OtaReq': $16.OtaReq$json,
-  '.Ciot.StorageData': $17.StorageData$json,
-  '.Ciot.StorageStop': $17.StorageStop$json,
-  '.Ciot.StorageCfg': $17.StorageCfg$json,
-  '.Ciot.StorageStatus': $17.StorageStatus$json,
-  '.Ciot.StorageReq': $17.StorageReq$json,
-  '.Ciot.StorageFile': $17.StorageFile$json,
-  '.Ciot.StorageReqFormat': $17.StorageReqFormat$json,
-  '.Ciot.StorageInfo': $17.StorageInfo$json,
-  '.Ciot.TcpData': $2.TcpData$json,
-  '.Ciot.TcpStop': $2.TcpStop$json,
-  '.Ciot.TcpCfg': $2.TcpCfg$json,
-  '.Ciot.TcpStatus': $2.TcpStatus$json,
-  '.Ciot.TcpDhcpStatus': $2.TcpDhcpStatus$json,
-  '.Ciot.TcpReq': $2.TcpReq$json,
-  '.Ciot.TcpInfo': $2.TcpInfo$json,
-  '.Ciot.WifiData': $18.WifiData$json,
-  '.Ciot.WifiStop': $18.WifiStop$json,
-  '.Ciot.WifiCfg': $18.WifiCfg$json,
-  '.Ciot.WifiStatus': $18.WifiStatus$json,
-  '.Ciot.WifiReq': $18.WifiReq$json,
-  '.Ciot.WifiReqScan': $18.WifiReqScan$json,
-  '.Ciot.WifiReqScanResult': $18.WifiReqScanResult$json,
-  '.Ciot.WifiReqGetAp': $18.WifiReqGetAp$json,
-  '.Ciot.WifiApInfo': $18.WifiApInfo$json,
-  '.Ciot.WifiInfo': $18.WifiInfo$json,
-  '.Ciot.LogData': $19.LogData$json,
-  '.Ciot.UsbData': $20.UsbData$json,
-  '.Ciot.UsbStop': $20.UsbStop$json,
-  '.Ciot.UsbCfg': $20.UsbCfg$json,
-  '.Ciot.UsbStatus': $20.UsbStatus$json,
-  '.Ciot.UsbReq': $20.UsbReq$json,
-  '.Ciot.MbusClientData': $21.MbusClientData$json,
-  '.Ciot.MbusClientStop': $21.MbusClientStop$json,
-  '.Ciot.MbusClientCfg': $21.MbusClientCfg$json,
-  '.Ciot.MbusClientRtuCfg': $21.MbusClientRtuCfg$json,
-  '.Ciot.MbusClientTcpCfg': $21.MbusClientTcpCfg$json,
-  '.Ciot.MbusClientStatus': $21.MbusClientStatus$json,
-  '.Ciot.MbusClientReq': $21.MbusClientReq$json,
-  '.Ciot.MbusFunctionReq': $4.MbusFunctionReq$json,
-  '.Ciot.MbusServerData': $22.MbusServerData$json,
-  '.Ciot.MbusServerStop': $22.MbusServerStop$json,
-  '.Ciot.MbusServerCfg': $22.MbusServerCfg$json,
-  '.Ciot.MbusServerRtuCfg': $22.MbusServerRtuCfg$json,
-  '.Ciot.MbusServerTcpCfg': $22.MbusServerTcpCfg$json,
-  '.Ciot.MbusServerStatus': $22.MbusServerStatus$json,
-  '.Ciot.MbusServerReq': $22.MbusServerReq$json,
-  '.Ciot.Proxy': $24.Proxy$json,
+  '.Ciot.UartData': $10.UartData$json,
+  '.Ciot.UartStop': $10.UartStop$json,
+  '.Ciot.UartCfg': $10.UartCfg$json,
+  '.Ciot.UartGpioCfg': $10.UartGpioCfg$json,
+  '.Ciot.UartStatus': $10.UartStatus$json,
+  '.Ciot.UartReq': $10.UartReq$json,
+  '.Ciot.NtpData': $11.NtpData$json,
+  '.Ciot.NtpStop': $11.NtpStop$json,
+  '.Ciot.NtpCfg': $11.NtpCfg$json,
+  '.Ciot.NtpStatus': $11.NtpStatus$json,
+  '.Ciot.NtpReq': $11.NtpReq$json,
+  '.Ciot.BleAdvData': $12.BleAdvData$json,
+  '.Ciot.BleAdvStop': $12.BleAdvStop$json,
+  '.Ciot.BleAdvCfg': $12.BleAdvCfg$json,
+  '.Ciot.BleAdvStatus': $12.BleAdvStatus$json,
+  '.Ciot.BleAdvReq': $12.BleAdvReq$json,
+  '.Ciot.BleScnData': $13.BleScnData$json,
+  '.Ciot.BleScnStop': $13.BleScnStop$json,
+  '.Ciot.BleScnCfg': $13.BleScnCfg$json,
+  '.Ciot.BleScnStatus': $13.BleScnStatus$json,
+  '.Ciot.BleScnReq': $13.BleScnReq$json,
+  '.Ciot.BleData': $14.BleData$json,
+  '.Ciot.BleStop': $14.BleStop$json,
+  '.Ciot.BleCfg': $14.BleCfg$json,
+  '.Ciot.BleStatus': $14.BleStatus$json,
+  '.Ciot.BleReq': $14.BleReq$json,
+  '.Ciot.BleInfo': $14.BleInfo$json,
+  '.Ciot.DfuData': $15.DfuData$json,
+  '.Ciot.DfuStop': $15.DfuStop$json,
+  '.Ciot.DfuCfg': $15.DfuCfg$json,
+  '.Ciot.DfuStatus': $15.DfuStatus$json,
+  '.Ciot.DfuReq': $15.DfuReq$json,
+  '.Ciot.GpioData': $16.GpioData$json,
+  '.Ciot.GpioStop': $16.GpioStop$json,
+  '.Ciot.GpioCfg': $16.GpioCfg$json,
+  '.Ciot.GpioPinCfg': $16.GpioPinCfg$json,
+  '.Ciot.GpioStatus': $16.GpioStatus$json,
+  '.Ciot.GpioReq': $16.GpioReq$json,
+  '.Ciot.GpioStateInfo': $16.GpioStateInfo$json,
+  '.Ciot.OtaData': $17.OtaData$json,
+  '.Ciot.OtaStop': $17.OtaStop$json,
+  '.Ciot.OtaCfg': $17.OtaCfg$json,
+  '.Ciot.OtaStatus': $17.OtaStatus$json,
+  '.Ciot.OtaReq': $17.OtaReq$json,
+  '.Ciot.StorageData': $18.StorageData$json,
+  '.Ciot.StorageStop': $18.StorageStop$json,
+  '.Ciot.StorageCfg': $18.StorageCfg$json,
+  '.Ciot.StorageStatus': $18.StorageStatus$json,
+  '.Ciot.StorageReq': $18.StorageReq$json,
+  '.Ciot.StorageFile': $18.StorageFile$json,
+  '.Ciot.StorageReqFormat': $18.StorageReqFormat$json,
+  '.Ciot.StorageInfo': $18.StorageInfo$json,
+  '.Ciot.TcpData': $19.TcpData$json,
+  '.Ciot.TcpStop': $19.TcpStop$json,
+  '.Ciot.TcpCfg': $19.TcpCfg$json,
+  '.Ciot.TcpStatus': $19.TcpStatus$json,
+  '.Ciot.TcpDhcpStatus': $19.TcpDhcpStatus$json,
+  '.Ciot.TcpReq': $19.TcpReq$json,
+  '.Ciot.TcpInfo': $19.TcpInfo$json,
+  '.Ciot.WifiData': $20.WifiData$json,
+  '.Ciot.WifiStop': $20.WifiStop$json,
+  '.Ciot.WifiCfg': $20.WifiCfg$json,
+  '.Ciot.WifiStatus': $20.WifiStatus$json,
+  '.Ciot.WifiReq': $20.WifiReq$json,
+  '.Ciot.WifiReqScan': $20.WifiReqScan$json,
+  '.Ciot.WifiReqScanResult': $20.WifiReqScanResult$json,
+  '.Ciot.WifiReqGetAp': $20.WifiReqGetAp$json,
+  '.Ciot.WifiApInfo': $20.WifiApInfo$json,
+  '.Ciot.WifiInfo': $20.WifiInfo$json,
+  '.Ciot.LogData': $21.LogData$json,
+  '.Ciot.UsbData': $22.UsbData$json,
+  '.Ciot.UsbStop': $22.UsbStop$json,
+  '.Ciot.UsbCfg': $22.UsbCfg$json,
+  '.Ciot.UsbStatus': $22.UsbStatus$json,
+  '.Ciot.UsbReq': $22.UsbReq$json,
+  '.Ciot.MbusClientData': $23.MbusClientData$json,
+  '.Ciot.MbusClientStop': $23.MbusClientStop$json,
+  '.Ciot.MbusClientCfg': $23.MbusClientCfg$json,
+  '.Ciot.MbusClientRtuCfg': $23.MbusClientRtuCfg$json,
+  '.Ciot.MbusClientTcpCfg': $23.MbusClientTcpCfg$json,
+  '.Ciot.MbusClientStatus': $23.MbusClientStatus$json,
+  '.Ciot.MbusClientReq': $23.MbusClientReq$json,
+  '.Ciot.MbusFunctionReq': $24.MbusFunctionReq$json,
+  '.Ciot.MbusServerData': $25.MbusServerData$json,
+  '.Ciot.MbusServerStop': $25.MbusServerStop$json,
+  '.Ciot.MbusServerCfg': $25.MbusServerCfg$json,
+  '.Ciot.MbusServerRtuCfg': $25.MbusServerRtuCfg$json,
+  '.Ciot.MbusServerTcpCfg': $25.MbusServerTcpCfg$json,
+  '.Ciot.MbusServerStatus': $25.MbusServerStatus$json,
+  '.Ciot.MbusServerReq': $25.MbusServerReq$json,
+  '.Ciot.WifiMultiData': $26.WifiMultiData$json,
+  '.Ciot.WifiMultiStop': $26.WifiMultiStop$json,
+  '.Ciot.WifiMultiCfg': $26.WifiMultiCfg$json,
+  '.Ciot.WifiMultiItemCfg': $26.WifiMultiItemCfg$json,
+  '.Ciot.WifiMultiStatus': $26.WifiMultiStatus$json,
+  '.Ciot.WifiMultiItemStatus': $26.WifiMultiItemStatus$json,
+  '.Ciot.WifiMultiReq': $26.WifiMultiReq$json,
+  '.Ciot.WifiMultiReqNext': $26.WifiMultiReqNext$json,
+  '.Ciot.WifiMultiReqSetInvalid': $26.WifiMultiReqSetInvalid$json,
+  '.Ciot.WifiMultiReqMarkActiveInvalid': $26.WifiMultiReqMarkActiveInvalid$json,
+  '.Ciot.WifiMultiReqResetInvalid': $26.WifiMultiReqResetInvalid$json,
+  '.Ciot.WifiMultiReqGetItem': $26.WifiMultiReqGetItem$json,
+  '.Ciot.WifiMultiReqSetItem': $26.WifiMultiReqSetItem$json,
+  '.Ciot.WifiMultiInfo': $26.WifiMultiInfo$json,
+  '.Ciot.Proxy': $0.Proxy$json,
   '.Ciot.CreateIfaceResponse': CreateIfaceResponse$json,
   '.Ciot.GetIfaceRequest': GetIfaceRequest$json,
   '.Ciot.GetIfaceResponse': GetIfaceResponse$json,
-  '.google.protobuf.Empty': $25.Empty$json,
+  '.google.protobuf.Empty': $2.Empty$json,
   '.Ciot.GetIfacesResponse': GetIfacesResponse$json,
   '.Ciot.UpdateIfaceRequest': UpdateIfaceRequest$json,
   '.Ciot.UpdateIfaceResponse': UpdateIfaceResponse$json,
@@ -408,7 +544,8 @@ const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>> IfaceManag
   '.Ciot.SendMessageRequest': SendMessageRequest$json,
   '.Ciot.SendMessageResponse': SendMessageResponse$json,
   '.Ciot.SubscribeToEventsRequest': SubscribeToEventsRequest$json,
-  '.Ciot.Event': $26.Event$json,
+  '.Ciot.Event': $3.Event$json,
+  '.Ciot.EventInternal': $3.EventInternal$json,
 };
 
 /// Descriptor for `IfaceManagerService`. Decode as a `google.protobuf.ServiceDescriptorProto`.
@@ -425,4 +562,3 @@ final $typed_data.Uint8List ifaceManagerServiceDescriptor = $convert.base64Decod
     'Vzc2FnZRIYLkNpb3QuU2VuZE1lc3NhZ2VSZXF1ZXN0GhkuQ2lvdC5TZW5kTWVzc2FnZVJlc3Bv'
     'bnNlEkIKEVN1YnNjcmliZVRvRXZlbnRzEh4uQ2lvdC5TdWJzY3JpYmVUb0V2ZW50c1JlcXVlc3'
     'QaCy5DaW90LkV2ZW50MAE=');
-

@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/ciot.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/ciot.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -49,7 +51,14 @@ const Info$json = {
   '1': 'Info',
   '2': [
     {'1': 'version', '3': 1, '4': 1, '5': 12, '10': 'version'},
-    {'1': 'ifaces', '3': 2, '4': 3, '5': 14, '6': '.Ciot.IfaceType', '10': 'ifaces'},
+    {
+      '1': 'ifaces',
+      '3': 2,
+      '4': 3,
+      '5': 14,
+      '6': '.Ciot.IfaceType',
+      '10': 'ifaces'
+    },
   ],
 };
 
@@ -63,7 +72,14 @@ const Status$json = {
   '1': 'Status',
   '2': [
     {'1': 'state', '3': 1, '4': 1, '5': 14, '6': '.Ciot.State', '10': 'state'},
-    {'1': 'ifaces', '3': 2, '4': 3, '5': 11, '6': '.Ciot.IfaceStatus', '10': 'ifaces'},
+    {
+      '1': 'ifaces',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.Ciot.IfaceStatus',
+      '10': 'ifaces'
+    },
   ],
 };
 
@@ -76,8 +92,22 @@ final $typed_data.Uint8List statusDescriptor = $convert.base64Decode(
 const IfaceStatus$json = {
   '1': 'IfaceStatus',
   '2': [
-    {'1': 'type', '3': 1, '4': 1, '5': 14, '6': '.Ciot.IfaceType', '10': 'type'},
-    {'1': 'state', '3': 2, '4': 1, '5': 14, '6': '.Ciot.IfaceState', '10': 'state'},
+    {
+      '1': 'type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.IfaceType',
+      '10': 'type'
+    },
+    {
+      '1': 'state',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.IfaceState',
+      '10': 'state'
+    },
   ],
 };
 
@@ -90,8 +120,24 @@ final $typed_data.Uint8List ifaceStatusDescriptor = $convert.base64Decode(
 const Req$json = {
   '1': 'Req',
   '2': [
-    {'1': 'save_cfg', '3': 1, '4': 1, '5': 11, '6': '.Ciot.IfaceInfo', '9': 0, '10': 'saveCfg'},
-    {'1': 'delete_cfg', '3': 2, '4': 1, '5': 11, '6': '.Ciot.IfaceInfo', '9': 0, '10': 'deleteCfg'},
+    {
+      '1': 'save_cfg',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.IfaceInfo',
+      '9': 0,
+      '10': 'saveCfg'
+    },
+    {
+      '1': 'delete_cfg',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.IfaceInfo',
+      '9': 0,
+      '10': 'deleteCfg'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -107,9 +153,33 @@ final $typed_data.Uint8List reqDescriptor = $convert.base64Decode(
 const Data$json = {
   '1': 'Data',
   '2': [
-    {'1': 'status', '3': 2, '4': 1, '5': 11, '6': '.Ciot.Status', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 3, '4': 1, '5': 11, '6': '.Ciot.Req', '9': 0, '10': 'request'},
-    {'1': 'info', '3': 6, '4': 1, '5': 11, '6': '.Ciot.Info', '9': 0, '10': 'info'},
+    {
+      '1': 'status',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Status',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Req',
+      '9': 0,
+      '10': 'request'
+    },
+    {
+      '1': 'info',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.Info',
+      '9': 0,
+      '10': 'info'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -121,4 +191,3 @@ final $typed_data.Uint8List dataDescriptor = $convert.base64Decode(
     'CgREYXRhEiYKBnN0YXR1cxgCIAEoCzIMLkNpb3QuU3RhdHVzSABSBnN0YXR1cxIlCgdyZXF1ZX'
     'N0GAMgASgLMgkuQ2lvdC5SZXFIAFIHcmVxdWVzdBIgCgRpbmZvGAYgASgLMgouQ2lvdC5JbmZv'
     'SABSBGluZm9CBgoEdHlwZQ==');
-

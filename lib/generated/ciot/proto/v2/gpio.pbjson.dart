@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/gpio.proto
-//
-// @dart = 2.12
+// Generated from ciot/proto/v2/gpio.proto.
+
+// @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -93,7 +95,14 @@ final $typed_data.Uint8List gpioPinCfgDescriptor = $convert.base64Decode(
 const GpioCfg$json = {
   '1': 'GpioCfg',
   '2': [
-    {'1': 'pins', '3': 1, '4': 3, '5': 11, '6': '.Ciot.GpioPinCfg', '10': 'pins'},
+    {
+      '1': 'pins',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.Ciot.GpioPinCfg',
+      '10': 'pins'
+    },
     {'1': 'blink_interval', '3': 2, '4': 1, '5': 13, '10': 'blinkInterval'},
   ],
 };
@@ -112,15 +121,22 @@ const GpioStatus$json = {
 };
 
 /// Descriptor for `GpioStatus`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List gpioStatusDescriptor = $convert.base64Decode(
-    'CgpHcGlvU3RhdHVzEhYKBnN0YXRlcxgBIAEoDFIGc3RhdGVz');
+final $typed_data.Uint8List gpioStatusDescriptor =
+    $convert.base64Decode('CgpHcGlvU3RhdHVzEhYKBnN0YXRlcxgBIAEoDFIGc3RhdGVz');
 
 @$core.Deprecated('Use gpioStateInfoDescriptor instead')
 const GpioStateInfo$json = {
   '1': 'GpioStateInfo',
   '2': [
     {'1': 'num', '3': 1, '4': 1, '5': 13, '10': 'num'},
-    {'1': 'state', '3': 2, '4': 1, '5': 14, '6': '.Ciot.GpioState', '10': 'state'},
+    {
+      '1': 'state',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6': '.Ciot.GpioState',
+      '10': 'state'
+    },
   ],
 };
 
@@ -133,8 +149,24 @@ final $typed_data.Uint8List gpioStateInfoDescriptor = $convert.base64Decode(
 const GpioReq$json = {
   '1': 'GpioReq',
   '2': [
-    {'1': 'set_status', '3': 1, '4': 1, '5': 11, '6': '.Ciot.GpioStatus', '9': 0, '10': 'setStatus'},
-    {'1': 'set_state', '3': 2, '4': 1, '5': 11, '6': '.Ciot.GpioStateInfo', '9': 0, '10': 'setState'},
+    {
+      '1': 'set_status',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.GpioStatus',
+      '9': 0,
+      '10': 'setStatus'
+    },
+    {
+      '1': 'set_state',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.GpioStateInfo',
+      '9': 0,
+      '10': 'setState'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -151,10 +183,42 @@ final $typed_data.Uint8List gpioReqDescriptor = $convert.base64Decode(
 const GpioData$json = {
   '1': 'GpioData',
   '2': [
-    {'1': 'stop', '3': 1, '4': 1, '5': 11, '6': '.Ciot.GpioStop', '9': 0, '10': 'stop'},
-    {'1': 'config', '3': 2, '4': 1, '5': 11, '6': '.Ciot.GpioCfg', '9': 0, '10': 'config'},
-    {'1': 'status', '3': 3, '4': 1, '5': 11, '6': '.Ciot.GpioStatus', '9': 0, '10': 'status'},
-    {'1': 'request', '3': 4, '4': 1, '5': 11, '6': '.Ciot.GpioReq', '9': 0, '10': 'request'},
+    {
+      '1': 'stop',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.GpioStop',
+      '9': 0,
+      '10': 'stop'
+    },
+    {
+      '1': 'config',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.GpioCfg',
+      '9': 0,
+      '10': 'config'
+    },
+    {
+      '1': 'status',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.GpioStatus',
+      '9': 0,
+      '10': 'status'
+    },
+    {
+      '1': 'request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.Ciot.GpioReq',
+      '9': 0,
+      '10': 'request'
+    },
   ],
   '8': [
     {'1': 'type'},
@@ -167,4 +231,3 @@ final $typed_data.Uint8List gpioDataDescriptor = $convert.base64Decode(
     'ZpZxgCIAEoCzINLkNpb3QuR3Bpb0NmZ0gAUgZjb25maWcSKgoGc3RhdHVzGAMgASgLMhAuQ2lv'
     'dC5HcGlvU3RhdHVzSABSBnN0YXR1cxIpCgdyZXF1ZXN0GAQgASgLMg0uQ2lvdC5HcGlvUmVxSA'
     'BSB3JlcXVlc3RCBgoEdHlwZQ==');
-
