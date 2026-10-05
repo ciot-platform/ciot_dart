@@ -16,7 +16,7 @@
 
 ### Usage of timeouts in Wifi scanning
 
-* Updated `WifiScanImpl` to use the new timeout parameter when sending messages, ensuring scan operations and AP info retrieval respect a 5000ms timeout.
+* Updated `WifiScanImpl` to use the new timeout parameter when sending messages, ensuring scan operations and AP info retrieval respect an 8000ms timeout.
 
 ### Breaking changes
 
