@@ -9,6 +9,7 @@ import 'package:ciot_dart/generated/ciot/proto/v2/iface.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/msg_data.pb.dart';
 import 'package:fpdart/fpdart.dart';
 import 'package:http/http.dart' as http;
+import 'package:http/http.dart' show ClientException;
 
 class HttpClient extends IfaceBase {
   @override
@@ -48,22 +49,26 @@ class HttpClient extends IfaceBase {
 
   @override
   Either<ErrorBase, MsgData> getData(MsgData data) {
-    if (data.whichType() != MsgData_Type.httpClient) {
+    if (data.whichType() != MsgData_Type.getData) {
       return Either.left(ErrorInvalidType());
     }
 
-    switch (data.httpClient.whichType()) {
-      case HttpClientData_Type.config:
-        data.httpClient.config = _cfg ?? HttpClientCfg();
-        break;
-      case HttpClientData_Type.status:
-        data.httpClient.status = _status;
-        break;
+    switch (data.getData.type) {
+      case DataType.DATA_TYPE_CONFIG:
+        return Either.right(MsgData(
+          httpClient: HttpClientData(
+            config: _cfg,
+          ),
+        ));
+      case DataType.DATA_TYPE_STATUS:
+        return Either.right(MsgData(
+          httpClient: HttpClientData(
+            status: _status,
+          ),
+        ));
       default:
         return Either.left(ErrorInvalidType());
     }
-
-    return Either.right(data);
   }
 
   @override
@@ -92,10 +97,27 @@ class HttpClient extends IfaceBase {
     }
     try {
       final uri = Uri.parse(_cfg!.url);
-      return httpRequest(uri, data);
+      return await httpRequest(uri, data);
     } on Exception catch (e) {
       return Either.left(ErrorException(e));
     }
+  }
+
+  @override
+  Either<ErrorBase, Unit> setTimeout(int timeout) {
+    if (_cfg == null) {
+      return Left(ErrorNullConfig());
+    }
+    _cfg!.timeout = timeout;
+    return const Right(unit);
+  }
+
+  Either<ErrorBase, Unit> setIp(String ip) {
+    if (_cfg == null) {
+      return Left(ErrorNullConfig());
+    }
+    _cfg!.url = ip;
+    return const Right(unit);
   }
 
   Future<Either<ErrorBase, Uint8List>> httpRequest(Uri uri, Uint8List data) async {
@@ -138,6 +160,8 @@ class HttpClient extends IfaceBase {
         return Either.left(ErrorHttpRequest(response.statusCode, response.bodyBytes));
       }
     } on SocketException catch (_) {
+      return Either.left(ErrorConnection());
+    } on ClientException catch (_) {
       return Either.left(ErrorConnection());
     } on TimeoutException catch (_) {
       return Either.left(ErrorTimeout());

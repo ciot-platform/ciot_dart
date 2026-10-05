@@ -1,13 +1,15 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/errors.proto
-//
+// Generated from ciot/proto/v2/errors.proto.
+
 // @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -68,6 +70,7 @@ const Err$json = {
     {'1': 'ERR_TRANSPORT', '2': 49},
     {'1': 'ERR_INVALID_RESPONSE', '2': 50},
     {'1': 'ERR_NULL_EVENT_HANDLER', '2': 51},
+    {'1': 'ERR_DEPRECATED', '2': 52},
     {'1': 'ERR_MBUS_EXCEPTION_ILLEGAL_FUNCTION', '2': 101},
     {'1': 'ERR_MBUS_EXCEPTION_ILLEGAL_DATA_ADDR', '2': 102},
     {'1': 'ERR_MBUS_EXCEPTION_ILLEGAL_DATA_VAL', '2': 103},
@@ -96,10 +99,10 @@ final $typed_data.Uint8List errDescriptor = $convert.base64Decode(
     'TElaRVJfTUlTU0lORxArEhEKDUVSUl9TTUFMTF9SQVcQLBIXChNFUlJfSU5WQUxJRF9SRVFVRV'
     'NUEC0SGAoURVJSX0lOVkFMSURfVENQX01CQVAQLxILCgdFUlJfQ1JDEDASEQoNRVJSX1RSQU5T'
     'UE9SVBAxEhgKFEVSUl9JTlZBTElEX1JFU1BPTlNFEDISGgoWRVJSX05VTExfRVZFTlRfSEFORE'
-    'xFUhAzEicKI0VSUl9NQlVTX0VYQ0VQVElPTl9JTExFR0FMX0ZVTkNUSU9OEGUSKAokRVJSX01C'
-    'VVNfRVhDRVBUSU9OX0lMTEVHQUxfREFUQV9BRERSEGYSJwojRVJSX01CVVNfRVhDRVBUSU9OX0'
-    'lMTEVHQUxfREFUQV9WQUwQZxIsCihFUlJfTUJVU19FWENFUFRJT05fU0VSVkVSX0RFVklDRV9G'
-    'QUlMVVJFEGg=');
+    'xFUhAzEhIKDkVSUl9ERVBSRUNBVEVEEDQSJwojRVJSX01CVVNfRVhDRVBUSU9OX0lMTEVHQUxf'
+    'RlVOQ1RJT04QZRIoCiRFUlJfTUJVU19FWENFUFRJT05fSUxMRUdBTF9EQVRBX0FERFIQZhInCi'
+    'NFUlJfTUJVU19FWENFUFRJT05fSUxMRUdBTF9EQVRBX1ZBTBBnEiwKKEVSUl9NQlVTX0VYQ0VQ'
+    'VElPTl9TRVJWRVJfREVWSUNFX0ZBSUxVUkUQaA==');
 
 @$core.Deprecated('Use errDataDescriptor instead')
 const ErrData$json = {
@@ -110,6 +113,5 @@ const ErrData$json = {
 };
 
 /// Descriptor for `ErrData`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List errDataDescriptor = $convert.base64Decode(
-    'CgdFcnJEYXRhEhsKA2VychgBIAEoDjIJLkNpb3QuRXJyUgNlcnI=');
-
+final $typed_data.Uint8List errDataDescriptor = $convert
+    .base64Decode('CgdFcnJEYXRhEhsKA2VychgBIAEoDjIJLkNpb3QuRXJyUgNlcnI=');

@@ -1,13 +1,14 @@
+// This is a generated file - do not edit.
 //
-//  Generated code. Do not modify.
-//  source: ciot/proto/v2/ble.proto
-//
+// Generated from ciot/proto/v2/ble.proto.
+
 // @dart = 3.3
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_final_fields
-// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+// ignore_for_file: constant_identifier_names
+// ignore_for_file: curly_braces_in_flow_control_structures
+// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
 
 import 'dart:core' as $core;
 
@@ -22,33 +23,38 @@ export 'ble.pbenum.dart';
 /// Bluetooth stop
 class BleStop extends $pb.GeneratedMessage {
   factory BleStop() => create();
-  BleStop._() : super();
-  factory BleStop.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BleStop.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BleStop', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..hasRequiredFields = false
-  ;
+  BleStop._();
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  BleStop clone() => BleStop()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  BleStop copyWith(void Function(BleStop) updates) => super.copyWith((message) => updates(message as BleStop)) as BleStop;
+  factory BleStop.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BleStop.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BleStop',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleStop clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleStop copyWith(void Function(BleStop) updates) =>
+      super.copyWith((message) => updates(message as BleStop)) as BleStop;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BleStop create() => BleStop._();
+  @$core.override
   BleStop createEmptyInstance() => create();
-  static $pb.PbList<BleStop> createRepeated() => $pb.PbList<BleStop>();
   @$core.pragma('dart2js:noInline')
-  static BleStop getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleStop>(create);
+  static BleStop getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleStop>(create);
   static BleStop? _defaultInstance;
 }
 
@@ -57,46 +63,50 @@ class BleCfg extends $pb.GeneratedMessage {
   factory BleCfg({
     $core.List<$core.int>? mac,
   }) {
-    final $result = create();
-    if (mac != null) {
-      $result.mac = mac;
-    }
-    return $result;
+    final result = create();
+    if (mac != null) result.mac = mac;
+    return result;
   }
-  BleCfg._() : super();
-  factory BleCfg.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BleCfg.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BleCfg', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'mac', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
+  BleCfg._();
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  BleCfg clone() => BleCfg()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  BleCfg copyWith(void Function(BleCfg) updates) => super.copyWith((message) => updates(message as BleCfg)) as BleCfg;
+  factory BleCfg.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BleCfg.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BleCfg',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'),
+      createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(
+        1, _omitFieldNames ? '' : 'mac', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleCfg clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleCfg copyWith(void Function(BleCfg) updates) =>
+      super.copyWith((message) => updates(message as BleCfg)) as BleCfg;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BleCfg create() => BleCfg._();
+  @$core.override
   BleCfg createEmptyInstance() => create();
-  static $pb.PbList<BleCfg> createRepeated() => $pb.PbList<BleCfg>();
   @$core.pragma('dart2js:noInline')
-  static BleCfg getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleCfg>(create);
+  static BleCfg getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleCfg>(create);
   static BleCfg? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get mac => $_getN(0);
   @$pb.TagNumber(1)
-  set mac($core.List<$core.int> v) { $_setBytes(0, v); }
+  set mac($core.List<$core.int> value) => $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasMac() => $_has(0);
   @$pb.TagNumber(1)
@@ -109,51 +119,54 @@ class BleInfo extends $pb.GeneratedMessage {
     $core.List<$core.int>? hwMac,
     $core.List<$core.int>? swMac,
   }) {
-    final $result = create();
-    if (hwMac != null) {
-      $result.hwMac = hwMac;
-    }
-    if (swMac != null) {
-      $result.swMac = swMac;
-    }
-    return $result;
+    final result = create();
+    if (hwMac != null) result.hwMac = hwMac;
+    if (swMac != null) result.swMac = swMac;
+    return result;
   }
-  BleInfo._() : super();
-  factory BleInfo.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BleInfo.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BleInfo', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'hwMac', $pb.PbFieldType.OY)
-    ..a<$core.List<$core.int>>(2, _omitFieldNames ? '' : 'swMac', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
+  BleInfo._();
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  BleInfo clone() => BleInfo()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  BleInfo copyWith(void Function(BleInfo) updates) => super.copyWith((message) => updates(message as BleInfo)) as BleInfo;
+  factory BleInfo.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BleInfo.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BleInfo',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'),
+      createEmptyInstance: create)
+    ..a<$core.List<$core.int>>(
+        1, _omitFieldNames ? '' : 'hwMac', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        2, _omitFieldNames ? '' : 'swMac', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleInfo clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleInfo copyWith(void Function(BleInfo) updates) =>
+      super.copyWith((message) => updates(message as BleInfo)) as BleInfo;
+
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BleInfo create() => BleInfo._();
+  @$core.override
   BleInfo createEmptyInstance() => create();
-  static $pb.PbList<BleInfo> createRepeated() => $pb.PbList<BleInfo>();
   @$core.pragma('dart2js:noInline')
-  static BleInfo getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleInfo>(create);
+  static BleInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleInfo>(create);
   static BleInfo? _defaultInstance;
 
   /// Hardware mac address
   @$pb.TagNumber(1)
   $core.List<$core.int> get hwMac => $_getN(0);
   @$pb.TagNumber(1)
-  set hwMac($core.List<$core.int> v) { $_setBytes(0, v); }
+  set hwMac($core.List<$core.int> value) => $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasHwMac() => $_has(0);
   @$pb.TagNumber(1)
@@ -163,7 +176,7 @@ class BleInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.List<$core.int> get swMac => $_getN(1);
   @$pb.TagNumber(2)
-  set swMac($core.List<$core.int> v) { $_setBytes(1, v); }
+  set swMac($core.List<$core.int> value) => $_setBytes(1, value);
   @$pb.TagNumber(2)
   $core.bool hasSwMac() => $_has(1);
   @$pb.TagNumber(2)
@@ -177,55 +190,55 @@ class BleStatus extends $pb.GeneratedMessage {
     $core.int? errCode,
     $core.bool? usingSwMac,
   }) {
-    final $result = create();
-    if (state != null) {
-      $result.state = state;
-    }
-    if (errCode != null) {
-      $result.errCode = errCode;
-    }
-    if (usingSwMac != null) {
-      $result.usingSwMac = usingSwMac;
-    }
-    return $result;
+    final result = create();
+    if (state != null) result.state = state;
+    if (errCode != null) result.errCode = errCode;
+    if (usingSwMac != null) result.usingSwMac = usingSwMac;
+    return result;
   }
-  BleStatus._() : super();
-  factory BleStatus.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BleStatus.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BleStatus', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
-    ..e<BleState>(1, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: BleState.BLE_STATE_IDLE, valueOf: BleState.valueOf, enumValues: BleState.values)
-    ..a<$core.int>(2, _omitFieldNames ? '' : 'errCode', $pb.PbFieldType.OU3)
+  BleStatus._();
+
+  factory BleStatus.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BleStatus.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BleStatus',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'),
+      createEmptyInstance: create)
+    ..aE<BleState>(1, _omitFieldNames ? '' : 'state',
+        enumValues: BleState.values)
+    ..aI(2, _omitFieldNames ? '' : 'errCode', fieldType: $pb.PbFieldType.OU3)
     ..aOB(3, _omitFieldNames ? '' : 'usingSwMac')
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  BleStatus clone() => BleStatus()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  BleStatus copyWith(void Function(BleStatus) updates) => super.copyWith((message) => updates(message as BleStatus)) as BleStatus;
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleStatus clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleStatus copyWith(void Function(BleStatus) updates) =>
+      super.copyWith((message) => updates(message as BleStatus)) as BleStatus;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BleStatus create() => BleStatus._();
+  @$core.override
   BleStatus createEmptyInstance() => create();
-  static $pb.PbList<BleStatus> createRepeated() => $pb.PbList<BleStatus>();
   @$core.pragma('dart2js:noInline')
-  static BleStatus getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleStatus>(create);
+  static BleStatus getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleStatus>(create);
   static BleStatus? _defaultInstance;
 
   /// Current state
   @$pb.TagNumber(1)
   BleState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(BleState v) { $_setField(1, v); }
+  set state(BleState value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
@@ -235,7 +248,7 @@ class BleStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $core.int get errCode => $_getIZ(1);
   @$pb.TagNumber(2)
-  set errCode($core.int v) { $_setUnsignedInt32(1, v); }
+  set errCode($core.int value) => $_setUnsignedInt32(1, value);
   @$pb.TagNumber(2)
   $core.bool hasErrCode() => $_has(1);
   @$pb.TagNumber(2)
@@ -245,85 +258,81 @@ class BleStatus extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   $core.bool get usingSwMac => $_getBF(2);
   @$pb.TagNumber(3)
-  set usingSwMac($core.bool v) { $_setBool(2, v); }
+  set usingSwMac($core.bool value) => $_setBool(2, value);
   @$pb.TagNumber(3)
   $core.bool hasUsingSwMac() => $_has(2);
   @$pb.TagNumber(3)
   void clearUsingSwMac() => $_clearField(3);
 }
 
-enum BleReq_Type {
-  setMac, 
-  notSet
-}
+enum BleReq_Type { setMac, notSet }
 
 /// Bluetooth module request
 class BleReq extends $pb.GeneratedMessage {
   factory BleReq({
     $core.List<$core.int>? setMac,
   }) {
-    final $result = create();
-    if (setMac != null) {
-      $result.setMac = setMac;
-    }
-    return $result;
+    final result = create();
+    if (setMac != null) result.setMac = setMac;
+    return result;
   }
-  BleReq._() : super();
-  factory BleReq.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BleReq.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  BleReq._();
+
+  factory BleReq.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BleReq.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, BleReq_Type> _BleReq_TypeByTag = {
-    1 : BleReq_Type.setMac,
-    0 : BleReq_Type.notSet
+    1: BleReq_Type.setMac,
+    0: BleReq_Type.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BleReq', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BleReq',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'),
+      createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<$core.List<$core.int>>(1, _omitFieldNames ? '' : 'setMac', $pb.PbFieldType.OY)
-    ..hasRequiredFields = false
-  ;
+    ..a<$core.List<$core.int>>(
+        1, _omitFieldNames ? '' : 'setMac', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  BleReq clone() => BleReq()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  BleReq copyWith(void Function(BleReq) updates) => super.copyWith((message) => updates(message as BleReq)) as BleReq;
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleReq clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleReq copyWith(void Function(BleReq) updates) =>
+      super.copyWith((message) => updates(message as BleReq)) as BleReq;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BleReq create() => BleReq._();
+  @$core.override
   BleReq createEmptyInstance() => create();
-  static $pb.PbList<BleReq> createRepeated() => $pb.PbList<BleReq>();
   @$core.pragma('dart2js:noInline')
-  static BleReq getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleReq>(create);
+  static BleReq getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleReq>(create);
   static BleReq? _defaultInstance;
 
+  @$pb.TagNumber(1)
   BleReq_Type whichType() => _BleReq_TypeByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(1)
   void clearType() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get setMac => $_getN(0);
   @$pb.TagNumber(1)
-  set setMac($core.List<$core.int> v) { $_setBytes(0, v); }
+  set setMac($core.List<$core.int> value) => $_setBytes(0, value);
   @$pb.TagNumber(1)
   $core.bool hasSetMac() => $_has(0);
   @$pb.TagNumber(1)
   void clearSetMac() => $_clearField(1);
 }
 
-enum BleData_Type {
-  stop, 
-  config, 
-  status, 
-  request, 
-  info, 
-  notSet
-}
+enum BleData_Type { stop, config, status, request, info, notSet }
 
 /// Bluetooth module data
 class BleData extends $pb.GeneratedMessage {
@@ -334,74 +343,81 @@ class BleData extends $pb.GeneratedMessage {
     BleReq? request,
     BleInfo? info,
   }) {
-    final $result = create();
-    if (stop != null) {
-      $result.stop = stop;
-    }
-    if (config != null) {
-      $result.config = config;
-    }
-    if (status != null) {
-      $result.status = status;
-    }
-    if (request != null) {
-      $result.request = request;
-    }
-    if (info != null) {
-      $result.info = info;
-    }
-    return $result;
+    final result = create();
+    if (stop != null) result.stop = stop;
+    if (config != null) result.config = config;
+    if (status != null) result.status = status;
+    if (request != null) result.request = request;
+    if (info != null) result.info = info;
+    return result;
   }
-  BleData._() : super();
-  factory BleData.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
-  factory BleData.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
+
+  BleData._();
+
+  factory BleData.fromBuffer($core.List<$core.int> data,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(data, registry);
+  factory BleData.fromJson($core.String json,
+          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(json, registry);
 
   static const $core.Map<$core.int, BleData_Type> _BleData_TypeByTag = {
-    1 : BleData_Type.stop,
-    2 : BleData_Type.config,
-    3 : BleData_Type.status,
-    4 : BleData_Type.request,
-    6 : BleData_Type.info,
-    0 : BleData_Type.notSet
+    1: BleData_Type.stop,
+    2: BleData_Type.config,
+    3: BleData_Type.status,
+    4: BleData_Type.request,
+    6: BleData_Type.info,
+    0: BleData_Type.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'BleData', package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'), createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BleData',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'Ciot'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 6])
     ..aOM<BleStop>(1, _omitFieldNames ? '' : 'stop', subBuilder: BleStop.create)
     ..aOM<BleCfg>(2, _omitFieldNames ? '' : 'config', subBuilder: BleCfg.create)
-    ..aOM<BleStatus>(3, _omitFieldNames ? '' : 'status', subBuilder: BleStatus.create)
-    ..aOM<BleReq>(4, _omitFieldNames ? '' : 'request', subBuilder: BleReq.create)
+    ..aOM<BleStatus>(3, _omitFieldNames ? '' : 'status',
+        subBuilder: BleStatus.create)
+    ..aOM<BleReq>(4, _omitFieldNames ? '' : 'request',
+        subBuilder: BleReq.create)
     ..aOM<BleInfo>(6, _omitFieldNames ? '' : 'info', subBuilder: BleInfo.create)
-    ..hasRequiredFields = false
-  ;
+    ..hasRequiredFields = false;
 
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-  'Will be removed in next major version')
-  BleData clone() => BleData()..mergeFromMessage(this);
-  @$core.Deprecated(
-  'Using this can add significant overhead to your binary. '
-  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-  'Will be removed in next major version')
-  BleData copyWith(void Function(BleData) updates) => super.copyWith((message) => updates(message as BleData)) as BleData;
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleData clone() => deepCopy();
+  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
+  BleData copyWith(void Function(BleData) updates) =>
+      super.copyWith((message) => updates(message as BleData)) as BleData;
 
+  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static BleData create() => BleData._();
+  @$core.override
   BleData createEmptyInstance() => create();
-  static $pb.PbList<BleData> createRepeated() => $pb.PbList<BleData>();
   @$core.pragma('dart2js:noInline')
-  static BleData getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleData>(create);
+  static BleData getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<BleData>(create);
   static BleData? _defaultInstance;
 
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(6)
   BleData_Type whichType() => _BleData_TypeByTag[$_whichOneof(0)]!;
+  @$pb.TagNumber(1)
+  @$pb.TagNumber(2)
+  @$pb.TagNumber(3)
+  @$pb.TagNumber(4)
+  @$pb.TagNumber(6)
   void clearType() => $_clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
   BleStop get stop => $_getN(0);
   @$pb.TagNumber(1)
-  set stop(BleStop v) { $_setField(1, v); }
+  set stop(BleStop value) => $_setField(1, value);
   @$pb.TagNumber(1)
   $core.bool hasStop() => $_has(0);
   @$pb.TagNumber(1)
@@ -412,7 +428,7 @@ class BleData extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   BleCfg get config => $_getN(1);
   @$pb.TagNumber(2)
-  set config(BleCfg v) { $_setField(2, v); }
+  set config(BleCfg value) => $_setField(2, value);
   @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
   @$pb.TagNumber(2)
@@ -423,7 +439,7 @@ class BleData extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   BleStatus get status => $_getN(2);
   @$pb.TagNumber(3)
-  set status(BleStatus v) { $_setField(3, v); }
+  set status(BleStatus value) => $_setField(3, value);
   @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
   @$pb.TagNumber(3)
@@ -434,7 +450,7 @@ class BleData extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   BleReq get request => $_getN(3);
   @$pb.TagNumber(4)
-  set request(BleReq v) { $_setField(4, v); }
+  set request(BleReq value) => $_setField(4, value);
   @$pb.TagNumber(4)
   $core.bool hasRequest() => $_has(3);
   @$pb.TagNumber(4)
@@ -445,7 +461,7 @@ class BleData extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   BleInfo get info => $_getN(4);
   @$pb.TagNumber(6)
-  set info(BleInfo v) { $_setField(6, v); }
+  set info(BleInfo value) => $_setField(6, value);
   @$pb.TagNumber(6)
   $core.bool hasInfo() => $_has(4);
   @$pb.TagNumber(6)
@@ -454,6 +470,7 @@ class BleData extends $pb.GeneratedMessage {
   BleInfo ensureInfo() => $_ensure(4);
 }
 
-
-const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
-const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');
+const $core.bool _omitFieldNames =
+    $core.bool.fromEnvironment('protobuf.omit_field_names');
+const $core.bool _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

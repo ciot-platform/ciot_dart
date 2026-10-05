@@ -2,7 +2,6 @@ import 'package:ciot_dart/generated/ciot/proto/v2/msg.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/msg_data.pb.dart';
 import 'package:ciot_dart/generated/ciot/proto/v2/wifi.pb.dart';
 import 'package:ciot_dart/src/domain/interfaces/iface_base.dart';
-import 'package:ciot_dart/src/domain/models/wifi_iface_model.dart';
 import 'package:ciot_dart/src/errors/errors.dart';
 import 'package:ciot_dart/src/infra/usecases/wifi_scan_impl.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -12,14 +11,11 @@ import 'package:mocktail/mocktail.dart';
 // Mock classes
 class MockIfaceBase extends Mock implements IfaceBase {}
 
-class MockWifiIfaceModel extends Mock implements WifiIfaceModel {}
-
 // Fake classes for Msg (needed for mocktail's any() matcher)
 class FakeMsg extends Fake implements Msg {}
 
 void main() {
   late MockIfaceBase mockIface;
-  late MockWifiIfaceModel mockWifiIfaceModel;
   late WifiScanImpl wifiScanImpl;
 
   setUpAll(() {
@@ -29,8 +25,7 @@ void main() {
 
   setUp(() {
     mockIface = MockIfaceBase();
-    mockWifiIfaceModel = MockWifiIfaceModel();
-    wifiScanImpl = WifiScanImpl(mockIface, mockWifiIfaceModel);
+    wifiScanImpl = WifiScanImpl(mockIface);
   });
 
   group('WifiScanImpl', () {
@@ -72,15 +67,14 @@ void main() {
         );
 
         // Mock para todas as chamadas
-        when(() => mockIface.sendMsg(any()))
-            .thenAnswer((invocation) async {
+        when(() => mockIface.sendMsg(any(), timeout: 8000)).thenAnswer((invocation) async {
           final msg = invocation.positionalArguments[0] as Msg;
-          
+
           // Se é uma requisição de scan
           if (msg.data.wifi.request.hasScan()) {
             return right(msgResponseScan);
           }
-          
+
           // Se é uma requisição de getAp
           if (msg.data.wifi.request.hasGetAp()) {
             final apId = msg.data.wifi.request.getAp.id;
@@ -90,12 +84,12 @@ void main() {
               return right(msgResponseAp2);
             }
           }
-          
+
           return left(ErrorNotFound());
         });
 
         // Act
-        final result = await wifiScanImpl.scan();
+        final result = await wifiScanImpl.call(0);
 
         // Assert
         expect(result.isRight(), true);
@@ -111,17 +105,16 @@ void main() {
         );
 
         // Verify que sendMsg foi chamado 3 vezes (1 scan + 2 getAp)
-        verify(() => mockIface.sendMsg(any())).called(3);
+        verify(() => mockIface.sendMsg(any(), timeout: 8000)).called(3);
       });
 
       test('deve retornar ErrorBase quando startScan falhar', () async {
         // Arrange
         final error = ErrorTimeout();
-        when(() => mockIface.sendMsg(any()))
-            .thenAnswer((_) async => left(error));
+        when(() => mockIface.sendMsg(any(), timeout: 8000)).thenAnswer((_) async => left(error));
 
         // Act
-        final result = await wifiScanImpl.scan();
+        final result = await wifiScanImpl.call(0);
 
         // Assert
         expect(result.isLeft(), true);
@@ -131,7 +124,7 @@ void main() {
         );
 
         // Verify que sendMsg foi chamado apenas 1 vez
-        verify(() => mockIface.sendMsg(any())).called(1);
+        verify(() => mockIface.sendMsg(any(), timeout: 8000)).called(1);
       });
 
       test('deve retornar lista vazia quando count for 0', () async {
@@ -145,11 +138,11 @@ void main() {
           ),
         );
 
-        when(() => mockIface.sendMsg(any()))
+        when(() => mockIface.sendMsg(any(), timeout: 8000))
             .thenAnswer((_) async => right(msgResponseScan));
 
         // Act
-        final result = await wifiScanImpl.scan();
+        final result = await wifiScanImpl.call(0);
 
         // Assert
         expect(result.isRight(), true);
@@ -159,7 +152,7 @@ void main() {
         );
 
         // Verify que sendMsg foi chamado apenas 1 vez (só o scan)
-        verify(() => mockIface.sendMsg(any())).called(1);
+        verify(() => mockIface.sendMsg(any(), timeout: 8000)).called(1);
       });
 
       test('deve continuar mesmo se getScannedAp falhar para algum AP', () async {
@@ -187,15 +180,14 @@ void main() {
         );
 
         // Mock para todas as chamadas
-        when(() => mockIface.sendMsg(any()))
-            .thenAnswer((invocation) async {
+        when(() => mockIface.sendMsg(any(), timeout: 8000)).thenAnswer((invocation) async {
           final msg = invocation.positionalArguments[0] as Msg;
-          
+
           // Se é uma requisição de scan
           if (msg.data.wifi.request.hasScan()) {
             return right(msgResponseScan);
           }
-          
+
           // Se é uma requisição de getAp
           if (msg.data.wifi.request.hasGetAp()) {
             final apId = msg.data.wifi.request.getAp.id;
@@ -205,12 +197,12 @@ void main() {
               return right(msgResponseAp2);
             }
           }
-          
+
           return left(ErrorNotFound());
         });
 
         // Act
-        final result = await wifiScanImpl.scan();
+        final result = await wifiScanImpl.call(0);
 
         // Assert
         expect(result.isRight(), true);
@@ -223,7 +215,7 @@ void main() {
         );
 
         // Verify que sendMsg foi chamado 3 vezes
-        verify(() => mockIface.sendMsg(any())).called(3);
+        verify(() => mockIface.sendMsg(any(), timeout: 8000)).called(3);
       });
 
       test('deve enviar mensagem correta para startScan', () async {
@@ -238,18 +230,18 @@ void main() {
         );
 
         Msg? capturedMsg;
-        when(() => mockIface.sendMsg(any())).thenAnswer((invocation) async {
+        when(() => mockIface.sendMsg(any(), timeout: 8000)).thenAnswer((invocation) async {
           capturedMsg = invocation.positionalArguments[0] as Msg;
           return right(msgResponseScan);
         });
 
         // Act
-        await wifiScanImpl.scan();
+        await wifiScanImpl.call(0);
 
         // Assert
         expect(capturedMsg, isNotNull);
         expect(capturedMsg!.data.wifi.request.hasScan(), true);
-        verify(() => mockIface.sendMsg(any())).called(1);
+        verify(() => mockIface.sendMsg(any(), timeout: 8000)).called(1);
       });
 
       test('deve enviar mensagem correta para getScannedAp com id correto', () async {
@@ -273,10 +265,10 @@ void main() {
         );
 
         final capturedMsgs = <Msg>[];
-        when(() => mockIface.sendMsg(any())).thenAnswer((invocation) async {
+        when(() => mockIface.sendMsg(any(), timeout: 8000)).thenAnswer((invocation) async {
           final msg = invocation.positionalArguments[0] as Msg;
           capturedMsgs.add(msg);
-          
+
           if (msg.data.wifi.request.hasScan()) {
             return right(msgResponseScan);
           } else if (msg.data.wifi.request.hasGetAp()) {
@@ -286,7 +278,7 @@ void main() {
         });
 
         // Act
-        await wifiScanImpl.scan();
+        await wifiScanImpl.call(0);
 
         // Assert
         expect(capturedMsgs.length, 2);
