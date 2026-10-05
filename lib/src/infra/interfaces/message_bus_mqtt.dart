@@ -58,9 +58,10 @@ class MessageBusMqtt<T> implements MessageBus<T> {
       // mqtt client implementation.
       _clientBroadcast ??= _client.onData.asBroadcastStream();
       _updatesSub ??= _clientBroadcast!.listen((ciot.MqttClientEvent event) {
-        final topic = event.topic;
-        final payloadBytes = event.payload;
-        _handleMessage(topic, payloadBytes, controller);
+        final topicController = _controllers[event.topic];
+        if (topicController != null) {
+          _handleMessage(event.topic, event.payload, topicController);
+        }
       }, onError: (err) {
         _cleanupAll();
       }, onDone: () {
