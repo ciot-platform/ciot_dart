@@ -97,7 +97,7 @@ class HttpClient extends IfaceBase {
     }
     try {
       final uri = Uri.parse(_cfg!.url);
-      return httpRequest(uri, data);
+      return await httpRequest(uri, data);
     } on Exception catch (e) {
       return Either.left(ErrorException(e));
     }
