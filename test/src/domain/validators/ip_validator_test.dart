@@ -84,8 +84,8 @@ void main() {
       });
 
       test('rejeita IPv4', () {
-        final result = IpValidator.validateIpv4('192.168.1.1');
-        expect(result.isValid, true);
+        final result = IpValidator.validateIpv6('192.168.1.1');
+        expect(result.isInvalid, true);
       });
     });
 
