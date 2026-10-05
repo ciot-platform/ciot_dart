@@ -11,7 +11,7 @@ import 'package:fpdart/fpdart.dart';
 abstract class IfaceBase implements Iface {
   final Serializer _serializer;
   bool _sending = false;
-  static int _sentMsgId = -1;
+  int _sentMsgId = -1;
 
   IfaceBase() : _serializer = SerializerPb.instance;
 
