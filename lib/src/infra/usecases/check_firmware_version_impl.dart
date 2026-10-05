@@ -27,6 +27,7 @@ class HgCheckFirmwareVersionImpl implements CheckFirmwareVersion {
     if (reqMinor > currentMinor) return true;
     if (reqMinor < currentMinor) return false;
     if (reqPatch > currentPatch) return true;
+    if (reqPatch < currentPatch) return false;
     if (reqRelease > currentRelease) return true;
     if (reqRelease < currentRelease) return false;
 

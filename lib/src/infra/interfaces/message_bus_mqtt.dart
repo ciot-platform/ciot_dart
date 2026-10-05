@@ -58,9 +58,13 @@ class MessageBusMqtt<T> implements MessageBus<T> {
       // mqtt client implementation.
       _clientBroadcast ??= _client.onData.asBroadcastStream();
       _updatesSub ??= _clientBroadcast!.listen((ciot.MqttClientEvent event) {
-        final topic = event.topic;
-        final payloadBytes = event.payload;
-        _handleMessage(topic, payloadBytes, controller);
+        // Deliver to every listener whose filter matches, so wildcard
+        // subscriptions (`+`, `#`) receive the concrete topics.
+        for (final entry in _controllers.entries) {
+          if (topicMatchesFilter(entry.key, event.topic)) {
+            _handleMessage(event.topic, event.payload, entry.value);
+          }
+        }
       }, onError: (err) {
         _cleanupAll();
       }, onDone: () {
@@ -71,6 +75,21 @@ class MessageBusMqtt<T> implements MessageBus<T> {
     }
 
     return controller.stream;
+  }
+
+  /// Matches a concrete MQTT [topic] against a subscription [filter],
+  /// following MQTT wildcard rules: `+` matches exactly one level and `#`
+  /// (last level only) matches the parent level and any levels below it.
+  static bool topicMatchesFilter(String filter, String topic) {
+    final filterLevels = filter.split('/');
+    final topicLevels = topic.split('/');
+    for (var i = 0; i < filterLevels.length; i++) {
+      final level = filterLevels[i];
+      if (level == '#') return true;
+      if (i >= topicLevels.length) return false;
+      if (level != '+' && level != topicLevels[i]) return false;
+    }
+    return filterLevels.length == topicLevels.length;
   }
 
   void _cleanupAll() {

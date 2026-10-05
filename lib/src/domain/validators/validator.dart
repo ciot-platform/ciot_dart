@@ -7,3 +7,4 @@ import 'validation_result.dart';
 typedef Validator<T> = ValidationResult<T> Function(T value);
 
 /// Base type for an asynchronous validator function.
+typedef AsyncValidator<T> = Future<ValidationResult<T>> Function(T value);

@@ -16,8 +16,15 @@
 
 ### Usage of timeouts in Wifi scanning
 
-* Updated `WifiScanImpl` to use the new timeout parameter when sending messages, ensuring scan operations and AP info retrieval respect a 5000ms timeout.
+* Updated `WifiScanImpl` to use the new timeout parameter when sending messages, ensuring scan operations and AP info retrieval respect an 8000ms timeout.
 
 ### Breaking changes
 
 * `force` parameter on `send` operations is not supported anymore. Now sending messages always wait for the last sent completion. Adjust the timeout to avoid errors on concurrence cases.
+* `WifiStop.call` now returns `Future<Either<ErrorBase, WifiStatus>>` (was `Either<ErrorBase, void>`) and accepts an optional `{int? timeout}`. Custom implementations and mocks of `WifiStop` must update their signature; callers can now read the resulting `WifiStatus`.
+
+### Fixes
+
+* `MessageBusMqtt` now routes each incoming message to every listener whose topic filter matches, including MQTT wildcards (`+`, `#`). Previously all messages were emitted on the stream of the first topic listened to.
+* `IfaceBase` keeps the expected response id per interface instance instead of sharing it across all interfaces.
+* `CheckFirmwareVersion` no longer reports an update as required when the required patch version is lower than the current one.
